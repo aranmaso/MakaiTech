@@ -49,6 +49,7 @@
 <Item ParentName="Bond">
 	Ring of bond - wearer gain increased social boost.
 	Pillar of communication - 5x5 radius social boost.
+	Bond Forge - a building that give nearby pawn mood boost
 
 <Item ParentName="Fate">
 	Convergence of Fate - Building that give immunity gain speed and injury healing speed.
