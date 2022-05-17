@@ -8,9 +8,13 @@
 <Building>
 	</>Makai Interdimensional Relay - 	Makai_Bench
 	</>Celestial Wall - 			MakainiumWall
-	</>Makai Interdimensional Uplink - 	Makai_Powerlink_Relay 	<desc>research bench linkable</desc>
+	</>Makai Interdimensional Uplink - 	Makai_Powerlink_Relay 		<desc>research bench linkable</desc>
 	</>Stardust-particle accelerator - 	Makai_Turret_A
 	<X>Stardust-beam compresser -		Makai_Turret_B
+	<X>Interdimension Receiver - 		Makai_En_Reciever		<desc>recieve raw energy from Makai</desc>
+	<X>Makai Energy Converter - 		Makai_En_Condens		<desc>convert raw energy into usable power. in a form of raw star particle</desc>
+	<X>Stardust Particle Collecter -	Makai_St_Conv			<desc>convert star particle into Stardust</desc>
+	<X>Celestial Steel Forge -		Makai_Cs_Forg			<desc>convert star particle into Celestial Steel</desc> 
 	
 	<X>Primodial Forge -			Makai_PForge		<desc>a forge created in the image of The First Forge, and inherit part of it power. it had forged a foundation for all thing that exist. and that yet to exist. those who control the Primodial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any material can be forged here, even those that yet to exist in our world. \n\n Think of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</desc> 
 	
@@ -76,5 +80,8 @@
 	
 <Item ParentName="Death">
 	Destined Death - a big scythe. insanely high armor pen. but deal no damage. on hit give a stacking hediff, once reach full severity victim will die in 13 days.
+	The Death Reversed - 13 use resurrecter. no drawback <Require More Archotech Garbage>
+	
+<Item ParentName="Distortion">
 	
 	
