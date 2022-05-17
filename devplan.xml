@@ -4,6 +4,7 @@
 	Celestial Fabric - 			Makai_Fabric_C		<notdone> 	<desc>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resist. immune even. one of the needed material to create Primodial Forge. Thing made from Celestial Fabric will never burn.</desc>
 	Flame of the First Forge - 		Makai_Forge_Flame 	<notdone> 	<desc>endgame item. a universal fuel althought not all building can utilize it full power efficiently. mostly non-makai building.
 		<source>Primodial Forge</source>
+	Miniature star -			Makai_StarSmall		<notdone>	<desc>a miniature star keep contained in a specialized container</desc>
 
 <Building>
 	</>Makai Interdimensional Relay - 	Makai_Bench
@@ -15,11 +16,12 @@
 	<X>Makai Energy Converter - 		Makai_En_Condens		<desc>convert raw energy into usable power. in a form of raw star particle</desc>
 	<X>Stardust Particle Collecter -	Makai_St_Conv			<desc>convert star particle into Stardust</desc>
 	<X>Celestial Steel Forge -		Makai_Cs_Forg			<desc>convert star particle into Celestial Steel</desc> 
+	<X><X>Sun Cradle - 			Makai_SunC			<desc>lategame power production. a miniature sun, right in your backyard<desc>
 	
 	<X>Primodial Forge -			Makai_PForge		<desc>a forge created in the image of The First Forge, and inherit part of it power. it had forged a foundation for all thing that exist. and that yet to exist. those who control the Primodial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any material can be forged here, even those that yet to exist in our world. \n\n Think of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</desc> 
 	
 	
-<Branching_Material> - needed to make Primodial Forge
+<Branching_Material> - needed to make Primodial Forge. each essence is used to make it own related item
 	Essence of Corruption - 	Makai_C-Path_E 		<notdone> Insanity related item
 	Essence of Bond - 		Makai_B-Path_E 		<notdone> Social boost related item
 	Essence of Fate - 		Makai_F-Path_E 		<notdone> Healing related item
