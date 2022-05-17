@@ -31,7 +31,38 @@
 	
 	<X>Primodial Forge -			Makai_PForge			<desc>a forge created in the image of The First Forge, and inherit part of it power. it had forged a foundation for all thing that exist. and that yet to exist. those who control the Primodial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any material can be forged here, even those that yet to exist in our world. \n\n Think of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</desc> 
 	
+<Equipment>
+	<Weapon>
+		</>Entity Null
+		</>Order
+		</>Knowledge Seeker
+		</>Existence
+		<X>Collapsed Will
+		<X>Frigid Star
+		<X>Sunblade
+		<X>Star Mace
+		<X>Destined Death
+	<Apparel>
+		</>Bracelet of Knowledge
+		<X>Ring of bond
+		<X>Ring of Lightning
+		<X>Ring of Absolute Order
 	
+<Item>
+	<X>Droplet of miracle
+
+	
+<Hediff>
+	Concept Destruction -				Conceptual_Destruction
+		<Source>Entity Null
+	Concept Null -					Conceptual_Null
+		<Source>Existence
+	Cease Thinking -				Knowledge_Stolen
+		<Source>Knowledge Seeker
+	Varia's Blessing -				Mak_Var_Bless
+		<Source>Bracelet of Knowledge
+		
+		
 <Branching_Material> - needed to make Primodial Forge. each essence is used to make it own related item
 	Essence of Corruption - 	Makai_C-Path_E 		<notdone> Insanity related item
 	Essence of Bond - 		Makai_B-Path_E 		<notdone> Social boost related item
