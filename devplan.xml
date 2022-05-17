@@ -1,40 +1,40 @@
 <main_material>
 	Celestial Steel - 			Makai_Ingot
-	Stardust - 					Makai_Stardust 					<desc>placbo universal fuel</desc>
+	Stardust - 				Makai_Stardust 				<desc>placbo universal fuel</desc>
 	Celestial Fabric - 			Makai_Fabric_C		<notdone> 	<desc>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resist. immune even. one of the needed material to create Primodial Forge. Thing made from Celestial Fabric will never burn.</desc>
-	Flame of the First Forge - 	Makai_Forge_Flame 	<notdone> 	<desc>endgame item. a universal fuel althought not all building can utilize it full power efficiently. mostly non-makai building.
+	Flame of the First Forge - 		Makai_Forge_Flame 	<notdone> 	<desc>endgame item. a universal fuel althought not all building can utilize it full power efficiently. mostly non-makai building.
 		<source>Primodial Forge</source>
 
 <Building>
 	</>Makai Interdimensional Relay - 	Makai_Bench
-	</>Celestial Wall - 				MakainiumWall
-	</>Makai Interdimensional Uplink - Makai_Powerlink_Relay 	<desc>research bench linkable</desc>
-	</>Stardust-particle accelerator - Makai_Turret_A
+	</>Celestial Wall - 			MakainiumWall
+	</>Makai Interdimensional Uplink - 	Makai_Powerlink_Relay 	<desc>research bench linkable</desc>
+	</>Stardust-particle accelerator - 	Makai_Turret_A
 	<X>Stardust-beam compresser -		Makai_Turret_B
 	
-	<X>Primodial Forge -				Makai_PForge			<desc>a forge created in the image of The First Forge, and inherit part of it power. it had forged a foundation for all thing that exist. and that yet to exist. those who control the Primodial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any material can be forged here, even those that yet to exist in our world. \n\n Thing of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</desc> 
+	<X>Primodial Forge -			Makai_PForge		<desc>a forge created in the image of The First Forge, and inherit part of it power. it had forged a foundation for all thing that exist. and that yet to exist. those who control the Primodial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any material can be forged here, even those that yet to exist in our world. \n\n Thing of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</desc> 
 	
 	
 <Branching_Material> - needed to make Primodial Forge
-	Essence of Corruption - Makai_C-Path_E 		<notdone> Insanity related item
+	Essence of Corruption - 	Makai_C-Path_E 		<notdone> Insanity related item
 	Essence of Bond - 		Makai_B-Path_E 		<notdone> Social boost related item
 	Essence of Fate - 		Makai_F-Path_E 		<notdone> Healing related item
-	Essence of Knowledge -	Makai_K-Path_E 		<notdone> Research speed boost
+	Essence of Knowledge -		Makai_K-Path_E 		<notdone> Research speed boost
 	Essence of Frost -		Makai_Fr-Path_E		<notdone> temperature control building. cold
 	Essence of Flame		Makai_Fla-Path_E	<notdone> temperature control building. hot
-	Essence of Existence - 	Makai_E-Path_E		<notdone> IDM. self healing speed.
-	Essence of Destruction- Makai_D-Path_E		<notdone> mitigate enemies defense. and increase their IDM.
+	Essence of Existence - 		Makai_E-Path_E		<notdone> IDM. self healing speed.
+	Essence of Destruction- 	Makai_D-Path_E		<notdone> mitigate enemies defense. and increase their IDM.
 	Essence of Order - 		Makai_Or-Path_E		<notdone> keep thing tidy. reduce mental break threshold. Slave no longer rebel. increase psyfocus gain.
 	Essence of Death - 		Makai_Dea-Path_E	<notdone> Deadly 13th. a countdown hediff that will kill a pawn in 13 days.
-	Essence of Distortion - Makai_Dis-Path_E	<notdone> undecided.
+	Essence of Distortion - Makai_Dis-Path_E		<notdone> undecided.
 
 	
 	Essence of Beyond -		Makai_SNS-Path_E	<notdone> SNS compat support. crafted from 1_Eternium 1_Stable Matter
-	Essence of Archotech - 	Makai_MAG-Path_E	<notdone> More Archotech Garbage patch. crafted with 250 ArchoMass and 25 ArchoFragment
-	Essence of Glitter - 	Makai_GT-Path_E		<notdone> Glitter Tech patch. crafted with 100 Alpha Poly and 100 Beta Poly.
-	Essence of Infinity -	Makai_Ducks-Path_E	<notdone> Duck's Insane skill patch. require pawn with 25 or more crafting to craft
-	Essence of The Deep -	Makai_Moyo-Path_E	<notdone> Moyo-From the depth patch. require 500 Abyssal Steel to craft
-	Essence of Warfare -	Makai_VFEM-Path_E	<notdone> Vanilla Faction Expanded Mechanoid patch. require 100 Mechanoid Component to craft.
+	Essence of Archotech - 		Makai_MAG-Path_E	<notdone> More Archotech Garbage patch. crafted with 250 ArchoMass and 25 ArchoFragment
+	Essence of Glitter - 		Makai_GT-Path_E		<notdone> Glitter Tech patch. crafted with 100 Alpha Poly and 100 Beta Poly.
+	Essence of Infinity -		Makai_Ducks-Path_E	<notdone> Duck's Insane skill patch. require pawn with 25 or more crafting to craft
+	Essence of The Deep -		Makai_Moyo-Path_E	<notdone> Moyo-From the depth patch. require 500 Abyssal Steel to craft
+	Essence of Warfare -		Makai_VFEM-Path_E	<notdone> Vanilla Faction Expanded Mechanoid patch. require 100 Mechanoid Component to craft.
 	Essence of Desire -		Makai_De-Path_E		<notdone> Simple Warrant patch. no, you don't get to warrant for all other essence for cheap. now pay up. this one cost 10k silver. (100k if any of the infinite resource mod is active. including Mines2.0/Planetary Drill/Omni Core Drill
 	Essence of Lust	- 		Makai_RJW-Path_E	<notdone> RJW patch. not required to make the forge, basically a reskinned fertility pill. you WILL have more kids. 
 
