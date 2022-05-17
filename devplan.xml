@@ -47,11 +47,12 @@
 <Item ParentName="Corruption">
 	Collapsed Will - Melee weapon,Claw shape,each hit give a build-up hediff. max sev = go berserk
 	Pillar of maddness - a pillar with 5x5 maddness radius. *warning* affect ally.
+	Nightmare Claw - turret that shoot claw-like  projectile. apply stacking hediff that caused berserk.
 
 <Item ParentName="Bond">
 	Ring of bond - wearer gain increased social boost.
 	Pillar of communication - 5x5 radius social boost.
-	Bond Forge - a building that give nearby pawn mood boost
+	Bond Forge - a building that give nearby pawn mood boost <Require Vanilla Faction Expanded - Mechanoid>
 
 <Item ParentName="Fate">
 	Convergence of Fate - Building that give immunity gain speed and injury healing speed.
@@ -68,7 +69,7 @@
 <Item ParentName="Flame">
 	Sunblade - Flame sword. deal heat damage. make user immune to heat. can shoot fireball
 	Passioned Flame - a building that heat up room. give heatstroke hediff in 2x2 radius, plan carefully.
-	Star Mace - similar to Sun Cradle. an minature sun, but even smaller and more dense. melt target armor. and set them on fire.
+	Star Mace - similar to Sun Cradle. an miniature sun, but even smaller and more dense. melt target armor. and set them on fire. can shoot fireball.
 	
 <Item ParentName="Existence">
 	Existence(the weapon) - Halberd that give user massive boost to healing ability. reduce pain they feel.		<done>
@@ -77,6 +78,7 @@
 <Item ParentName="Destruction">
 	Entity Null - Gigantic sword. shoot lightning. nullify enemies defense. and increase target IDM.	<done>
 	Ring of Lightning - a lightning ring that periodically shoot at enemies. give move speed increase.
+	Storm Caller - a big pillar that act as turret. shoot Lightning. <Require Vanilla Weapon Expanded - Laser>
 	
 <Item ParentName="Order">
 	Order(the weapon) - a big halberd. reduce wearer mental break threshold. increase psyfocus gain. reduce psycast heat gain.
