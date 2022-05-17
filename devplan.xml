@@ -64,27 +64,28 @@
 		
 		
 <Branching_Material> - needed to make Primodial Forge. each essence is used to make it own related item
-	Essence of Corruption - 	Makai_C-Path_E 		<notdone> Insanity related item
-	Essence of Bond - 		Makai_B-Path_E 		<notdone> Social boost related item
-	Essence of Fate - 		Makai_F-Path_E 		<notdone> Healing related item
-	Essence of Knowledge -		Makai_K-Path_E 		<notdone> Research speed boost
-	Essence of Frost -		Makai_Fr-Path_E		<notdone> temperature control building. cold
-	Essence of Flame		Makai_Fla-Path_E	<notdone> temperature control building. hot
-	Essence of Existence - 		Makai_E-Path_E		<notdone> IDM. self healing speed.
-	Essence of Destruction- 	Makai_D-Path_E		<notdone> mitigate enemies defense. and increase their IDM.
-	Essence of Order - 		Makai_Or-Path_E		<notdone> keep thing tidy. reduce mental break threshold. Slave no longer rebel. increase psyfocus gain.
-	Essence of Death - 		Makai_Dea-Path_E	<notdone> Deadly 13th. a countdown hediff that will kill a pawn in 13 days.
-	Essence of Distortion - 	Makai_Dis-Path_E	<notdone> undecided.
+	Essence of Corruption - 	Makai_C-Path_E 		<art notdone><xml notdone> Insanity related item
+	Essence of Bond - 		Makai_B-Path_E 		<art notdone><xml notdone> Social boost related item
+	Essence of Fate - 		Makai_F-Path_E 		<art notdone><xml notdone> Healing related item
+	Essence of Knowledge -		Makai_K-Path_E 		<art notdone><xml notdone> Research speed boost
+	Essence of Frost -		Makai_Fr-Path_E		<art notdone><xml notdone> temperature control building. cold
+	Essence of Flame		Makai_Fla-Path_E	<art notdone><xml notdone> temperature control building. hot
+	Essence of Existence - 		Makai_E-Path_E		<art notdone><xml notdone> IDM. self healing speed.
+	Essence of Destruction- 	Makai_D-Path_E		<art notdone><xml notdone> mitigate enemies defense. and increase their IDM.
+	Essence of Order - 		Makai_Or-Path_E		<art notdone><xml notdone> keep thing tidy. reduce mental break threshold. Slave no longer rebel. increase psyfocus gain.
+	Essence of Death - 		Makai_Dea-Path_E	<art notdone><xml notdone> Deadly 13th. a countdown hediff that will kill a pawn in 13 days.
+	Essence of Distortion - 	Makai_Dis-Path_E	<art notdone><xml notdone> undecided.
 
+<Modded_Essence>
 	
-	Essence of Beyond -		Makai_SNS-Path_E	<notdone> SNS compat support. crafted from 1_Eternium 1_Stable Matter
-	Essence of Archotech - 		Makai_MAG-Path_E	<notdone> More Archotech Garbage patch. crafted with 250 ArchoMass and 25 ArchoFragment
-	Essence of Glitter - 		Makai_GT-Path_E		<notdone> Glitter Tech patch. crafted with 100 Alpha Poly and 100 Beta Poly.
-	Essence of Infinity -		Makai_Ducks-Path_E	<notdone> Duck's Insane skill patch. require pawn with 25 or more crafting to craft
-	Essence of The Deep -		Makai_Moyo-Path_E	<notdone> Moyo-From the depth patch. require 500 Abyssal Steel to craft
-	Essence of Warfare -		Makai_VFEM-Path_E	<notdone> Vanilla Faction Expanded Mechanoid patch. require 100 Mechanoid Component to craft.
-	Essence of Desire -		Makai_De-Path_E		<notdone> Simple Warrant patch. no, you don't get to warrant for all other essence for cheap. now pay up. this one cost 10k silver. (100k if any of the infinite resource mod is active. including Mines2.0/Planetary Drill/Omni Core Drill
-	Essence of Lust	- 		Makai_RJW-Path_E	<notdone> RJW patch. not required to make the forge, basically a reskinned fertility pill. you WILL have more kids. 
+	Essence of Beyond -		Makai_SNS-Path_E	<art notdone><xml notdone> SNS compat support. crafted from 1_Eternium 1_Stable Matter
+	Essence of Archotech - 		Makai_MAG-Path_E	<art notdone><xml notdone> More Archotech Garbage patch. crafted with 250 ArchoMass and 25 ArchoFragment
+	Essence of Glitter - 		Makai_GT-Path_E		<art notdone><xml notdone> Glitter Tech patch. crafted with 100 Alpha Poly and 100 Beta Poly.
+	Essence of Infinity -		Makai_Ducks-Path_E	<art notdone><xml notdone> Duck's Insane skill patch. require pawn with 25 or more crafting to craft
+	Essence of The Deep -		Makai_Moyo-Path_E	<art notdone><xml notdone> Moyo-From the depth patch. require 500 Abyssal Steel to craft
+	Essence of Warfare -		Makai_VFEM-Path_E	<art notdone><xml notdone> Vanilla Faction Expanded Mechanoid patch. require 100 Mechanoid Component to craft.
+	Essence of Desire -		Makai_De-Path_E		<art notdone><xml notdone> Simple Warrant patch. no, you don't get to warrant for all other essence for cheap. now pay up. this one cost 10k silver. (100k if any of the infinite resource mod is active. including Mines2.0/Planetary Drill/Omni Core Drill
+	Essence of Lust	- 		Makai_RJW-Path_E	<art notdone><xml notdone> RJW patch. not required to make the forge, basically a reskinned fertility pill. you WILL have more kids. 
 
 <Item ParentName="Corruption">
 	Collapsed Will - Melee weapon,Claw shape,each hit give a build-up hediff. max sev = go berserk
