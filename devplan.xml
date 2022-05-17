@@ -1,10 +1,10 @@
 <main_material>
 	Celestial Steel - 			Makai_Ingot
 	Stardust - 				Makai_Stardust 				<desc>placbo universal fuel</desc>
-	Celestial Fabric - 			Makai_Fabric_C		<notdone> 	<desc>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resist. immune even. one of the needed material to create Primodial Forge. Thing made from Celestial Fabric will never burn.</desc>
+	Celestial Fabric - 			Makai_Fabric_C		art<X> xml</> 	<desc>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resist. immune even. one of the needed material to create Primodial Forge. Thing made from Celestial Fabric will never burn.</desc>
 	Flame of the First Forge - 		Makai_Forge_Flame 	<notdone> 	<desc>endgame item. a universal fuel althought not all building can utilize it full power efficiently. mostly non-makai building.
 		<source>Primodial Forge</source>
-	Miniature star -			Makai_StarSmall		<notdone>	<desc>a miniature star keep contained in a specialized container</desc>
+	Miniature star -			Makai_StarSmall		art<X> xml</>	<desc>a miniature star keep contained in a specialized container</desc>
 
 <Building>
 	<Production>
