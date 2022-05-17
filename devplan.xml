@@ -66,6 +66,7 @@
 <Item ParentName="Flame">
 	Sunblade - Flame sword. deal heat damage. make user immune to heat. can shoot fireball
 	Passioned Flame - a building that heat up room. give heatstroke hediff in 2x2 radius, plan carefully.
+	Star Mace - similar to Sun Cradle. an minature sun, but even smaller and more dense. melt target armor. and set them on fire.
 	
 <Item ParentName="Existence">
 	Existence(the weapon) - Halberd that give user massive boost to healing ability. reduce pain they feel.		<done>
