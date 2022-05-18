@@ -1,59 +1,64 @@
 <main_material>
-	Celestial Steel - 			Makai_Ingot
-	Stardust - 				Makai_Stardust 				<desc>placbo universal fuel</desc>
-	Celestial Fabric - 			Makai_Fabric_C		art<X> xml</> 	<desc>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resist. immune even. one of the needed material to create Primodial Forge. Thing made from Celestial Fabric will never burn.</desc>
-	Flame of the First Forge - 		Makai_Forge_Flame 	<notdone> 	<desc>endgame item. a universal fuel althought not all building can utilize it full power efficiently. mostly non-makai building.
-		<source>Primodial Forge</source>
-	Miniature star -			Makai_StarSmall		art<X> xml</>	<desc>a miniature star keep contained in a specialized container</desc>
+	Celestial Steel - 				Makai_Ingot
+	Stardust - 					Makai_Stardust 					<desc>placbo universal fuel</desc>
+	Celestial Fabric - 				Makai_Fabric_C		Art<X> Xml</> 		<desc>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resist. immune even. one of the needed material to create Primodial Forge. Thing made from Celestial Fabric will never burn.</desc>
+	Flame of the First Forge - 			Makai_Forge_Flame 	<notdone> 		<desc>endgame item. a universal fuel althought not all building can utilize it full power efficiently. mostly non-makai building.
+		<Source>Primodial Forge</source>
+	Miniature star -				Makai_StarSmall		art<X/> xml</>		<desc>a miniature star keep contained in a specialized container</desc>
 
 <Building>
 	<Production>
-	</>Makai Interdimensional Relay - 	Makai_Bench
-	<X>Interdimension Receiver - 		Makai_En_Reciever		<desc>recieve raw energy from Makai</desc>
-	<X>Makai Energy Converter - 		Makai_En_Condens		<desc>convert raw energy into usable power. in a form of raw star particle</desc>
-	<X>Stardust Particle Collecter -	Makai_St_Conv			<desc>convert star particle into Stardust</desc>
-	<X>Celestial Steel Forge -		Makai_Cs_Forg			<desc>convert star particle into Celestial Steel</desc> 
+	</>Makai Interdimensional Relay - 		Makai_Bench
+	<X>Interdimension Receiver - 			Makai_En_Reciever		<desc>recieve raw energy from Makai</desc>
+	<X>Makai Energy Converter - 			Makai_En_Condens		<desc>convert raw energy into usable power. in a form of raw star particle</desc>
+	<X>Stardust Particle Collecter -		Makai_St_Conv			<desc>convert star particle into Stardust</desc>
+	<X>Celestial Steel Forge -			Makai_Cs_Forg			<desc>convert star particle into Celestial Steel</desc> 
 	
 	<Structure>
-	</>Celestial Wall - 			MakainiumWall
+	</>Celestial Wall - 				MakainiumWall
+	
+	<Floor>
+	<X>Celestial Floor -				MakaiFloorA
 	
 	<Linkable>
-	</>Makai Interdimensional Uplink - 	Makai_Powerlink_Relay 		<desc>research bench linkable</desc>
+	</>Makai Interdimensional Uplink - 		Makai_Powerlink_Relay 		<desc>research bench linkable</desc>
 	
 	<Security>
-	</>Stardust-particle accelerator - 	Makai_Turret_A
-	<X>Stardust-beam compresser -		Makai_Turret_B
+	</>Stardust-particle accelerator - 		Makai_Turret_A
+	<X>Stardust-beam compresser -			Makai_Turret_B
+	<X>Nightmare Claw - 				Makai_Turret_CRupt
+	<X>Storm Caller -				Makai_Turret_SC
+	<X>
 	
 	<Power>
-	<X>Sun Cradle - 			Makai_SunC			<desc>lategame power production. a miniature sun, right in your backyard<desc>
+	<X>Sun Cradle - 				Makai_SunC			<desc>lategame power production. a miniature sun, right in your backyard<desc>
 	
 	<EndGameGoal>
-	
-	<X>Primodial Forge -			Makai_PForge			<desc>a forge created in the image of The First Forge, and inherit part of it power. it had forged a foundation for all thing that exist. and that yet to exist. those who control the Primodial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any material can be forged here, even those that yet to exist in our world. \n\n Think of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</desc> 
+	<X>Primodial Forge -				Makai_PForge			<desc>a forge created in the image of The First Forge, and inherit part of it power. it had forged a foundation for all thing that exist. and that yet to exist. those who control the Primodial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any material can be forged here, even those that yet to exist in our world. \n\n Think of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</desc> 
 	
 <Equipment>
 	<Weapon>
-		</>Entity Null			Makai_Anva_Sword		<desc>Gigantic sword. shoot lightning. nullify enemies defense. and increase target IDM.
-		</>Order			Makai_Ama_Berd			<desc>a big halberd. reduce wearer mental break threshold. increase psyfocus gain. reduce psycast heat gain.
-		</>Knowledge Seeker		Makai_Bow_Varia			<desc>Bow that increase user learning speed. precise aim. also stop target from thinking.	
-		</>Existence			Makai_Ouro_Berd			<desc>Halberd that give user massive boost to healing ability. reduce pain they feel.
-		<X/>Collapsed Will		Makai_Alf_Claw			<desc>Melee weapon,Claw shape,each hit give a build-up hediff. max sev = go berserk
-		<X/>Frigid Star			Makai_Yuki_Staff		<desc>Staff weapon. considered as ranged. shoot cold orb that inflic hyperthemia and unique debuff.
-		<X>Sunblade			Makai_Mica_Sword		<desc>Flame sword. deal heat damage. make user immune to heat. can shoot fireball
-		<X>Star Mace			Makai_Mica_Mace			<desc>similar to Sun Cradle. an miniature sun, but even smaller and more dense. melt target armor. and set them on fire. can shoot fireball.
-		<X>Destined Death		Makai_Sari_Scy			<desc>a big scythe. insanely high armor pen. but deal no damage. on hit give a stacking hediff, once reach full severity victim will die in 13 days.
+		</>Entity Null				Makai_Anva_Sword		<desc>Gigantic sword. shoot lightning. nullify enemies defense. and increase target IDM.
+		</>Order				Makai_Ama_Berd			<desc>a big halberd. reduce wearer mental break threshold. increase psyfocus gain. reduce psycast heat gain.
+		</>Knowledge Seeker			Makai_Bow_Varia			<desc>Bow that increase user learning speed. precise aim. also stop target from thinking.	
+		</>Existence				Makai_Ouro_Berd			<desc>Halberd that give user massive boost to healing ability. reduce pain they feel.
+		<X/>Collapsed Will			Makai_Alf_Claw			<desc>Melee weapon,Claw shape,each hit give a build-up hediff. max sev = confuse or run in panic
+		<X/>Frigid Star				Makai_Yuki_Staff		<desc>Staff weapon. considered as ranged. shoot cold orb that inflic hyperthemia and unique debuff.
+		<X>Sunblade				Makai_Mica_Sword		<desc>Flame sword. deal heat damage. make user immune to heat. can shoot fireball
+		<X>Star Mace				Makai_Mica_Mace			<desc>similar to Sun Cradle. a miniature sun, but even smaller and more dense. melt target armor. and set them on fire. can shoot fireball.
+		<X>Destined Death			Makai_Sari_Scy			<desc>a big scythe. insanely high armor pen. but deal no damage. on hit give a stacking hediff, once reach full severity victim will die in 13 hours.
 	<Apparel>
-		</>Bracelet of Knowledge
-		<X>Ring of bond
-		<X>Ring of Lightning
-		<X>Ring of Absolute Order
+		</>Bracelet of Knowledge		Makai_Varia_Brace
+		<X>Ring of bond				Makai_Aria_Ring
+		<X>Ring of Lightning			Makai_Anva_Ring
+		<X>Ring of Absolute Order		Makai_Ama_Ring
 	
 <Item>
-	<X>Droplet of miracle
+	<X>Droplet of miracle				Makai_Nephi_Drop
 
 	
 <Hediff>
-	Concept Destruction -				Conceptual_Destruction
+	Concept Destruction -			Conceptual_Destruction
 		<Source>Entity Null
 	Concept Null -					Conceptual_Null
 		<Source>Existence
@@ -61,7 +66,10 @@
 		<Source>Knowledge Seeker
 	Varia's Blessing -				Mak_Var_Bless
 		<Source>Bracelet of Knowledge
-		
+	Concept Corrupt					Conceptual_Corrupt	
+		<Source>Collapse Will
+	Concept Frost					Conceptual_Frost
+		<Source>Frigid Star
 		
 <Branching_Material> - needed to make Primodial Forge. each essence is used to make it own related item
 	Essence of Corruption - 	Makai_C-Path_E 		<art notdone><xml notdone> Insanity related item
@@ -88,7 +96,7 @@
 	Essence of Lust	- 		Makai_RJW-Path_E	<art notdone><xml notdone> RJW patch. not required to make the forge, basically a reskinned fertility pill. you WILL have more kids. 
 
 <Item ParentName="Corruption">
-	Collapsed Will - Melee weapon,Claw shape,each hit give a build-up hediff. max sev = go berserk
+	Collapsed Will - Melee weapon,Claw shape,each hit give a build-up hediff. max sev = go berserk <xml done><art notdone>
 	Pillar of maddness - a pillar with 5x5 maddness radius. *warning* affect ally.
 	Nightmare Claw - turret that shoot claw-like  projectile. apply stacking hediff that caused berserk.
 
@@ -103,10 +111,10 @@
 
 <Item ParentName="Knowledge">
 	Varia Bracelet - Increase research speed and learning speed. some boost to global work speed.	<done>
-	Knowledge Seeker - Bow that increase user learning speed. precise aim.	<done>
+	Knowledge Seeker - Bow that increase user learning speed. precise aim. also stop target from thinking.	<done>
 	
 <Item ParentName="Frost">
-	Frigid Star	- Staff weapon. considered as ranged. shoot cold orb that inflic hyperthemia and unique debuff.
+	Frigid Star	- Staff weapon. considered as ranged. shoot cold orb that inflic hyperthemia and unique debuff.		<xml done><art notdone>
 	Cold Slumber - a building that cool down room. give hypothemia hediff in a 2x2 radius, plan carefully.
 	
 <Item ParentName="Flame">
@@ -132,5 +140,6 @@
 	The Death Reversed - 13 use resurrecter. no drawback <Require More Archotech Garbage>
 	
 <Item ParentName="Distortion">
+	
 	
 	
