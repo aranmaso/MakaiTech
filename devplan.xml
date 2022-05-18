@@ -37,8 +37,8 @@
 		</>Order			Makai_Ama_Berd			<desc>a big halberd. reduce wearer mental break threshold. increase psyfocus gain. reduce psycast heat gain.
 		</>Knowledge Seeker		Makai_Bow_Varia			<desc>Bow that increase user learning speed. precise aim. also stop target from thinking.	
 		</>Existence			Makai_Ouro_Berd			<desc>Halberd that give user massive boost to healing ability. reduce pain they feel.
-		<X>Collapsed Will		Makai_Alf_Claw			<desc>Melee weapon,Claw shape,each hit give a build-up hediff. max sev = go berserk
-		<X>Frigid Star			Makai_Yuki_Staff		<desc>Staff weapon. considered as ranged. shoot cold orb that inflic hyperthemia and unique debuff.
+		<X/>Collapsed Will		Makai_Alf_Claw			<desc>Melee weapon,Claw shape,each hit give a build-up hediff. max sev = go berserk
+		<X/>Frigid Star			Makai_Yuki_Staff		<desc>Staff weapon. considered as ranged. shoot cold orb that inflic hyperthemia and unique debuff.
 		<X>Sunblade			Makai_Mica_Sword		<desc>Flame sword. deal heat damage. make user immune to heat. can shoot fireball
 		<X>Star Mace			Makai_Mica_Mace			<desc>similar to Sun Cradle. an miniature sun, but even smaller and more dense. melt target armor. and set them on fire. can shoot fireball.
 		<X>Destined Death		Makai_Sari_Scy			<desc>a big scythe. insanely high armor pen. but deal no damage. on hit give a stacking hediff, once reach full severity victim will die in 13 days.
