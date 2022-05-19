@@ -58,7 +58,7 @@
 
 	
 <Hediff>
-	Concept Destruction -			Conceptual_Destruction
+	Concept Destruction -				Conceptual_Destruction
 		<Source>Entity Null
 	Concept Null -					Conceptual_Null
 		<Source>Existence
