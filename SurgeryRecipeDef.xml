@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--Corruption-->
+	<ThingDef ParentName="EssenseBase">
+		<defName>Makai_C-Path_E_Seed</defName>
+		<label>Seed of Corruption</label>
+		<description>Essense of pure corruption, pulsing with unimaginable power.</description>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_claw</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+		</statBases>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>100</Makai_Stardust>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Surgery</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+			<researchPrerequisites>
+				<li>Makai_Essence2</li>
+			</researchPrerequisites>
+			<recipeUsers>
+				<li>Makai_Bench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>Makai_Induce_Insanity</defName>
+		<label>Induce insanity</label>
+		<description>Incubate essence of insanity into target</description>
+		<jobString>Induce insanity into TargetA.</jobString>
+		<workAmount>1000</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<addsHediff>Essence_Incubating_Insanity</addsHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully induce insanity into {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence2</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter><categories><li>Medicine</li></categories></filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_C-Path_E_Seed</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Makai_C-Path_E_Seed</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Makai_Harvest_Insanity</defName>
+		<label>Harvest Essence - Insanity</label>
+		<description>Extract incubating essence from target</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>extract essence from TargetA.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<targetsBodyPart>true</targetsBodyPart>
+		<removesHediff>Essence_Incubating_Complete_Insanity</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully harvest essence of insanity from {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence2</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients>
+		</ingredients>
+		<fixedIngredientFilter>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<products>
+			<Makai_C-Path_E>1</Makai_C-Path_E>
+		</products>
+	</RecipeDef>
+	
+	<!--Bond-->
+	<ThingDef ParentName="EssenseBase">
+		<defName>Makai_B-Path_Seed</defName>
+		<label>Base Essence of Bond</label>
+		<description>Essense of pure corruption, pulsing with unimaginable power.</description>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+		</statBases>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>100</Makai_Stardust>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Surgery</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+			<researchPrerequisites>
+				<li>Makai_Essence4</li>
+			</researchPrerequisites>
+			<recipeUsers>
+				<li>Makai_Bench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="EssenseBase">
+		<defName>Makai_B-Path_Frag</defName>
+		<label>Bond Fragment</label>
+		<description>Essense of pure corruption, pulsing with unimaginable power.</description>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<statBases>
+		</statBases>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>Makai_Induce_Bond</defName>
+		<label>Empowering Bond</label>
+		<description>Embed base essence of bond.</description>
+		<jobString>Embed base essence into TargetA.</jobString>
+		<workAmount>1000</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<addsHediff>Essence_Growth_Bond_Giver</addsHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully embed base essence into {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence4</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter><categories><li>Medicine</li></categories></filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_B-Path_Seed</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Makai_B-Path_Seed</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Makai_Harvest_Bond_Frag</defName>
+		<label>Harvest Essence - Bond Fragment</label>
+		<description>Extract incubating bond fragment from target</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>extract fragment from TargetA.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<targetsBodyPart>true</targetsBodyPart>
+		<removesHediff>Essence_Growth_Bond</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully harvest essence of insanity from {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence4</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+		</ingredients>
+		<fixedIngredientFilter>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<products>
+			<Makai_B-Path_Frag>1</Makai_B-Path_Frag>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Makai_Harvest_Bond_Seed</defName>
+		<label>Harvest Base Essence - Bond</label>
+		<description>Extract seed from target</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>extract base essence from TargetA.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<targetsBodyPart>true</targetsBodyPart>
+		<removesHediff>Essence_Growth_Bond_Giver</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully harvest seed of bond from {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence4</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+		</ingredients>
+		<fixedIngredientFilter>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<products>
+			<Makai_B-Path_Seed>1</Makai_B-Path_Seed>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Makai_Harvest_Bond</defName>
+		<label>Harvest Essence - Bond</label>
+		<description>Extract seed from target</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>extract base essence from TargetA.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<targetsBodyPart>true</targetsBodyPart>
+		<removesHediff>Essence_Incubating_Complete_Bond</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully harvest essence of bond from {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence4</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_B-Path_Seed</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_B-Path_Frag</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_B-Path_Seed</li>
+				<li>Makai_B-Path_Frag</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<products>
+			<Makai_B-Path_E>1</Makai_B-Path_E>
+		</products>
+	</RecipeDef>
+	
+	<!--Fate-->
+	<ThingDef ParentName="EssenseBase">
+		<defName>Makai_F-Path_Seed</defName>
+		<label>Base Essence of Fate</label>
+		<description>Essense of pure corruption, pulsing with unimaginable power.</description>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_claw</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<butcherProducts>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>1000</Plasteel>
+		</butcherProducts>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+		</statBases>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>100</Makai_Stardust>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Surgery</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>15</Crafting>
+			</skillRequirements>
+			<researchPrerequisites>
+				<li>Makai_Essence2</li>
+			</researchPrerequisites>
+			<recipeUsers>
+				<li>Makai_Bench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="EssenseBase">
+		<defName>Makai_F-Path_Frag</defName>
+		<label>Fated Fragment</label>
+		<description>Essense of pure corruption, pulsing with unimaginable power.</description>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<statBases>
+		</statBases>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>Makai_Induce_Fate</defName>
+		<label>Empowering Fate</label>
+		<description>Incubate essence of fate into target</description>
+		<jobString>Induce fate into TargetA.</jobString>
+		<workAmount>1000</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>true</isViolation>
+		<addsHediff>Essence_Fate_Buffer</addsHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully induce fate into {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence2</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter><categories><li>Medicine</li></categories></filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_F-Path_Seed</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Makai_F-Path_Seed</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+</Defs>
