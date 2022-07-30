@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<EssenceOfTheUniverse>
+
+	<!-- order from easiest to hardest to acquire -->
+		<note>MFA = Makai Fabrication Altar</note>
+	<Essence_Of_Corruption>
+		<Method>
+			<li>Finish specific research, then craft seed of corruption from Makai Fabrication Altar</li>
+			<li>perform operation to plant the seed into pawn brain. take 5 days to growth into Slumbering Essence of Corruption</li>
+			<li>during the 5 days duration, victim will experience constant berserk.</li>
+			<li>once the seed is fully grow. extract it from the pawn(Lethal) to get Essence of Insanity</li>
+		</Method>
+	</Essence_Of_Corruption>
+	
+	<Essence_Of_Order>
+		<Method>
+			<li>Finish specific research.</li>
+			<li>similar to Seed of Corruption, plant the base essence inside pawn brain and wait for 5 days</li>
+			<li>pawn with seed will experience increase mood boost, gain suppressionPerDay instead of losing(incase of slave) never have mental break.</li>
+			<li>after 5 days base essence will grow into Slumbering Essence of Order</li>
+		</Method>
+	</Essence_Of_Order>
+	
+	<Essence_Of_Knowledge>
+		<Method>
+			<li>Finish a 120k point research(it own specific research) then craft 3 Fragment of Knowledge from MFA</li>
+			<li>Combine the 3 Fragment of Knowledge into Essence of Knowledge at MFA</li>
+		</Method>
+	</Essence_Of_Knowledge>
+	
+	<Essence_of_Flame>
+		<Method>
+			<li>Finish specific research, then build Essence Consolidator - Flame</li>
+			<li>Craft Base Essence of Flame from MFA</li>
+			<li>Process it in the machine for 5 days</li>
+			<li>in order for machine to work, room need to be in at least 200c or higher</li>
+		</Method>
+	</Essence_of_Flame>
+	
+	<Essence_of_Frost>
+		<Method>
+			<li>Finish specific research, then build Essence Consolidator - Frost</li>
+			<li>Craft Base Essence of Frost from MFA</li>
+			<li>Process it in the machine for 5 days</li>
+			<li>in order for machine to work, room need to be in at least -100c or lower</li>
+		</Method>
+	</Essence_of_Frost>
+	
+	<Essence_Of_Death>
+		<Method>
+			<li>Finish specific research,</li>
+			<li>Craft Fragment of Death - First Half at MFA. require 100 corses of any type</li>
+			<li>Craft Fragment of Death - Second Half at MFA. require 20 heart</li>
+			<li>Harvest 1 Soul from humanlike pawn through operation(Lethal)</li>
+		</Method>
+	</Essence_Of_Death>
+	
+	<Essence_Of_Distortion>
+		<Method> <!-- May change in the future -->
+			<li>Finish specific research</li>
+			<li>combine Essence of Order and Corruption</li>
+		</Method>
+	</Essence_Of_Distortion>
+	
+	<Essence_Of_Destruction>
+		<Method>
+			<li>Finish specific research</li>
+			<li>combinee Essence of Flame,Death,Corruption</li>
+		</Method>
+	</Essence_Of_Destruction>
+	
+	<Essence_Of_Bond>
+		<Method>
+			<li>Finish specific research</li>
+			<li>Craft Base Essence of Bond from MFA</li>
+			<li>install into pawn as implant called Warmth of Bond.</li>
+			<li>pawn with WoB will emit Bond aura. give nearby pawn a Bond level</li>
+			<li>Bond Level increase at minimum once per day. a total of 5 days needed to reach lvl 5</li>
+			<li>Once Bond Level reach lvl 5. there will be a new hediff, Bond Fragment.</li>
+			<li>Extract at least 2 Bond Fragment and extract base essence to combine into Bond Fragment.</li>
+		</Method>
+	</Essence_Of_Bond>
+	
+	<Essence_Of_Fate>
+		<Method>
+			<li>
+			Implant String of Fate into pawn, setMax Consciousness to 1%. 
+			over the duration of 5 days will transform each limb and part into Fated [Bodypart_Name]
+			after 5 days has passed, Fated Bodypart will get stronger every 24 hours.
+			String of Fate will disappear and replace with Fated Heart and apply Fated Encounter. 
+			pawn will be in permanent Berserk for 5 days.
+			player have to defeat that pawn without killing. 
+			after doing so they have to be keep contained until Fated Encounter reach full severity
+			at max severity Fated Encounter no longer give mental break.
+			Fated Implant will reach full severity after at least 10 days including the time they spawn in during transformation.
+			at max severity Fated Implant will turn into full on Fated Bodypart. after that each Fated Bodypart can be harvest/remove to gain
+			Fated Fragment. since there no lung replacement in vanilla there will be a temporary fake lung that cost 5 stardust.
+			take all 10 Fated Fragment and craft into 1 Essence of Fate at Makai Altar
+			alternatively, player can keep the super pawn without harvesting part.
+			</li>
+		</Method>
+	</Essence_Of_Fate>
+	
+	<Essence_Of_Existence>
+		<Method>
+			<li>Finish specific research</li>
+			<li>Combine all essence together</li>
+		</Method>
+	</Essence_Of_Existence>
+	
+	
+	
+</EssenceOfTheUniverse>
