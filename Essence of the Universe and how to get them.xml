@@ -85,7 +85,7 @@
 		<Method>
 			<li>
 			Implant String of Fate into pawn, setMax Consciousness to 1%. 
-			over the duration of 5 days will transform each limb and part into Fated [Bodypart_Name]
+			over the duration of 5 days will transform each limb and part into Fated [Bodypart_Name] Implant.
 			after 5 days has passed, Fated Bodypart will get stronger every 24 hours.
 			String of Fate will disappear and replace with Fated Heart and apply Fated Encounter. 
 			pawn will be in permanent Berserk for 5 days.
