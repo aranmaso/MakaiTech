@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+    <defName>Makai_FlamePillar</defName>
+    <label>Pillar of Flame</label>
+    <description>pillar of flame utilizing the essence of flame. will heat the room up to 250c</description>
+    <graphicData>
+      <texPath>Things/Building/FlamePillar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+	  <drawOffset>(0,0.2,0.5)</drawOffset>
+    </graphicData>
+	<uiIconPath>Things/Building/FlamePillar</uiIconPath>
+    <uiIconScale>1</uiIconScale>
+    <researchPrerequisites>
+		<li>Makai_Essence3</li>
+	</researchPrerequisites>
+	<tickerType>Normal</tickerType>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationHotKey>Misc4</designationHotKey>
+    <designationCategory>Makai_Tech</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <WorkToBuild>20000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+	<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <costList>
+      <Makai_Ingot>10</Makai_Ingot>
+	  <Makai_Fla-Path_E>1</Makai_Fla-Path_E>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <comps>
+    <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>1000</basePowerConsumption>
+    </li>
+	<li Class="CompProperties_Glower">
+			<glowRadius>2</glowRadius>
+			<glowColor>(238,142,0)</glowColor>
+	</li>
+    <li Class="CompProperties_Flickable"/>
+	<li Class="CompProperties_HeatPusher">
+		<compClass>CompHeatPusherPowered</compClass>
+		<heatPerSecond>250</heatPerSecond>
+		<heatPushMaxTemperature>250</heatPushMaxTemperature>
+	</li>
+    </comps>
+    <placeWorkers>
+    </placeWorkers>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+    <defName>Makai_FrostPillar</defName>
+    <label>Pillar of Frost</label>
+    <description>pillar of frost utilizing the essence of frost. will cool the room down to -273c</description>
+    <graphicData>
+      <texPath>Things/Building/FrostPillar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+	  <drawOffset>(0,0.2,0.5)</drawOffset>
+    </graphicData>
+	<uiIconPath>Things/Building/FrostPillar</uiIconPath>
+    <uiIconScale>1</uiIconScale>
+    <researchPrerequisites>
+		<li>Makai_Essence3</li>
+	</researchPrerequisites>
+	<tickerType>Normal</tickerType>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationHotKey>Misc4</designationHotKey>
+    <designationCategory>Makai_Tech</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <WorkToBuild>20000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+	<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <costList>
+      <Makai_Ingot>10</Makai_Ingot>
+	  <Makai_Fr-Path_E>1</Makai_Fr-Path_E>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <comps>
+    <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>1000</basePowerConsumption>
+    </li>
+	<li Class="CompProperties_Glower">
+			<glowRadius>2</glowRadius>
+			<glowColor>(0,179,238)</glowColor>
+	</li>
+    <li Class="CompProperties_Flickable"/>
+	<li Class="CompProperties_HeatPusher">
+		<compClass>CompHeatPusherPowered</compClass>
+		<heatPerSecond>-500</heatPerSecond>
+		<heatPushMinTemperature>-273</heatPushMinTemperature>
+	</li>
+    </comps>
+    <placeWorkers>
+    </placeWorkers>
+    <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+	</ThingDef>
+
+
+
+</Defs>
