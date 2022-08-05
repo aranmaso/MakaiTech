@@ -262,7 +262,7 @@
 		<showHoursToRecover>true</showHoursToRecover>
       </li>
       <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <disappearsAfterTicks>26000</disappearsAfterTicks>
       </li>
     </comps>
     <stages>
@@ -748,37 +748,7 @@
 		</li>
     </stages>
   </HediffDef>
-  <!--HediffDef ParentName="DiseaseBase">
-    <defName>Destined_Death_Permanent</defName>
-    <label>Death Curse</label>
-    <description>you not suppose to see this. this hediff will keep apply "End of the line" to prevent pawn from being resurrected.</description>
-    <isBad>false</isBad>
-	<initialSeverity>1</initialSeverity>
-    <maxSeverity>1</maxSeverity>
-    <comps>
-	  <li Class="HediffCompProperties_Discoverable">
-        <sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
-      </li>
-    </comps>
-    <stages>
-		<li>
-				<becomeVisible>false</becomeVisible>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<setMax>0</setMax>
-					</li>
-				</capMods>
-				<hediffGivers>
-				<li Class="HediffGiver_Random">
-				<hediff>Destined_Death</hediff>
-				<mtbDays>0.001</mtbDays>
-				<countToAffect>1</countToAffect>
-				</li>
-				</hediffGivers>
-		</li>
-    </stages>
-  </HediffDef-->
+  
   
   <!--===============================================-->
   
