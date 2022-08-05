@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XmlExtensions.SettingsMenuDef>
+		<defName>Summary_of_this_mod</defName>
+		<modId>Aranmaho.Makai</modId>
+		<settings>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>About Makai:\n\n Makai. a civilization of advanced technology and magic advanced far beyond even Archotech. after exploring every inch and corner of their universe \n they're begin to send various expedition fleet to other dimension. and one of those fleet just happen to arrive in Rimworld universe  </text>
+			</li>
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+</Defs>
