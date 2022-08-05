@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<WorkGiverDef>
+    <defName>DoBillMakaiBench</defName>
+    <label>fabricate makai things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+		<li>Makai_Bench</li>
+    </fixedBillGiverDefs>
+    <verb>making things</verb>
+    <gerund>making makai items at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<WorkGiverDef Name="ForgeCraftBase">
+    <defName>DoBillPrimoForge</defName>
+    <label>materialize matter</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+		<li>Makai_PrimordialForge</li>
+    </fixedBillGiverDefs>
+    <verb>making things</verb>
+    <gerund>making items at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<WorkGiverDef ParentName="ForgeCraftBase">
+    <defName>DoBillPrimoForgeResource</defName>
+    <label>materialize matter</label>
+    <fixedBillGiverDefs>
+		<li>Makai_PrimoForge_RawResourceModule</li>
+    </fixedBillGiverDefs>
+	</WorkGiverDef>
+	
+	<WorkGiverDef ParentName="ForgeCraftBase">
+    <defName>DoBillPrimoForgeCloth</defName>
+    <label>materialize matter</label>
+    <fixedBillGiverDefs>
+		<li>Makai_PrimoForge_ClothResourceModule</li>
+    </fixedBillGiverDefs>
+	</WorkGiverDef>
+	
+	<WorkGiverDef ParentName="ForgeCraftBase">
+    <defName>DoBillPrimoForgeItems</defName>
+    <label>materialize matter</label>
+    <fixedBillGiverDefs>
+		<li>Makai_PrimoForge_ItemModule</li>
+    </fixedBillGiverDefs>
+	</WorkGiverDef>
+	
+	<WorkGiverDef ParentName="ForgeCraftBase">
+    <defName>DoBillPrimoForgeManufactured</defName>
+    <label>materialize matter</label>
+    <fixedBillGiverDefs>
+		<li>Makai_PrimoForge_ManufacturedModule</li>
+    </fixedBillGiverDefs>
+	</WorkGiverDef>
+	
+	<WorkGiverDef ParentName="ForgeCraftBase">
+    <defName>DoBillPrimoForgeFood</defName>
+    <label>materialize matter</label>
+    <fixedBillGiverDefs>
+		<li>Makai_PrimoForge_FoodModule</li>
+    </fixedBillGiverDefs>
+	</WorkGiverDef>
+</Defs>
