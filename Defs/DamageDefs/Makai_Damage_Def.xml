@@ -269,7 +269,7 @@
     <additionalHediffs>
       <li>
         <hediff>Conceptual_Death</hediff>
-		<severityPerDamageDealt>0.5</severityPerDamageDealt>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
       </li>
     </additionalHediffs>
     <impactSoundType>Slice</impactSoundType>
@@ -525,6 +525,10 @@
       <li>
         <hediff>Makai_ArmorMelt</hediff>
 		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+	  <li>
+        <hediff>ATKSPEED_Mark</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
       </li>
     </additionalHediffs>
 	<buildingDamageFactor>1</buildingDamageFactor>

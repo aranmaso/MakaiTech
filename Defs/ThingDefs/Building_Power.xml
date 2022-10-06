@@ -22,7 +22,7 @@
     <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
     <building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>ArchonexusCore_Ambience</soundAmbient>
+			<soundAmbient>WaterMill_Ambience</soundAmbient>
     </building>
     <constructEffect>ConstructMetal</constructEffect>
     <statBases>
@@ -50,11 +50,11 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
-        <basePowerConsumption>-2500</basePowerConsumption>
+        <basePowerConsumption>-5500</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
 	  <li Class="CompProperties_Battery">
-			<storedEnergyMax>2500</storedEnergyMax>
+			<storedEnergyMax>5500</storedEnergyMax>
 			<efficiency>1</efficiency>
 			<shortCircuitInRain>false</shortCircuitInRain>
 			<transmitsPower>true</transmitsPower>
@@ -76,6 +76,7 @@
         <chanceNeverExplodeFromDamage>0.15</chanceNeverExplodeFromDamage>
       </li-->
       <li Class="CompProperties_Glower">
+		<overlightRadius>2</overlightRadius>
         <glowRadius>2</glowRadius>
         <glowColor>(0,164,255)</glowColor>
       </li>
@@ -114,7 +115,7 @@
     <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
     <building>
 			<ai_chillDestination>false</ai_chillDestination>
-			<soundAmbient>ArchonexusCore_Ambience</soundAmbient>
+			<soundAmbient>WaterMill_Ambience</soundAmbient>
     </building>
 	<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
     <constructEffect>ConstructMetal</constructEffect>
@@ -141,14 +142,14 @@
     </costList>
     <comps>
 		  <li Class="CompProperties_Battery">
-			<storedEnergyMax>512000</storedEnergyMax>
+			<storedEnergyMax>2048000</storedEnergyMax>
 			<efficiency>1</efficiency>
 			<shortCircuitInRain>false</shortCircuitInRain>
 			<transmitsPower>true</transmitsPower>
 		  </li>
 		  <li Class="CompProperties_Power">
 			<compClass>CompPowerPlant</compClass>
-			<basePowerConsumption>-100000</basePowerConsumption>
+			<basePowerConsumption>-512000</basePowerConsumption>
 			<transmitsPower>true</transmitsPower>
 		  </li>
 		  <li Class="CompProperties_Refuelable">
@@ -161,6 +162,8 @@
 			  </thingDefs>
 			</fuelFilter>
 			<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			<showFuelGizmo>true</showFuelGizmo>
+			<fuelGizmoLabel>Star Particle</fuelGizmoLabel>
 		  </li>
 		  <li Class="CompProperties_Flickable"/>
 		  <li Class="CompProperties_Explosive">

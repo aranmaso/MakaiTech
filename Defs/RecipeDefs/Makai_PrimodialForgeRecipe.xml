@@ -4,7 +4,8 @@
 	<RecipeDef Name="MakaiPrimoForgeCraftBase" Abstract="True">
 		<jobString>Manifest Matter</jobString>
 		<effectWorking>Smith</effectWorking>
-		<soundWorking>ArchonexusCore_Ambience</soundWorking>
+		<!-- soundWorking>ArchonexusCore_Ambience</soundWorking -->
+		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>3000</workAmount>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -28,7 +29,7 @@
 	<RecipeDef Name="MakaiPrimoForgeCraftBaseRawResource" Abstract="True">
 		<jobString>Manifest Matter</jobString>
 		<effectWorking>Smith</effectWorking>
-		<soundWorking>ArchonexusCore_Ambience</soundWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>3000</workAmount>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -52,7 +53,7 @@
 	<RecipeDef Name="MakaiPrimoForgeCraftBaseClothLeathery" Abstract="True">
 		<jobString>Manifest Matter</jobString>
 		<effectWorking>Smith</effectWorking>
-		<soundWorking>ArchonexusCore_Ambience</soundWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>3000</workAmount>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -76,7 +77,7 @@
 	<RecipeDef Name="MakaiPrimoForgeCraftBaseItems" Abstract="True">
 		<jobString>Manifest Matter</jobString>
 		<effectWorking>Smith</effectWorking>
-		<soundWorking>ArchonexusCore_Ambience</soundWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>3000</workAmount>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -100,7 +101,7 @@
 	<RecipeDef Name="MakaiPrimoForgeCraftBaseManufactured" Abstract="True">
 		<jobString>Manifest Matter</jobString>
 		<effectWorking>Smith</effectWorking>
-		<soundWorking>ArchonexusCore_Ambience</soundWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>3000</workAmount>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -124,7 +125,7 @@
 	<RecipeDef Name="MakaiPrimoForgeCraftBaseFood" Abstract="True">
 		<jobString>Manifest Matter</jobString>
 		<effectWorking>Smith</effectWorking>
-		<soundWorking>ArchonexusCore_Ambience</soundWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>3000</workAmount>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -243,6 +244,14 @@
 			<WoodLog>100</WoodLog>
 		</products>
 	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
+		<defName>Makai_Manifest_Makai_Ingot</defName>
+		<label>Materialize Celestial Steel</label>
+		<description>Materialize Celestial Steel from Primodial Forge</description>
+		<products>
+			<Makai_Ingot>100</Makai_Ingot>
+		</products>
+	</RecipeDef>
 	
 	<!-- Leather and Cloth -->
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery">
@@ -277,6 +286,14 @@
 			<DevilstrandCloth>100</DevilstrandCloth>
 		</products>
 	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery">
+		<defName>Makai_Manifest_Makai_Fabric_C</defName>
+		<label>Materialize Celestial fabric</label>
+		<description>Materialize Celestial fabric from Primodial Forge</description>
+		<products>
+			<Makai_Fabric_C>100</Makai_Fabric_C>
+		</products>
+	</RecipeDef>
 	
 	<!-- Manufactured -->
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
@@ -293,6 +310,22 @@
 		<description>Materialize Reinforced Barrel from Primodial Forge</description>
 		<products>
 			<ReinforcedBarrel>10</ReinforcedBarrel>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
+		<defName>Makai_Manifest_Makai_Stardust</defName>
+		<label>Materialize stardust</label>
+		<description>Materialize stardust from Primodial Forge</description>
+		<products>
+			<Makai_Stardust>10</Makai_Stardust>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
+		<defName>Makai_Manifest_Makai_StarSmall</defName>
+		<label>Materialize miniature star</label>
+		<description>Materialize miniature star from Primodial Forge</description>
+		<products>
+			<Makai_StarSmall>10</Makai_StarSmall>
 		</products>
 	</RecipeDef>
 	
@@ -388,7 +421,7 @@
 	</RecipeDef>
 	
 	<!-- Item -->
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="ludeon.rimworld.royalty">
 		<defName>Makai_Manifest_PsychicAmplifier</defName>
 		<label>Materialize psylink neuroformer</label>
 		<description>Materialize psylink neuroformer from Primodial Forge</description>

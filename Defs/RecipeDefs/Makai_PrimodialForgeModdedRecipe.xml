@@ -294,5 +294,102 @@
 			<Moyo_Depthweave>100</Moyo_Depthweave>
 		</products>
 	</RecipeDef>
+	
+	<!-- Antimatter Annihilation Resource -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_AntimatterComposite_AA</defName>
+		<label>Materialize antimatter composite</label>
+		<description>Materialize antimatter composite from Primodial Forge</description>
+		<products>
+			<AntimatterComposite_AA>100</AntimatterComposite_AA>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_HyperAlloy_AA</defName>
+		<label>Materialize hyper alloy</label>
+		<description>Materialize hyper alloy from Primodial Forge</description>
+		<products>
+			<HyperAlloy_AA>100</HyperAlloy_AA>
+		</products>
+	</RecipeDef>
+	<!-- Antimatter Annihilation Manufactured -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_HyperComponent_AA</defName>
+		<label>Materialize hyper component</label>
+		<description>Materialize hyper component from Primodial Forge</description>
+		<products>
+			<HyperComponent_AA>100</HyperComponent_AA>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_AntimatterCanister_AA</defName>
+		<label>Materialize antimatter canister</label>
+		<description>Materialize antimatter canister from Primodial Forge</description>
+		<products>
+			<AntimatterCanister_AA>100</AntimatterCanister_AA>
+		</products>
+	</RecipeDef>
+	
+	<!-- SOS2 -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechExoticParticles</defName>
+		<label>Materialize exotic particles</label>
+		<description>Materialize exotic particles from Primodial Forge</description>
+		<products>
+			<ArchotechExoticParticles>100</ArchotechExoticParticles>
+		</products>
+	</RecipeDef>
+	<!-- SOS2 Manufactured -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechRepairGel</defName>
+		<label>Materialize mechanite repair gel</label>
+		<description>Materialize mechanite repair gel from Primodial Forge</description>
+		<products>
+			<ArchotechRepairGel>100</ArchotechRepairGel>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ShuttleFuelPods</defName>
+		<label>Materialize uranium fuel pod</label>
+		<description>Materialize uranium fuel pod from Primodial Forge</description>
+		<products>
+			<ShuttleFuelPods>1000</ShuttleFuelPods>
+		</products>
+	</RecipeDef>
+	<!-- SOS2 Item -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArcholifePod</defName>
+		<label>Materialize archolife pod</label>
+		<description>Materialize archolife pod from Primodial Forge</description>
+		<products>
+			<ArcholifePod>10</ArcholifePod>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechMechaniteCore</defName>
+		<label>Materialize mechanite disassembler core</label>
+		<description>Materialize mechanite disassembler core from Primodial Forge</description>
+		<products>
+			<ArchotechMechaniteCore>10</ArchotechMechaniteCore>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechPsychicCore</defName>
+		<label>Materialize psychic flayer core</label>
+		<description>Materialize psychic flayer core from Primodial Forge</description>
+		<products>
+			<ArchotechPsychicCore>10</ArchotechPsychicCore>
+		</products>
+	</RecipeDef>
+	
+	<!-- VanillaFaction - Ancient -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="vanillaexpanded.vfea">
+		<defName>Makai_Manifest_VFEA_SuperNanites</defName>
+		<label>Materialize Super Nanite</label>
+		<description>Materialize Super Nanite from Primodial Forge</description>
+		<products>
+			<VFEA_SuperNanites>10</VFEA_SuperNanites>
+		</products>
+	</RecipeDef>
 
 </Defs>

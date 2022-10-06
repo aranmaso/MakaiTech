@@ -11,7 +11,7 @@
 		</specialDesignatorClasses>
 	</DesignationCategoryDef>
 
-<ThingDef ParentName="BenchBase">
+	<ThingDef ParentName="BenchBase">
 		<defName>Makai_Bench</defName>
 		<label>Makai Fabrication Altar</label>
 		<description>an altar used to make various Makai related item. doesn't require power to use.</description>
@@ -144,7 +144,7 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 		<comps>
-			<li Class="CompProperties_MoteEmitter">
+			<li Class="CompProperties_MoteEmitter" MayRequire="ludeon.rimworld.ideology">
 			<mote>Mote_PsychicConditionCauserEffect</mote>
 			<emissionInterval>2000</emissionInterval>
 			<soundOnEmission>Archonexus_Throb</soundOnEmission>
@@ -301,13 +301,13 @@
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
       </li>
-	  <li Class="PipeSystem.CompProperties_ResourceTrader">
+		<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>Makai_Raw_EnergyNet</pipeNet>
 				<!-- Amount used per tick, it it's negative, it's producing -->
 				<consumptionPerTick>-0.8335</consumptionPerTick>
 				<!-- Ambient sound -->
 				<!--soundAmbientReceivingResource>SoundDef</soundAmbientReceivingResource-->
-			</li>
+		</li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>

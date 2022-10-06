@@ -609,15 +609,15 @@
     <label>power beam</label>
     <thingClass>MakaiTech.C_PowerBeam</thingClass>
     <comps>
-      <li Class="CompProperties_OrbitalBeam">
-        <width>8</width>
-        <color>(255, 0, 0, 255)</color>
-        <sound>OrbitalBeam</sound>
+      <li Class="MakaiTech.MakaiCompProperties_OrbitalBeam">
+        <width>10</width>
+        <color>(255, 255, 255, 255)</color>
+        <sound>InsanityPillar</sound>
       </li>
 	  <li Class="CompProperties_AffectsSky">
         <skyColors>
-          <sky>(183, 171, 0)</sky>
-          <shadow>(25, 25, 0)</shadow>
+          <sky>(255, 128, 117, 100)</sky>
+          <shadow>(100, 100, 100)</shadow>
           <overlay>(255, 255, 255)</overlay>
           <saturation>1</saturation>
         </skyColors>

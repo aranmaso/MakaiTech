@@ -241,6 +241,7 @@
 		<building>Makai_FrostEssenceProcessor</building>
 		<items>
 			<li>Makai_Ingot</li>
+			<li>Makai_Stardust</li>
 		</items>
 		<amount>
 			<li>25</li>

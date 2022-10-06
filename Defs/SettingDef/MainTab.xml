@@ -27,11 +27,11 @@
 			<key>Makai_Ingot_OP</key>
 			<defaultValue>false</defaultValue>
 		</li>
-		<li Class="XmlExtensions.Setting.Checkbox">
+		<!--li Class="XmlExtensions.Setting.Checkbox">
 			<label>no oversized weapon</label>
 			<key>Makai_Weapon_NoBig</key>
 			<defaultValue>false</defaultValue>
-		</li>
+		</li-->
 		<li Class="XmlExtensions.Setting.Checkbox">
 			<label>stardust is universal fuel</label>
 			<key>Stardust.UniversalFuel</key>

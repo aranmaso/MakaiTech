@@ -105,7 +105,7 @@
       <li>Things/Projectile/y_beam</li>
     </textures>
     <seam>0.1</seam>
-    <causefireChance>0.1</causefireChance>
+    <causefireChance>0</causefireChance>
 	<beamWidth>1.5</beamWidth>
 	<lifetime>60</lifetime>
 	<explosionEffect>Ring_ExpandY</explosionEffect>
@@ -126,6 +126,10 @@
 		<texPath>Things/Weapon/varia_bow</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>2</drawSize>
+		<drawOffsetNorth>(0.2,0,-0.1)</drawOffsetNorth>
+		<drawOffsetEast>(0.2,0,-0.1)</drawOffsetEast>
+		<drawOffsetWest>(-0.2,0,-0.1)</drawOffsetWest>
+		<drawOffsetSouth>(0.2,0,-0.1)</drawOffsetSouth>
     </graphicData>
     <soundInteract>Interact_ChargeLance</soundInteract>
     <statBases>
@@ -245,14 +249,8 @@
 		</verbProps>
     </li-->
 	<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.2,0,-0.1)</northOffset>
-				<eastOffset>(0.2,0,-0.1)</eastOffset>
-				<westOffset>(-0.2,0,-0.1)</westOffset>
-				<southOffset>(0.2,0,-0.1)</southOffset>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
-			<li Class="SkillDrain.CompProperties_SkillDrain">
+			<li Class="MakaiTech.CompProperties_SkillDrain">
 				<skillToDrain>Intellectual</skillToDrain>
 				<xpToDrain>5000</xpToDrain>
 				<transferSkillPoints>true</transferSkillPoints>
@@ -278,7 +276,7 @@
     </tools>
  </ThingDef>
  <!-- Yuki_Staff -->
- <ThingDef Name="MakaiBaseGun" Abstract="True" ParentName="BaseWeapon">
+	<ThingDef Name="MakaiBaseGun" Abstract="True" ParentName="BaseWeapon">
 		<techLevel>Archotech</techLevel>
 		<smeltable>true</smeltable>
 		<thingCategories>
@@ -297,7 +295,7 @@
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
     </comps>
-  </ThingDef>
+	</ThingDef>
 
 	<ThingDef Name="MakaiBaseMakeableGun" ParentName="MakaiBaseGun" Abstract="True">
     <recipeMaker>
@@ -421,6 +419,10 @@
 			<texPath>Things/Weapon/yuki_staff</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.7</drawSize>
+			<drawOffsetNorth>(0.4,0,0.4)</drawOffsetNorth>
+			<drawOffsetEast>(0.4,0,0.4)</drawOffsetEast>
+			<drawOffsetWest>(-0.4,0,0.4)</drawOffsetWest>
+			<drawOffsetSouth>(0.4,0,0.4)</drawOffsetSouth>
 			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
@@ -462,7 +464,7 @@
 		<verbs>
 			<li>
 				<label>MainAttack</label>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Yuki_Project</defaultProjectile>
 				<warmupTime>1.0</warmupTime>
@@ -506,7 +508,7 @@
 				</targetParams>
 			</li>
 			<li>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
 				<label>ExtraShot</label>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Yuki_Project_Extra</defaultProjectile>
@@ -527,6 +529,9 @@
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
 			<compClass>CompEquippable</compClass>
 			<verbProps>
+					<li>
+						<label>MainAttack</label>
+					</li>
 					<li>
 						<draw>false</draw>
 						<canBeToggled>true</canBeToggled>
@@ -557,20 +562,10 @@
 						<canFireIndependently>false</canFireIndependently>
 						<label>ColdSpike</label>
 					</li>
-					<li>
-						<label>MainAttack</label>
-						<canBeToggled>true</canBeToggled>
-					</li>
 			</verbProps>
 			</li>
 			<li>
 				<compClass>CompQuality</compClass>
-			</li>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.4,0,0.4)</northOffset>
-				<eastOffset>(0.4,0,0.4)</eastOffset>
-				<westOffset>(-0.4,0,0.4)</westOffset>
-				<southOffset>(0.4,0,0.4)</southOffset>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
@@ -604,7 +599,7 @@
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
 		<projectile>
-			<speed>20</speed>
+			<speed>28</speed>
 			<damageDef>ME_Bullet_A</damageDef>
 			<!--extraDamages>
 				<li>
@@ -617,8 +612,13 @@
 					<amount>5</amount>
 					<armorPenetration>1</armorPenetration>
 				</li>
+				<li>
+					<def>EMP</def>
+					<amount>11115</amount>
+					<armorPenetration>2</armorPenetration>
+				</li>
 			</extraDamages-->
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>3</damageAmountBase>
 			<armorPenetrationBase>0.5</armorPenetrationBase>
 			<stoppingPower>1</stoppingPower>
 		</projectile>
@@ -627,7 +627,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Assault</defName>
 		<label>ME-A1</label>
-		<description>energy assault rifle. a very obsolate weapon(in Makai standard) shared to people of rimworld. fire shot in 3 burst.</description>
+		<description>energy assault rifle. a very obsolate weapon(in Makai standard) shared to people of rimworld. fire shot in 3 burst. Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_A1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -641,7 +641,7 @@
 			<Mass>2</Mass>
 			<AccuracyTouch>0.75</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyMedium>1</AccuracyMedium>
 			<AccuracyLong>0.75</AccuracyLong>
 			<RangedWeapon_Cooldown>1.30</RangedWeapon_Cooldown>
 			</statBases>
@@ -670,7 +670,7 @@
 		<verbs>
 			<li>
 				<label>MainAttack</label>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>ME_Pro</defaultProjectile>
 				<warmupTime>1.0</warmupTime>
@@ -683,13 +683,11 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0,0,0)</northOffset>
-				<eastOffset>(0,0,0)</eastOffset>
-				<westOffset>(0,0,0)</westOffset>
-				<southOffset>(0,0,0)</southOffset>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_SelfBuffOnTargetHit">
+				<HediffDef>Makai_SelfBuffOnHit_ATKSPEED</HediffDef>
+				<SeverityPerHit>0.5</SeverityPerHit>
+			</li>
 		</comps>
 	<tools>
       <li>
@@ -846,12 +844,6 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0,0,0)</northOffset>
-				<eastOffset>(0,0,0)</eastOffset>
-				<westOffset>(0,0,0)</westOffset>
-				<southOffset>(0,0,0)</southOffset>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
 	<tools>
@@ -886,7 +878,7 @@
 		<projectile>
 			<speed>20</speed>
 			<damageDef>ME_Bullet_A</damageDef>
-			<damageAmountBase>6</damageAmountBase>
+			<damageAmountBase>3</damageAmountBase>
 			<armorPenetrationBase>0.5</armorPenetrationBase>
 			<stoppingPower>1</stoppingPower>
 		</projectile>
@@ -895,7 +887,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Pistol</defName>
 		<label>ME-A2</label>
-		<description>energy pistol. a very obsolate weapon(in Makai standard) shared to people of rimworld. fire shot in 3 burst each.</description>
+		<description>energy pistol. a very obsolate weapon(in Makai standard) shared to people of rimworld. fire shot in 6 burst each.Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_A2</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -938,7 +930,7 @@
 		<verbs>
 			<li>
 				<label>Energy Pellet</label>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>ME_ProMini</defaultProjectile>
 				<warmupTime>1.0</warmupTime>
@@ -951,18 +943,16 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0,0,0)</northOffset>
-				<eastOffset>(0,0,0)</eastOffset>
-				<westOffset>(0,0,0)</westOffset>
-				<southOffset>(0,0,0)</southOffset>
-			</li>
 			<!--li Class="SkillDrain.CompProperties_SkillDrain">
 				<skillToDrain>Intellectual</skillToDrain>
 				<xpToDrain>10000</xpToDrain>
 				<transferSkillPoints>true</transferSkillPoints>
 			</li-->
 			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_SelfBuffOnTargetHit">
+				<HediffDef>Makai_SelfBuffOnHit_ATKSPEED</HediffDef>
+				<SeverityPerHit>0.05</SeverityPerHit>
+			</li>
 		</comps>
 		<modExtensions>
 		</modExtensions>
@@ -1080,12 +1070,6 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0,0,0)</northOffset>
-				<eastOffset>(0,0,0)</eastOffset>
-				<westOffset>(0,0,0)</westOffset>
-				<southOffset>(0,0,0)</southOffset>
-			</li>
 			<!--li Class="SkillDrain.CompProperties_SkillDrain">
 				<skillToDrain>Intellectual</skillToDrain>
 				<xpToDrain>10000</xpToDrain>

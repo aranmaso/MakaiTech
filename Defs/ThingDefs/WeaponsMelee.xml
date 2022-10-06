@@ -91,6 +91,10 @@
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
             <drawSize>2.0</drawSize>
+			<drawOffsetNorth>(0.8,0,0.5)</drawOffsetNorth>
+			<drawOffsetEast>(0.8,0,0.5)</drawOffsetEast>
+			<drawOffsetWest>(-0.8,0,0.5)</drawOffsetWest>
+			<drawOffsetSouth>(0.8,0,0.5)</drawOffsetSouth>
 			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
         </graphicData>
         <techLevel>Archotech</techLevel>
@@ -115,7 +119,7 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
-			<MaxHitPoints>10000</MaxHitPoints>
+			<MaxHitPoints>2000</MaxHitPoints>
             <WorkToMake>120000</WorkToMake>
             <Mass>20</Mass>
 			<MarketValue>6000</MarketValue>
@@ -219,12 +223,6 @@
 		<compClass>CompQuality</compClass>
 	</li>
 	<li Class="CompProperties_Forbiddable"/>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.8,0,0.5)</northOffset>
-				<eastOffset>(0.8,0,0.5)</eastOffset>
-				<westOffset>(-0.8,0,0.5)</westOffset>
-				<southOffset>(0.8,0,0.5)</southOffset>
-			</li>
 	</comps>
     </ThingDef>
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
@@ -236,6 +234,10 @@
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
             <drawSize>2.8</drawSize>
+			<drawOffsetNorth>(0.5,0,0.6)</drawOffsetNorth>
+			<drawOffsetEast>(0.5,0,0.6)</drawOffsetEast>
+			<drawOffsetWest>(-0.5,0,0.6)</drawOffsetWest>
+			<drawOffsetSouth>(0.5,0,0.6)</drawOffsetSouth>
 			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
         </graphicData>
         <techLevel>Archotech</techLevel>
@@ -256,8 +258,8 @@
 		<costStuffCount>550</costStuffCount>
 		<equippedStatOffsets>
 			<MentalBreakThreshold>-0.5</MentalBreakThreshold>
-			<PsychicEntropyGain>-0.5</PsychicEntropyGain>
-			<MeditationFocusGain>1</MeditationFocusGain>
+			<PsychicEntropyGain MayRequire="ludeon.rimworld.royalty">-0.5</PsychicEntropyGain>
+			<MeditationFocusGain MayRequire="ludeon.rimworld.royalty">1</MeditationFocusGain>
 		</equippedStatOffsets>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
@@ -314,12 +316,6 @@
             </skillRequirements>
         </recipeMaker>
 	<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.5,0,0.6)</northOffset>
-				<eastOffset>(0.5,0,0.6)</eastOffset>
-				<westOffset>(-0.5,0,0.6)</westOffset>
-				<southOffset>(0.5,0,0.6)</southOffset>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
 	</comps>
     </ThingDef>
@@ -333,6 +329,10 @@
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
             <drawSize>2.8</drawSize>
+			<drawOffsetNorth>(0.3,0,0.3)</drawOffsetNorth>
+			<drawOffsetEast>(0.3,0,0.3)</drawOffsetEast>
+			<drawOffsetWest>(-0.3,0,0.3)</drawOffsetWest>
+			<drawOffsetSouth>(0.3,0,0.3)</drawOffsetSouth>
 			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
         </graphicData>
         <techLevel>Archotech</techLevel>
@@ -363,7 +363,7 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
-			<MaxHitPoints>5000</MaxHitPoints>
+			<MaxHitPoints>2000</MaxHitPoints>
             <WorkToMake>120000</WorkToMake>
             <Mass>12.3</Mass>
 			<MarketValue>6000</MarketValue>
@@ -433,12 +433,6 @@
         </recipeMaker>
 		
 	<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.3,0,0.3)</northOffset>
-				<eastOffset>(0.3,0,0.3)</eastOffset>
-				<westOffset>(-0.3,0,0.3)</westOffset>
-				<southOffset>(0.3,0,0.3)</southOffset>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
 	</comps>
     </ThingDef>
@@ -474,7 +468,7 @@
 		<equippedStatOffsets>
 			<AimingDelayFactor>-0.5</AimingDelayFactor>
 			<PainShockThreshold>1</PainShockThreshold>
-			<MeleeWeapon_CooldownMultiplier>-0.3</MeleeWeapon_CooldownMultiplier>
+			<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
 		</equippedStatOffsets>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
@@ -536,12 +530,6 @@
         </recipeMaker>
 		
 	<comps>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0,0,0)</northOffset>
-				<eastOffset>(0,0,0))</eastOffset>
-				<westOffset>(0,0,0)</westOffset>
-				<southOffset>(0,0,0)</southOffset>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
 	</comps>
     </ThingDef>
@@ -578,6 +566,10 @@
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
             <drawSize>2.0</drawSize>
+			<drawOffsetNorth>(0.5,0,0.5)</drawOffsetNorth>
+			<drawOffsetEast>(0.5,0,0.5)</drawOffsetEast>
+			<drawOffsetWest>(-0.5,0,0.5)</drawOffsetWest>
+			<drawOffsetSouth>(0.5,0,0.5)</drawOffsetSouth>
 			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
         </graphicData>
         <techLevel>Archotech</techLevel>
@@ -700,12 +692,6 @@
 		<compClass>CompQuality</compClass>
 	</li>
 	<li Class="CompProperties_Forbiddable"/>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.5,0,0.5)</northOffset>
-				<eastOffset>(0.5,0,0.5)</eastOffset>
-				<westOffset>(-0.5,0,0.5)</westOffset>
-				<southOffset>(0.5,0,0.5)</southOffset>
-			</li>
 	</comps>
     </ThingDef>
 	
@@ -764,6 +750,10 @@
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
             <drawSize>2.0</drawSize>
+			<drawOffsetNorth>(0.2,0,-0.55)</drawOffsetNorth>
+			<drawOffsetEast>(0.2,0,-0.55)</drawOffsetEast>
+			<drawOffsetWest>(-0.2,0,-0.55)</drawOffsetWest>
+			<drawOffsetSouth>(0.2,0,-0.55)</drawOffsetSouth>
 			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
         </graphicData>
         <techLevel>Archotech</techLevel>
@@ -917,17 +907,13 @@
 		<compClass>CompQuality</compClass>
 	</li>
 	<li Class="CompProperties_Forbiddable"/>
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.2,0,-0.55)</northOffset>
-				<eastOffset>(0.2,0,-0.55)</eastOffset>
-				<westOffset>(-0.2,0,-0.55)</westOffset>
-				<southOffset>(0.2,0,-0.55)</southOffset>
+	<!--li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
 				<groundGraphic>
                     <texPath>Things/Weapon/mica_radiantstar_ground</texPath>
                     <graphicClass>Graphic_Single</graphicClass>
                     <shaderType>CutoutComplex</shaderType>
                 </groundGraphic>
-			</li>
+	</li-->
 	</comps>
     </ThingDef>
 
@@ -1050,12 +1036,16 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Sari_Scy</defName>
         <label>Destined Death</label>
-        <description>An unwieldy scythe weapon that pierces armor but deals little damage. It will inflict the curse, Destined Death, which will build up to eventually kill the victim. \n\n\nVictims of &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt; cannot be resurrected.</description>
+        <description>An unwieldy scythe weapon that ignore armor but deals little damage. It will inflict the curse, Destined Death, which will build up to eventually kill the victim. \n\n\nVictims of &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt; cannot be resurrected.</description>
         <graphicData>
             <texPath>Things/Weapon/sari_scythe</texPath>
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
             <drawSize>2.0</drawSize>
+			<drawOffsetNorth>(0.2,0,0.5)</drawOffsetNorth>
+			<drawOffsetEast>(0.2,0,0.5)</drawOffsetEast>
+			<drawOffsetWest>(-0.2,0,0.5)</drawOffsetWest>
+			<drawOffsetSouth>(0.2,0,0.5)</drawOffsetSouth>
 			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
         </graphicData>
         <techLevel>Archotech</techLevel>
@@ -1082,6 +1072,7 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
             <WorkToMake>8000</WorkToMake>
             <Mass>1.5</Mass>
 			<MarketValue>6000</MarketValue>
@@ -1112,7 +1103,7 @@
 			<requireLineOfSight>false</requireLineOfSight>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>Makai_Sari_Swipe_DEAD</defaultProjectile>
-			<warmupTime>30</warmupTime>
+			<warmupTime>10</warmupTime>
 			<range>7</range>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 			<burstShotCount>1</burstShotCount>
@@ -1254,19 +1245,14 @@
 				<compClass>CompQuality</compClass>
 			</li>
 
-			<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-				<northOffset>(0.2,0,0.5)</northOffset>
-				<eastOffset>(0.2,0,0.5)</eastOffset>
-				<westOffset>(-0.2,0,0.5)</westOffset>
-				<southOffset>(0.2,0,0.5)</southOffset>
+			<!--li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
 			<groundGraphic>
                     <texPath>Things/Weapon/sari_scythe_ground</texPath>
                     <graphicClass>Graphic_Single</graphicClass>
                     <shaderType>CutoutComplex</shaderType>
 					<drawSize>2.0</drawSize>
             </groundGraphic>
-			</li>
-
+			</li-->
 			<li Class="CompProperties_Forbiddable"/>
 	</comps>
     </ThingDef>

@@ -367,4 +367,22 @@
     </children>
 	<!--positionRadius>0.01</positionRadius-->
   </EffecterDef>
+  
+  <EffecterDef>
+    <defName>Makai_WarpBullet</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>Mote_YellowGlowWarp</moteDef>
+        <positionLerpFactor>0.6</positionLerpFactor>
+        <chancePerTick>0.2</chancePerTick>
+        <scale>
+          <min>2</min>
+          <max>2</max>
+        </scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+	<!--positionRadius>0.01</positionRadius-->
+  </EffecterDef>
   </Defs>

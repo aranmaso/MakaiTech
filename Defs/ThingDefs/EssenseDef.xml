@@ -106,7 +106,7 @@
 			<useDuration>200</useDuration>
 		</li>
 		<li Class="CompProperties_UseEffectInstallImplant">
-        <hediffDef>Essence_Fate_Proxy</hediffDef>
+        <hediffDef>Essence_Fate_Buff</hediffDef>
         <bodyPart>Brain</bodyPart>
 		</li>
 		<li Class="CompProperties_UseEffect">
@@ -133,7 +133,7 @@
 		<comps>
 			<li Class="CompProperties_Usable">
 				<useJob>UseItem</useJob>
-				<useLabel>Use Essence of Knowledge to learn skill</useLabel>
+				<useLabel>Embrace the blessing of knowledge</useLabel>
 				<useDuration>200</useDuration>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">

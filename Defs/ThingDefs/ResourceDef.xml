@@ -52,7 +52,7 @@
 				<WorkTableWorkSpeedFactor>6</WorkTableWorkSpeedFactor>
 				<WorkTableEfficiencyFactor>2</WorkTableEfficiencyFactor>
 				<ResearchSpeedFactor>2</ResearchSpeedFactor>
-				<MeditationFocusStrength>1.5</MeditationFocusStrength>
+				<MeditationFocusStrength MayRequire="ludeon.rimworld.royalty">1.5</MeditationFocusStrength>
 				<JoyGainFactor>6</JoyGainFactor>
 				<BedRestEffectiveness>2</BedRestEffectiveness>
 				<WorkToBuild>3.5</WorkToBuild>
@@ -61,7 +61,7 @@
 				<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
 				<EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
 				<EnergyShieldRechargeRate>1.5</EnergyShieldRechargeRate>
-				<Ability_PsyfocusCost>0.85</Ability_PsyfocusCost>
+				<Ability_PsyfocusCost MayRequire="ludeon.rimworld.royalty">0.85</Ability_PsyfocusCost>
 				<Ability_EntropyGain MayRequire="ludeon.rimworld.royalty">0.75</Ability_EntropyGain>
 				<ShootingAccuracyTurret>2</ShootingAccuracyTurret>
 				<FilthMultiplier>0</FilthMultiplier>
@@ -133,7 +133,7 @@
 				<WorkToMake>5</WorkToMake>
 				<SurgerySuccessChanceFactor>2</SurgerySuccessChanceFactor>
 				<MedicalTendQualityOffset>2</MedicalTendQualityOffset>
-				<MeditationFocusStrength>1.5</MeditationFocusStrength>
+				<MeditationFocusStrength MayRequire="ludeon.rimworld.royalty">1.5</MeditationFocusStrength>
 				<JoyGainFactor>6</JoyGainFactor>
 				<BedRestEffectiveness>5</BedRestEffectiveness>
 				<WorkToBuild>3.5</WorkToBuild>

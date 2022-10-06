@@ -38,7 +38,7 @@
     <comps>
 		<li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>150</basePowerConsumption>
+        <basePowerConsumption>500</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Forbiddable"/>
@@ -218,7 +218,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>500</basePowerConsumption>
+        <basePowerConsumption>3000</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Forbiddable"/>
@@ -537,7 +537,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>550</basePowerConsumption>
+        <basePowerConsumption>2000</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Forbiddable"/>
@@ -724,7 +724,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>550</basePowerConsumption>
+        <basePowerConsumption>1250</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Forbiddable"/>
@@ -861,17 +861,21 @@
   </ThingDef>
   
   <!-- Artillery Plasma Turret -->
-  <ThingDef ParentName="BuildingBase">
+	<ThingDef ParentName="BuildingBase">
     <defName>Makai_Turret_E</defName>
     <label>Stardust Artiliery Cannon</label>
     <description>a massive stardust-compresser cannon. accelerate energized startdust across long distance, on impact will resonate with nearby living thing and deal massive damage. super effective against structure, has build-in shield generator that intercept ground projectile.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Building/makai_turret_base2</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(4,4)</drawSize>
-	  <drawOffset>(0,0,0)</drawOffset>
+      <texPath>Things/Building/makai_turret_base3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(6,6)</drawSize>
+	  <drawOffsetNorth>(0,0,0.2)</drawOffsetNorth>
+	  <drawOffsetSouth>(0,0,-0.5)</drawOffsetSouth>
+	  <drawOffsetEast>(0.2,0,0)</drawOffsetEast>
+	  <drawOffsetWest>(-0.2,0,0)</drawOffsetWest>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
@@ -898,7 +902,7 @@
 	<size>(5,5)</size>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
-    <fillPercent>0.99</fillPercent>
+    <fillPercent>0.50</fillPercent>
     <hasTooltip>true</hasTooltip>
     <stuffCategories>
       <li>Metallic</li>
@@ -919,7 +923,7 @@
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Makai_Turret_TopE</turretGunDef>
 	  <turretTopDrawSize>5</turretTopDrawSize>
-	  <turretTopOffset>(0, 0)</turretTopOffset>
+	  <turretTopOffset>(0, 1)</turretTopOffset>
 	  <turretBurstWarmupTime>4.0</turretBurstWarmupTime>
       <turretBurstCooldownTime>15</turretBurstCooldownTime>
 	  <buildingTags>
@@ -937,9 +941,9 @@
     </researchPrerequisites>
 	<tickerType>Normal</tickerType>
     <comps>
-      <li Class="CompProperties_Power">
+		<li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>2000</basePowerConsumption>
+        <basePowerConsumption>12500</basePowerConsumption>
 		</li>
 		<li Class="CompProperties_Flickable"/>
 		<li Class="CompProperties_Forbiddable"/>
@@ -947,47 +951,47 @@
         <manWorkType>Violent</manWorkType>
 		</li-->
 		<li Class="CompProperties_Refuelable">
-		<fuelLabel>Shots until rearm</fuelLabel>
-		<fuelGizmoLabel>Stardust particle storage</fuelGizmoLabel>
-        <fuelFilter>
-          <thingDefs>
-            <li>Makai_Stardust</li>
-          </thingDefs>
-        </fuelFilter>
-		<fuelCapacity>1000</fuelCapacity>
-        <initialFuelPercent>1</initialFuelPercent>
-        <autoRefuelPercent>0.75</autoRefuelPercent>
-        <showFuelGizmo>true</showFuelGizmo>
-        <minimumFueledThreshold>1</minimumFueledThreshold>
-        <fuelMultiplier>10</fuelMultiplier>
-        <factorByDifficulty>true</factorByDifficulty>
-        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <outOfFuelMessage>Cannot shoot: Needs refuel</outOfFuelMessage>
-        <fuelIconPath>Things/Items/makai_mat_dust</fuelIconPath>
+			<fuelLabel>Shots until rearm</fuelLabel>
+			<fuelGizmoLabel>Stardust particle storage</fuelGizmoLabel>
+			<fuelFilter>
+			  <thingDefs>
+				<li>Makai_Stardust</li>
+			  </thingDefs>
+			</fuelFilter>
+			<fuelCapacity>1000</fuelCapacity>
+			<initialFuelPercent>1</initialFuelPercent>
+			<autoRefuelPercent>0.75</autoRefuelPercent>
+			<showFuelGizmo>true</showFuelGizmo>
+			<minimumFueledThreshold>1</minimumFueledThreshold>
+			<fuelMultiplier>10</fuelMultiplier>
+			<factorByDifficulty>true</factorByDifficulty>
+			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			<outOfFuelMessage>Cannot shoot: Needs refuel</outOfFuelMessage>
+			<fuelIconPath>Things/Items/makai_mat_dust</fuelIconPath>
 		</li>
 		<li MayRequire="vanillaexpanded.vfesecurity" Class="VFESecurity.CompProperties_LongRangeArtillery">
-        <worldTileRange>69</worldTileRange>
-        <maxForcedMissRadiusFactor>1</maxForcedMissRadiusFactor>
-        <gizmoIconTexPath>Things/Building/makai_turret_topE</gizmoIconTexPath>
-      </li>
-	  <li Class="CompProperties_ProjectileInterceptor" MayRequire="ludeon.rimworld.royalty">
-        <radius>5</radius>
-		<interceptGroundProjectiles>true</interceptGroundProjectiles>
-		<interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
-		<interceptNonHostileProjectiles>false</interceptNonHostileProjectiles>
-        <color>(95, 87, 165)</color>
-		<!--minAlpha>1</minAlpha-->
-        <reactivateEffect>Ring_ExpandP</reactivateEffect>
-		<interceptEffect>Ring_ExpandP_Mini</interceptEffect>
-        <!--activeSound>MortarShield_Ambience</activeSound-->
-        <disarmedByEmpForTicks>0</disarmedByEmpForTicks>
-        <chargeIntervalTicks>600000</chargeIntervalTicks>
-        <chargeDurationTicks>6000</chargeDurationTicks>
-      </li>
+			<worldTileRange>69</worldTileRange>
+			<maxForcedMissRadiusFactor>1</maxForcedMissRadiusFactor>
+			<gizmoIconTexPath>Things/Building/makai_turret_topE</gizmoIconTexPath>
+		</li>
+		<li Class="CompProperties_ProjectileInterceptor" MayRequire="ludeon.rimworld.royalty">
+			<radius>5</radius>
+			<interceptGroundProjectiles>true</interceptGroundProjectiles>
+			<interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+			<interceptNonHostileProjectiles>false</interceptNonHostileProjectiles>
+			<color>(95, 87, 165)</color>
+			<!--minAlpha>1</minAlpha-->
+			<reactivateEffect>Ring_ExpandP</reactivateEffect>
+			<interceptEffect>Ring_ExpandP_Mini</interceptEffect>
+			<!--activeSound>MortarShield_Ambience</activeSound-->
+			<disarmedByEmpForTicks>0</disarmedByEmpForTicks>
+			<chargeIntervalTicks>600000</chargeIntervalTicks>
+			<chargeDurationTicks>6000</chargeDurationTicks>
+			</li>
     </comps>
-  </ThingDef>
+	</ThingDef>
   
-  <ThingDef ParentName="BaseBullet">
+	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_Turret_Makai_E</defName>
 		<label>Condensed Shot</label>
 		<graphicData>
@@ -998,32 +1002,54 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<speed>100</speed>
+			<speed>50</speed>
 			<damageDef>Stardust_Artiliery_Bullet_Ex</damageDef>
 			<damageAmountBase>75</damageAmountBase>
 			<armorPenetrationBase>2</armorPenetrationBase>
 			<ai_IsIncendiary>true</ai_IsIncendiary>
-			<arcHeightFactor>1</arcHeightFactor>
 			<flyOverhead>true</flyOverhead>
 			<shadowSize>0</shadowSize>
 			<explosionRadius>5</explosionRadius>
-			<stoppingPower>-5</stoppingPower>
+			<stoppingPower>5</stoppingPower>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<soundExplode>Explosion_EMP</soundExplode>
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
 			<soundAmbient>MortarRound_Ambient</soundAmbient>
 			<explosionEffect>BIGLASERIMPACT</explosionEffect>
 		</projectile>
+		<comps>
+			<li Class="MakaiTech.CompProperties_FleckEmitter">
+				<alwaysOn>true</alwaysOn>
+				<moteDefs>
+					<li>Mote_WhitePuffB</li>
+				</moteDefs>
+				<scale>1</scale>
+				<scaleMax>1</scaleMax>
+				<rotationMinRate>-30</rotationMinRate>
+				<rotationMaxRate>30</rotationMaxRate>
+				<minRandomOffsetX>-0.1</minRandomOffsetX>
+				<maxRandomOffsetX>0.1</maxRandomOffsetX>
+				<minRandomOffsetY>-0.3</minRandomOffsetY>
+				<maxRandomOffsetY>0.3</maxRandomOffsetY>
+				<minRotate>-45</minRotate>
+				<maxRotate>45</maxRotate>
+				<minSpeed>-1</minSpeed>
+				<maxSpeed>1</maxSpeed>
+				<minEmissionInterval>0</minEmissionInterval>
+				<maxEmissionInterval>1</maxEmissionInterval>
+				<countPerEmit>2</countPerEmit>
+			</li>
+		</comps>
 	</ThingDef>
   
-  <ThingDef ParentName="BaseWeaponTurret">
+	<ThingDef ParentName="BaseWeaponTurret">
     <defName>Makai_Turret_TopE</defName>
     <label>Artiliery Cannon</label>
     <graphicData>
-      <texPath>Things/Building/makai_turret_topE</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>(5,5)</drawSize>
-	  <drawOffset>(0,0,0)</drawOffset>
+		<texPath>Things/Building/makai_turret_topE</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(5,5)</drawSize>
+		<drawOffset>(0,0,0)</drawOffset>
     </graphicData>
     <description>Top of a stardust-compresser turret</description>
     <soundInteract>Interact_ChargeLance</soundInteract>
@@ -1040,8 +1066,8 @@
 	  <Mass>450</Mass>
       <Flammability>0</Flammability>
     </statBases>
-    <weaponTags>
-      <li>TurretGun</li>
+    <weaponTags Inherit="False">
+      <li>Artillery</li>
     </weaponTags>
     <verbs>
       <li>

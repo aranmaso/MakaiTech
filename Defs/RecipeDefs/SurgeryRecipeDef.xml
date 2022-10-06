@@ -250,15 +250,13 @@
 	
 	<RecipeDef ParentName="SurgeryInstallImplantBase">
 		<defName>Makai_Induce_Bond</defName>
-		<workerClass>Recipe_AddHediff</workerClass>
 		<label>Empowering Bond</label>
 		<description>embed base essence of bond.</description>
 		<jobString>Embed base essence into TargetA.</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>true</hideBodyPartNames>
-		<isViolation>true</isViolation>
+		<isViolation>false</isViolation>
 		<addsHediff>Essence_Growth_Bond_Giver</addsHediff>
-		<successfullyRemovedHediffMessage>{0} has successfully embed base essence into {1}.</successfullyRemovedHediffMessage>
 		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
 		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
 		<anesthetize>false</anesthetize>
@@ -619,10 +617,10 @@ by that time all Fated Implant should reach full severity and turn into Fated Fr
 	
 	<!-- Take Soul -->
 	<RecipeDef ParentName="SurgeryFlesh">
-		<defName>Makai_Dea-Path_Soul_Extraction</defName>
+		<defName>Makai_Dea_Path_Soul_Extraction</defName>
 		<label>Take Soul</label>
 		<description>soul extraction</description>
-		<workerClass>Recipe_AddHediff</workerClass>
+		<workerClass>MakaiTech.Recipe_TakeSoul</workerClass>
 		<jobString>Take soul from TargetA.</jobString>
 		<workAmount>1300</workAmount>
 		<hideBodyPartNames>true</hideBodyPartNames>
@@ -630,6 +628,7 @@ by that time all Fated Implant should reach full severity and turn into Fated Fr
 		<targetsBodyPart>false</targetsBodyPart>
 		<addsHediff>Destined_Death_Soul_Missing_Giver</addsHediff>
 		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<surgerySuccessChanceFactor>9999</surgerySuccessChanceFactor>
 		<anesthetize>false</anesthetize>
 		<researchPrerequisites>
 				<li>Makai_Essence5</li>
@@ -645,14 +644,13 @@ by that time all Fated Implant should reach full severity and turn into Fated Fr
 		<fixedIngredientFilter>
 		</fixedIngredientFilter>
 		<products>
-			<Makai_Dea-Path_Soul>1</Makai_Dea-Path_Soul>
 		</products>
 	</RecipeDef>
 	<RecipeDef ParentName="SurgeryFlesh">
-		<defName>Makai_Dea-Path_Soul_Restore</defName>
+		<defName>Makai_Dea_Path_Soul_Restore</defName>
 		<label>Restore Soul</label>
 		<description>soul restoration</description>
-		<workerClass>Recipe_RemoveHediff</workerClass>
+		<workerClass>MakaiTech.Recipe_TransferSoul</workerClass>
 		<jobString>return soul to TargetA.</jobString>
 		<workAmount>1300</workAmount>
 		<hideBodyPartNames>true</hideBodyPartNames>
@@ -660,6 +658,7 @@ by that time all Fated Implant should reach full severity and turn into Fated Fr
 		<targetsBodyPart>false</targetsBodyPart>
 		<removesHediff>Destined_Death_Soul_Missing_Giver</removesHediff>
 		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<surgerySuccessChanceFactor>9999</surgerySuccessChanceFactor>
 		<anesthetize>false</anesthetize>
 		<researchPrerequisites>
 				<li>Makai_Essence5</li>
@@ -674,7 +673,7 @@ by that time all Fated Implant should reach full severity and turn into Fated Fr
 			<li>
 				<filter>
 					<thingDefs>
-						<li>Makai_Dea-Path_Soul</li>
+						<li>Makai_Dea_Path_Soul</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -682,21 +681,23 @@ by that time all Fated Implant should reach full severity and turn into Fated Fr
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>Makai_Dea-Path_Soul</li>
+				<li>Makai_Dea_Path_Soul</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
 		</products>
 	</RecipeDef>
 	<ThingDef ParentName="EssenseBase">
-		<defName>Makai_Dea-Path_Soul</defName>
-		<label>Soul</label>
+		<defName>Makai_Dea_Path_Soul</defName>
+		<thingClass>MakaiTech.Soul</thingClass>
+		<label>Soul(MakaiTech)</label>
 		<description>a soul extracted from living being</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDeathSoul</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.5</drawSize>
 		</graphicData>
+		<stackLimit>1</stackLimit>
 		<tradeTags>
 		</tradeTags>
 		<thingCategories>

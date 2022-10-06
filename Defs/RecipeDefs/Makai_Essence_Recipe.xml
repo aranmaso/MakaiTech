@@ -225,7 +225,7 @@
 			<li>
 			<filter>
 			  <thingDefs>
-				<li>Makai_Dea-Path_Soul</li>
+				<li>Makai_Dea_Path_Soul</li>
 			  </thingDefs>
 			</filter>
 			<count>1</count>
@@ -235,7 +235,7 @@
 		<thingDefs>
 				<li>Makai_Dea-Path_FragFirst</li>
 				<li>Makai_Dea-Path_FragSecond</li>
-				<li>Makai_Dea-Path_Soul</li>
+				<li>Makai_Dea_Path_Soul</li>
 		</thingDefs>
 		<disallowedCategories>
 		</disallowedCategories>
