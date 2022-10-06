@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<Makai_InsertFlameFragment>insert flame fragment</Makai_InsertFlameFragment>
+	<Makai_InsertFlameFragmentDesc>insert flame fragment</Makai_InsertFlameFragmentDesc>
+	<Makai_BringIngrediant>bring ingrediant to the consolidater</Makai_BringIngrediant>
+	<Makai_BringIngrediantDesc>bring ingrediant to the consolidater</Makai_BringIngrediantDesc>
+	<Makai_BondGainLevel>{PAWN_labelShort} has lost a {1} implant level due to {2}.</Makai_BondGainLevel>
+	<Makai_SkillNeurotrainerUsed>{USER_labelShort} has embrace the essence of {1} to go from level {2} to level {3}.</Makai_SkillNeurotrainerUsed>
+
+
+
+</LanguageData>
