@@ -31,17 +31,15 @@
 	<Essence_of_Flame>
 		<Method>
 			<li>Finish specific research, then build Essence Consolidator - Flame</li>
-			<li>Craft Base Essence of Flame from MFA</li>
 			<li>Process it in the machine for 5 days</li>
-			<li>in order for machine to work, room need to be in at least 200c or higher</li>
+			<li>in order for machine to work, room need to be in at least 150c or higher</li>
 		</Method>
 	</Essence_of_Flame>
 	
 	<Essence_of_Frost>
 		<Method>
 			<li>Finish specific research, then build Essence Consolidator - Frost</li>
-			<li>Craft Base Essence of Frost from MFA</li>
-			<li>Process it in the machine for 5 days</li>
+			<li>Process it in the consolidators for 5 days</li>
 			<li>in order for machine to work, room need to be in at least -100c or lower</li>
 		</Method>
 	</Essence_of_Frost>
@@ -49,9 +47,10 @@
 	<Essence_Of_Death>
 		<Method>
 			<li>Finish specific research,</li>
-			<li>Craft Fragment of Death - First Half at MFA. require 100 corses of any type</li>
+			<li>Craft Fragment of Death - First Half at MFA. require 50 corses of any type</li>
 			<li>Craft Fragment of Death - Second Half at MFA. require 20 heart</li>
 			<li>Harvest 1 Soul from humanlike pawn through operation(Lethal)</li>
+			<li>combine it into essence of death</li>
 		</Method>
 	</Essence_Of_Death>
 	
