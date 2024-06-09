@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			
+			<!-- Varia Bow -->
+		
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Bow_Varia</defName>
+				<statBases>
+					<Bulk>5.2</Bulk>
+					<Mass>3.0</Mass>
+					<SwayFactor>0.1</SwayFactor>
+					<ShotSpread>0.1</ShotSpread>
+					<SightsEfficiency>2</SightsEfficiency>
+					<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+					<WorkToMake>15000</WorkToMake>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.0</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>VWEL_Bullet_Varia</defaultProjectile>
+					<warmupTime>1</warmupTime>
+					<range>50</range>
+					<minRange>1</minRange>
+					<soundCast>Shot_ChargeBlaster</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+						<onlyManualCast>false</onlyManualCast>
+						<stopBurstWithoutLos>false</stopBurstWithoutLos>
+						<targetParams>
+							<canTargetLocations>false</canTargetLocations>
+						</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>3</magazineSize>
+					<reloadTime>0.5</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleBeam</ammoSet>
+				</AmmoUser>
+				<FireModes>
+				  <aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Bow_Varia"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Bow Arms</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Head</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<!-- <extraMeleeDamages> -->
+							<!-- <li> -->
+							  <!-- <def>Stun</def> -->
+							  <!-- <amount>32</amount> -->
+							  <!-- <chance>0.20</chance> -->
+							<!-- </li> -->
+							<!-- </extraMeleeDamages>   -->
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<!-- Early Assault -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Early_Assault"]/verbs/li[1]/verbClass</xpath>
+				<value>
+					<verbClass>Verb_Shoot</verbClass>
+				</value>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Early_Assault</defName>
+				<statBases>
+					<Bulk>2.5</Bulk>
+					<Mass>2.0</Mass>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>0.5</ShotSpread>
+					<SightsEfficiency>1</SightsEfficiency>
+					<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+					<WorkToMake>12050</WorkToMake>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.5</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>ME_Pro</defaultProjectile>
+					<warmupTime>1</warmupTime>
+					<range>25</range>
+					<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+					<burstShotCount>3</burstShotCount>
+					<soundCast>pewpewthree</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+						<onlyManualCast>false</onlyManualCast>
+						<stopBurstWithoutLos>false</stopBurstWithoutLos>
+						<targetParams>
+							<canTargetLocations>false</canTargetLocations>
+						</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>50</magazineSize>
+					<reloadTime>1</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleEnergy</ammoSet>
+				</AmmoUser>
+				<FireModes>
+				  <aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Early_Assault"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Head</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<!-- <extraMeleeDamages> -->
+							<!-- <li> -->
+							  <!-- <def>Stun</def> -->
+							  <!-- <amount>32</amount> -->
+							  <!-- <chance>0.20</chance> -->
+							<!-- </li> -->
+							<!-- </extraMeleeDamages>   -->
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<!-- <li Class="PatchOperationReplace"> -->
+				<!-- <xpath>Defs/ThingDef[defName="Makai_Early_Bomb"]/verbs/li[1]/verbClass</xpath> -->
+				<!-- <value> -->
+					<!-- <verbClass>Verb_Shoot</verbClass> -->
+				<!-- </value> -->
+			<!-- </li> -->
+			<!-- <li Class="PatchOperationRemove"> -->
+				<!-- <xpath>Defs/ThingDef[defName="Makai_Early_Bomb"]/verbs/li[0]/forcedMissRadius</xpath> -->
+			<!-- </li> -->
+			
+			<!-- Early Bomb -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Early_Bomb</defName>
+				<statBases>
+					<Bulk>2.5</Bulk>
+					<Mass>2.0</Mass>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>0.15</ShotSpread>
+					<SightsEfficiency>0.7</SightsEfficiency>
+					<RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+					<WorkToMake>15000</WorkToMake>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.5</recoilAmount>
+					<verbClass>CombatExtended.Verb_LaunchProjectileCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>MEG_Pro</defaultProjectile>
+					<warmupTime>2</warmupTime>
+					<range>25</range>
+					<minRange>5</minRange>
+					<forcedMissRadius>5</forcedMissRadius>
+					<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+					<burstShotCount>3</burstShotCount>
+					<soundCast>pewpewthree</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+					<onlyManualCast>true</onlyManualCast>
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<recoilAmount>2.93</recoilAmount>
+					<ai_IsBuildingDestroyer>True</ai_IsBuildingDestroyer>
+					<ignorePartialLoSBlocker>True</ignorePartialLoSBlocker>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+					</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>20</magazineSize>
+					<reloadTime>2</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleBomb</ammoSet>
+				</AmmoUser>
+				<FireModes>
+				  <aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Early_Bomb"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Head</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<!-- <extraMeleeDamages> -->
+							<!-- <li> -->
+							  <!-- <def>Stun</def> -->
+							  <!-- <amount>32</amount> -->
+							  <!-- <chance>0.20</chance> -->
+							<!-- </li> -->
+							<!-- </extraMeleeDamages>   -->
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<!-- Yuki Staff -->
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Yuki_Staff"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Yuki_Staff"]/verbs</xpath>
+			</li>
+			<li Class="PatchOperationAttributeRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Yuki_Staff"]/comps</xpath>
+				<attribute>Inherit</attribute>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Yuki_Staff</defName>
+				<statBases>
+					<Bulk>2.5</Bulk>
+					<Mass>2.0</Mass>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>10</ShotSpread>
+					<SightsEfficiency>1</SightsEfficiency>
+					<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+					<WorkToMake>15000</WorkToMake>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statBases>
+				<Properties>
+					<recoilAmount>0</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Yuki_Project_Extra</defaultProjectile>
+					<warmupTime>2</warmupTime>
+					<range>50</range>
+					<forcedMissRadius>0</forcedMissRadius>
+					<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+					<burstShotCount>30</burstShotCount>
+					<soundCast>pewpewthree</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+						<onlyManualCast>false</onlyManualCast>
+						<stopBurstWithoutLos>false</stopBurstWithoutLos>
+						<targetParams>
+							<canTargetLocations>true</canTargetLocations>
+						</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>100</magazineSize>
+					<reloadTime>1</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleIce</ammoSet>
+				</AmmoUser>
+				<FireModes>
+				  <aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Yuki_Staff"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							 <label>staff head</label>
+							<capacities>
+							  <li>Blunt</li>
+							</capacities>
+							<power>9</power>
+							<cooldownTime>1.8</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">							
+							<label>staff handle</label>
+							<capacities>
+							  <li>Blunt</li>
+							  <li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<!-- Early Pistol -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Early_Pistol"]/verbs/li[1]/verbClass</xpath>
+				<value>
+					<verbClass>Verb_Shoot</verbClass>
+				</value>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Early_Pistol</defName>
+				<statBases>
+					<Bulk>2.5</Bulk>
+					<Mass>2.0</Mass>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>0.5</ShotSpread>
+					<SightsEfficiency>1</SightsEfficiency>
+					<RangedWeapon_Cooldown>0.69</RangedWeapon_Cooldown>
+					<WorkToMake>15000</WorkToMake>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.5</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>ME_Pro</defaultProjectile>
+					<warmupTime>1</warmupTime>
+					<range>25</range>
+					<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+					<burstShotCount>6</burstShotCount>
+					<soundCast>pewpewthree</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+						<onlyManualCast>false</onlyManualCast>
+						<stopBurstWithoutLos>false</stopBurstWithoutLos>
+						<targetParams>
+							<canTargetLocations>false</canTargetLocations>
+						</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>75</magazineSize>
+					<reloadTime>1</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleEnergy</ammoSet>
+				</AmmoUser>
+				<FireModes>
+				  <aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Early_Pistol"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Head</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<!-- <extraMeleeDamages> -->
+							<!-- <li> -->
+							  <!-- <def>Stun</def> -->
+							  <!-- <amount>32</amount> -->
+							  <!-- <chance>0.20</chance> -->
+							<!-- </li> -->
+							<!-- </extraMeleeDamages>   -->
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<!-- Stardust Cannon -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Stardust_Cannon</defName>
+				<statBases>
+					<Bulk>2.5</Bulk>
+					<Mass>2.0</Mass>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>0.15</ShotSpread>
+					<SightsEfficiency>0.7</SightsEfficiency>
+					<RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+					<WorkToMake>15000</WorkToMake>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.5</recoilAmount>
+					<verbClass>CombatExtended.Verb_LaunchProjectileCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_Turret_Makai_B_EX_HELD</defaultProjectile>
+					<warmupTime>3</warmupTime>
+					<range>45</range>
+					<minRange>5</minRange>
+					<forcedMissRadius>0.1</forcedMissRadius>
+					<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+					<burstShotCount>3</burstShotCount>
+					<requireLineOfSight>false</requireLineOfSight>
+					<soundCast>anva_gl</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+					<onlyManualCast>true</onlyManualCast>
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<ai_IsBuildingDestroyer>True</ai_IsBuildingDestroyer>
+					<ignorePartialLoSBlocker>True</ignorePartialLoSBlocker>
+					<targetParams>
+						<canTargetLocations>true</canTargetLocations>
+						<canTargetSelf>true</canTargetSelf>
+					</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>20</magazineSize>
+					<reloadTime>2</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleCannon</ammoSet>
+				</AmmoUser>
+				<FireModes>
+				  <aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Stardust_Cannon"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Gun head</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Gun handle</label>
+							<capacities>
+								<li>Blunt</li>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<!-- <extraMeleeDamages> -->
+							<!-- <li> -->
+							  <!-- <def>Stun</def> -->
+							  <!-- <amount>32</amount> -->
+							  <!-- <chance>0.20</chance> -->
+							<!-- </li> -->
+							<!-- </extraMeleeDamages>   -->
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			
+		</operations>
+	
+	</Operation>
+
+
+</Patch>

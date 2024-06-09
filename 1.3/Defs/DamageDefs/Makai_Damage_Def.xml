@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <DamageDef>
+    <defName>Existence_Null_ArmorDebuff</defName>
+    <label>Concept of Destruction</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has it existence made null</deathMessage>
+    <hediff>Crush</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Conceptual_Destruction</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Existence_Null_Lightning</defName>
+    <label>Lightning Burn</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has it existence made null</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Conceptual_Destruction</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Lightning_Ring_Ball</defName>
+    <label>Lightning Burn</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has it existence made null</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Conceptual_Destruction</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Curse_of_Always_Exist</defName>
+    <label>Existence Dread</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has face the concept of existence</deathMessage>
+    <hediff>Crush</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Conceptual_Null</hediff>
+		<severityPerDamageDealt>0.4</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Alf_Corruption</defName>
+    <label>Mind Corruption</label>
+	<defaultDamage>0</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has lost it mind.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Conceptual_Corrupt</hediff>
+		<severityPerDamageDealt>3</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Alf_Corruption_Beam</defName>
+    <label>Mind Corruption</label>
+	<defaultDamage>0</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has lost it mind.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Conceptual_Corrupt</hediff>
+		<severityPerDamageDealt>10</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Yuki_Cold</defName>
+    <label>Frigid Cold</label>
+	<defaultDamage>1</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has freezed to dead.</deathMessage>
+    <hediff>Frostbite</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Hypothermia</hediff>
+		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+	  <li>
+        <hediff>Conceptual_Frost</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Yuki_Cold_Extra</defName>
+    <label>Frigid Cold</label>
+	<defaultDamage>1</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has freezed to dead.</deathMessage>
+    <hediff>Frostbite</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Hypothermia</hediff>
+		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Mica_Fire</defName>
+    <label>SunBlade</label>
+	<defaultDamage>1</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has burned to dead.</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Heatstroke</hediff>
+		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+	  <li>
+        <hediff>Conceptual_Flame</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<isExplosive>true</isExplosive>
+	<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>6</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorCenter>(0.73, 0.93, 0.96)</explosionColorCenter>
+    <explosionColorEdge>(0.71, 0.82, 0.90)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Mica_Star</defName>
+    <label>Radiant Star</label>
+	<defaultDamage>1</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has burned to dead.</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Burn</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Heatstroke</hediff>
+		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+	  <li>
+        <hediff>Conceptual_StarHeat</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<isExplosive>false</isExplosive>
+	<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>6</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorCenter>(0.73, 0.93, 0.96)</explosionColorCenter>
+    <explosionColorEdge>(0.71, 0.82, 0.90)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Sari_13th</defName>
+    <label>Destined Death</label>
+	<defaultDamage>1</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has met a destined death.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Conceptual_Death</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Sari_Turret</defName>
+    <label>Destined Death</label>
+	<defaultDamage>1</defaultDamage>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has met a destined death.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>false</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<damageEffecter>Ring_ExpandP</damageEffecter>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Knowledge_Seeker</defName>
+    <label>Knowledge Seeker</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has their ability to think cease functioned</deathMessage>
+    <hediff>Stab</hediff>
+    <hediffSolid>Crush</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <additionalHediffs>
+      <li>
+        <hediff>Knowledge_Stolen</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+	<defName>Stardust_Accel_Bullet</defName>
+    <label>stardust particle</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has their being scorched by stardust</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<additionalHediffs>
+      <li>
+        <hediff>Makai_ArmorMelt</hediff>
+		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+	<buildingDamageFactor>0</buildingDamageFactor>
+    <plantDamageFactor>0</plantDamageFactor>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+	<defName>Stardust_Compress_Bullet</defName>
+    <label>stardust beam</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has their being scorched by stardust</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<buildingDamageFactor>4</buildingDamageFactor>
+    <plantDamageFactor>4</plantDamageFactor>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<!--damageEffecter>LASERIMPACT</damageEffecter-->
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Stardust_Compress_Bullet_Ex</defName>
+    <label>energy blast</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<buildingDamageFactor>4</buildingDamageFactor>
+    <plantDamageFactor>4</plantDamageFactor>
+    <armorCategory>Heat</armorCategory>
+	<defaultDamage>50</defaultDamage>
+	<minDamageToFragment>15</minDamageToFragment>
+	<defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>5.00</defaultArmorPenetration>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<isExplosive>true</isExplosive>
+	<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>50</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Mote_Invis</explosionCellFleck>
+	<explosionInteriorFleck>Mote_Invis</explosionInteriorFleck>
+    <explosionColorCenter>(0,255,0)</explosionColorCenter>
+    <explosionColorEdge>(0,255,0)</explosionColorEdge>
+    <soundExplosion>Explosion_EMP</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+	<!--damageEffecter>LASERIMPACT</damageEffecter-->
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Stardust_Compress_Bullet_Ex_HELD</defName>
+    <label>energy blast</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<buildingDamageFactor>4</buildingDamageFactor>
+    <plantDamageFactor>4</plantDamageFactor>
+    <armorCategory>Heat</armorCategory>
+	<defaultDamage>50</defaultDamage>
+	<minDamageToFragment>15</minDamageToFragment>
+	<defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>5.00</defaultArmorPenetration>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<isExplosive>true</isExplosive>
+	<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>20</explosionHeatEnergyPerCell>
+    <!--explosionCellFleck>Mote_Invis</explosionCellFleck>
+	<explosionInteriorFleck>Mote_Invis</explosionInteriorFleck-->
+    <explosionColorCenter>(0,255,0)</explosionColorCenter>
+    <explosionColorEdge>(0,255,0)</explosionColorEdge>
+    <soundExplosion>Explosion_EMP</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+	<damageEffecter>Ring_ExpandY</damageEffecter>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Stardust_Artiliery_Bullet_Ex</defName>
+    <label>energy blast</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<buildingDamageFactor>10</buildingDamageFactor>
+    <plantDamageFactor>10</plantDamageFactor>
+    <armorCategory>Sharp</armorCategory>
+	<defaultDamage>50</defaultDamage>
+	<minDamageToFragment>15</minDamageToFragment>
+	<defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>5.00</defaultArmorPenetration>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<isExplosive>true</isExplosive>
+	<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>200</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Mote_Invis</explosionCellFleck>
+	<!--explosionInteriorFleck>Mote_Invis</explosionInteriorFleck-->
+    <explosionColorCenter>(255,255,0,255)</explosionColorCenter>
+    <explosionColorEdge>(255,255,0,50)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+	<damageEffecter>Ring_ExpandY</damageEffecter>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>Nightmare_Claw_Bullet_Damage</defName>
+    <label>corrupted blast</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<additionalHediffs>
+      <li>
+        <hediff>Nigthmare_Claw</hediff>
+		<severityPerDamageDealt>0.5</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <armorCategory>Sharp</armorCategory>
+	<defaultDamage>10</defaultDamage>
+	<minDamageToFragment>15</minDamageToFragment>
+	<defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>0.10</defaultArmorPenetration>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<isExplosive>true</isExplosive>
+	<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>6</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Mote_Invis</explosionCellFleck>
+	<explosionInteriorFleck>LineEMP</explosionInteriorFleck>
+    <explosionColorCenter>(255,255,0,100)</explosionColorCenter>
+    <explosionColorEdge>(255,255,0,100)</explosionColorEdge>
+    <soundExplosion>sari_sweep</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+	<damageEffecter>Ring_ExpandY</damageEffecter>
+  </DamageDef>
+  
+  <DamageDef>
+	<defName>Nightmare_Claw_Bullet_DamageTwo</defName>
+    <label>corrupted claw</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has their being corrupted by nightmare claw</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<additionalHediffs>
+      <li>
+        <hediff>Conceptual_Corrupt</hediff>
+		<severityPerDamageDealt>0.5</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+	<buildingDamageFactor>4</buildingDamageFactor>
+    <plantDamageFactor>4</plantDamageFactor>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<soundExplosion>sari_sweep</soundExplosion>
+	<damageEffecter>Ring_ExpandY</damageEffecter>
+  </DamageDef>
+  
+  <DamageDef Name="BaseAutoBullet">
+	<defName>ME_Bullet_A</defName>
+    <label>energy bullet</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<additionalHediffs>
+      <li>
+        <hediff>Makai_ArmorMelt</hediff>
+		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+	  <li>
+        <hediff>ATKSPEED_Mark</hediff>
+		<severityPerDamageDealt>1</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+	<buildingDamageFactor>1</buildingDamageFactor>
+    <plantDamageFactor>1</plantDamageFactor>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+  
+  <DamageDef>
+    <defName>ME_Bullet_G</defName>
+    <label>energy blast</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Burn</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<additionalHediffs>
+      <li>
+        <hediff>Makai_ArmorMelt</hediff>
+		<severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <armorCategory>Heat</armorCategory>
+	<defaultDamage>50</defaultDamage>
+	<minDamageToFragment>15</minDamageToFragment>
+	<defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>0.10</defaultArmorPenetration>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	<isExplosive>true</isExplosive>
+	<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>6</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Mote_WhiteBlode</explosionCellFleck>
+    <explosionColorCenter>(255,255,0)</explosionColorCenter>
+    <explosionColorEdge>(255,122,0)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+  
+  <!--DamageDef>
+	<defName>Stardust_Bullet_Boom</defName>
+	<label>star boom</label>
+	<defaultDamage>200</defaultDamage>
+    <minDamageToFragment>200</minDamageToFragment>
+    <deathMessage>{0} has died from an artillery explosion.</deathMessage>
+    <defaultStoppingPower>0.8</defaultStoppingPower>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <isExplosive>true</isExplosive>
+    <hediff>Shredded</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+    <buildingDamageFactor>0</buildingDamageFactor>
+    <plantDamageFactor>0</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>6</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorCenter>(0.37, 0.34, 0.64)</explosionColorCenter>
+    <explosionColorEdge>(0.37, 0.34, 0.64)</explosionColorEdge>
+    <soundExplosion>Explosion_EMP</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <isRanged>true</isRanged>
+  </DamageDef-->
+</Defs>

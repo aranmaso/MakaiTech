@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>Makai_Install_DistortArmBase</defName>
+		<label>Install distorted arm</label>
+		<description>expose pawn to essence of distortion, and distort it part into something else entirely.</description>
+		<jobString>expose TargetA. to essence of distortion</jobString>
+		<workAmount>1000</workAmount>
+		<hideBodyPartNames>false</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<addsHediff>Makai_Distorted_Arm_Base</addsHediff>
+		<surgeryIgnoreEnvironment>false</surgeryIgnoreEnvironment>
+		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<anesthetize>true</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence6_Bionic</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_Dis-Path_E</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_Dis-Path_E</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<products>
+			<Makai_Dis-Path_E>1</Makai_Dis-Path_E>
+		</products>
+	</RecipeDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+    <defName>Makai_Distorted_Arm_Base</defName>
+    <label>Distorted Arm</label>
+	<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
+    <description>Distorted Arm made from exposing a pawn to Essence of Distortion.</description>	
+    <isBad>false</isBad>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.5</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+		<li Class="MakaiTech.HediffCompProperties_AdaptiveArmor">
+			<!--damageDefIncoming>Flame</damageDefIncoming>
+			<createHediffOn>Shoulder</createHediffOn>
+			<createHediff>Distorted_Arm_Base_FlameReact</createHediff-->
+			<severityPerHit>1.1</severityPerHit>
+			<armorInfoLists>
+				<li>
+					<armorCategoryDef>Sharp</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_SharpReact</reactionHediff>
+				</li>
+				<li>
+					<armorCategoryDef>Blunt</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_BluntReact</reactionHediff>
+				</li>
+				<li>
+					<armorCategoryDef>Heat</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_FlameReact</reactionHediff>
+				</li>
+				<li>
+					<armorCategoryDef>Celestial</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_CelestialReact</reactionHediff>
+				</li>
+			</armorInfoLists>
+			<damageDefInfoList>
+				<li>
+					<damageDef>Frostbite</damageDef>
+					<reactionHediff>Distorted_Arm_Base_FrostReact</reactionHediff>
+				</li>
+				<li>
+					<damageDef>Burn</damageDef>
+					<reactionHediff>Distorted_Arm_Base_BurnReact</reactionHediff>
+				</li>
+				<li>
+					<damageDef>Arrow</damageDef>
+					<reactionHediff>Distorted_Arm_Base_ArrowReact</reactionHediff>
+				</li>
+			</damageDefInfoList>
+			<!-- <damageDefIncoming2>Frostbite</damageDefIncoming2> -->
+			<!-- <createHediff2>Distorted_Arm_Base_FrostReact</createHediff2> -->
+			
+			<!-- <damageDefIncoming3>Burn</damageDefIncoming3> -->
+			<!-- <createHediff3>Distorted_Arm_Base_BurnReact</createHediff3> -->
+			
+			<!-- <damageDefIncoming4>Arrow</damageDefIncoming4> -->
+			<!-- <createHediff4>Distorted_Arm_Base_ArrowReact</createHediff4> -->
+			
+			<!-- <DamageArmorCategoryDef>Sharp</DamageArmorCategoryDef> -->
+			<!-- <skipIfAlreadyExists>true</skipIfAlreadyExists> -->
+			<!-- <createHediff11>Distorted_Arm_Base_SharpReact</createHediff11> -->
+			<!-- <SeverityPerHit2>0.1</SeverityPerHit2> -->
+			
+			<!-- <DamageArmorCategoryDef2>Blunt</DamageArmorCategoryDef2> -->
+			<!-- <skipIfAlreadyExists2>true</skipIfAlreadyExists2> -->
+			<!-- <createHediff12>Distorted_Arm_Base_BluntReact</createHediff12> -->
+			<!-- <SeverityPerHit1>0.1</SeverityPerHit1> -->
+			
+			<!-- <DamageArmorCategoryDef3>Heat</DamageArmorCategoryDef3> -->
+			<!-- <skipIfAlreadyExists3>true</skipIfAlreadyExists3> -->
+			<!-- <createHediff13>Distorted_Arm_Base_FlameReact</createHediff13> -->
+			<!-- <SeverityPerHit3>0.1</SeverityPerHit3> -->
+		</li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+    </stages>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
+		<defName>Makai_Install_DistortSkinBase</defName>
+		<label>Install distorted skin plating</label>
+		<description>expose pawn to essence of distortion, and distort it part into something else entirely.</description>
+		<jobString>expose TargetA. to essence of distortion</jobString>
+		<workAmount>1000</workAmount>
+		<hideBodyPartNames>false</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<addsHediff>Makai_Distorted_Skin_Base</addsHediff>
+		<surgeryIgnoreEnvironment>false</surgeryIgnoreEnvironment>
+		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<anesthetize>true</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence6_Bionic</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_Dis-Path_E</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_Dis-Path_E</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Torso</li>
+		</appliedOnFixedBodyParts>
+		<products>
+			<Makai_Dis-Path_E>1</Makai_Dis-Path_E>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>Makai_Remove_DistortSkinBase</defName>
+    <label>remove distorted skin implant</label>
+    <description>Remove distorted skin implant.</description>
+    <descriptionHyperlinks>
+      <HediffDef>Makai_Distorted_Skin_Base</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing distorted skin implant.</jobString>
+    <removesHediff>Makai_Distorted_Skin_Base</removesHediff>
+  </RecipeDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+	<!--HediffDef ParentName="AddedBodyPartBase"-->
+    <defName>Makai_Distorted_Skin_Base</defName>
+    <label>Distorted Skin Plating</label>
+	<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
+    <description>Distorted Plating made from exposing pawn to Essence of Distortion.</description>
+    <isBad>false</isBad>	
+    <comps>
+		<li Class="MakaiTech.HediffCompProperties_AdaptiveArmor">
+			<severityPerHit>1.1</severityPerHit>
+			<armorInfoLists>
+				<li>
+					<armorCategoryDef>Sharp</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_SharpReact</reactionHediff>
+				</li>
+				<li>
+					<armorCategoryDef>Blunt</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_BluntReact</reactionHediff>
+				</li>
+				<li>
+					<armorCategoryDef>Heat</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_FlameReact</reactionHediff>
+				</li>
+				<li>
+					<armorCategoryDef>Celestial</armorCategoryDef>
+					<reactionHediff>Distorted_Arm_Base_CelestialReact</reactionHediff>
+				</li>
+			</armorInfoLists>
+			<damageDefInfoList>
+				<li>
+					<damageDef>Frostbite</damageDef>
+					<reactionHediff>Distorted_Arm_Base_FrostReact</reactionHediff>
+				</li>
+				<li>
+					<damageDef>Burn</damageDef>
+					<reactionHediff>Distorted_Arm_Base_BurnReact</reactionHediff>
+				</li>
+				<li>
+					<damageDef>Arrow</damageDef>
+					<reactionHediff>Distorted_Arm_Base_ArrowReact</reactionHediff>
+				</li>
+			</damageDefInfoList>
+			</li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+    </stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Distorted_Arm_Base_FrostReact</defName>
+    <label>Adapt - Frost Resistance</label>
+	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
+    <description>Adaptive module to resist Frostbite damage.</description>
+    <isBad>false</isBad>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>2500</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+    </comps>
+    <stages>
+      <li>
+		<statOffsets>
+			<ComfyTemperatureMin>-300</ComfyTemperatureMin>
+		</statOffsets>
+      </li>
+    </stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Distorted_Arm_Base_BurnReact</defName>
+    <label>Adapt - Flame Resistance</label>
+	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
+    <description>Adaptive module to resist Burn damage.</description>
+    <isBad>false</isBad>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>2500</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+    </comps>
+    <stages>
+      <li>
+		<statOffsets>
+			<Flammability>-0.5</Flammability>
+			<ComfyTemperatureMax>300</ComfyTemperatureMax>
+		</statOffsets>
+      </li>
+    </stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Distorted_Arm_Base_ArrowReact</defName>
+    <label>Adapt - Arrow Immune</label>
+	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
+    <description>Adaptive module to immune Arrow damage.</description>
+    <isBad>false</isBad>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>60</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+    </comps>
+    <stages>
+      <li>
+		<statOffsets>
+			<Flammability>-0.5</Flammability>
+			<ArmorRating_Sharp>300</ArmorRating_Sharp>
+			<InjuryHealingFactor>100</InjuryHealingFactor>
+		</statOffsets>
+      </li>
+    </stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Distorted_Arm_Base_FlameReact</defName>
+    <label>Adapt - Flame Resistance</label>
+	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
+    <description>Adaptive module to resist Flame damage</description>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+	<maxSeverity>6</maxSeverity>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>625</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-48</severityPerDay>
+			<showHoursToRecover>false</showHoursToRecover>
+		</li>
+    </comps>
+    <stages>
+      <li>
+		<label>Level 1</label>
+		<minSeverity>1</minSeverity>
+		<statOffsets>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+		</statOffsets>
+		<statFactors>
+		</statFactors>
+      </li>
+	  <li>
+		<label>Level 2</label>
+		<minSeverity>2</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_FlameReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 3</label>
+		<minSeverity>3</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_FlameReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 4</label>
+		<minSeverity>4</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_FlameReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 5</label>
+		<minSeverity>5</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_FlameReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Heat>0.3</ArmorRating_Heat>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 6</label>
+		<minSeverity>6</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_FlameReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+		</statOffsets>
+	  </li>
+    </stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Distorted_Arm_Base_BluntReact</defName>
+    <label>Adapt - Blunt Resistance</label>
+	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
+    <description>Adaptive module to resist Blunt damage.</description>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+	<maxSeverity>6</maxSeverity>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>625</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-48</severityPerDay>
+			<showHoursToRecover>false</showHoursToRecover>
+		</li>
+    </comps>
+    <stages>
+      <li>
+		<label>Level 1</label>
+		<minSeverity>1</minSeverity>
+		<statOffsets>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		</statOffsets>
+		<statFactors>
+		</statFactors>
+      </li>
+	  <li>
+		<label>Level 2</label>
+		<minSeverity>2</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_BluntReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 3</label>
+		<minSeverity>3</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_BluntReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 4</label>
+		<minSeverity>4</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_BluntReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 5</label>
+		<minSeverity>5</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_BluntReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 6</label>
+		<minSeverity>6</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_BluntReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+		</statOffsets>
+	  </li>
+    </stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Distorted_Arm_Base_SharpReact</defName>
+    <label>Adapt - Sharp Resistance</label>
+	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
+    <description>Adaptive module to resist Sharp damage.</description>
+    <isBad>false</isBad>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>6</maxSeverity>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>625</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-48</severityPerDay>
+			<showHoursToRecover>false</showHoursToRecover>
+		</li>
+    </comps>
+    <stages>
+      <li>
+		<label>Level 1</label>
+		<minSeverity>1</minSeverity>
+		<statOffsets>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+		</statOffsets>
+		<statFactors>
+		</statFactors>
+      </li>
+	  <li>
+		<label>Level 2</label>
+		<minSeverity>2</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_SharpReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 3</label>
+		<minSeverity>3</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_SharpReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 4</label>
+		<minSeverity>4</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_SharpReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 5</label>
+		<minSeverity>5</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_SharpReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 6</label>
+		<minSeverity>6</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_SharpReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+		</statOffsets>
+	  </li>
+    </stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Distorted_Arm_Base_CelestialReact</defName>
+    <label>Adapt - Celestial Resistance</label>
+	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
+    <description>Adaptive module to resist Celestial damage.</description>
+    <isBad>false</isBad>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>6</maxSeverity>
+    <comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>625</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-48</severityPerDay>
+			<showHoursToRecover>false</showHoursToRecover>
+		</li>
+    </comps>
+    <stages>
+      <li>
+		<label>Level 1</label>
+		<minSeverity>1</minSeverity>
+		<statOffsets>
+			<ArmorRating_Celestial>0.1</ArmorRating_Celestial>
+		</statOffsets>
+		<statFactors>
+		</statFactors>
+      </li>
+	  <li>
+		<label>Level 2</label>
+		<minSeverity>2</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_CelestialReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Celestial>0.15</ArmorRating_Celestial>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 3</label>
+		<minSeverity>3</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_CelestialReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Celestial>0.2</ArmorRating_Celestial>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 4</label>
+		<minSeverity>4</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_CelestialReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Celestial>0.25</ArmorRating_Celestial>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 5</label>
+		<minSeverity>5</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_CelestialReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Celestial>0.3</ArmorRating_Celestial>
+		</statOffsets>
+	  </li>
+	  <li>
+		<label>Level 6</label>
+		<minSeverity>6</minSeverity>
+		<hediffGivers>
+			<li Class="HediffGiver_AddSeverity">
+			<hediff>Distorted_Arm_Base_CelestialReact</hediff>
+			<severityAmount>-1</severityAmount>
+			<mtbHours>1</mtbHours>
+			</li>
+		</hediffGivers>
+		<statOffsets>
+			<ArmorRating_Celestial>0.5</ArmorRating_Celestial>
+		</statOffsets>
+	  </li>
+    </stages>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+	<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
+		<defName>Makai_Install_DistortTargeting</defName>
+		<label>install distorted eye implant</label>
+		<description>expose pawn to essence of distortion, and distort it part into something else entirely.</description>
+		<jobString>expose TargetA. to essence of distortion</jobString>
+		<workAmount>1000</workAmount>
+		<hideBodyPartNames>false</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<addsHediff>Makai_Distorted_EyeImplant</addsHediff>
+		<surgeryIgnoreEnvironment>false</surgeryIgnoreEnvironment>
+		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<anesthetize>true</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence6_Bionic</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_Dis-Path_E</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_Dis-Path_E</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<products>
+			<Makai_Dis-Path_E>1</Makai_Dis-Path_E>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>Makai_Remove_DistortTargeting</defName>
+    <label>remove distorted eye implant</label>
+    <description>Remove distorted eye implant.</description>
+    <descriptionHyperlinks>
+      <HediffDef>Makai_Distorted_EyeImplant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing distorted eye implant.</jobString>
+    <removesHediff>Makai_Distorted_EyeImplant</removesHediff>
+  </RecipeDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+	<!--HediffDef ParentName="AddedBodyPartBase"-->
+    <defName>Makai_Distorted_EyeImplant</defName>
+    <label>Distorted Eye Plating</label>
+	<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
+    <description>Distorted Plating made from exposing pawn to Essence of Distortion. this retina plating seem to guide any projectile they shot. making them bounce between target.</description>
+    <isBad>false</isBad>
+    <comps>
+		<li Class="MakaiTech.HediffCompProperties_BouncingHediff">
+			<bounceCount>25</bounceCount>
+			<bounceRegenPerProc>5</bounceRegenPerProc>
+			<tickToRestore>2500</tickToRestore>
+			<chance>0.5</chance>
+			<uiIcon>Things/Abilities/HediffToggle/ShiftBullet</uiIcon>
+		</li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+    </stages>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+	<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
+		<defName>Makai_Install_FatedReverse</defName>
+		<label>embed reversed fate fragment</label>
+		<description>expose pawn to essence of fate, grant them the blessing of reversed fate.</description>
+		<workerClass>Recipe_AddHediff</workerClass>
+		<jobString>expose TargetA. to essence of fate</jobString>
+		<workAmount>1000</workAmount>
+		<isViolation>false</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<addsHediff>Makai_Fate_Reverse</addsHediff>
+		<surgeryIgnoreEnvironment>false</surgeryIgnoreEnvironment>
+		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<anesthetize>true</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence4_Bionic</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>15</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_F-Path_E</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_F-Path_E</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Makai_F-Path_E>1</Makai_F-Path_E>
+		</products>
+	</RecipeDef>
+	
+	<HediffDef ParentName="ImplantHediffBase">
+    <defName>Makai_Fate_Reverse</defName>
+    <label>Reverse Fate Fragment</label>
+    <description>Fragment of reversed fate embed into this individual, causing the corse of fate for their injury and condition to go in reverse. basically healing and reversing any hediff they currently have. or restoring lost limb. the fragment only lasted 24h. \n\n\n be warn, the string of fate may yield unexpected result in certain circumstances.</description>
+    <defaultLabelColor>(95, 87, 165)</defaultLabelColor>
+	<initialSeverity>1</initialSeverity>
+	<maxSeverity>1</maxSeverity>
+	<hediffClass>HediffWithComps</hediffClass>
+	<spawnThingOnRemoved>Makai_F-Path_E</spawnThingOnRemoved>
+    <isBad>false</isBad>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<showRemainingTime>True</showRemainingTime>
+			<disappearsAfterTicks>30000</disappearsAfterTicks>
+		</li>
+		<li Class="MakaiTech.HediffCompProperties_ReversedFate">
+			<interval>250</interval>
+			<tickIncrease>1000</tickIncrease>
+			<severityToReverse>0.1</severityToReverse>
+		</li>
+	</comps>
+    <stages>
+		<li>
+		</li>
+	</stages>
+	</HediffDef>	
+</Defs>

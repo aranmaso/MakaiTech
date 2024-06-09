@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <CombatExtended.AmmoCategoryDef>
+    <defName>Makai_StarParticleAmmoClass</defName>
+    <label>Star Particle</label>
+    <description>Ammunition made purely from star particle with Makai technology.</description>
+  </CombatExtended.AmmoCategoryDef>
+
+
+  
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>MakaiTech</name>
+	<author>Aranmaho</author>
+	<packageId>Aranmaho.Makai</packageId>
+	<supportedVersions>
+		<!-- <li>1.4</li> -->
+		<li>1.5</li>
+	</supportedVersions>
+	<description>
+	MakaiTech. experience what it feel like to have power of the star in the comfort of your own hand.
+	</description>
+	<modDependencies>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+			<downloadUrl>https://github.com/AndroidQuazar/VanillaExpandedFramework</downloadUrl>
+		</li>
+		<!-- <li> -->
+			<!-- <packageId>imranfish.xmlextensions</packageId> -->
+			<!-- <displayName>XML Extensions</displayName> -->
+			<!-- <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2574315206</steamWorkshopUrl> -->
+		<!-- </li> -->
+	</modDependencies>
+	<loadAfter>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<!-- <li>imranfish.xmlextensions</li> -->
+	</loadAfter>	
+
+</ModMetaData>

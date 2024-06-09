@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<AbilityDef>
+    <defName>Makai_Corruption_ClawGrab</defName>
+    <label>Claw Grab</label>
+    <description>launch a claw of nightmare at target pawn.and pull target pawn to caster location.</description>
+    <iconPath>Things/Abilities/Corruption/ClawGrab</iconPath>
+    <aiCanUse>true</aiCanUse>
+	<groupDef>Makai_Weapon_Ability</groupDef>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>20.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>sari_sweep</soundCast>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+		<canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+		<li Class="MakaiTech.CompProperties_PullingClaw">
+			<thingDef>Makai_Pull</thingDef>
+			<projectileDef>MakaiPsy_CP_ClawGrab</projectileDef>
+		</li>
+    </comps>
+	<modExtensions>
+			<li Class="MakaiTech.AbilityExtension_MakaiDataHolder">
+				<thingDef>Makai_Pull</thingDef>
+				<projectileDef>MakaiPsy_CP_ClawGrab</projectileDef>
+			</li>
+	</modExtensions>
+  </AbilityDef>
+  
+  <AbilityDef>
+    <defName>Makai_Corruption_Pulse</defName>
+    <label>Pulse Now</label>
+    <description>launch a claw of nightmare at target pawn.and pull target pawn to caster location.</description>
+    <iconPath>Things/Abilities/Corruption/ClawGrab</iconPath>
+    <aiCanUse>true</aiCanUse>
+	<groupDef>Makai_Weapon_Ability</groupDef>
+	<targetRequired>False</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>sari_sweep</soundCast>
+	  <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+		<li Class="MakaiTech.CompProperties_PulsingCorruption" />		
+    </comps>
+	<modExtensions>
+			<li Class="MakaiTech.AbilityExtension_MakaiDataHolder">
+				<thingDef>Makai_Pull</thingDef>
+				<projectileDef>MakaiPsy_CP_ClawGrab</projectileDef>
+			</li>
+		</modExtensions>
+  </AbilityDef>
+
+
+</Defs>

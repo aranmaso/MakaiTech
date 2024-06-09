@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Makai_De-Path_E"]/statBases/MarketValue</xpath>
+    <value>
+      <MarketValue>200000</MarketValue>
+    </value>
+  </Operation>
+</Patch>

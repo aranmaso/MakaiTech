@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Makai_SunC"]/building/soundAmbient</xpath>
+			<value>
+				<soundAmbient>ArchonexusCore_Ambience</soundAmbient>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Makai_Powernode_TierOne"]/building/soundAmbient</xpath>
+			<value>
+				<soundAmbient>ArchonexusCore_Ambience</soundAmbient>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[@Name="MakaiPrimoForgeCraftBase"]/soundWorking</xpath>
+			<value>
+				<soundWorking>ArchonexusCore_Ambience</soundWorking>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[@Name="MakaiPrimoForgeCraftBaseRawResource"]/soundWorking</xpath>
+			<value>
+				<soundWorking>ArchonexusCore_Ambience</soundWorking>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[@Name="MakaiPrimoForgeCraftBaseClothLeathery"]/soundWorking</xpath>
+			<value>
+				<soundWorking>ArchonexusCore_Ambience</soundWorking>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[@Name="MakaiPrimoForgeCraftBaseItems"]/soundWorking</xpath>
+			<value>
+				<soundWorking>ArchonexusCore_Ambience</soundWorking>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[@Name="MakaiPrimoForgeCraftBaseManufactured"]/soundWorking</xpath>
+			<value>
+				<soundWorking>ArchonexusCore_Ambience</soundWorking>
+			</value>
+			</li>
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[@Name="MakaiPrimoForgeCraftBaseFood"]/soundWorking</xpath>
+			<value>
+				<soundWorking>ArchonexusCore_Ambience</soundWorking>
+			</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

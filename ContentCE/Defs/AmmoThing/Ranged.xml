@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef>
+      <defName>Makai_StarParticleAmmo</defName>
+      <label>Star Particle</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>Things/Items/makai_mat_dust</iconPath>
+    </ThingCategoryDef>
+	
+	<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_MakaiStarParticleBeam</defName>
+    <label>Star Particle Beam</label>
+    <ammoTypes>
+      <Ammo_MakaiStarParticleVariaBow>Bullet_Laser_VariaBow</Ammo_MakaiStarParticleVariaBow>
+    </ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_MakaiStarParticleIce</defName>
+    <label>Star Particle Iceshard</label>
+    <ammoTypes>
+      <Ammo_MakaiStarParticleYukiStaff>Bullet_Ice_YukiStaff</Ammo_MakaiStarParticleYukiStaff>
+    </ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_MakaiStarParticleEnergy</defName>
+    <label>Star Particle Bolt</label>
+    <ammoTypes>
+      <Ammo_MakaiStarParticleEnergy>Bullet_MakaiEnergyWeaponAssault</Ammo_MakaiStarParticleEnergy>
+    </ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_MakaiStarParticleBomb</defName>
+    <label>Star Particle Bomb</label>
+    <ammoTypes>
+      <Ammo_MakaiStarParticleBomb>Bullet_MakaiEnergyWeaponBomb</Ammo_MakaiStarParticleBomb>
+    </ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_MakaiStarParticleCannon</defName>
+    <label>Star Particle Cannon</label>
+    <ammoTypes>
+      <Ammo_MakaiStarParticleCannon>Bullet_MakaiEnergyWeaponCannon</Ammo_MakaiStarParticleCannon>
+    </ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<!-- Recipe -->
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MakaiStarParticleVariaBow</defName>
+    <label>make star particle energy arrow x200</label>
+    <description>Craft 200 star particle ammo cartridges.</description>
+    <jobString>Making Star Particle ammo cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Makai_Stardust</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Makai_Stardust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MakaiStarParticleVariaBow>200</Ammo_MakaiStarParticleVariaBow>
+    </products>
+    <workAmount>6000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MakaiStarParticleYukiStaff</defName>
+    <label>make frozen particle canister x200</label>
+    <description>Craft 200 star particle frozen cartridges.</description>
+    <jobString>Making Star Particle frozen cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Makai_Stardust</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Makai_Stardust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MakaiStarParticleYukiStaff>200</Ammo_MakaiStarParticleYukiStaff>
+    </products>
+    <workAmount>6000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MakaiStarParticleEnergy</defName>
+    <label>make star particle energy cartridges x200</label>
+    <description>Craft 200 star particle ammo cartridges.</description>
+    <jobString>Making Star Particle ammo cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Makai_Stardust</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Makai_Stardust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MakaiStarParticleEnergy>200</Ammo_MakaiStarParticleEnergy>
+    </products>
+    <workAmount>6000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MakaiStarParticleBomb</defName>
+    <label>make star particle explosive canister x200</label>
+    <description>Craft 200 star particle ammo cartridges.</description>
+    <jobString>Making Star Particle ammo cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Makai_Stardust</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Makai_Stardust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MakaiStarParticleBomb>200</Ammo_MakaiStarParticleBomb>
+    </products>
+    <workAmount>6000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MakaiStarParticleCannon</defName>
+    <label>make condensed stardust canister x10</label>
+    <description>Craft 200 star particle ammo cartridges.</description>
+    <jobString>Making Star Particle ammo cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Makai_Stardust</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Makai_Stardust</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MakaiStarParticleCannon>10</Ammo_MakaiStarParticleCannon>
+    </products>
+    <workAmount>6000</workAmount>
+  </RecipeDef>
+	
+	<!-- AmmoDef -->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="StarParticleBase" ParentName="AmmoBase" Abstract="True">
+    <description>Special ammo used by Makai weaponary.</description>
+    <statBases>
+      <MarketValue>50</MarketValue>
+	  <Mass>0.1</Mass>
+	  <Bulk>0.1</Bulk>
+	  <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting_Makai_Bench</li>
+    </tradeTags>
+    <thingCategories>
+      <li>Makai_StarParticleAmmo</li>
+    </thingCategories>
+        <stackLimit>200</stackLimit>
+	    <cookOffFlashScale>40</cookOffFlashScale>
+    <cookOffSound>MortarBomb_Explode</cookOffSound>
+    <ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+  </ThingDef>
+  
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleVariaBow</defName>
+    <label>star particle energy arrow</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleYukiStaff</defName>
+    <label>star particle Iceshard</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleEnergy</defName>
+    <label>star particle energy cartridge</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleBomb</defName>
+    <label>volatile star particle canister</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleCannon</defName>
+    <label>Stardust Cannon Ammo</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+  
+	<!-- Projectile -->
+  
+	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletBlue">
+          <defName>Bullet_Laser_VariaBow</defName>
+          <label>laser beam</label> 
+		  <graphicData>
+            <color>(255,255,0)</color>
+          </graphicData>   
+          <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Knowledge_Seeker</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <armorPenetrationSharp>35.5</armorPenetrationSharp>
+            <armorPenetrationBlunt>350.5</armorPenetrationBlunt>
+          </projectile>         
+    </ThingDef>
+	
+	<!-- Small Projectile -->
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseMakaiEnergyBullet" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/makai_bullet_mea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <speed>50</speed>
+	  <dropsCasings>true</dropsCasings>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+    <defName>Bullet_Ice_YukiStaff</defName>
+    <label>star particle bolt</label>
+	<graphicData>
+		<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Yuki_Cold_Extra</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <armorPenetrationSharp>35</armorPenetrationSharp>
+	  <armorPenetrationBlunt>350</armorPenetrationBlunt>
+    </projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+    <defName>Bullet_MakaiEnergyWeaponAssault</defName>
+    <label>star particle bolt</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>ME_Bullet_A</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <!-- <secondaryDamage> -->
+        <!-- <li> -->
+          <!-- <def>Bomb_Secondary</def> -->
+          <!-- <amount>4</amount> -->
+        <!-- </li> -->
+      <!-- </secondaryDamage> -->
+      <armorPenetrationSharp>35</armorPenetrationSharp>
+	  <armorPenetrationBlunt>350</armorPenetrationBlunt>
+    </projectile>
+	</ThingDef>	
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+    <defName>Bullet_MakaiEnergyWeaponBomb</defName>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <label>star particle bolt</label>
+	<graphicData>
+			<texPath>Things/Projectile/makai_bullet_meg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+	</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>ME_Bullet_G</damageDef>
+	  <speed>20</speed>
+      <damageAmountBase>30</damageAmountBase>
+      <armorPenetrationSharp>10</armorPenetrationSharp>
+	  <armorPenetrationBlunt>100</armorPenetrationBlunt>
+	  <explosionRadius>2.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+    <defName>Bullet_MakaiEnergyWeaponCannon</defName>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <label>star particle bolt</label>
+	<graphicData>
+			<texPath>Things/Projectile/y_beam2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+	</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Stardust_Compress_Bullet_Ex_HELD</damageDef>
+	  <speed>40</speed>
+      <damageAmountBase>20</damageAmountBase>
+      <armorPenetrationSharp>50</armorPenetrationSharp>
+	  <armorPenetrationBlunt>500</armorPenetrationBlunt>
+	  <explosionRadius>3</explosionRadius>
+	  <explosionEffect>LASERIMPACT_PURPLE</explosionEffect>
+    </projectile>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+					<ThoughtDef>
+						<defName>AriaBless</defName>
+						<workerClass>ThoughtWorker_Hediff</workerClass>
+						<hediff>Makai_AriaBuffonWearer</hediff>
+						<validWhileDespawned>true</validWhileDespawned>
+						<stages>
+							<li>
+								<label>Chad</label>
+								<description>Look at me. I'm CHAD now.</description>
+								<baseMoodEffect>3</baseMoodEffect>
+							</li>
+						</stages>
+					</ThoughtDef>
+					<HediffDef>
+						<defName>Makai_AriaBuffonWearer</defName>
+						<label>Chad Energy</label>
+						<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+						<labelNoun>a chad energy</labelNoun>
+						<description>The user is emiting chad aura</description>
+						<descriptionHyperlinks><ThingDef>Makai_Aria_Ring</ThingDef></descriptionHyperlinks>
+						<isBad>false</isBad>
+						<stages>
+						  <li>
+							<painOffset>-0.50</painOffset>
+							<capMods>
+								<li>
+									<capacity>Talking</capacity>
+									<offset>0.1</offset>
+								</li>
+								<li>
+									<capacity>Hearing</capacity>
+									<offset>0.1</offset>
+								</li>
+								<li>
+									<capacity>Consciousness</capacity>
+									<offset>0.1</offset>
+								</li>
+							</capMods>
+						  </li>
+						</stages>
+					</HediffDef>
+				  
+				  <HediffDef>
+					<defName>Makai_AriaBuffHidded</defName>
+					<hediffClass>HediffWithComps</hediffClass>
+					<label>Chad Energy</label>
+					<labelNoun>a chad buff</labelNoun>
+					<description>The wearer is chad</description>
+					<stages>	
+						<li>
+							<becomeVisible>false</becomeVisible>
+						</li>
+					</stages>
+					<comps>
+					<li Class="HediffCompProperties_Disappears">
+					</li>
+					  <li Class="HediffCompProperties_PsychicHarmonizer">
+						<range>5</range>
+						<thought>Aria_Mood_buff</thought>
+					  </li>
+					  <li Class="HediffCompProperties_GiveHediffsInRange">
+						<range>5</range>
+						<mote MayRequire="ludeon.rimworld.ideology">Mote_AriaBuffAura</mote>
+						<hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+						<targetingParameters>
+						  <canTargetBuildings>false</canTargetBuildings>
+						  <canTargetAnimals>false</canTargetAnimals>
+						  <canTargetMechs>false</canTargetMechs>
+						  <onlyTargetColonists>true</onlyTargetColonists>
+						</targetingParameters>
+						<hediff>AriaChadBuff</hediff>
+					  </li>
+					</comps>
+				  </HediffDef>  
+					<ThoughtDef>
+					<defName>Aria_Mood_buff</defName>
+					<thoughtClass>Thought_PsychicHarmonizer</thoughtClass>
+					<stackLimit>1</stackLimit>
+					<stages>
+					  <li>
+						<label>Chad Aura: {HARMONIZER_labelShort}</label>
+						<description>My friend chad energy make me feel thing.</description>
+						<baseMoodEffect>5</baseMoodEffect>
+					  </li>
+					</stages>
+				  </ThoughtDef>
+				  
+				  <ThingDef ParentName="MoteBase" MayRequire="ludeon.rimworld.ideology">
+					<defName>Mote_AriaBuffAura</defName>
+					<thingClass>MoteAttached</thingClass>
+					<altitudeLayer>LightingOverlay</altitudeLayer>
+					<drawOffscreen>true</drawOffscreen>
+					<mote>
+					  <solidTime>999</solidTime>
+					  <needsMaintenance>true</needsMaintenance>
+					</mote>
+					<graphicData>
+					  <graphicClass>Graphic_Mote</graphicClass>
+					  <texPath>Things/Mote/CombatCommandMask</texPath>
+					  <shaderType>MoteGlowPulse</shaderType>
+					  <color>(0, 31, 32)</color>
+					  <drawSize>10</drawSize>
+					</graphicData>
+				  </ThingDef>
+
+				  <ThingDef ParentName="MoteBase" MayRequire="ludeon.rimworld.royalty">
+					<defName>Makai_Mote_LinkLine</defName>
+					<thingClass>MoteDualAttached</thingClass>
+					<altitudeLayer>MoteLow</altitudeLayer>
+					<mote>
+					  <fadeInTime>0.1</fadeInTime>
+					  <fadeOutTime>0.1</fadeOutTime>
+					  <solidTime>999</solidTime>
+					  <needsMaintenance>True</needsMaintenance>
+					  <rotateTowardsTarget>True</rotateTowardsTarget>
+					  <scaleToConnectTargets>True</scaleToConnectTargets>
+					</mote>
+					<graphicData>
+					  <shaderType>MoteGlow</shaderType>
+					  <texPath>Things/Mote/CombatCommandLinkLine</texPath>
+					</graphicData>
+				  </ThingDef>
+				  
+				  <HediffDef>
+					<defName>AriaChadBuff</defName>
+					<label>Charmed by chad</label>
+					<description>Mental state are improved by {HARMONIZER_labelShort}</description>
+					<hediffClass>HediffWithComps</hediffClass>
+					<comps>
+					  <li Class="HediffCompProperties_Disappears">
+						<showRemainingTime>false</showRemainingTime>
+					  </li>
+					  <li Class="HediffCompProperties_DisappearsOnDeath"/>
+					  <li Class="HediffCompProperties_Link">
+						<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+						<maxDistance>5</maxDistance>
+						<customMote MayRequire="ludeon.rimworld.royalty">Makai_Mote_LinkLine</customMote>
+					  </li>
+					</comps>
+					<isBad>false</isBad>
+						<stages>
+						  <li>
+							<painOffset>-0.2</painOffset>
+							<statOffsets>
+							  <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+							  <Comfort>+0.3</Comfort>
+							</statOffsets>
+						  </li>
+						</stages>
+				  </HediffDef>
+				  
+	<HediffDef ParentName="DiseaseBase">
+    <defName>Sigil_Order_Buff</defName>
+    <label>Order's Blessing</label>
+	<defaultLabelColor>(196, 145, 191)</defaultLabelColor>
+    <description>has recieve the blessing of order. Comfort need will always be full.</description>
+    <isBad>false</isBad>
+    <comps>
+	  <li Class="MakaiTech.HediffCompProperties_ChangeNeedMultiple">
+		<needDef>Comfort</needDef>
+		<percentPerDay>10</percentPerDay>
+	  </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

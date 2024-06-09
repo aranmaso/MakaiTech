@@ -1,0 +1,1387 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+    <defName>Makai_Lightning_G</defName>
+    <label>green zappy</label>
+    <description>A focused, long range laser arrow.</description>
+    <textures>
+      <li>Things/Projectile/g_lightning</li>
+    </textures>
+    <seam>1</seam>
+    <causefireChance>0.1</causefireChance>
+	<beamWidth>3</beamWidth>
+	<lifetime>220</lifetime>
+    <projectile>
+		<damageDef>Existence_Null_ArmorDebuff</damageDef>
+		<damageAmountBase>20</damageAmountBase>
+		<armorPenetrationBase>1</armorPenetrationBase>
+		<stoppingPower>3</stoppingPower>
+    </projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Makai_Lightning_G_Nerf</defName>
+		<label>LightningStrike</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_green</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>55</speed>
+			<damageDef>Existence_Null_ArmorDebuff</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Makai_Lightning_Ball</defName>
+		<label>LightningBall</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_green</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>55</speed>
+			<damageDef>Lightning_Ring_Ball</damageDef>
+			<damageAmountBase>4</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+	<!--ThingDef ParentName="BaseBullet" MayRequire="OskarPotocki.VFE.Mechanoid">
+		<defName>Makai_Lightning_G_Chain</defName>
+		<label>lightning bolt</label>
+		<thingClass>VFEMech.TeslaProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/g_light</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>150</speed>
+		</projectile>
+		<modExtensions>
+			<li Class="VFEMech.TeslaChainingProps">
+				<maxBounceCount>3</maxBounceCount>
+				<damageDef>Flame</damageDef>
+				<explosionDamageDef>Smoke</explosionDamageDef>
+				<impactRadius>2.9</impactRadius>
+				<targetFriendly>false</targetFriendly>
+				<addFire>false</addFire>
+				<bounceRange>5</bounceRange>
+				<maxLifetime>100</maxLifetime>
+			</li>
+		</modExtensions>
+	</ThingDef-->
+	
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Makai_Anva_Sword</defName>
+        <label>Entity Null</label>
+        <description>A giant sword made in the image of the original Entity Null. have ability to reduce target armor to nothing, and can also shoot lightning. very heavy to wield for ordinary pawn. \n the blade composed of local material from Rimworld mixing with Celestial Steel making this weapon very durable and can last a long time.</description>
+        <graphicData>
+            <texPath>Things/Weapon/anva_sword_new</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>2.0</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+		<uiIconPath>Things/Weapon/anva_sword_new</uiIconPath>
+        <techLevel>Archotech</techLevel>
+        <weaponTags>
+            <li>UltratechMelee</li>
+			<li>Makai_God_Weapon</li>
+        </weaponTags>
+        <generateCommonality>0.01</generateCommonality>
+        <costList>
+            <Makai_Stardust>250</Makai_Stardust>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Makai_Ingot>75</Makai_Ingot>
+            <Plasteel>750</Plasteel>
+			<Makai_D-Path_E>1</Makai_D-Path_E>
+        </costList>
+	    <stuffCategories>
+		<li>Metallic</li>
+		<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>550</costStuffCount>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+            <WorkToMake>120000</WorkToMake>
+            <Mass>20</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+        </statBases>
+        <relicChance>1</relicChance>
+        <equippedAngleOffset>-135</equippedAngleOffset>
+		<verbs>
+		<!-- <li> -->
+			<!-- <label>G_Attack</label> -->
+			<!-- <verbClass>Verb_Shoot</verbClass> -->
+			<!-- <hasStandardCommand>true</hasStandardCommand> -->
+			<!-- <defaultProjectile>Makai_Lightning_G</defaultProjectile> -->
+			<!-- <warmupTime>2</warmupTime> -->
+			<!-- <range>13</range> -->
+			<!-- <minRange>2</minRange> -->
+			<!-- <ticksBetweenBurstShots>10</ticksBetweenBurstShots> -->
+			<!-- <burstShotCount>1</burstShotCount> -->
+			<!-- <soundCast>anva_gl</soundCast> -->
+			<!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
+			<!-- <muzzleFlashScale>14</muzzleFlashScale> -->
+			<!-- <targetParams> -->
+				<!-- <canTargetLocations>true</canTargetLocations> -->
+			<!-- </targetParams> -->
+		<!-- </li> -->
+		</verbs>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>1.3</cooldownTime>
+				<chanceFactor>0.07</chanceFactor>
+				<extraMeleeDamages>
+					<li>
+						<def>Existence_Null_ArmorDebuff</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2.2</cooldownTime>
+				<chanceFactor>0.5</chanceFactor>
+				<armorPenetration>0.90</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Existence_Null_ArmorDebuff</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>2.75</cooldownTime>
+				<chanceFactor>0.8</chanceFactor>
+				<armorPenetration>0.9</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Existence_Null_ArmorDebuff</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+        </tools>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+            <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+            <recipeUsers>
+                <li>Makai_Bench</li>
+            </recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+	<comps>
+	<li Class="CompProperties_Styleable" />
+    <!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+		<!-- <compClass>CompEquippable</compClass> -->
+		<!-- <ConsiderMelee>true</ConsiderMelee> -->
+		<!-- <verbProps> -->
+		<!-- <li> -->
+			<!-- <label>G_Attack</label> -->
+		<!-- </li> -->
+		<!-- </verbProps> -->
+	<!-- </li> -->
+	<!-- <li> -->
+		<!-- <compClass>CompQuality</compClass> -->
+	<!-- </li> -->
+	<li Class="CompProperties_Forbiddable"/>
+	<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Destruction</traitDef>
+				<hediffDef>Destruction_AutoAttack</hediffDef>
+			</li>
+	</comps>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.8,0,0.5)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.8,0,0.5)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.8,0,0.5)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.8,0,0.5)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+	</modExtensions>
+    </ThingDef>
+	
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Makai_Ama_Berd</defName>
+        <label>Order</label>
+        <description>A giant halberd that improve user psychic ability in various aspect. and reduce mental break threshold. \n the blade feature a very refined celestial steel. which make it very strong compare to local material.</description>
+        <graphicData>
+            <texPath>Things/Weapon/ama_halberd_new</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>2.8</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+		<uiIconPath>Things/Weapon/ama_halberd_new</uiIconPath>
+        <techLevel>Archotech</techLevel>
+        <weaponTags>
+            <li>UltratechMelee</li>
+			<li>Makai_God_Weapon</li>
+        </weaponTags>
+        <generateCommonality>0.01</generateCommonality>
+        <costList>
+            <Makai_Stardust>250</Makai_Stardust>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Makai_Ingot>75</Makai_Ingot>
+            <Plasteel>750</Plasteel>
+			<Makai_Or-Path_E>1</Makai_Or-Path_E>
+        </costList>
+	    <stuffCategories>
+		<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>550</costStuffCount>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+			<PsychicEntropyGain MayRequire="ludeon.rimworld.royalty">-0.5</PsychicEntropyGain>
+			<MeditationFocusGain MayRequire="ludeon.rimworld.royalty">1</MeditationFocusGain>
+		</equippedStatOffsets>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+            <WorkToMake>120000</WorkToMake>
+            <Mass>1.5</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+        </statBases>
+        <relicChance>1</relicChance>
+        <equippedAngleOffset>-135</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>0.75</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>1.75</cooldownTime>
+				<armorPenetration>0.50</armorPenetration>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>15</power>
+                <cooldownTime>1.55</cooldownTime>
+				<armorPenetration>0.40</armorPenetration>
+            </li>
+        </tools>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+            <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+            <recipeUsers>
+                <li>Makai_Bench</li>
+            </recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+	<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Order</traitDef>
+				<hediffDef>Order_Enlightenment</hediffDef>
+			</li>
+	</comps>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.5,0,0.6)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.5,0,0.6)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.5,0,0.6)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.5,0,0.6)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+	</modExtensions>
+    </ThingDef>
+	<!--============= Ouro Berd =============-->
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Makai_Ouro_Berd</defName>
+        <label>Existence</label>
+        <description>the original weapon this halberd are based on are said to have been forged from the very concept of existence itself. while this halberd is no where near that level of power, it still grant wielder the blessing from Guardian of Existence, grant them with godlike power befit the wielder of concept of existence.</description>
+        <graphicData>
+            <texPath>Things/Weapon/ouro_wep_new</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>2.8</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+		<uiIconPath>Things/Weapon/ouro_wep_new</uiIconPath>
+        <techLevel>Archotech</techLevel>
+        <weaponTags>
+            <li>SpacerMeleeAdvanced</li>
+			<li>Makai_God_Weapon</li>
+        </weaponTags>
+        <generateCommonality>0</generateCommonality>
+        <costList>
+            <Makai_Stardust>250</Makai_Stardust>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Makai_Ingot>75</Makai_Ingot>
+            <Plasteel>750</Plasteel>
+			<AIPersonaCore>1</AIPersonaCore>
+			<Makai_E-Path_E>1</Makai_E-Path_E>
+        </costList>
+	    <stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>550</costStuffCount>
+		<equippedStatOffsets>
+			<MedicalTendQualityOffset>2</MedicalTendQualityOffset>
+			<PainShockThreshold>1</PainShockThreshold>
+			<ImmunityGainSpeed>50</ImmunityGainSpeed>
+			<InjuryHealingFactor>50</InjuryHealingFactor>
+		</equippedStatOffsets>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+            <WorkToMake>120000</WorkToMake>
+            <Mass>12.3</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+        </statBases>
+        <relicChance>1</relicChance>
+        <equippedAngleOffset>-150</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>50</power>
+                <cooldownTime>0.55</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Curse_of_Always_Exist</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>80</power>
+                <cooldownTime>3.25</cooldownTime>
+				<armorPenetration>2</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Curse_of_Always_Exist</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>80</power>
+                <cooldownTime>3.35</cooldownTime>
+				<armorPenetration>2</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Curse_of_Always_Exist</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+        </tools>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+            <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+            <recipeUsers>
+                <li>Makai_Bench</li>
+            </recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>19</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+		
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Existence</traitDef>
+				<hediffDef>Existence_Resurrection</hediffDef>
+				<removeHediffOnUnequip>false</removeHediffOnUnequip>
+			</li>
+		</comps>
+		<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.3,0,0.3)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.3,0,0.3)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.3,0,0.3)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.3,0,0.3)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+		</modExtensions>
+    </ThingDef>
+	<!--============= Alf Claw =============-->
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Makai_Alf_Claw</defName>
+        <label>Collapsed Will</label>
+        <description>a claw weapon made with the intent to corrupt someone mind. increase user melee fighting ability, make them attack faster than they normally can and sent them into a state where they won't go down with pain.</description>
+        <graphicData>
+            <texPath>Things/Weapon/alf_claw_new</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>1.0</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+		<uiIconPath>Things/Weapon/alf_claw_new</uiIconPath>
+        <techLevel>Archotech</techLevel>
+        <weaponTags>
+            <li>UltratechMelee</li>
+			<li>Makai_God_Weapon</li>
+        </weaponTags>
+        <generateCommonality>0.01</generateCommonality>
+        <costList>
+            <Makai_Stardust>250</Makai_Stardust>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Makai_Ingot>75</Makai_Ingot>
+            <Plasteel>750</Plasteel>
+			<Makai_C-Path_E>1</Makai_C-Path_E>
+        </costList>
+	    <stuffCategories>
+		<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>550</costStuffCount>
+		<equippedStatOffsets>
+			<AimingDelayFactor>-0.5</AimingDelayFactor>
+			<PainShockThreshold>1</PainShockThreshold>
+			<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
+		</equippedStatOffsets>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+            <WorkToMake>60000</WorkToMake>
+            <Mass>2.5</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+        </statBases>
+        <relicChance>1</relicChance>
+        <equippedAngleOffset>-50</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>0.55</cooldownTime>
+				<armorPenetration>0.20</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Alf_Corruption</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>0.35</cooldownTime>
+				<armorPenetration>0.20</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Alf_Corruption</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+        </tools>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+            <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+            <recipeUsers>
+                <li>Makai_Bench</li>
+            </recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+		
+	<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Corruption</traitDef>
+				<hediffDef>Corruption_Avatar</hediffDef>
+				<abilityDef>Makai_Corruption_ClawGrab</abilityDef>
+			</li>
+	</comps>
+    </ThingDef>
+	<!--============= Mica Blade =============-->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Mica_Project</defName>
+		<label>Fireball</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_fire</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<speed>20</speed>
+			<damageDef>Mica_Fire</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<arcHeightFactor>0.2</arcHeightFactor>
+			<explosionRadius>1.2</explosionRadius>
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Makai_Mica_Blade</defName>
+        <label>Sunblade</label>
+        <description>a sword embued with the power of the sun. it blade emit extreme heat to melt away anything it touch. grant user the blessing of Guardian of Flame, make them immune to heat damage and never be harmed by fire.</description>
+        <graphicData>
+            <texPath>Things/Weapon/mica_sunblade_new</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>2.0</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+		<uiIconPath>Things/Weapon/mica_sunblade_new</uiIconPath>
+        <techLevel>Archotech</techLevel>
+        <weaponTags>
+            <li>UltratechMelee</li>
+			<li>Makai_God_Weapon</li>
+        </weaponTags>
+        <generateCommonality>0.01</generateCommonality>
+        <costList>
+			<Makai_StarSmall>1</Makai_StarSmall>
+            <Makai_Stardust>250</Makai_Stardust>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Makai_Ingot>75</Makai_Ingot>
+            <Plasteel>750</Plasteel>
+			<Makai_Fla-Path_E>1</Makai_Fla-Path_E>
+        </costList>
+	    <stuffCategories>
+		<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>550</costStuffCount>
+		<equippedStatOffsets>
+			<ArmorRating_Heat>100</ArmorRating_Heat>
+			<Flammability>-10</Flammability>
+		</equippedStatOffsets>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+            <WorkToMake>8000</WorkToMake>
+            <Mass>1.5</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+			<Flammability>0</Flammability>
+        </statBases>
+        <relicChance>1</relicChance>
+        <equippedAngleOffset>-150</equippedAngleOffset>
+		<verbs>
+		<!-- <li> -->
+			<!-- <label>Fire Ball</label> -->
+			<!-- <verbClass>Verb_Shoot</verbClass> -->
+			<!-- <hasStandardCommand>true</hasStandardCommand> -->
+			<!-- <defaultProjectile>Mica_Project</defaultProjectile> -->
+			<!-- <warmupTime>2</warmupTime> -->
+			<!-- <range>13</range> -->
+			<!-- <minRange>2</minRange> -->
+			<!-- <forcedMissRadius>1.9</forcedMissRadius> -->
+			<!-- <ticksBetweenBurstShots>10</ticksBetweenBurstShots> -->
+			<!-- <burstShotCount>1</burstShotCount> -->
+			<!-- <soundCast>InfernoCannon_Fire</soundCast> -->
+			<!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
+			<!-- <muzzleFlashScale>14</muzzleFlashScale> -->
+			<!-- <targetParams> -->
+				<!-- <canTargetLocations>true</canTargetLocations> -->
+			<!-- </targetParams> -->
+		<!-- </li> -->
+		</verbs>
+        <tools>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>20</power>
+                <cooldownTime>1.45</cooldownTime>
+				<armorPenetration>0.90</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Mica_Fire</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>20</power>
+                <cooldownTime>1.35</cooldownTime>
+				<armorPenetration>0.80</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Mica_Fire</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+        </tools>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+            <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+            <recipeUsers>
+                <li>Makai_Bench</li>
+            </recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+		<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.5,0,0.5)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.5,0,0.5)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.5,0,0.5)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.5,0,0.5)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+		</modExtensions>
+		<comps>
+		<li Class="CompProperties_Styleable" />
+		<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+			<!-- <compClass>CompEquippable</compClass> -->
+			<!-- <ConsiderMelee>true</ConsiderMelee> -->
+			<!-- <verbProps> -->
+			<!-- <li> -->
+				<!-- <label>Fire Ball</label> -->
+			<!-- <graphic> -->
+				<!-- <texPath>Things/Projectile/makai_bullet_fire</texPath> -->
+				<!-- <graphicClass>Graphic_Single</graphicClass> -->
+			<!-- </graphic> -->
+			<!-- </li> -->
+			<!-- </verbProps> -->
+		<!-- </li>	 -->
+		<!-- <li> -->
+			<!-- <compClass>CompQuality</compClass> -->
+		<!-- </li> -->
+		<li Class="CompProperties_Forbiddable"/>
+		<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Flame</traitDef>
+				<hediffDef>Flame_Avatar</hediffDef>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef" MayRequire="VanillaExpanded.VWEL">
+    <defName>Makai_StarFlail</defName>
+    <label>Radiant Star</label>
+    <description>A focused, long range sun.</description>
+    <textures>
+      <li>Things/Projectile/makai_bullet_flail</li>
+    </textures>
+    <seam>1</seam>
+    <causefireChance>1</causefireChance>
+	<beamWidth>1.5</beamWidth>
+	<lifetime>220</lifetime>
+    <projectile>
+		<damageDef>Mica_Star</damageDef>
+		<damageAmountBase>10</damageAmountBase>
+		<armorPenetrationBase>1</armorPenetrationBase>
+		<stoppingPower>3</stoppingPower>
+    </projectile>
+	</ThingDef>
+	
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>Makai_StarFlail_Extend</defName>
+		<label>A focused, long range sun.</label>
+		<thingClass>VFECore.FlamethrowProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/starflail</texPath>
+			<texPathFadeOut>Things/Projectile/starflail_FadeOut</texPathFadeOut>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Mica_Star</damageDef>
+			<speed>25</speed>
+			<damageAmountBase>5</damageAmountBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>0.3</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0.2, 0, -0.5)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>5</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+	
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Makai_Mica_Mace</defName>
+        <label>Radiant Star</label>
+        <description>a miniature sun attach to handle with energy link. it heat can melt away target armor. can be used as throwning weapon or spin it fast enough to shoot a fireball. grant user the blessing of Guardian of Flame, make them immune to heat damage and never be harmed by fire.</description>
+        <graphicData>
+            <texPath>Things/Weapon/mica_radiantstar</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>2.0</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+		<uiIconPath>Things/Weapon/mica_radiantstar</uiIconPath>
+        <techLevel>Archotech</techLevel>
+        <weaponTags>
+            <li>UltratechMelee</li>
+			<li>Makai_God_Weapon</li>
+        </weaponTags>
+        <generateCommonality>0.01</generateCommonality>
+        <costList>
+            <Makai_StarSmall>1</Makai_StarSmall>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Makai_Ingot>75</Makai_Ingot>
+            <Plasteel>750</Plasteel>
+			<Makai_Fabric_C>250</Makai_Fabric_C>
+			<Makai_Fla-Path_E>1</Makai_Fla-Path_E>
+        </costList>
+	    <stuffCategories>
+		<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>550</costStuffCount>
+		<equippedStatOffsets>
+			<ArmorRating_Heat>100</ArmorRating_Heat>
+			<Flammability>-10</Flammability>
+		</equippedStatOffsets>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+            <WorkToMake>8000</WorkToMake>
+            <Mass>1.5</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+			<Flammability>0</Flammability>
+        </statBases>
+        <relicChance>1</relicChance>
+        <equippedAngleOffset>-60</equippedAngleOffset>
+		<verbs>
+		<li>
+			<label>Swing thrown</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Makai_StarFlail_Extend</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<range>7</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>ThumpCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+		<li>
+			<label>Fire Ball</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Mica_Project</defaultProjectile>
+			<warmupTime>2</warmupTime>
+			<range>13</range>
+			<minRange>2</minRange>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+		</verbs>
+        <tools>
+            <li>
+                <label>link</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>14</power>
+                <cooldownTime>1.45</cooldownTime>
+				<armorPenetration>0.80</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Mica_Star</def>
+						<amount>1</amount>
+					</li>
+					<li>
+						<def>Flame</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>star</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>14</power>
+                <cooldownTime>1.35</cooldownTime>
+				<armorPenetration>0.80</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Mica_Star</def>
+						<amount>1</amount>
+					</li>
+					<li>
+						<def>Flame</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+        </tools>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+            <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+            <recipeUsers>
+                <li>Makai_Bench</li>
+            </recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+		<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.2,0,-0.55)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.2,0,-0.55)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.2,0,-0.55)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.2,0,-0.55)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+		</modExtensions>
+		<comps Inherit="False">
+		<li Class="CompProperties_Styleable" />
+		<li Class="MVCF.Comps.CompProperties_VerbProps">
+			<compClass>CompEquippable</compClass>
+			<ConsiderMelee>true</ConsiderMelee>
+			<verbProps>
+			<li>
+				<label>Fire Ball</label>
+			<graphic>
+				<texPath>Things/Projectile/makai_bullet_fire</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphic>
+			</li>
+			<li>
+				<label>Swing thrown</label>
+			<graphic>
+				<texPath>Things/Projectile/makai_bullet_fire</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphic>
+			</li>
+			</verbProps>
+		</li>	
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+		<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Flame</traitDef>
+				<hediffDef>Flame_Avatar</hediffDef>
+			</li>
+		<!--li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+					<groundGraphic>
+						<texPath>Things/Weapon/mica_radiantstar_ground</texPath>
+						<graphicClass>Graphic_Single</graphicClass>
+						<shaderType>CutoutComplex</shaderType>
+					</groundGraphic>
+		</li-->
+		</comps>
+    </ThingDef>
+
+<!--============= Sari Scythe =============-->
+
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>Makai_Sari_Swipe</defName>
+		<label>scythe sweep</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/destineddeath</texPath>
+			<texPathFadeOut>Things/Projectile/destineddeathFade</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Sari_13th</damageDef>
+			<speed>50</speed>
+			<damageAmountBase>1</damageAmountBase>
+			<armorPenetrationBase>66.6</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>2</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, 0)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>20</tickFrameRate>
+		<finalTickFrameRate>10</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce> 
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+	
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet" MayRequire="RimOfMadness.Vampires">
+		<defName>Makai_Sari_Swipe_DEAD</defName>
+		<label>scythe sweep</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/destineddeath</texPath>
+			<texPathFadeOut>Things/Projectile/destineddeathFade</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Sari_13th</damageDef>
+			<speed>50</speed>
+			<damageAmountBase>10000</damageAmountBase>
+			<armorPenetrationBase>666.666</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>2</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, 0)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>20</tickFrameRate>
+		<finalTickFrameRate>10</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+	
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>Makai_Sari_Thrown</defName>
+		<label>scythe thrown</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/scythethrown</texPath>
+			<texPathFadeOut>Things/Projectile/scythethrownFade</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Sari_13th</damageDef>
+			<speed>33</speed>
+			<damageAmountBase>1</damageAmountBase>
+			<armorPenetrationBase>66.6</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>0.25</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, 0)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>7</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+	
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>Makai_Sari_Spin</defName>
+		<label>scythe spin</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/scytheSpin</texPath>
+			<texPathFadeOut>Things/Projectile/scytheSpinFade</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Sari_13th</damageDef>
+			<speed>25</speed>
+			<damageAmountBase>1</damageAmountBase>
+			<armorPenetrationBase>66.6</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>0.50</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, 0)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>10</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>15</tickDamageRate>
+		<dealsDamageOnce>false</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+		<stopWhenHit>false</stopWhenHit>
+	</VFECore.ExpandableProjectileDef>
+	
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>Makai_Sari_Scy</defName>
+        <label>Destined Death</label>
+        <description>An unwieldy scythe weapon that ignore armor but deals little damage. It will inflict the curse, Destined Death, which will build up to eventually kill the victim. \n\n\nVictims of &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt; cannot be resurrected.</description>
+        <graphicData>
+            <texPath>Things/Weapon/sari_scythe</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>2.0</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+        </graphicData>
+		<uiIconPath>Things/Weapon/sari_scythe</uiIconPath>
+        <techLevel>Archotech</techLevel>
+        <weaponTags>
+            <li>UltratechMelee</li>
+			<li>Makai_God_Weapon</li>
+        </weaponTags>
+        <generateCommonality>0.01</generateCommonality>
+        <costList>
+            <Makai_Stardust>250</Makai_Stardust>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Makai_Ingot>75</Makai_Ingot>
+            <Plasteel>750</Plasteel>
+			<Makai_Dea-Path_E>1</Makai_Dea-Path_E>
+        </costList>
+	    <stuffCategories>
+		<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>550</costStuffCount>
+		<equippedStatOffsets>
+			<PainShockThreshold>1</PainShockThreshold>
+		</equippedStatOffsets>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+            <WorkToMake>8000</WorkToMake>
+            <Mass>1.5</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+        </statBases>
+        <relicChance>1</relicChance>
+        <equippedAngleOffset>-180</equippedAngleOffset>
+		<verbs>
+		<li>
+			<label>Sweep</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<requireLineOfSight>false</requireLineOfSight>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Makai_Sari_Swipe</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<range>7</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>sari_sweep</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+		<li MayRequire="RimOfMadness.Vampires">
+			<label>DEAD IMMINENT</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<requireLineOfSight>false</requireLineOfSight>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Makai_Sari_Swipe_DEAD</defaultProjectile>
+			<warmupTime>10</warmupTime>
+			<range>7</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>sari_sweep</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+		<li>
+			<label>Thrown</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<requireLineOfSight>false</requireLineOfSight>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Makai_Sari_Thrown</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<range>10</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>sari_sweep</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+		<li>
+			<label>Spin</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<requireLineOfSight>false</requireLineOfSight>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Makai_Sari_Spin</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<range>10</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>sari_sweep</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+		</verbs>
+        <tools>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>1</power>
+                <cooldownTime>1.45</cooldownTime>
+				<armorPenetration>66.6</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Sari_13th</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>blade</label>
+                <capacities>
+                    <li>Makai_Celestial</li>
+                </capacities>
+                <power>1</power>
+                <cooldownTime>0.75</cooldownTime>
+				<armorPenetration>66.6</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Sari_13th</def>
+						<amount>1</amount>
+					</li>
+				</extraMeleeDamages>
+            </li>
+        </tools>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+            <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+            <recipeUsers>
+                <li>Makai_Bench</li>
+            </recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+		<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.2,0,0.5)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.2,0,0.5)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.2,0,0.5)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.2,0,0.5)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+		</modExtensions>
+		<comps Inherit="False">
+		<li Class="CompProperties_Styleable" />
+		<li Class="MVCF.Comps.CompProperties_VerbProps">
+		<compClass>CompEquippable</compClass>
+		<ConsiderMelee>true</ConsiderMelee>
+		<verbProps>
+		
+			<li>
+			<label>Sweep</label>
+			<graphic>
+				<texPath>Things/Gizmos/ScytheSweep</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphic>
+			<comps>
+				<!--li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+				<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+				<uniqueTargets>true</uniqueTargets>
+				<invisible>true</invisible>
+				</li-->
+			</comps>
+			</li>
+			
+			<li MayRequire="RimOfMadness.Vampires">
+			<label>DEAD IMMINENT</label>
+			<description>not even god can save you now</description>
+			<graphic>
+				<texPath>Things/Gizmos/ScytheSweep</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphic>
+			</li>
+			<li>
+			<label>Thrown</label>
+			<graphic>
+				<texPath>Things/Gizmos/ScytheThrown</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphic>
+			</li>
+			<li>
+			<label>Spin</label>
+			<graphic>
+				<texPath>Things/Gizmos/ScytheSpin</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphic>
+			</li>
+		</verbProps>
+		</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+
+			<!--li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+			<groundGraphic>
+                    <texPath>Things/Weapon/sari_scythe_ground</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+					<drawSize>2.0</drawSize>
+            </groundGraphic>
+			</li-->
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Death</traitDef>
+				<hediffDef>Death_Avatar</hediffDef>
+			</li>
+		</comps>
+    </ThingDef>
+
+
+
+</Defs>

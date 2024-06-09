@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Varia Necklage -->
+
+	<ThingDef Name="MakaiApparelBase" ParentName="ApparelNoQualityBase" Abstract="True">
+    <comps>
+		<li>
+        <compClass>CompQuality</compClass>
+		</li>
+    </comps>
+  </ThingDef>
+
+
+<ThingDef ParentName="MakaiApparelBase">
+    <defName>Makai_Varia_Brace</defName>
+    <label>Bracelet of Knowledge</label>
+    <description>a bracelet with the blessing of knowledge. rumor in the rim has it that anyone can become Einstein by simply wearing this bracelet, whoever that person is.</description>
+    <techLevel>Ultra</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>Makai_Apparel1</researchPrerequisite>
+      <recipeUsers>
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Plasteel>25</Plasteel>
+	  <Makai_Ingot>35</Makai_Ingot>
+      <Makai_Stardust>5</Makai_Stardust>
+	  <ComponentSpacer>1</ComponentSpacer>
+	  <Makai_K-Path_E>1</Makai_K-Path_E>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/va_bles</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+	<comps>
+	    <li Class="VFECore.CompProperties_ApparelHediffs">
+		<hediffDefnames>
+		<li>Mak_Var_Bless</li>
+		</hediffDefnames>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+	  <MarketValue>6000</MarketValue>
+      <Mass>10</Mass>
+      <Flammability>0.2</Flammability>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+		<equippedStatOffsets>
+			<AimingDelayFactor>-0.25</AimingDelayFactor>
+			<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+			<li>Hands</li>
+	  </bodyPartGroups>
+      <layers>
+        <li>Bracelet</li>
+      </layers>
+    </apparel>
+	<tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+ 
+ <!-- Aria Ring -->
+ 
+  <ThingDef ParentName="MakaiApparelBase">
+    <defName>Makai_Aria_Ring</defName>
+    <label>Ring of Bond</label>
+    <description>a ring that bestow the user with blessing of bonding. make pawn more attractive and have incredible social potential. pawn near the user will also experience good mood if the user is in high spirit.</description>
+    <techLevel>Ultra</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>Makai_Apparel1</researchPrerequisite>
+      <recipeUsers>
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Plasteel>25</Plasteel>
+	  <Makai_Ingot>35</Makai_Ingot>
+      <Makai_Stardust>5</Makai_Stardust>
+	  <ComponentSpacer>1</ComponentSpacer>
+	  <Makai_B-Path_E>1</Makai_B-Path_E>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/aria_ring</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+	<comps>
+	    <li Class="VFECore.CompProperties_ApparelHediffs">
+		<hediffDefnames>
+		<li>Makai_AriaBuffonWearer</li>
+		<li>Makai_AriaBuffHidded</li>
+		</hediffDefnames>
+		</li>
+		<!--li Class="CompProperties_CauseHediff_Apparel">
+		<hediff>Makai_AriaBuffonWearer</hediff>
+		</li>
+		<li Class="CompProperties_CauseHediff_Apparel">
+		<hediff>Makai_AriaBuffHidded</hediff>
+		</li-->
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+	  <MarketValue>6000</MarketValue>
+      <Mass>10</Mass>
+      <Flammability>0.2</Flammability>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+		<equippedStatOffsets>
+			<TradePriceImprovement>+0.20</TradePriceImprovement>
+			<SocialImpact>+0.5</SocialImpact>
+		</equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+			<li>Hands</li>
+	  </bodyPartGroups>
+      <layers>
+        <li>Ring</li>
+      </layers>
+    </apparel>
+	<tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <!-- Anva Ring -->
+
+	<!--ThingDef ParentName="MakaiApparelBase">
+    <defName>Makai_Anva_Ring</defName>
+    <label>Ring of Lightning</label>
+    <description>Zapp Ring</description>
+    <techLevel>Archotech</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>Makai_Communication</researchPrerequisite>
+      <recipeUsers>
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Plasteel>25</Plasteel>
+	  <Makai_Ingot>35</Makai_Ingot>
+      <Makai_Stardust>5</Makai_Stardust>
+	  <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/AnvaRing/anva_ring</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+	<verbs>
+		<li>
+			<label>zappshot</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Makai_Lightning_G_Nerf</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<range>30</range>
+			<minRange>2</minRange>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>pewpewthree</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>12</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</li>
+	</verbs>
+	<comps>
+		<li Class="MVCF.Comps.CompProperties_VerbGiver">
+			<verbProps>
+				<li>
+					<label>zappshot</label>
+					<visualLabel>zapping</visualLabel>
+					<canBeToggled>true</canBeToggled>
+					<canFireIndependently>true</canFireIndependently>
+					<description>Automatic zapping defense system</description>
+				</li>
+			</verbProps>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+	  <MarketValue>6000</MarketValue>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+		<equippedStatOffsets>
+			<MeleeDodgeChance>0.2</MeleeDodgeChance>
+		</equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+	  <wornGraphicPath>Things/Apparel/AnvaRing/anva_ring</wornGraphicPath>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(0.0,-0.1)</offset>
+		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </north>
+        <south>
+          <offset>(0.0,0.20)</offset>
+		  <female><offset>(0.0,-0.2)</offset> </female>
+		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(-0.0,-0.25)</offset></thin>
+        </south>
+        <east>
+          <offset>(-0.4,-0.1)</offset>
+		  <hulk><offset>(-0.15,-0.0)</offset></hulk>
+		  <fat><offset>(-0.10,-0.0)</offset></fat>
+		  <thin><offset>(0.05,-0.0)</offset></thin>
+        </east>
+        <west>
+          <offset>(0.4,-0.1)</offset>
+		  <hulk><offset>(0.15,-0.0)</offset></hulk>
+		  <fat><offset>(0.10,-0.0)</offset></fat>
+		  <thin><offset>(-0.05,-0.0)</offset></thin>
+        </west>
+        <male> <scale>(0.75,0.75)</scale></male>
+        <female><scale>(0.75,0.75)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(0.9,0.9)</scale></hulk>
+        <fat> <scale>(0.9,0.9)</scale></fat>
+      </wornGraphicData>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+			<li>Hands</li>
+	  </bodyPartGroups>
+      <layers>
+			<li>Ring</li>
+      </layers>
+    </apparel>
+	<tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef-->
+  
+  <ThingDef ParentName="MakaiApparelBase">
+    <defName>Makai_Anva_Ring</defName>
+    <label>Ring of Lightning</label>
+    <description>a piece of equipment that bestow user with blessing of lightning. will protect wearer from harm by shooting lightning ball at any threat.</description>
+    <techLevel>Archotech</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+	  <researchPrerequisite>Makai_Apparel1</researchPrerequisite>
+      <recipeUsers>
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Plasteel>25</Plasteel>
+	  <Makai_Ingot>35</Makai_Ingot>
+      <Makai_Stardust>5</Makai_Stardust>
+	  <ComponentSpacer>1</ComponentSpacer>
+	  <Makai_D-Path_E>1</Makai_D-Path_E>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/AnvaRing/anva_ring</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+	<tickerType>Normal</tickerType>
+	<verbs>
+		<li>
+			<label>zappshot</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Makai_Lightning_Ball</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<range>30</range>
+			<minRange>2</minRange>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>pewpewthree</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>12</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</li>
+	</verbs>
+	<comps>
+		<li Class="MVCF.Comps.CompProperties_VerbGiver">
+			<verbProps>
+				<li>
+					<label>zappshot</label>
+					<visualLabel>zapping</visualLabel>
+					<canBeToggled>true</canBeToggled>
+					<description>Automatic zapping defense system</description>
+					<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+							<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+							<uniqueTargets>true</uniqueTargets>
+							<invisible>true</invisible>
+							</li>
+					</comps>
+				</li>
+			</verbProps>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+	  <MarketValue>6000</MarketValue>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+		<PainShockThreshold>0.5</PainShockThreshold>
+		<MeleeDodgeChance>0.2</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0</generateAllowChance>
+    <apparel>
+	  <wornGraphicPath>Things/Apparel/AnvaRing/anva_ring</wornGraphicPath>
+	  <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>Makai_God_Replica</li>
+      </tags>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(0,0.2)</offset>
+		  <female><offset>(0,0.2)</offset></female>
+		  <hulk><offset>(0,0.2)</offset></hulk>
+		  <fat><offset>(0,0.2)</offset></fat>
+		  <thin><offset>(0,0.2)</offset></thin>
+        </north>
+        <south>
+          <offset>(0,0.2)</offset>
+		  <hulk><offset>(0,0.2)</offset></hulk>
+		  <fat><offset>(0,0.2)</offset></fat>
+		  <thin><offset>(0,0.2)</offset></thin>
+        </south>
+        <east>
+          <offset>(-0.6,0.2)</offset>
+		  <hulk><offset>(-0.6,0.2)</offset></hulk>
+		  <fat><offset>(-0.6,0.2)</offset></fat>
+		  <thin><offset>(-0.6,0.2)</offset></thin>
+        </east>
+        <west>
+          <offset>(0.6,0.2)</offset>
+		  <hulk><offset>(0.6,0.2)</offset></hulk>
+		  <fat><offset>(0.6,0.2)</offset></fat>
+		  <thin><offset>(0.6,0.2)</offset></thin>
+        </west>
+        <male><scale>(1,1)</scale></male>
+        <female><scale>(1,1)</scale></female>
+        <thin><scale>(1,1)</scale></thin>
+        <hulk><scale>(1.0,1.0)</scale></hulk>
+        <fat><scale>(1.0,1.0)</scale></fat>
+      </wornGraphicData>
+    </apparel>
+	<tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+	<colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(1,1,1,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+  
+ <!-- Ama Ring -->
+ 
+	<ThingDef ParentName="MakaiApparelBase">
+    <defName>Makai_Ama_Sigil</defName>
+    <label>Sigil of Absolute Order</label>
+    <description>a sigil that hold the blessing of Order. give pawn a calm state of mind. and make them more comfortable.</description>
+    <techLevel>Archotech</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>Makai_Apparel1</researchPrerequisite>
+      <recipeUsers>
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Plasteel>25</Plasteel>
+	  <Makai_Ingot>35</Makai_Ingot>
+      <Makai_Stardust>5</Makai_Stardust>
+	  <ComponentSpacer>1</ComponentSpacer>
+	  <Makai_Or-Path_E>1</Makai_Or-Path_E>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/ama_sigil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.75</drawSize>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+	<comps>
+		<li Class="CompProperties_Forbiddable"/>
+		<li Class="VFECore.CompProperties_ApparelHediffs">
+		<hediffDefnames>
+		<li>Sigil_Order_Buff</li>
+		</hediffDefnames>
+		</li>
+	</comps>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+	  <MarketValue>6000</MarketValue>
+      <Mass>1</Mass>
+	  <Beauty>1</Beauty>
+      <Flammability>0</Flammability>
+      <EquipDelay>1</EquipDelay>
+	  <FilthMultiplier>-1</FilthMultiplier>
+    </statBases>
+		<equippedStatOffsets>
+			<Comfort>1</Comfort>
+			<MentalBreakThreshold>-0.2</MentalBreakThreshold>
+		</equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+		<li>Torso</li>
+	  </bodyPartGroups>
+      <layers>
+        <li>Sigil</li>
+      </layers>
+    </apparel>
+	<tradeability>Sellable</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+ <!-- Alf Sigil -->
+ 
+<ThingDef ParentName="OrbitalUtilityBase">
+    <defName>Makai_Alf_Sigil</defName>
+    <label>Insanity Pillar</label>
+    <description>Sigil of corruption. point toward your enemies call down light pillar of insanity, drive all pawn in the area berserk.</description>
+    <graphicData>
+      <texPath>Things/Projectile/makai_bullet_claw</texPath>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+	 <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>0.2</Mass>
+      <Beauty>-3</Beauty>
+      <Flammability>0.5</Flammability>
+    </statBases>
+	<techLevel>Archotech</techLevel>
+	<thingSetMakerTags Inherit="False">
+	  <li>ApparelUtility</li>
+	  <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+	<recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>Makai_Apparel1</researchPrerequisite>
+      <recipeUsers>
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+	<costList>
+      <Plasteel>25</Plasteel>
+	  <Makai_Ingot>35</Makai_Ingot>
+      <Makai_Stardust>5</Makai_Stardust>
+	  <ComponentSpacer>1</ComponentSpacer>
+	  <Makai_C-Path_E>1</Makai_C-Path_E>
+    </costList>
+    <apparel>
+      <ai_pickUpOpportunistically>true</ai_pickUpOpportunistically>
+	  <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+		<li>Torso</li>
+	  </bodyPartGroups>
+      <layers>
+        <li>Sigil</li>
+      </layers>
+    </apparel>
+    <verbs>
+      <li>
+        <verbClass>MakaiTech.Verb_CorruptPowerBeam</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>3</warmupTime>
+        <ai_AvoidFriendlyFireRadius>15</ai_AvoidFriendlyFireRadius>
+        <range>44.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundAiming>OrbitalTargeter_Aiming</soundAiming>
+        <soundCast>OrbitalTargeter_Fire</soundCast>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>1</maxCharges>
+        <destroyOnEmpty>false</destroyOnEmpty>
+		<replenishAfterCooldown>true</replenishAfterCooldown>
+		<baseReloadTicks>2500</baseReloadTicks>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="OrbitalStrikeBase">
+    <defName>Makai_C_PowerBeam</defName>
+    <label>power beam</label>
+    <thingClass>MakaiTech.C_PowerBeam</thingClass>
+    <comps>
+      <li Class="MakaiTech.MakaiCompProperties_OrbitalBeam">
+        <width>10</width>
+        <color>(255, 255, 255, 255)</color>
+        <sound>InsanityPillar</sound>
+      </li>
+	  <li Class="CompProperties_AffectsSky">
+        <skyColors>
+          <sky>(255, 128, 117, 100)</sky>
+          <shadow>(100, 100, 100)</shadow>
+          <overlay>(255, 255, 255)</overlay>
+          <saturation>1</saturation>
+        </skyColors>
+      </li>
+    </comps>
+  </ThingDef>
+
+<!-- Add more layer -->  
+    <ApparelLayerDef>
+    <defName>Bracelet</defName>
+    <label>bracelet</label>
+    <drawOrder>350</drawOrder>
+	</ApparelLayerDef>
+	
+	<ApparelLayerDef>
+    <defName>Ring</defName>
+    <label>Ring</label>
+    <drawOrder>360</drawOrder>
+	</ApparelLayerDef>
+	
+	<ApparelLayerDef>
+    <defName>Sigil</defName>
+    <label>Sigil</label>
+    <drawOrder>370</drawOrder>
+	</ApparelLayerDef>
+	
+	<ApparelLayerDef>
+    <defName>BackDecor</defName>
+    <label>Back Equipment</label>
+    <drawOrder>510</drawOrder>
+	</ApparelLayerDef>
+
+</Defs>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<DesignatorDropdownGroupDef>
+		<defName>Makai_FloorC</defName>
+		<label>Makai Floor</label>
+	</DesignatorDropdownGroupDef>
+	<TerrainDef Name="MK_C_Floor">
+		<defName>Makai_Celest_Floor</defName>
+		<label>celestial floor</label>
+		<designatorDropdown>Makai_FloorC</designatorDropdown>
+		<description>A celestial floor tile. very pretty to look at. like a star. this floor never get dirty so it save your pawn some work.</description>
+		<texturePath>Terrains/Floors/celest_floor_with_sun</texturePath>
+		<pathCost>0</pathCost>
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<tags>
+			<li>Floor</li>
+			<li>FineFloor</li>
+		</tags>
+		<statBases>
+			<Cleanliness>2</Cleanliness>
+			<WorkToBuild>10000</WorkToBuild>
+			<MarketValue>20</MarketValue>
+			<Beauty>20</Beauty>
+			<FilthMultiplier>0</FilthMultiplier>
+		</statBases>
+		<costList>
+			<Makai_Ingot>3</Makai_Ingot>
+		</costList>
+		<designationCategory>Floors</designationCategory>
+		<fertility>0</fertility>
+		<constructEffect>ConstructMetal</constructEffect>
+		<filthAcceptanceMask></filthAcceptanceMask>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<researchPrerequisites>
+			<li>Makai_Structure_Tier1</li>
+		</researchPrerequisites>
+	</TerrainDef>
+	<TerrainDef ParentName="MK_C_Floor">
+		<defName>Makai_Celest_Floor_NoLine</defName>
+		<label>celestial floor(no line)</label>
+		<designatorDropdown>Makai_FloorC</designatorDropdown>
+		<description>A celestial floor tile. very pretty to look at. like a star. this floor never get dirty so it save your pawn some work.</description>
+		<texturePath>Terrains/Floors/celest_floor_without_Sun_without_line</texturePath>
+		<pathCost>0</pathCost>
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<tags>
+			<li>Floor</li>
+			<li>FineFloor</li>
+		</tags>
+		<statBases>
+			<Cleanliness>2</Cleanliness>
+			<WorkToBuild>10000</WorkToBuild>
+			<MarketValue>20</MarketValue>
+			<Beauty>20</Beauty>
+			<FilthMultiplier>0</FilthMultiplier>
+		</statBases>
+		<costList>
+			<Makai_Ingot>3</Makai_Ingot>
+		</costList>
+		<designationCategory>Floors</designationCategory>
+		<fertility>0</fertility>
+		<constructEffect>ConstructMetal</constructEffect>
+		<filthAcceptanceMask></filthAcceptanceMask>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<researchPrerequisites>
+			<li>Makai_Structure_Tier1</li>
+		</researchPrerequisites>
+	</TerrainDef>
+	<TerrainDef>
+		<defName>Makai_Green</defName>
+		<label>Green floor</label>
+		<designatorDropdown>Makai_FloorC</designatorDropdown>
+		<description>A celestial floor tile. very pretty to look at. like a star. this floor never get dirty so it save your pawn some work.</description>
+		<texturePath>Terrains/Floors/greenfloor</texturePath>
+		<pathCost>0</pathCost>
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<tags>
+			<li>Floor</li>
+			<li>FineFloor</li>
+		</tags>
+		<statBases>
+			<Cleanliness>2</Cleanliness>
+			<WorkToBuild>10000</WorkToBuild>
+			<MarketValue>20</MarketValue>
+			<Beauty>20</Beauty>
+			<FilthMultiplier>0</FilthMultiplier>
+		</statBases>
+		<costList>
+			<Makai_Ingot>3</Makai_Ingot>
+		</costList>
+		<designationCategory>Floors</designationCategory>
+		<fertility>0</fertility>
+		<constructEffect>ConstructMetal</constructEffect>
+		<filthAcceptanceMask></filthAcceptanceMask>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<researchPrerequisites>
+			<li>Makai_Structure_Tier1</li>
+		</researchPrerequisites>
+	</TerrainDef>
+	
+	
+</Defs>

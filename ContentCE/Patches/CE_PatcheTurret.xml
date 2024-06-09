@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Remove refuelable property -->
+			<li Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[
+				defName = "Makai_Turret_A" or 		
+				defName = "Makai_Turret_B" or		
+				defName = "Makai_Turret_C" or
+				defName = "Makai_Turret_D" or
+				defName = "Makai_Turret_E"
+			]/comps/li[@Class = "CompProperties_Refuelable"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+				defName = "Makai_Turret_A" or 		
+				defName = "Makai_Turret_B" or		
+				defName = "Makai_Turret_C" or
+				defName = "Makai_Turret_D" or
+				defName = "Makai_Turret_E"
+			]/thingClass</xpath>
+			<value>
+				<thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+			</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+				defName = "Makai_Turret_A" or 		
+				defName = "Makai_Turret_B" or		
+				defName = "Makai_Turret_C" or
+				defName = "Makai_Turret_D" or
+				defName = "Makai_Turret_E"
+			]/fillPercent</xpath>
+			<value>
+				<fillPercent>0.85</fillPercent>
+			</value>
+			</li>
+		
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[
+				defName = "Makai_Turret_A" or 		
+				defName = "Makai_Turret_B" or		
+				defName = "Makai_Turret_C" or
+				defName = "Makai_Turret_D" or
+				defName = "Makai_Turret_E"
+			]/statBases</xpath>
+			<value>
+				<AimingAccuracy>0.5</AimingAccuracy>
+			</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+				defName = "Makai_Turret_A" or 		
+				defName = "Makai_Turret_B" or		
+				defName = "Makai_Turret_C" or
+				defName = "Makai_Turret_D" or
+				defName = "Makai_Turret_E"
+			]/statBases/ShootingAccuracyTurret</xpath>
+			<value>
+				<ShootingAccuracyTurret>0.75</ShootingAccuracyTurret>
+			</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+				defName = "Makai_Turret_A" or 		
+				defName = "Makai_Turret_B" or		
+				defName = "Makai_Turret_C" or
+				defName = "Makai_Turret_D" or
+				defName = "Makai_Turret_E"
+			]/building/turretBurstCooldownTime</xpath>
+			<value>
+				<turretBurstCooldownTime>1.1</turretBurstCooldownTime>
+			</value>
+			</li>
+			
+			<!-- Turret Gun Change -->
+			
+			<!-- Turret A -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Turret_TopA</defName>
+				<statBases>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>1</ShotSpread>
+					<SightsEfficiency>1</SightsEfficiency>
+					<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.25</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_Turret_Makai_A</defaultProjectile>
+					<warmupTime>1</warmupTime>
+					<range>40</range>
+					<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+					<burstShotCount>10</burstShotCount>
+					<soundCast>pewpewthree</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+						<onlyManualCast>false</onlyManualCast>
+						<stopBurstWithoutLos>false</stopBurstWithoutLos>
+						<targetParams>
+							<canTargetLocations>false</canTargetLocations>
+						</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>250</magazineSize>
+					<reloadTime>1</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleEnergyTurret</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+					<noSnapshot>true</noSnapshot>
+					<noSingleShot>true</noSingleShot>
+				</FireModes>
+			</li>
+			
+			<!-- Turret B -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Turret_TopB</defName>
+				<statBases>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>0.5</ShotSpread>
+					<SightsEfficiency>1</SightsEfficiency>
+					<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.25</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_Turret_Makai_B</defaultProjectile>
+					<warmupTime>1</warmupTime>
+					<range>60</range>
+					<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+					<burstShotCount>1</burstShotCount>
+					<requireLineOfSight>false</requireLineOfSight>
+					<soundCast>anva_gl</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+					<onlyManualCast>false</onlyManualCast>
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<targetParams>
+						<canTargetLocations>True</canTargetLocations>
+					</targetParams>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>250</magazineSize>
+					<reloadTime>1</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleLaserTurret</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+					<noSnapshot>true</noSnapshot>
+					<noSingleShot>true</noSingleShot>
+				</FireModes>
+			</li>
+			
+			<!-- Turret C -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Turret_TopC</defName>
+				<statBases>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>2</ShotSpread>
+					<SightsEfficiency>1</SightsEfficiency>
+					<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.1</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Makai_God_Bullet_C_TypeTwo</defaultProjectile>
+					<warmupTime>2</warmupTime>
+					<range>40</range>
+					<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+					<burstShotCount>6</burstShotCount>
+					<soundCast>pewpewthree</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<onlyManualCast>false</onlyManualCast>
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<targetParams>
+						<canTargetLocations>False</canTargetLocations>
+					</targetParams>
+					<muzzleFlashScale>9</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>250</magazineSize>
+					<reloadTime>1</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleClawTurret</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+					<noSnapshot>true</noSnapshot>
+					<noSingleShot>true</noSingleShot>
+				</FireModes>
+			</li>
+			
+			<!-- Turret D -->
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Turret_D"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Turret_TopD"]</xpath>
+			</li>
+			
+			<!-- Turret E -->
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Makai_Turret_TopE</defName>
+				<statBases>
+					<SwayFactor>0.2</SwayFactor>
+					<ShotSpread>0.5</ShotSpread>
+					<SightsEfficiency>1</SightsEfficiency>
+					<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.1</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_Turret_Makai_E</defaultProjectile>
+					<warmupTime>5</warmupTime>
+					<range>700</range>
+					<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+					<burstShotCount>3</burstShotCount>
+					<soundCast>anva_gl</soundCast>
+					<soundCastTail>GunTail_Heavy</soundCastTail>
+					<onlyManualCast>false</onlyManualCast>
+					<stopBurstWithoutLos>false</stopBurstWithoutLos>
+					<targetParams>
+						<canTargetLocations>False</canTargetLocations>
+					</targetParams>
+					<muzzleFlashScale>9</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>250</magazineSize>
+					<reloadTime>1</reloadTime>
+					<ammoSet>AmmoSet_MakaiStarParticleArtilleryTurret</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+					<noSnapshot>true</noSnapshot>
+					<noSingleShot>true</noSingleShot>
+				</FireModes>
+			</li>
+			
+			
+			
+			
+			
+		</operations>
+	</Operation>
+</Patch>

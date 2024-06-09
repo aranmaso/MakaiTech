@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[@Name="FatedBaseColorImplant"]/comps</xpath>
+					<value>
+					<li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+						<scaleAdjustment>1.5</scaleAdjustment>
+					</li>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[@Name="FatedBaseColor"]/comps</xpath>
+					<value>
+					<li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+						<scaleAdjustment>1</scaleAdjustment>
+					</li>
+					</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName="Makai_Distorted_Arm_Base"]/comps</xpath>
+				<value>
+					<li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+						<scaleAdjustment>0.5</scaleAdjustment>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName="Makai_Distorted_Skin_Base"]/comps</xpath>
+				<value>
+					<li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+						<scaleAdjustment>0.5</scaleAdjustment>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName="Essence_Fate_Encounter"]/comps</xpath>
+				<value>
+					<li Class="EBF.Hediffs.HediffCompProperties_MaxHPAdjust">
+						<scaleAdjustment>1</scaleAdjustment>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

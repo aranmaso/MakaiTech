@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--RangedLaserBase-->
+	<ThingDef Name="BaseMakaiRangedLaser" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Archotech</techLevel>
+    <smeltable>true</smeltable>
+	<tradeability>Sellable</tradeability>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <thingSetMakerTags Inherit="False">
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers />
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>Makai_Weapon1</researchPrerequisite>
+    </recipeMaker>
+    <weaponClasses>
+      <li>Ultratech</li>
+    </weaponClasses>
+  </ThingDef>
+  
+  <!-- Bullet Laser -->
+  <ThingDef>
+    <defName>MakaiBeamGraphic</defName>
+    <thingClass>VanillaWeaponsExpandedLaser.LaserBeamGraphic</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <label>stardust beam</label>
+    
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+  </ThingDef>
+  
+  <ThingDef Abstract="True" Name="Makai_BulletLaser" ParentName="BaseBullet">
+    <thingClass>VanillaWeaponsExpandedLaser.LaserBeam</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <beamGraphic>MakaiBeamGraphic</beamGraphic>
+   
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+	
+    <!-- <explosionEffect>Ring_ExpandY</explosionEffect> -->
+    <hitLivingEffect>MKLivingImpact</hitLivingEffect>
+    
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <speed>10000</speed>
+    </projectile>
+    
+    <seam>0.25</seam>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+		<defName>Makai_Bullet_Varia</defName>
+		<label>precise shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shot_Bow_Red</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>50</speed>
+			<damageDef>Knowledge_Seeker</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+	 <!--Varia Bow-->
+	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+    <defName>VWEL_Bullet_Varia</defName>
+    <label>precise shot</label>
+    <description>A focused, long range laser arrow.</description>
+    <textures>
+      <li>Things/Projectile/y_beam</li>
+    </textures>
+    <seam>0.1</seam>
+    <causefireChance>0</causefireChance>
+	<beamWidth>1.5</beamWidth>
+	<lifetime>60</lifetime>
+	<explosionEffect>Ring_ExpandY</explosionEffect>
+    <projectile>
+		<damageDef>Knowledge_Seeker</damageDef>
+		<damageAmountBase>10</damageAmountBase>
+		<armorPenetrationBase>0.75</armorPenetrationBase>
+		<stoppingPower>3</stoppingPower>
+    </projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseMakaiRangedLaser">
+    <defName>Makai_Bow_Varia</defName>
+	<thingClass>VanillaWeaponsExpandedLaser.LaserGun</thingClass>
+    <label>Knowledge Seeker</label>
+    <description>a bow made with highly advanced targeting system. you did have to be trying to miss with this weapon. on hit will steal victim of any ability to think. also give them trauma savant just because. oh and it set them on fire.</description>
+    <graphicData>
+		<texPath>Things/Weapon/varia_bow</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>2</drawSize>
+    </graphicData>
+	<uiIconPath>Things/Weapon/varia_bow</uiIconPath>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <statBases>
+		<WorkToMake>12050</WorkToMake>
+		<!-- <MarketValue>3600</MarketValue> -->
+		<Mass>3.8</Mass>
+			<AccuracyTouch>2</AccuracyTouch>
+			<AccuracyShort>2</AccuracyShort>
+			<AccuracyMedium>2</AccuracyMedium>
+			<AccuracyLong>2</AccuracyLong>
+			<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+		<Makai_Ingot>65</Makai_Ingot>
+		<Plasteel>70</Plasteel>
+		<ComponentSpacer>8</ComponentSpacer>
+		<Makai_Stardust>15</Makai_Stardust>
+		<Makai_K-Path_E>1</Makai_K-Path_E>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <unfinishedThingDef Inherit="False">UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite Inherit="False">Makai_Weapon4</researchPrerequisite>
+    </recipeMaker>
+	<techLevel>Archotech</techLevel>
+    <weaponTags Inherit="False">
+	<!-- <li>UltratechGun</li> -->
+	<li>LaserGun</li>
+	<li>Makai_God_Weapon</li>
+    </weaponTags>
+	<generateCommonality>0.0001</generateCommonality>
+	<equippedStatOffsets>
+		<MoveSpeed>0.65</MoveSpeed> <!-- drawback -->
+		<GlobalLearningFactor>0.5</GlobalLearningFactor>
+	</equippedStatOffsets>
+	<equippedAngleOffset>-50</equippedAngleOffset>
+    <verbs>
+		<li>
+			<label>MainAttack</label>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>VWEL_Bullet_Varia</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<range>50</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>Shot_ChargeBlaster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+      </li>
+	  	<!--li>
+			<verbClass>Verb_Shoot</verbClass>
+			<label>ExtraShot</label>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Turret_Makai_A</defaultProjectile>
+			<warmupTime>2</warmupTime>
+			<range>50</range>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<burstShotCount>40</burstShotCount>
+			<forcedMissRadius>90</forcedMissRadius>
+			<soundCast>pewpewthree</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>4</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</li>
+	  	<li>
+			<verbClass>Verb_Shoot</verbClass>
+			<label>ExtraShot2</label>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>VWEL_Bullet_Varia</defaultProjectile>
+			<warmupTime>2</warmupTime>
+			<range>50</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>VWE_LaserShot_Heavy</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>4</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</li-->
+    </verbs>
+	<!--comps Inherit="False">
+    <li Class="MVCF.Comps.CompProperties_VerbProps">
+      <compClass>CompEquippable</compClass>
+      <verbProps>
+					<li>
+						<draw>true</draw>
+						<canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Things/Weapon/varia_bow_mini</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+						<label>ExtraShot</label>
+					</li>
+					<li>
+						<draw>true</draw>
+						<canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Things/Weapon/varia_bow_mini</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<canFireIndependently>true</canFireIndependently>
+						<label>ExtraShot2</label>
+					</li>
+		</verbProps>
+    </li-->
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.2,0,-0.1)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.2,0,-0.1)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.2,0,-0.1)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.2,0,-0.1)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+	</modExtensions>
+	<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_SkillDrain">
+				<skillToDrain>Intellectual</skillToDrain>
+				<xpToDrain>5000</xpToDrain>
+				<transferSkillPoints>true</transferSkillPoints>
+			</li>
+			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Knowledge</traitDef>
+				<hediffDef>Knowledge_Avatar</hediffDef>
+			</li>
+	</comps>	
+    <tools>
+      <li>
+        <label>arms</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+ </ThingDef>
+ <!-- Yuki_Staff -->
+	<ThingDef Name="MakaiBaseGun" Abstract="True" ParentName="BaseWeapon">
+		<techLevel>Archotech</techLevel>
+		<smeltable>true</smeltable>
+		<relicChance>1</relicChance>
+		<thingCategories>
+			<li>WeaponsRanged</li>
+		</thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+	</ThingDef>
+
+	<ThingDef Name="MakaiBaseMakeableGun" ParentName="MakaiBaseGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>Makai_Bench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+    </recipeMaker>
+	<weaponTags>
+			<li>Gun</li>
+	</weaponTags>
+	</ThingDef>
+ 
+	<ThingDef ParentName="BaseBullet">
+		<defName>Yuki_Project</defName>
+		<label>Cold Orb</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>20</speed>
+			<damageDef>Yuki_Cold</damageDef>
+			<damageAmountBase>1</damageAmountBase>
+			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Yuki_Project_Extra</defName>
+		<label>Cold Orb</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>20</speed>
+			<damageDef>Yuki_Cold_Extra</damageDef>
+			<explosionRadius>0.1</explosionRadius>
+			<damageAmountBase>1</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+			<arcHeightFactor>1</arcHeightFactor>
+			<flyOverhead>false</flyOverhead>
+			<shadowSize>0.5</shadowSize>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+		</projectile>
+	</ThingDef>
+	
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>Makai_Yuki_Burst</defName>
+		<label>cold burst</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Ice_Burst</texPath>
+			<texPathFadeOut>Things/Projectile/Ice_BurstFade</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Yuki_Cold_Extra</damageDef>
+			<speed>55</speed>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
+		<lifeTimeDuration>200</lifeTimeDuration>
+		<widthScaleFactor>0.40</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>10</tickFrameRate>
+		<finalTickFrameRate>10</finalTickFrameRate>
+		<tickDamageRate>30</tickDamageRate>
+		<dealsDamageOnce>false</dealsDamageOnce>
+		<stopWhenHit>false</stopWhenHit>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+	
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>Makai_Yuki_Spike</defName>
+		<label>cold burst</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Ice_Spike</texPath>
+			<texPathFadeOut>Things/Projectile/Ice_SpikeFade</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Yuki_Cold_Extra</damageDef>
+			<speed>25</speed>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>0.40</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1.2</totalSizeScale>
+		<tickFrameRate>10</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>false</dealsDamageOnce>
+		<stopWhenHit>false</stopWhenHit>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+ 
+ <ThingDef ParentName="MakaiBaseMakeableGun">
+		<defName>Makai_Yuki_Staff</defName>
+		<label>Frigid Star</label>
+		<description>a staff made with the image of cold. have various shooting ability. victim feel a deathly curse of cold creeping up to them. cause hypothermia and freezing curse.</description>
+		<graphicData>
+			<texPath>Things/Weapon/yuki_staff</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.7</drawSize>
+			<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+		</graphicData>
+		<uiIconPath>Things/Weapon/yuki_staff</uiIconPath>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<generateCommonality>0.01</generateCommonality>
+		<generateAllowChance>0.1</generateAllowChance>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>2</Mass>
+			<!-- <MarketValue>6000</MarketValue> -->
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+			</statBases>
+		<recipeMaker>
+			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<skillRequirements>
+       			 <Crafting>16</Crafting>
+     			</skillRequirements>
+			<recipeUsers>
+        			<li>Makai_Bench</li>
+     			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Makai_Ingot>65</Makai_Ingot>
+			<Plasteel>70</Plasteel>
+			<ComponentSpacer>8</ComponentSpacer>
+			<Makai_Stardust>15</Makai_Stardust>
+			<Makai_Fr-Path_E>1</Makai_Fr-Path_E>
+		</costList>
+		<techLevel>Archotech</techLevel>
+		<weaponTags>
+			<li>UltratechGun</li>
+			<li>Makai_God_Weapon</li>
+		</weaponTags>
+		<equippedStatOffsets>
+		</equippedStatOffsets>
+		<equippedAngleOffset>-180</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>MainAttack</label>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Yuki_Project</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>27</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>pewpewthree</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+			<li>
+				<label>ColdBurst</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<requireLineOfSight>false</requireLineOfSight>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Makai_Yuki_Burst</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<range>15</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>ice_freeze</soundCast>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+			<li>
+				<label>ColdSpike</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<requireLineOfSight>false</requireLineOfSight>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Makai_Yuki_Spike</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>20</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>ice_freeze</soundCast>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+			<li>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
+				<label>ExtraShot</label>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Yuki_Project_Extra</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<range>50</range>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<burstShotCount>20</burstShotCount>
+				<forcedMissRadius>10</forcedMissRadius>
+				<soundCast>pewpewthree</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>4</muzzleFlashScale>
+				<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			</li>
+		</verbs>
+		<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0.4,0,0.4)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0.4,0,0.4)</drawOffset>
+			</east>
+			<west>
+				<drawOffset>(-0.4,0,0.4)</drawOffset>
+			</west>
+			<south>
+				<drawOffset>(0.4,0,0.4)</drawOffset>
+			</south>
+		</weaponCarryDrawOffsets>
+		</li>
+		</modExtensions>
+		<comps Inherit="False">
+			<li Class="CompProperties_Styleable" />
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+			<compClass>CompEquippable</compClass>
+			<verbProps>
+					<li>
+						<label>MainAttack</label>
+					</li>
+					<li>
+						<draw>false</draw>
+						<canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<label>ExtraShot</label>
+						<comps>
+							<!--li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+							<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+							<uniqueTargets>true</uniqueTargets>
+							<invisible>true</invisible>
+							</li-->
+						</comps>
+					</li>
+					<li>
+						<draw>false</draw>
+						<canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Things/Gizmos/ColdBurst</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<label>ColdBurst</label>
+					</li>
+					<li>
+						<draw>false</draw>
+						<canBeToggled>true</canBeToggled>
+						<graphic>
+							<texPath>Things/Gizmos/IceSpike</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphic>
+						<label>ColdSpike</label>
+					</li>
+			</verbProps>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
+				<traitDef>Makai_Trait_Frost</traitDef>
+				<hediffDef>Frost_Avatar</hediffDef>
+			</li>
+		</comps>
+	<tools>
+      <li>
+        <label>staff head</label>
+        <capacities>
+          <li>Makai_Celestial</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+		<extraMeleeDamages>
+			<li>
+				<def>Yuki_Cold</def>
+				<amount>1</amount>
+			</li>
+		</extraMeleeDamages>
+      </li>
+      <li>
+        <label>staff handle</label>
+        <capacities>
+          <li>Makai_Celestial</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+		<extraMeleeDamages>
+			<li>
+				<def>Yuki_Cold</def>
+				<amount>1</amount>
+			</li>
+		</extraMeleeDamages>
+      </li>
+    </tools>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>ME_Pro</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>28</speed>
+			<damageDef>ME_Bullet_A</damageDef>
+			<!--extraDamages>
+				<li>
+					<def>Nightmare_Claw_Bullet_DamageTwo</def>
+					<amount>5</amount>
+					<armorPenetration>1</armorPenetration>
+				</li>
+				<li>
+					<def>Knowledge_Seeker</def>
+					<amount>5</amount>
+					<armorPenetration>1</armorPenetration>
+				</li>
+				<li>
+					<def>EMP</def>
+					<amount>11115</amount>
+					<armorPenetration>2</armorPenetration>
+				</li>
+			</extraDamages-->
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+			<li Class="VFECore.CompProperties_HomingProjectile">
+				<homingDistanceFractionPassed>0.2</homingDistanceFractionPassed>
+				<homingCorrectionTickRate>5</homingCorrectionTickRate>
+				<initialDispersionFromTarget>30</initialDispersionFromTarget>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakaiBaseMakeableGun">
+		<defName>Makai_Early_Assault</defName>
+		<label>ME-A1</label>
+		<description>energy assault rifle. fire shot in 3 burst. Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. projectile is homing-type \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<graphicData>
+			<texPath>Things/Weapon/ME_A1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>1.30</RangedWeapon_Cooldown>
+			</statBases>
+		<recipeMaker>
+			<researchPrerequisite>Makai_Weapon2</researchPrerequisite>
+			<skillRequirements>
+       			 <Crafting>12</Crafting>
+     			</skillRequirements>
+			<recipeUsers>
+        			<li>Makai_Bench</li>
+     			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Plasteel>70</Plasteel>
+			<ComponentSpacer>8</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>SpacerGun</li>
+			<li>Makai_W_Ultra</li>
+		</weaponTags>
+		<equippedStatOffsets>
+		</equippedStatOffsets>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>MainAttack</label>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ME_Pro</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>40</range>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>pewpewthree</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_SelfBuffOnTargetHit">
+				<hediffDef>Makai_SelfBuffOnHit_ATKSPEED</hediffDef>
+				<markedHediff>ATKSPEED_Mark</markedHediff>
+				<SeverityPerHit>0.5</SeverityPerHit>
+			</li>
+		</comps>
+	<tools>
+      <li>
+        <label>gun head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>gun handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>MEG_Pro</defName>
+		<label>energy shot</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_meg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>20</speed>
+			<damageDef>ME_Bullet_G</damageDef>
+			<damageAmountBase>30</damageAmountBase>
+			<armorPenetrationBase>0.3</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<flyOverhead>false</flyOverhead>
+			<arcHeightFactor>0.2</arcHeightFactor>
+			<explosionRadius>2.5</explosionRadius>
+			<shadowSize>1</shadowSize>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>MEG_Pro2nd</defName>
+		<label>Condensed Shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_meg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<speed>20</speed>
+			<damageDef>ME_Bullet_G</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<arcHeightFactor>5</arcHeightFactor>
+			<flyOverhead>true</flyOverhead>
+			<explosionRadius>1.5</explosionRadius>
+			<shadowSize>1</shadowSize>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="MakaiBaseMakeableGun">
+		<defName>Makai_Early_Bomb</defName>
+		<label>ME-G1</label>
+		<description>energy launcher. fire a single explosive shot. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<graphicData>
+			<texPath>Things/Weapon/ME_G1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.1</drawSize>
+			<onGroundRandomRotateAngle>20</onGroundRandomRotateAngle>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<generateCommonality>0.1</generateCommonality>
+		<generateAllowChance>0.1</generateAllowChance>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
+			</statBases>
+		<recipeMaker>
+			<researchPrerequisite>Makai_Weapon2</researchPrerequisite>
+			<skillRequirements>
+       			 <Crafting>12</Crafting>
+     			</skillRequirements>
+			<recipeUsers>
+        			<li>Makai_Bench</li>
+     			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Plasteel>70</Plasteel>
+			<ComponentSpacer>8</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>SpacerGun</li>
+			<li>Makai_W_Ultra_G</li>
+		</weaponTags>
+		<equippedStatOffsets>
+		</equippedStatOffsets>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>Energy Blaster</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>MEG_Pro</defaultProjectile>
+				<warmupTime>2.0</warmupTime>
+				<range>25</range>
+				<requireLineOfSight>false</requireLineOfSight>
+				<forcedMissRadius>0.1</forcedMissRadius>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>pewpewthree</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<onlyManualCast>true</onlyManualCast>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<muzzleFlashScale>2</muzzleFlashScale>
+			</li>
+			<li>
+				<label>Energy Burst</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>MEG_Pro2nd</defaultProjectile>
+				<warmupTime>4.0</warmupTime>
+				<range>25</range>
+				<requireLineOfSight>false</requireLineOfSight>
+				<forcedMissRadius>6</forcedMissRadius>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>pewpewthree</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<onlyManualCast>true</onlyManualCast>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<muzzleFlashScale>2</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	<tools>
+      <li>
+        <label>gun head</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>staff handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>ME_ProMini</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea3</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>20</speed>
+			<damageDef>ME_Bullet_A</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+		<comps>
+			<li Class="VFECore.CompProperties_HomingProjectile">
+				<homingDistanceFractionPassed>0.3</homingDistanceFractionPassed>
+				<homingCorrectionTickRate>5</homingCorrectionTickRate>
+				<initialDispersionFromTarget>10</initialDispersionFromTarget>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakaiBaseMakeableGun">
+		<defName>Makai_Early_Pistol</defName>
+		<label>ME-A2</label>
+		<description>energy pistol. fire shot in 6 burst each.Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. projectile are homing-type. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<graphicData>
+			<texPath>Things/Weapon/ME_A2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+			<onGroundRandomRotateAngle>20</onGroundRandomRotateAngle>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.50</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.30</AccuracyLong>
+			<RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>Makai_Weapon2</researchPrerequisite>
+			<skillRequirements>
+       			 <Crafting>12</Crafting>
+     			</skillRequirements>
+			<recipeUsers>
+        			<li>Makai_Bench</li>
+     			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Plasteel>70</Plasteel>
+			<ComponentSpacer>8</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>SpacerGun</li>
+			<li>Makai_W_Ultra</li>
+		</weaponTags>
+		<equippedStatOffsets>
+		</equippedStatOffsets>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>Energy Pellet</label>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ME_ProMini</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>35</range>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<burstShotCount>6</burstShotCount>
+				<soundCast>pewpewthree</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<!--li Class="SkillDrain.CompProperties_SkillDrain">
+				<skillToDrain>Intellectual</skillToDrain>
+				<xpToDrain>10000</xpToDrain>
+				<transferSkillPoints>true</transferSkillPoints>
+			</li-->
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MakaiTech.CompProperties_SelfBuffOnTargetHit">
+				<hediffDef>Makai_SelfBuffOnHit_ATKSPEED</hediffDef>
+				<markedHediff>ATKSPEED_Mark</markedHediff>
+				<SeverityPerHit>0.05</SeverityPerHit>
+			</li>
+		</comps>
+		<modExtensions>
+		</modExtensions>
+		<tools>
+		  <li>
+			<label>gun head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.8</cooldownTime>
+		  </li>
+		  <li>
+			<label>gun handle</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>Poke</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.9</cooldownTime>
+		  </li>
+		</tools>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Bullet_Turret_Makai_B_EX_HELD</defName>
+		<label>Condensed Shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/y_beam2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<speed>40</speed>
+			<damageDef>Stardust_Compress_Bullet_Ex_HELD</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationBase>2</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<arcHeightFactor>0.2</arcHeightFactor>
+			<flyOverhead>false</flyOverhead>
+			<explosionRadius>3</explosionRadius>
+			<shadowSize>1</shadowSize>
+			<stoppingPower>1</stoppingPower>
+			<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakaiBaseMakeableGun">
+		<defName>Makai_Stardust_Cannon</defName>
+		<label>Stardust Cannon</label>
+		<description>Compressed Stardust cannon. portable version of stardust turret. due to limited energy storage it can only launch projectile instead of firing beam of stardust, because of weight it really harder to move while carrying this weapon. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<graphicData>
+			<texPath>Things/Building/makai_turret_topB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+			<onGroundRandomRotateAngle>20</onGroundRandomRotateAngle>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<generateCommonality>0.1</generateCommonality>
+		<generateAllowChance>0.1</generateAllowChance>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.5</AccuracyTouch>
+			<AccuracyShort>0.7</AccuracyShort>
+			<AccuracyMedium>0.9</AccuracyMedium>
+			<AccuracyLong>0.9</AccuracyLong>
+			<RangedWeapon_Cooldown>5.00</RangedWeapon_Cooldown>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>Makai_Weapon3</researchPrerequisite>
+			<skillRequirements>
+       			 <Crafting>16</Crafting>
+     			</skillRequirements>
+			<recipeUsers>
+        			<li>Makai_Bench</li>
+     			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>250</Makai_Stardust>
+			<Plasteel>70</Plasteel>
+			<ComponentSpacer>8</ComponentSpacer>
+		</costList>
+		<techLevel>Ultra</techLevel>
+		<weaponTags>
+			<li>SpacerGun</li>
+			<li>Makai_W_Ultra</li>
+		</weaponTags>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+		</equippedStatOffsets>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>Energy BLAST</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Turret_Makai_B_EX_HELD</defaultProjectile>
+				<warmupTime>3.0</warmupTime>
+				<range>45</range>
+				<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<requireLineOfSight>false</requireLineOfSight>
+				<forcedMissRadius>0.1</forcedMissRadius>
+				<soundCast>anva_gl</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetSelf>true</canTargetSelf>
+				</targetParams>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<!--li Class="SkillDrain.CompProperties_SkillDrain">
+				<skillToDrain>Intellectual</skillToDrain>
+				<xpToDrain>10000</xpToDrain>
+				<transferSkillPoints>true</transferSkillPoints>
+			</li-->
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<modExtensions>
+		</modExtensions>
+		<tools>
+		  <li>
+			<label>gun head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.8</cooldownTime>
+		  </li>
+		  <li>
+			<label>gun handle</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>Poke</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.9</cooldownTime>
+		  </li>
+		</tools>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>ME_Pro_TOne</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>55</speed>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>ME_Pro_TOne_Pis</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>55</speed>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>ME_Pro_TOne_Sniper</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>55</speed>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>55</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+			<!-- <li Class="MakaiTech.CompProperties_FleckEmitter"> -->
+				<!-- <alwaysOn>true</alwaysOn> -->
+				<!-- <moteDefs> -->
+					<!-- <li>Mote_WhitePuffB</li> -->
+				<!-- </moteDefs> -->
+				<!-- <scale>0.2</scale> -->
+				<!-- <scaleMax>0.5</scaleMax> -->
+				<!-- <rotationMinRate>-30</rotationMinRate> -->
+				<!-- <rotationMaxRate>30</rotationMaxRate> -->
+				<!-- <minRandomOffsetX>-0.1</minRandomOffsetX> -->
+				<!-- <maxRandomOffsetX>0.1</maxRandomOffsetX> -->
+				<!-- <minRandomOffsetY>-0.1</minRandomOffsetY> -->
+				<!-- <maxRandomOffsetY>0.1</maxRandomOffsetY> -->
+				<!-- <minRotate>-45</minRotate> -->
+				<!-- <maxRotate>45</maxRotate> -->
+				<!-- <minSpeed>-1</minSpeed> -->
+				<!-- <maxSpeed>1</maxSpeed> -->
+				<!-- <minEmissionInterval>0</minEmissionInterval> -->
+				<!-- <maxEmissionInterval>1</maxEmissionInterval> -->
+				<!-- <countPerEmit>2</countPerEmit> -->
+			<!-- </li> -->
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakaiBaseMakeableGun" Name="MakaiT1Weapon">
+		<defName>Makai_T1_Assault</defName>
+		<label>Stardust HMG</label>
+		<description>energy heavy machine gun. fire shot in 10 burst. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<graphicData>
+			<texPath>Things/Weapon/MakaiHMG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.1</drawSize>
+			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+		</graphicData>
+		<soundInteract>Interact_ChargeRifle</soundInteract>
+		<generateCommonality>0.1</generateCommonality>
+		<generateAllowChance>0.1</generateAllowChance>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>2.30</RangedWeapon_Cooldown>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>Makai_Weapon1</researchPrerequisite>
+			<skillRequirements>
+       			 <Crafting>12</Crafting>
+     			</skillRequirements>
+			<recipeUsers>
+        			<li>Makai_Bench</li>
+     			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Makai_Ingot>10</Makai_Ingot>
+			<Makai_Stardust>500</Makai_Stardust>
+			<Plasteel>70</Plasteel>
+			<ComponentSpacer>10</ComponentSpacer>
+		</costList>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>SpacerGun</li>
+			<li>Makai_W_Spacer</li>
+		</weaponTags>
+		<tradeTags>
+			<li>WeaponRanged</li>
+		</tradeTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+			<li>Ultratech</li>
+		</weaponClasses>
+		<equippedStatOffsets>
+		</equippedStatOffsets>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>MainAttack</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ME_Pro_TOne</defaultProjectile>
+				<warmupTime>2.5</warmupTime>
+				<range>40</range>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<burstShotCount>10</burstShotCount>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	<tools>
+      <li>
+        <label>gun head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>gun handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakaiT1Weapon">
+		<defName>Makai_T1_Sniper</defName>
+		<label>Stardust Triple-Shot</label>
+		<description>energy sniper, fire a burst of 3 super heated shot \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<graphicData>
+			<texPath>Things/Weapon/MakaiSniper</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.25</drawSize>
+			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>1</AccuracyLong>
+			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs Inherit="False">
+			<li>
+				<label>MainAttack</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ME_Pro_TOne_Sniper</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>75</range>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>anva_gl</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>15</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakaiT1Weapon">
+		<defName>Makai_T1_Pistol</defName>
+		<label>Stardust RE-45</label>
+		<description>energy handgun, fire a burst of 3 super heated shot \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<graphicData>
+			<texPath>Things/Weapon/MakaiPistol</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.6</AccuracyMedium>
+			<AccuracyLong>0.5</AccuracyLong>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs Inherit="False">
+			<li>
+				<label>MainAttack</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>ME_Pro_TOne</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>25</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>pewpewthree</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>5</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+ </Defs>

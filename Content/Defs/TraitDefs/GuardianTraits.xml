@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TraitDef>
+    <defName>Makai_Trait_Existence</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Existence</label>
+        <description>wielded the concept of existence taken form. {PAWN_nameDef} path shall never meet it end, for the path of existence lay the foundation of all.</description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Makai_Trait_Destruction</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Destruction</label>
+        <description>wielded the concept of destruction taken form. no entity should resist {PAWN_nameDef} strike. for {PAWN_nameDef} power is the one absolute.</description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Makai_Trait_Order</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Order</label>
+        <description>wielded the concept of order taken form. {PAWN_nameDef} mind shall be as still as the enlightened one. be the guidance light for those who've lost their way.</description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Makai_Trait_Corruption</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Corruption</label>
+        <description>wielded the concept of corruption taken form. the mark of the corrupted one. for {PAWN_nameDef} has seen the true depth of abyss. the taint forever remain.</description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Makai_Trait_Flame</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Flame</label>
+        <description>wielded the concept of heat taken form. {PAWN_nameDef} light shall be as the brightest star, paved {PAWN_nameDef} road with radiant of gold.</description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Makai_Trait_Frost</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Frost</label>
+        <description>wielded the concept of cold taken form. {PAWN_nameDef} heart shall be cold as ice. the frigid star shall envelope {PAWN_nameDef} world in endless cold.</description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Makai_Trait_Death</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Death</label>
+        <description>wielded the concept of death taken form. {PAWN_nameDef} path shall bring an end to all road. for destined death is the final destination of all.</description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>Makai_Trait_Knowledge</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Avatar of Knowledge</label>
+        <description>wielded the concept of knowledge taken form. {PAWN_nameDef} shall seek, take, and steal. for it is {PAWN_nameDef} duty to gather all knowledge. those known to man, and those yet to be known by any. </description>
+		<statOffsets>
+			<ArmorRating_Celestial>1</ArmorRating_Celestial>
+		</statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+  
+  
+  
+</Defs>

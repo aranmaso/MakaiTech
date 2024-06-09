@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <!-- <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="MultiAnalyzer"]] | Defs/thingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="MultiAnalyzer"]]</xpath> -->
+        <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities[./li[text()="MultiAnalyzer"]]</xpath>
+        <value>
+            <li>Makai_Powerlink_Relay</li>
+        </value>
+    </Operation>
+
+</Patch>

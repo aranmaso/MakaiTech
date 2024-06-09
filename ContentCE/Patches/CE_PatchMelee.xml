@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Anva Sword -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Anva_Sword"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>3</power>
+							<cooldownTime>1.3</cooldownTime>
+							<armorPenetrationBlunt>5</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>point</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>25</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Existence_Null_ArmorDebuff</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.2</cooldownTime>
+							<armorPenetrationSharp>55</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>edge</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>25</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Existence_Null_ArmorDebuff</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.75</cooldownTime>
+							<armorPenetrationSharp>60</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[defName="Conceptual_Destruction"]/stages/li[1]</xpath>
+				<value>
+					<li>
+						<label>Defense Null</label>
+						<painFactor>1.2</painFactor>
+						<capMods>
+						  <li>
+							<capacity>Consciousness</capacity>
+							<setMax>0.8</setMax>
+						  </li>
+						</capMods>
+						<statFactors>
+							<Flammability>10</Flammability>
+							<IncomingDamageFactor>1.5</IncomingDamageFactor>
+						</statFactors>
+						<statOffsets>
+							<ArmorRating_Sharp>-1000</ArmorRating_Sharp>
+							<ArmorRating_Blunt>-1000</ArmorRating_Blunt>
+							<ArmorRating_Heat>-1000</ArmorRating_Heat>
+						</statOffsets>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/statBases</xpath>
+			  <value>
+				<Bulk>35</Bulk>
+				<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]</xpath>
+			  <value>
+				<equippedStatOffsets>
+				  <MeleeCritChance>0.17</MeleeCritChance>
+				  <MeleeParryChance>0.5</MeleeParryChance>
+				  <MeleeDodgeChance>0.3</MeleeDodgeChance>
+				</equippedStatOffsets>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/weaponTags</xpath>
+			  <value>
+				<li>CE_TwoHandedWeapon</li>
+			  </value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Anva_Sword"]/verbs</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Anva_Sword"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Anva_Sword"]/comps</xpath>
+				<attribute>Inherit</attribute>
+			</li>
+			
+			<!-- Ama Berd -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Ama_Berd"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>4</power>
+							<cooldownTime>1.3</cooldownTime>
+							<armorPenetrationBlunt>25</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>point</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>15</power>
+							<cooldownTime>2.2</cooldownTime>
+							<armorPenetrationSharp>55</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>edge</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>15</power>
+							<cooldownTime>2.75</cooldownTime>
+							<armorPenetrationSharp>55</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Ama_Berd"]/statBases</xpath>
+			  <value>
+				<Bulk>20</Bulk>
+				<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Ama_Berd"]</xpath>
+			  <value>
+				<equippedStatOffsets>
+				  <MeleeCritChance>0.17</MeleeCritChance>
+				  <MeleeParryChance>0.5</MeleeParryChance>
+				  <MeleeDodgeChance>0.3</MeleeDodgeChance>
+				</equippedStatOffsets>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Ama_Berd"]/weaponTags</xpath>
+			  <value>
+				<li>CE_TwoHandedWeapon</li>
+			  </value>
+			</li>
+			
+			<!-- Ouro Berd -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Ouro_Berd"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>20</power>
+							<cooldownTime>1.3</cooldownTime>
+							<armorPenetrationBlunt>200</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>point</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>60</power>
+							<cooldownTime>3.25</cooldownTime>
+							<armorPenetrationSharp>200</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>edge</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>80</power>
+							<cooldownTime>2.75</cooldownTime>
+							<armorPenetrationSharp>200</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]/statBases</xpath>
+			  <value>
+				<Bulk>15</Bulk>
+				<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]</xpath>
+			  <value>
+				<equippedStatOffsets>
+				  <MeleeCritChance>0.17</MeleeCritChance>
+				  <MeleeParryChance>0.5</MeleeParryChance>
+				  <MeleeDodgeChance>0.3</MeleeDodgeChance>
+				</equippedStatOffsets>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]/weaponTags</xpath>
+			  <value>
+				<li>CE_TwoHandedWeapon</li>
+			  </value>
+			</li>
+			
+			<!-- Alf Claw -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Alf_Claw"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">							
+							<label>point</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>4</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Alf_Corruption</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>0.55</cooldownTime>
+							<armorPenetrationSharp>35</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">							
+							<label>edge</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>4</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Alf_Corruption</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>0.75</cooldownTime>
+							<armorPenetrationSharp>35</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Alf_Claw"]/statBases</xpath>
+			  <value>
+				<Bulk>5</Bulk>
+				<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Alf_Claw"]</xpath>
+			  <value>
+				<equippedStatOffsets>
+				  <MeleeCritChance>0.17</MeleeCritChance>
+				  <MeleeParryChance>0.75</MeleeParryChance>
+				  <MeleeDodgeChance>0.5</MeleeDodgeChance>
+				</equippedStatOffsets>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Alf_Claw"]/weaponTags</xpath>
+			  <value>
+				<li>CE_OneHandedWeapon</li>
+			  </value>
+			</li>
+			
+			<!-- Mica Sword -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Blade"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>point</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>25</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Mica_Fire</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.2</cooldownTime>
+							<armorPenetrationSharp>85</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>edge</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>25</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Mica_Fire</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.75</cooldownTime>
+							<armorPenetrationSharp>85</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Mica_Blade"]/statBases</xpath>
+			  <value>
+				<Bulk>5</Bulk>
+				<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Mica_Blade"]</xpath>
+			  <value>
+				<equippedStatOffsets>
+				  <MeleeCritChance>0.17</MeleeCritChance>
+				  <MeleeParryChance>0.5</MeleeParryChance>
+				  <MeleeDodgeChance>0.5</MeleeDodgeChance>
+				</equippedStatOffsets>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Mica_Blade"]/weaponTags</xpath>
+			  <value>
+				<li>CE_TwoHandedWeapon</li>
+			  </value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Blade"]/verbs</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Blade"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Blade"]/comps</xpath>
+				<attribute>Inherit</attribute>
+			</li>
+			
+			<!-- Mica Mace -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Mace"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>point</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>25</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Mica_Star</def>
+									<amount>1</amount>
+								</li>
+								<li>
+									<def>Flame</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.2</cooldownTime>
+							<armorPenetrationSharp>200</armorPenetrationSharp>
+							<armorPenetrationBlunt>2000</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>edge</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>25</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Mica_Star</def>
+									<amount>1</amount>
+								</li>
+								<li>
+									<def>Flame</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.75</cooldownTime>
+							<armorPenetrationSharp>200</armorPenetrationSharp>
+							<armorPenetrationBlunt>2000</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Mica_Mace"]/statBases</xpath>
+			  <value>
+				<Bulk>5</Bulk>
+				<MeleeCounterParryBonus>2</MeleeCounterParryBonus>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Mica_Mace"]</xpath>
+			  <value>
+				<equippedStatOffsets>
+				  <MeleeCritChance>0.17</MeleeCritChance>
+				  <MeleeParryChance>0.5</MeleeParryChance>
+				  <MeleeDodgeChance>0.5</MeleeDodgeChance>
+				</equippedStatOffsets>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Mica_Mace"]/weaponTags</xpath>
+			  <value>
+				<li>CE_TwoHandedWeapon</li>
+			  </value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Mace"]/verbs</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Mace"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Mace"]/comps</xpath>
+				<attribute>Inherit</attribute>
+			</li>
+			
+			<!-- Sari Scythe -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Sari_Scy"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>point</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>1</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Sari_13th</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.2</cooldownTime>
+							<armorPenetrationSharp>6666</armorPenetrationSharp>
+							<armorPenetrationBlunt>6666</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>edge</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>1</power>
+							<extraMeleeDamages>
+								<li>
+									<def>Sari_13th</def>
+									<amount>1</amount>
+								</li>
+							</extraMeleeDamages>
+							<cooldownTime>2.75</cooldownTime>
+							<armorPenetrationSharp>6666</armorPenetrationSharp>
+							<armorPenetrationBlunt>6666</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Sari_Scy"]/statBases</xpath>
+			  <value>
+				<Bulk>5</Bulk>
+				<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Sari_Scy"]</xpath>
+			  <value>
+				<equippedStatOffsets>
+				  <MeleeCritChance>0.17</MeleeCritChance>
+				  <MeleeParryChance>0.5</MeleeParryChance>
+				  <MeleeDodgeChance>0.5</MeleeDodgeChance>
+				</equippedStatOffsets>
+			  </value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/ThingDef[defName="Makai_Sari_Scy"]/weaponTags</xpath>
+			  <value>
+				<li>CE_TwoHandedWeapon</li>
+			  </value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Sari_Scy"]/verbs</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Sari_Scy"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
+			</li>
+			<li Class="PatchOperationAttributeRemove">
+				<xpath>Defs/ThingDef[defName="Makai_Sari_Scy"]/comps</xpath>
+				<attribute>Inherit</attribute>
+			</li>
+			
+			
+			
+			
+			
+		</operations>
+	</Operation>
+</Patch>

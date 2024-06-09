@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Makai_EssenceDuck</defName>
+		<label>Essence of Infinity</label>
+		<description>Research into how to manifest Essence of Infinity</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

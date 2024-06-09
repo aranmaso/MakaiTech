@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<RecipeDef>
+		<defName>AskForIngot</defName>
+		<label>Bargain for Celestial Steel</label>
+		<description>attempt to bargain a vast amount of resouce for 10 Celestial Ingot. the makainian has yet to fully trust you. so they want a huge amount of resource in return when giving out celestial steel. \n\n This is a very inefficient way of getting celestial steel as once you go deeper into Makai research tree. there will be a building to create Makai's material for way cheaper cost.</description>
+		<jobString>Bargain Ingot.</jobString>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<workAmount>66666</workAmount>
+		<workSkill>Social</workSkill>
+		<recipeUsers>
+			<li>Makai_Bench</li>
+			<li>FabricationBench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>1000</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1000</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>1000</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>Silver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Makai_Ingot>10</Makai_Ingot>
+		</products>
+		<skillRequirements>
+			<Social>13</Social>
+   		 </skillRequirements>
+    		<researchPrerequisite>Makai_Communication</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>AskForIngotx10</defName>
+		<label>Bargain for Celestial Steelx10</label>
+		<description>attempt to bargain a vast amount of resouce for 100 Celestial Ingot. the makainian has yet to fully trust you. so they want a huge amount of resource in return when giving out celestial steel. \n\n This is a very inefficient way of getting celestial steel as once you go deeper into Makai research tree. there will be a building to create Makai's material for way cheaper cost.</description>
+		<jobString>Bargain Ingot.</jobString>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<workAmount>66666</workAmount>
+		<workSkill>Social</workSkill>
+		<recipeUsers>
+			<li>Makai_Bench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>10000</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10000</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>10000</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>Silver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Makai_Ingot>100</Makai_Ingot>
+		</products>
+		<skillRequirements>
+			<Social>16</Social>
+   		 </skillRequirements>
+    		<researchPrerequisite>Makai_EnergyRelay_Tier5</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>Forge_Miniature_Sun</defName>
+		<label>Forge Miniature Sun</label>
+		<description>Combine various material to create a miniature sun.</description>
+		<jobString>Creating Star</jobString>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<workAmount>60000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<recipeUsers>
+			<li>Makai_Bench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_Ingot</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_Stardust</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_Fabric_C</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_Ingot</li>
+				<li>Makai_Stardust</li>
+				<li>Makai_Fabric_C</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Makai_StarSmall>1</Makai_StarSmall>
+		</products>
+		<skillRequirements>
+			<Crafting>16</Crafting>
+   		 </skillRequirements>
+    		<researchPrerequisite>Makai_EnergyRelay_Tier7</researchPrerequisite>
+	</RecipeDef>
+	
+	<RecipeDef MayRequire="ducks.insaneskills">
+		<defName>Manifest_Ducks</defName>
+		<label>Manifest Essense of Infinity</label>
+		<description>Materialize the Essense of Infinity</description>
+		<jobString>Manifest Infinity</jobString>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<workAmount>6000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>Makai_Bench</li>
+		</recipeUsers>
+		<ingredients>
+		</ingredients>
+		<fixedIngredientFilter>
+		</fixedIngredientFilter>
+		<products>
+			<Makai_Ducks-Path_E>1</Makai_Ducks-Path_E>
+		</products>
+		<skillRequirements>
+			<Crafting>40</Crafting>
+   		 </skillRequirements>
+    		<researchPrerequisite>Makai_EssenceDuck</researchPrerequisite>
+	</RecipeDef>
+</Defs>

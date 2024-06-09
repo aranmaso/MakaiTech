@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <ThoughtDef>
+    <defName>BrainCease</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Knowledge_Stolen</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Stopped Thinking</label>
+        <description>w..what where? who...?</description>
+        <baseMoodEffect>99</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>BondMood</defName>
+	<durationDays>1</durationDays>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Bonding Essense</label>
+        <description>&lt;color=#C491BF&gt;Friend!&lt;color&gt; so many friend!</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

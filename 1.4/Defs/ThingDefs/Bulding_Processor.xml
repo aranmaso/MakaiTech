@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<DesignatorDropdownGroupDef>
+		<defName>Makai_Consilidator</defName>
+		<label>Essence Maker</label>
+	</DesignatorDropdownGroupDef>
+	<!-- Essence of Flame Maker -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Makai_FlameEssenceProcessor</defName>
+		<label>Essence Consolidator - Flame</label>
+		<description>a building use to gather essence particle</description>
+		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Makai_Processor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>100</Makai_Stardust>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<uiIconScale>0.8</uiIconScale>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>500</Mass>
+			<WorkToBuild>12000</WorkToBuild>
+			<MaxHitPoints>5000</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<size>(3,3)</size>
+		<designationCategory>Makai_Tech</designationCategory>
+		<designatorDropdown>Makai_Consilidator</designatorDropdown>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<researchPrerequisites>
+			<li>Makai_Essence3</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>2000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="ItemProcessor.CompProperties_ItemProcessor">
+				<buildingOnGraphic>Things/Building/Makai_FlameProcessor</buildingOnGraphic>
+				<numberOfInputs>1</numberOfInputs>
+				<isMachineSpecifiesOutput>true</isMachineSpecifiesOutput>
+				<acceptsNoneAsInput>false</acceptsNoneAsInput>
+				<transfersIngredientLists>false</transfersIngredientLists>
+				
+				<InsertFirstItemDesc>IP_InsertFirstItemDesc</InsertFirstItemDesc>
+				<chooseIngredientsIcon>UI/IP_InsertIngredients</chooseIngredientsIcon>
+
+				<bringIngredientsText>IP_BringIngredients</bringIngredientsText>
+				<bringIngredientsDesc>IP_BringIngredientsDesc</bringIngredientsDesc>
+				<bringIngredientsIcon>UI/IP_InsertIngredients</bringIngredientsIcon >
+
+				<cancelIngredientsText>IP_CancelIngredients</cancelIngredientsText> 
+				<cancelIngredientsDesc>IP_CancelIngredientsDesc</cancelIngredientsDesc>
+				<cancelIngredientsIcon>UI/IP_CancelIngredients</cancelIngredientsIcon> 
+
+				<noPowerDestroysProgress>true</noPowerDestroysProgress>
+				<rareTicksToDestroy>120</rareTicksToDestroy>
+				<noPowerDestroysMessage>IP_NoPowerDestroysMessage</noPowerDestroysMessage>
+				<noPowerDestroysInitialWarning>IP_NoPowerDestroysInitialWarning</noPowerDestroysInitialWarning>
+
+				<destroyIngredientsAtStartOfProcess>false</destroyIngredientsAtStartOfProcess>
+				<isTemperatureDependingMachine>true</isTemperatureDependingMachine>
+				<maxTemp>1000</maxTemp>
+				<minTemp>150</minTemp>
+				<messageIfWrongTempWarning>IP_WrongTemp</messageIfWrongTempWarning>
+				<messageIfWrongTemp>IP_SpoiledDueToWrongTemp</messageIfWrongTemp>
+				<rareTicksToDestroyDueToWrongTemp>50</rareTicksToDestroyDueToWrongTemp>
+				
+				<showFactoryProgressBar>true</showFactoryProgressBar>
+
+			</li>
+
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+	</ThingDef>
+		
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>Makai_EssenceFlameIngrediant</defName>
+		<building>Makai_FlameEssenceProcessor</building>
+		<slot>1</slot>
+		<items>
+			<li>Makai_Ingot</li>
+			<li>Makai_Stardust</li>
+		</items>
+	</ItemProcessor.ItemAcceptedDef>
+		
+	<ItemProcessor.CombinationDef Name="Makai_EssenceMakerBaser">
+		<defName>Makai_EssenceFlameMaker</defName>
+		<building>Makai_FlameEssenceProcessor</building>
+		<items>
+			<li>Makai_Ingot</li>
+			<li>Makai_Stardust</li>
+		</items>
+		<amount>
+			<li>25</li>
+			<li>100</li>
+		</amount>
+		<result>Makai_Fla-Path_E</result>
+		<yield>1</yield>
+		<useQualityIncreasing>false</useQualityIncreasing>
+		<singleTimeIfNotQualityIncreasing>5</singleTimeIfNotQualityIncreasing>
+		<finishedProductMessage>IP_GenericProductFinished</finishedProductMessage>
+	</ItemProcessor.CombinationDef>
+	
+	<!-- Essence of Frost Maker -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>Makai_FrostEssenceProcessor</defName>
+		<label>Essence Consolidator - Frost</label>
+		<description>a building use to gather essence particle</description>
+		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Makai_Processor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>100</Makai_Stardust>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<uiIconScale>0.8</uiIconScale>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<Mass>500</Mass>
+			<WorkToBuild>12000</WorkToBuild>
+			<MaxHitPoints>5000</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<size>(3,3)</size>
+		<designationCategory>Makai_Tech</designationCategory>
+		<designatorDropdown>Makai_Consilidator</designatorDropdown>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<researchPrerequisites>
+			<li>Makai_Essence3</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>2000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="ItemProcessor.CompProperties_ItemProcessor">
+				<buildingOnGraphic>Things/Building/Makai_FrostProcessor</buildingOnGraphic>
+				<numberOfInputs>1</numberOfInputs>
+				<isMachineSpecifiesOutput>true</isMachineSpecifiesOutput>
+				<acceptsNoneAsInput>false</acceptsNoneAsInput>
+				<transfersIngredientLists>false</transfersIngredientLists>
+				
+				<InsertFirstItemDesc>IP_InsertFirstItemDesc</InsertFirstItemDesc>
+				<chooseIngredientsIcon>UI/IP_InsertIngredients</chooseIngredientsIcon>
+
+				<bringIngredientsText>IP_BringIngredients</bringIngredientsText>
+				<bringIngredientsDesc>IP_BringIngredientsDesc</bringIngredientsDesc>
+				<bringIngredientsIcon>UI/IP_InsertIngredients</bringIngredientsIcon >
+
+				<cancelIngredientsText>IP_CancelIngredients</cancelIngredientsText> 
+				<cancelIngredientsDesc>IP_CancelIngredientsDesc</cancelIngredientsDesc>
+				<cancelIngredientsIcon>UI/IP_CancelIngredients</cancelIngredientsIcon> 
+
+				<noPowerDestroysProgress>true</noPowerDestroysProgress>
+				<rareTicksToDestroy>120</rareTicksToDestroy>
+				<noPowerDestroysMessage>IP_NoPowerDestroysMessage</noPowerDestroysMessage>
+				<noPowerDestroysInitialWarning>IP_NoPowerDestroysInitialWarning</noPowerDestroysInitialWarning>
+
+				<destroyIngredientsAtStartOfProcess>false</destroyIngredientsAtStartOfProcess>
+				<isTemperatureDependingMachine>true</isTemperatureDependingMachine>
+				<maxTemp>-100</maxTemp>
+				<minTemp>-1000</minTemp>
+				<messageIfWrongTempWarning>IP_WrongTemp</messageIfWrongTempWarning>
+				<messageIfWrongTemp>IP_SpoiledDueToWrongTemp</messageIfWrongTemp>
+				<rareTicksToDestroyDueToWrongTemp>100</rareTicksToDestroyDueToWrongTemp>
+				
+				<showFactoryProgressBar>true</showFactoryProgressBar>
+
+			</li>
+
+		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+	</ThingDef>
+	
+	<ItemProcessor.ItemAcceptedDef>
+		<defName>Makai_EssenceFrostIngrediant</defName>
+		<building>Makai_FrostEssenceProcessor</building>
+		<slot>1</slot>
+		<items>
+			<li>Makai_Ingot</li>
+			<li>Makai_Stardust</li>
+		</items>
+	</ItemProcessor.ItemAcceptedDef>
+	
+	<ItemProcessor.CombinationDef ParentName="Makai_EssenceMakerBaser">
+		<defName>Makai_EssenceFrostMaker</defName>
+		<building>Makai_FrostEssenceProcessor</building>
+		<items>
+			<li>Makai_Ingot</li>
+			<li>Makai_Stardust</li>
+		</items>
+		<amount>
+			<li>25</li>
+			<li>100</li>
+		</amount>
+		<result>Makai_Fr-Path_E</result>
+		<yield>1</yield>
+	</ItemProcessor.CombinationDef>
+
+</Defs>

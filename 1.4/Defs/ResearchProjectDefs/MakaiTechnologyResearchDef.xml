@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Makai Workbench unlock-->	
+	<ResearchProjectDef>
+		<defName>Makai_Communication</defName>
+		<label>Makai Communication</label>
+		<description>Develop a way of connecting an AI to an makai device, allowing it to help decipher makai technology.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.40</researchViewY>
+		<discoveredLetterTitle>About: Celestial Steel</discoveredLetterTitle>
+		<discoveredLetterText>Celestial Steel, an material of unimaginable power from outside the domain. you now able to contact main world of Makai. perhape they may willing to share some of it. for a price...</discoveredLetterText>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_EnergyRelay_Tier1</defName>
+		<label>Makai Interdimensional Energy</label>
+		<description>a start of researching into recieving power from makai home dimension</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Communication</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_EnergyRelay_Tier2</defName>
+		<label>Makai Energy Reciever</label>
+		<description>Build a dimensional reciever, and connect it to a makai interdimension power network.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier1</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_EnergyRelay_Tier3</defName>
+		<label>Pure Energy Converter</label>
+		<description>we can't use pure energy as a power source by itself. we need to refine it into star particle first.</description>
+		<baseCost>10000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier2</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_EnergyRelay_Tier4</defName>
+		<label>Stardust Condenser</label>
+		<description>with star particle being obtained. this open a path way to many Makai Technology previously inaccessible by normal mean.</description>
+		<baseCost>20000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier3</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_EnergyRelay_Tier5</defName>
+		<label>Celestial Steel Forge</label>
+		<description>Forge a Celestial Steel. a type of material originate from makai</description>
+		<baseCost>25000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier4</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_EnergyRelay_Tier6</defName>
+		<label>Celestial Fabric</label>
+		<description>Craft a Celestial Fabric. a type of fabric originate from makai. it whole purpose is to hold the star. hence the nickname "Star Cradle"</description>
+		<baseCost>20000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier5</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_EnergyRelay_Tier7</defName>
+		<label>The Sun Cradle</label>
+		<description>have you ever wonder what it feel like to take the sun that always hang high in the sky, and hold it in the palm of your hand?</description>
+		<baseCost>50000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier6</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Structure_Tier1</defName>
+		<label>Celestial Structure</label>
+		<description>Build a wall and floor using celestial steel</description>
+		<baseCost>20000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier5</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>4.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Weapon1</defName>
+		<label>Early Makai's Weapon Production</label>
+		<description>a blueprint for early mass-produce weapon from makai.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier1</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.40</researchViewY>
+		<discoveredLetterTitle>About: Early Makai weapon.</discoveredLetterTitle>
+		<discoveredLetterText>even as an early low tier weapon. they possess superior combat capability compare to ultra-tech counterpart. but due to the different between universe. these are adapted to use local method of resupplying. perhape if we reseach further into how makai produce energy. we may come closer to what they capable of.</discoveredLetterText>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Weapon2</defName>
+		<label>Weaponizing Star Particle</label>
+		<description>research into converting star particle into weapon form.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier3</li>
+			<li>Makai_Weapon1</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>1.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Weapon3</defName>
+		<label>Stardust-powered Weapon</label>
+		<description>build weapon powered by Stardust</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier4</li>
+			<li>Makai_Weapon2</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>1.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Weapon4</defName>
+		<label>Guardian's Weapon Replica</label>
+		<description>Craft a weapon which utilize the very concept of all existence itself as a weapon.</description>
+		<baseCost>20000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>9.00</researchViewX>
+		<researchViewY>4.40</researchViewY>
+		<discoveredLetterTitle>About: Guadian's Weapon Replica.</discoveredLetterTitle>
+		<discoveredLetterText>a weapon which utilize the concept itself as a weapon. these are the pinnacle of warfare. the peak amount of power an individual could hold. the only thing stronger than these weapon are the true weapon of the Makai's Guardian themselves</discoveredLetterText>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Apparel1</defName>
+		<label>Guardian Blessing</label>
+		<description>Craft a Apparel which give the blessing of Makai Guardian.</description>
+		<baseCost>20000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>9.00</researchViewX>
+		<researchViewY>5.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence</defName>
+		<label>Essence of the Universe</label>
+		<description>To go further beyond first you must go back to the very root of the universe itself.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_EnergyRelay_Tier7</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+		<discoveredLetterTitle>About: Manifest the Essence</discoveredLetterTitle>
+		<discoveredLetterText>the essence embodied various aspect of the universe, each has it own method to acquire it. the method to get it represent what each they are.</discoveredLetterText>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence1</defName>
+		<label>Essence of Knowledge</label>
+		<description>Research into how to manifest Essence of Knowledge into our world.</description>
+		<baseCost>120000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>2.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence2</defName>
+		<label>Essence of Corruption</label>
+		<description>essence of corruption can be cultivated from the mind of living creature after incubated with the seed of corruption</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>2.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence3</defName>
+		<label>Essence of Flame &amp; Frost</label>
+		<description>Research into how to manifest Essence of Flame &amp; Frost into our world. contruct the necessary building and start the process of obtaining the essence.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>9.00</researchViewX>
+		<researchViewY>2.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence4</defName>
+		<label>Essence of Bond &amp; Fate</label>
+		<description>Research into how to manifest Essence of Bond &amp; Fate into our world. craft the base essence and follow it instruction.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>9.00</researchViewX>
+		<researchViewY>1.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence4_Bionic</defName>
+		<label>Essence Implantation - Fate &amp; Bond</label>
+		<description>Research into how to utilize Essence of Bond &amp; Fate as bionic and implant to strengthen pawn. operation will be available on any pawn once the essence is acquired.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence4</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>5.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence5</defName>
+		<label>Essence of Destruction &amp; Death</label>
+		<description>Research into how to manifest Essence of Destruction &amp; Death into our world. either Combind Essence of Death,Flame,Corrupt to create essence of destruction, or using Destruction Singularity. as for essence of death. follow the recipes instruction in the altar.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>1.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence6</defName>
+		<label>Essence of Order &amp; Distortion</label>
+		<description>Research into how to manifest Essence of Order &amp; Distortion into our world. essence of order process is similar to corruption. as for essence of distortion you combine Order and Corruption at the altar.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>1.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Makai_Essence6_Bionic</defName>
+		<label>Essence Implantation - Order &amp; Distortion</label>
+		<description>Research into how to utilize Essence of Order &amp; Distortion as Bionic and Implant. operation will be available on any pawn once the essence is acquired.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence6</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>4.40</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Makai_Essence7</defName>
+		<label>Essence of Existence</label>
+		<description>Research into how to manifest Essence of Existence, the final step to accessing Primodial Forge. combine every other essence together.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>
+		
+	<ResearchProjectDef>
+		<defName>Makai_Primordial_Forge</defName>
+		<label>The Primordial Forge</label>
+		<description>the very root of all existence. The Primordial Forge. now universe is your to change. the forge require all essence including essence of existence to gain access to.</description>
+		<baseCost>157000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence1</li>
+			<li>Makai_Essence2</li>
+			<li>Makai_Essence3</li>
+			<li>Makai_Essence4</li>
+			<li>Makai_Essence5</li>
+			<li>Makai_Essence6</li>
+			<li>Makai_Essence7</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>10.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+	
+
+</Defs>

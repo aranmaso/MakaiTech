@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- More Archotech Garbage-->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="mrkociak.morearchotechstuffandthingsreupload">
+		<defName>Makai_Manifest_archotechmatteraddingsomecraptoavoidproblems</defName>
+		<label>Materialize Archotech Mass</label>
+		<description>Materialize Archotech Mass from Primodial Forge</description>
+		<products>
+			<archotechmatteraddingsomecraptoavoidproblems>100</archotechmatteraddingsomecraptoavoidproblems>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="mrkociak.morearchotechstuffandthingsreupload">
+		<defName>Makai_Manifest_ArchotechScrap</defName>
+		<label>Materialize Archotech Fragment</label>
+		<description>Materialize Archotech Fragment from Primodial Forge</description>
+		<products>
+			<ArchotechScrap>100</ArchotechScrap>
+		</products>
+	</RecipeDef>
+	<!-- ============================================================================== -->
+	
+	<!-- SNS Resource-->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Unobtainium</defName>
+		<label>Materialize Starsteel</label>
+		<description>Materialize Starsteel from Primodial Forge</description>
+		<products>
+			<SNS_Unobtainium>100</SNS_Unobtainium>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_CosmicAlloy</defName>
+		<label>Materialize Cosmic Alloy</label>
+		<description>Materialize Cosmic Alloy from Primodial Forge</description>
+		<products>
+			<SNS_CosmicAlloy>100</SNS_CosmicAlloy>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_CosmicMatter</defName>
+		<label>Materialize Cosmic Matter</label>
+		<description>Materialize Cosmic Matter from Primodial Forge</description>
+		<products>
+			<SNS_CosmicMatter>100</SNS_CosmicMatter>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Eternium</defName>
+		<label>Materialize Eternium</label>
+		<description>Materialize Eternium from Primodial Forge</description>
+		<products>
+			<SNS_Eternium>100</SNS_Eternium>
+		</products>
+	</RecipeDef>
+	<!-- SNS AOTC Resource -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="explodoboy.snsambitioncosmic.gen4addon">
+		<defName>Makai_Manifest_SNS_StableMatter</defName>
+		<label>Materialize Stable Matter</label>
+		<description>Materialize Stable Matter from Primodial Forge</description>
+		<products>
+			<SNS_StableMatter>100</SNS_StableMatter>
+		</products>
+	</RecipeDef>
+	<!-- SNS Component-->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Component_GenII</defName>
+		<label>Materialize Cosmic Component</label>
+		<description>Materialize Cosmic Component from Primodial Forge</description>
+		<products>
+			<SNS_Component_GenII>100</SNS_Component_GenII>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Component_GenIII</defName>
+		<label>Materialize Enigmatic component</label>
+		<description>Materialize Enigmatic component from Primodial Forge</description>
+		<products>
+			<SNS_Component_GenIII>100</SNS_Component_GenIII>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Unobtainium_Fuel</defName>
+		<label>Materialize Cosmic Catalyst Fuel Cell</label>
+		<description>Materialize Cosmic Catalyst Fuel Cell from Primodial Forge</description>
+		<products>
+			<SNS_Unobtainium_Fuel>100</SNS_Unobtainium_Fuel>
+		</products>
+	</RecipeDef>
+	<!-- SNS Med -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Medicine_GenI</defName>
+		<label>Materialize Stellar medicine</label>
+		<description>Materialize Stellar medicine from Primodial Forge</description>
+		<products>
+			<SNS_Medicine_GenI>100</SNS_Medicine_GenI>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Medicine_GenII</defName>
+		<label>Materialize Cosmic medicine</label>
+		<description>Materialize Cosmic medicine from Primodial Forge</description>
+		<products>
+			<SNS_Medicine_GenII>100</SNS_Medicine_GenII>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Medicine_GenIII</defName>
+		<label>Materialize Enigmatic medicine</label>
+		<description>Materialize Cosmic medicine from Primodial Forge</description>
+		<products>
+			<SNS_Medicine_GenIII>100</SNS_Medicine_GenIII>
+		</products>
+	</RecipeDef>
+	<!-- SNS AOTC MED-->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="explodoboy.snsambitioncosmic.gen4addon">
+		<defName>Makai_Manifest_SNS_Medicine_Pinnacle</defName>
+		<label>Materialize Gift of Eternity</label>
+		<description>Materialize Cosmic medicine from Primodial Forge</description>
+		<products>
+			<SNS_Medicine_Pinnacle>100</SNS_Medicine_Pinnacle>
+		</products>
+	</RecipeDef>
+	<!-- SNS Cloth-->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Unobtainium_Fiber</defName>
+		<label>Materialize Starsteel Wool</label>
+		<description>Materialize Starsteel Wool from Primodial Forge</description>
+		<products>
+			<SNS_Unobtainium_Fiber>100</SNS_Unobtainium_Fiber>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_CosmicAlloyWeave</defName>
+		<label>Materialize Cosmic Weave</label>
+		<description>Materialize Cosmic Weave from Primodial Forge</description>
+		<products>
+			<SNS_CosmicAlloyWeave>100</SNS_CosmicAlloyWeave>
+		</products>
+	</RecipeDef>
+	<!-- SNS Food -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Meal_Nutrient_GenI</defName>
+		<label>Materialize nutrient bar</label>
+		<description>Materialize nutrient bar from Primodial Forge</description>
+		<products>
+			<SNS_Meal_Nutrient_GenI>10</SNS_Meal_Nutrient_GenI>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Meal_Nutrient_GenII</defName>
+		<label>Materialize advanced nutrient bar</label>
+		<description>Materialize nutrient bar from Primodial Forge</description>
+		<products>
+			<SNS_Meal_Nutrient_GenII>10</SNS_Meal_Nutrient_GenII>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Meal_Nutrient_GenIII</defName>
+		<label>Materialize luxurious nutrient bar</label>
+		<description>Materialize nutrient bar from Primodial Forge</description>
+		<products>
+			<SNS_Meal_Nutrient_GenIII>10</SNS_Meal_Nutrient_GenIII>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Meal_Normal_GenII</defName>
+		<label>Materialize decadent meal</label>
+		<description>Materialize nutrient bar from Primodial Forge</description>
+		<products>
+			<SNS_Meal_Normal_GenII>10</SNS_Meal_Normal_GenII>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood" MayRequire="explodoboy.snsambitioncosmic">
+		<defName>Makai_Manifest_SNS_Meal_Normal_GenIII</defName>
+		<label>Materialize hedonistic meal</label>
+		<description>Materialize hedonistic bar from Primodial Forge</description>
+		<products>
+			<SNS_Meal_Normal_GenIII>10</SNS_Meal_Normal_GenIII>
+		</products>
+	</RecipeDef>
+	<!-- SNS AOTC Food-->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood" MayRequire="explodoboy.snsambitioncosmic.gen4addon">
+		<defName>Makai_Manifest_SNS_Meal_Normal_GenIV</defName>
+		<label>Materialize Hedonist's Dream</label>
+		<description>Materialize Hedonist's Dream from Primodial Forge</description>
+		<products>
+			<SNS_Meal_Normal_GenIV>10</SNS_Meal_Normal_GenIV>
+		</products>
+	</RecipeDef>
+	<!-- ============================================================================== -->
+	
+	<!-- Glitter Tech Resource-->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_Titanium</defName>
+		<label>Materialize Titanium</label>
+		<description>Materialize Titanium from Primodial Forge</description>
+		<products>
+			<Titanium>100</Titanium>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_AlphaPoly</defName>
+		<label>Materialize AlphaPoly</label>
+		<description>Materialize AlphaPoly from Primodial Forge</description>
+		<products>
+			<AlphaPoly>100</AlphaPoly>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_BetaPoly</defName>
+		<label>Materialize BetaPoly</label>
+		<description>Materialize BetaPoly from Primodial Forge</description>
+		<products>
+			<BetaPoly>100</BetaPoly>
+		</products>
+	</RecipeDef>
+	<!-- Glitter Tech Component -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_MagneticCoil</defName>
+		<label>Materialize MagneticCoil</label>
+		<description>Materialize MagneticCoil from Primodial Forge</description>
+		<products>
+			<MagneticCoil>100</MagneticCoil>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_Silicon</defName>
+		<label>Materialize Silicon</label>
+		<description>Materialize Silicon from Primodial Forge</description>
+		<products>
+			<Silicon>100</Silicon>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_ComputerComp</defName>
+		<label>Materialize Computer components</label>
+		<description>Materialize Computer components from Primodial Forge</description>
+		<products>
+			<ComputerComp>100</ComputerComp>
+		</products>
+	</RecipeDef>
+	<!-- Glitter Tech Med -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_Ethanol</defName>
+		<label>Materialize Ethanol</label>
+		<description>Materialize Ethanol from Primodial Forge</description>
+		<products>
+			<Ethanol>100</Ethanol>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_Bandage</defName>
+		<label>Materialize Bandage</label>
+		<description>Materialize Bandage from Primodial Forge</description>
+		<products>
+			<Bandage>100</Bandage>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+		<defName>Makai_Manifest_Serum</defName>
+		<label>Materialize Serum</label>
+		<description>Materialize Serum from Primodial Forge</description>
+		<products>
+			<Serum>100</Serum>
+		</products>
+	</RecipeDef>
+	
+	<!-- VFE Mechanoid Component -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="oskarpotocki.vfe.mechanoid">
+		<defName>Makai_Manifest_VFE_ComponentMechanoid</defName>
+		<label>Materialize mechanoid component</label>
+		<description>Materialize mechanoid component from Primodial Forge</description>
+		<products>
+			<VFE_ComponentMechanoid>100</VFE_ComponentMechanoid>
+		</products>
+	</RecipeDef>
+	
+	<!-- Moyo Resource -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="nemonian.my">
+		<defName>Makai_Manifest_Moyo_Abyssteel</defName>
+		<label>Materialize abyssteel</label>
+		<description>Materialize abyssteel from Primodial Forge</description>
+		<products>
+			<Moyo_Abyssteel>100</Moyo_Abyssteel>
+		</products>
+	</RecipeDef>
+	<!-- Moyo Cloth -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery" MayRequire="nemonian.my">
+		<defName>Makai_Manifest_Moyo_Depthweave</defName>
+		<label>Materialize depthweave</label>
+		<description>Materialize depthweave from Primodial Forge</description>
+		<products>
+			<Moyo_Depthweave>100</Moyo_Depthweave>
+		</products>
+	</RecipeDef>
+	
+	<!-- Antimatter Annihilation Resource -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_AntimatterComposite_AA</defName>
+		<label>Materialize antimatter composite</label>
+		<description>Materialize antimatter composite from Primodial Forge</description>
+		<products>
+			<AntimatterComposite_AA>100</AntimatterComposite_AA>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_HyperAlloy_AA</defName>
+		<label>Materialize hyper alloy</label>
+		<description>Materialize hyper alloy from Primodial Forge</description>
+		<products>
+			<HyperAlloy_AA>100</HyperAlloy_AA>
+		</products>
+	</RecipeDef>
+	<!-- Antimatter Annihilation Manufactured -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_HyperComponent_AA</defName>
+		<label>Materialize hyper component</label>
+		<description>Materialize hyper component from Primodial Forge</description>
+		<products>
+			<HyperComponent_AA>100</HyperComponent_AA>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="co.uk.epicguru.antimatterannihilation">
+		<defName>Makai_Manifest_AntimatterCanister_AA</defName>
+		<label>Materialize antimatter canister</label>
+		<description>Materialize antimatter canister from Primodial Forge</description>
+		<products>
+			<AntimatterCanister_AA>100</AntimatterCanister_AA>
+		</products>
+	</RecipeDef>
+	
+	<!-- SOS2 -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechExoticParticles</defName>
+		<label>Materialize exotic particles</label>
+		<description>Materialize exotic particles from Primodial Forge</description>
+		<products>
+			<ArchotechExoticParticles>100</ArchotechExoticParticles>
+		</products>
+	</RecipeDef>
+	<!-- SOS2 Manufactured -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechRepairGel</defName>
+		<label>Materialize mechanite repair gel</label>
+		<description>Materialize mechanite repair gel from Primodial Forge</description>
+		<products>
+			<ArchotechRepairGel>100</ArchotechRepairGel>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ShuttleFuelPods</defName>
+		<label>Materialize uranium fuel pod</label>
+		<description>Materialize uranium fuel pod from Primodial Forge</description>
+		<products>
+			<ShuttleFuelPods>1000</ShuttleFuelPods>
+		</products>
+	</RecipeDef>
+	<!-- SOS2 Item -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArcholifePod</defName>
+		<label>Materialize archolife pod</label>
+		<description>Materialize archolife pod from Primodial Forge</description>
+		<products>
+			<ArcholifePod>10</ArcholifePod>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechMechaniteCore</defName>
+		<label>Materialize mechanite disassembler core</label>
+		<description>Materialize mechanite disassembler core from Primodial Forge</description>
+		<products>
+			<ArchotechMechaniteCore>10</ArchotechMechaniteCore>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="kentington.saveourship2">
+		<defName>Makai_Manifest_ArchotechPsychicCore</defName>
+		<label>Materialize psychic flayer core</label>
+		<description>Materialize psychic flayer core from Primodial Forge</description>
+		<products>
+			<ArchotechPsychicCore>10</ArchotechPsychicCore>
+		</products>
+	</RecipeDef>
+	
+	<!-- VanillaFaction - Ancient -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="vanillaexpanded.vfea">
+		<defName>Makai_Manifest_VFEA_SuperNanites</defName>
+		<label>Materialize Super Nanite</label>
+		<description>Materialize Super Nanite from Primodial Forge</description>
+		<products>
+			<VFEA_SuperNanites>10</VFEA_SuperNanites>
+		</products>
+	</RecipeDef>
+
+</Defs>

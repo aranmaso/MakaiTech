@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>Makai_Ingot</defName>
+		<label>celestial steel</label>
+		<description>a steel forged from star particle. have insane durability. incredibly dense but somehow also impossibly light as well. display a very high resistance to damage and change. only with technology from Makai one could shape this material into anything at all, but once you can. it can be shaped into almost anything. \n once being made into something, the material itself seem to understand what it being made into and vastly improve on what it suppose to do.</description>
+		<graphicData>
+			<texPath>Things/Items/makai_mat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Silver_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<Mass>0.15</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<StuffPower_Armor_Sharp>4</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>4</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>2</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Celestial>2</StuffPower_Armor_Celestial>
+			<StuffPower_Armor_Electric MayRequire="ceteam.combatextended">4.5</StuffPower_Armor_Electric>
+			<StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>2</SharpDamageMultiplier>
+			<BluntDamageMultiplier>2</BluntDamageMultiplier>
+			<CelestialDamageMultiplier>2</CelestialDamageMultiplier>
+		</statBases>
+		<stuffProps>
+			<stuffAdjective>starborne</stuffAdjective>
+			<categories>
+				<li>Metallic</li>
+				<li>Fabric</li>
+				<li>Woody</li>
+				<li>Stony</li>
+				<li>Leathery</li>
+			</categories>
+			<statOffsets>
+				<Beauty>10</Beauty>
+				<Cleanliness>1</Cleanliness>
+				<Comfort>1</Comfort>
+			</statOffsets>
+			<commonality>0</commonality>
+			<color>(95,87,165)</color>
+			<statFactors>				
+				<MeleePenetrationFactor MayRequire="ceteam.combatextended">2</MeleePenetrationFactor>
+				<Flammability>0</Flammability>
+				<MaxHitPoints>25</MaxHitPoints>
+				<Mass>0.5</Mass>
+				<WorkToMake>3.5</WorkToMake>
+				<DoorOpenSpeed>6</DoorOpenSpeed>
+				<TrapMeleeDamage>2.75</TrapMeleeDamage>
+				<TrapSpringChance>2.75</TrapSpringChance>
+				<SurgerySuccessChanceFactor>2</SurgerySuccessChanceFactor>
+				<MedicalTendQualityOffset>2</MedicalTendQualityOffset>
+				<WorkTableWorkSpeedFactor>6</WorkTableWorkSpeedFactor>
+				<WorkTableEfficiencyFactor>2</WorkTableEfficiencyFactor>
+				<ResearchSpeedFactor>2</ResearchSpeedFactor>
+				<MeditationFocusStrength MayRequire="ludeon.rimworld.royalty">1.5</MeditationFocusStrength>
+				<JoyGainFactor>6</JoyGainFactor>
+				<BedRestEffectiveness>2</BedRestEffectiveness>
+				<WorkToBuild>3.5</WorkToBuild>
+				<Beauty>10</Beauty>
+				<MeleeWeapon_CooldownMultiplier>0.65</MeleeWeapon_CooldownMultiplier>
+				<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+				<EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
+				<EnergyShieldRechargeRate>1.5</EnergyShieldRechargeRate>
+				<Ability_PsyfocusCost MayRequire="ludeon.rimworld.royalty">0.85</Ability_PsyfocusCost>
+				<Ability_EntropyGain MayRequire="ludeon.rimworld.royalty">0.75</Ability_EntropyGain>
+				<ShootingAccuracyTurret>2</ShootingAccuracyTurret>
+				<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+				<FilthMultiplier>0</FilthMultiplier>
+				<BabyPlayGainFactor MayRequire="ludeon.rimworld.biotech">2</BabyPlayGainFactor>
+				<BirthRitualQualityOffset MayRequire="ludeon.rimworld.biotech">2</BirthRitualQualityOffset>
+				<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.2</RangedCooldownFactor>
+				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.2</StaggerDurationFactor>
+				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">2</StaggerDurationFactor>
+				<MechBandwidth MayRequire="ludeon.rimworld.biotech">2</MechBandwidth>
+				<MechRepairSpeed MayRequire="ludeon.rimworld.biotech">2</MechRepairSpeed>
+				<RestFallRateFactor MayRequire="ludeon.rimworld.biotech">0.2</RestFallRateFactor>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Makai_Fabric_C</defName>
+		<label>celestial fabric</label>
+		<description>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resistance to the point it almost immune to heat. one of the needed material to create Primodial Forge or anything related to Miniature Sun. anything made from Celestial Fabric will never burn.</description>
+		<graphicData>
+			<texPath>Things/Items/makai_mat_fabric</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>250</MarketValue>
+			<Mass>0.15</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<StuffPower_Armor_Sharp>2.5</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>2.5</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>99999</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Celestial>2</StuffPower_Armor_Celestial>
+			<StuffPower_Armor_Electric MayRequire="ceteam.combatextended">4.5</StuffPower_Armor_Electric>
+			<StuffPower_Insulation_Cold>22</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>99999</StuffPower_Insulation_Heat>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+			<!--Nutrition>1</Nutrition-->
+		</statBases>
+		<!--socialPropernessMatters>true</socialPropernessMatters>
+		<ingestible>
+			<foodType>Meal</foodType>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<preferability>MealLavish</preferability>
+			<tasteThought>AteLavishMeal</tasteThought>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible-->
+		<comps>
+			<!--li Class="CompProperties_Ingredients" /-->
+		</comps>
+		<stuffProps>
+			<stuffAdjective>starcradle</stuffAdjective>
+			<categories>
+				<li>Fabric</li>
+				<li>Leathery</li>
+			</categories>
+			<statOffsets>
+				<Beauty>20</Beauty>
+				<Cleanliness>2</Cleanliness>
+				<Comfort>1</Comfort>
+			</statOffsets>
+			<commonality>0</commonality>
+			<color>(124,116,190)</color>
+			<statFactors>
+				<Flammability>0</Flammability>
+				<MaxHitPoints>6</MaxHitPoints>
+				<Mass>0.2</Mass>
+				<WorkToMake>5</WorkToMake>
+				<SurgerySuccessChanceFactor>2</SurgerySuccessChanceFactor>
+				<MedicalTendQualityOffset>2</MedicalTendQualityOffset>
+				<MeditationFocusStrength MayRequire="ludeon.rimworld.royalty">1.5</MeditationFocusStrength>
+				<JoyGainFactor>6</JoyGainFactor>
+				<BedRestEffectiveness>5</BedRestEffectiveness>
+				<WorkToBuild>3.5</WorkToBuild>
+				<Beauty>10</Beauty>
+				<FilthMultiplier>0</FilthMultiplier>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>Textiles</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Makai_Stardust</defName>
+		<label>stardust</label>
+		<description>Star Particle condensed into a form of Stardust. the stardust seem to have a mind of it own and can freely change it structure to match the need of anything it being filled into. \n aka. it act as both a material and Universal Fuel that you can refill anything with.</description>
+		<graphicData>
+			<texPath>Things/Items/makai_mat_dust</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(164,0,255)</glowColor>
+			</li>
+		</comps>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<MarketValue>50</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Makai_StarSmall</defName>
+		<label>miniature star</label>
+		<description>a mass-produce version of miniature sun commonly found in Makai. can be used to make other high-tier item or be placed down as portable energy source.</description>
+		<graphicData>
+			<texPath>Things/Items/makai_mat_minisun</texPath> <!-- temporary texture -->
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+		</comps>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<MarketValue>1000</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+			<li>Manufactured</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Makai_StarParticle</defName>
+		<label>star particle</label>
+		<description>a miniature star keep contained in a specialized container</description>
+		<graphicData>
+			<texPath>Things/Items/makai_mat_minisun</texPath> <!-- temporary texture -->
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+		</comps>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<MarketValue>80</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+    <defName>Makai_RawEnergy</defName>
+    <label>Pure Energy</label>
+    <description>matter in it purest form. a pure energy</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_minisun</texPath> <!-- temporary texture -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <stackLimit>750</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>4</MarketValue>
+      <Mass>0.07</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <comps>
+    </comps>
+    <modExtensions>
+    </modExtensions>
+  </ThingDef>
+	
+</Defs>

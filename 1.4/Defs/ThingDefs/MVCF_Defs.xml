@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<MVCF.ModDef>
+	<defName>MKT_MVCF</defName>
+	<label>Makai Tech MVCF</label>
+	<description>Adding ranged attacks for Makai Tech</description>
+	<ActivateFeatures>
+		<li>RangedAnimals</li>
+		<li>HediffVerbs</li>
+		<li>IntegratedToggle</li>
+		<li>ApparelVerbs</li>
+		<li>ExtraEquipmentVerbs</li>
+		<li>Drawing</li>
+		<li>IndependentFire</li>
+		<li>TickVerbs</li>
+	</ActivateFeatures>
+</MVCF.ModDef>
+</Defs>

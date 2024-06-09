@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- AmmoSetDef -->
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_MakaiStarParticleEnergyTurret</defName>
+		<label>compressed-stardust Bolt</label>
+		<ammoTypes>
+		  <Ammo_MakaiStarParticleEnergyTurret>Bullet_MakaiEnergyWeaponTurretA</Ammo_MakaiStarParticleEnergyTurret>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_MakaiStarParticleLaserTurret</defName>
+		<label>condensed-stardust Bolt</label>
+		<ammoTypes>
+		  <Ammo_MakaiStarParticleLaserTurret>Bullet_MakaiEnergyWeaponTurretB</Ammo_MakaiStarParticleLaserTurret>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_MakaiStarParticleClawTurret</defName>
+		<label>nightmare claw</label>
+		<ammoTypes>
+		  <Ammo_MakaiStarParticleClawTurret>Bullet_MakaiEnergyWeaponTurretC</Ammo_MakaiStarParticleClawTurret>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_MakaiStarParticleArtilleryTurret</defName>
+		<label>Stardust Artillery Cannon</label>
+		<ammoTypes>
+		  <Ammo_MakaiStarParticleArtilleryTurret>Bullet_MakaiEnergyWeaponTurretE</Ammo_MakaiStarParticleArtilleryTurret>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- RecipeDef -->
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_MakaiStarParticleEnergyTurret</defName>
+		<label>make compressed-stardust cartridges x250</label>
+		<description>Craft 250 star particle ammo cartridges.</description>
+		<jobString>Making Star Particle ammo cartridges.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Makai_Stardust</li>
+			  </thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>Makai_Stardust</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <Ammo_MakaiStarParticleEnergyTurret>250</Ammo_MakaiStarParticleEnergyTurret>
+		</products>
+		<workAmount>6000</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_MakaiStarParticleLaserTurret</defName>
+		<label>make condensed-stardust cartridges x250</label>
+		<description>Craft 250 star particle ammo cartridges.</description>
+		<jobString>Making Star Particle ammo cartridges.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Makai_Stardust</li>
+			  </thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>Makai_Stardust</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <Ammo_MakaiStarParticleLaserTurret>250</Ammo_MakaiStarParticleLaserTurret>
+		</products>
+		<workAmount>6000</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_MakaiStarParticleClawTurret</defName>
+		<label>make nigthmare seal x250</label>
+		<description>Craft 250 star particle ammo cartridges.</description>
+		<jobString>Making Star Particle ammo cartridges.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Makai_Stardust</li>
+			  </thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>Makai_Stardust</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <Ammo_MakaiStarParticleClawTurret>250</Ammo_MakaiStarParticleClawTurret>
+		</products>
+		<workAmount>6000</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_MakaiStarParticleArtilleryTurret</defName>
+		<label>make stardust artillery canister x25</label>
+		<description>Craft 25 stardust artillery canister</description>
+		<jobString>Making Star Particle ammo cartridges.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>Makai_Stardust</li>
+			  </thingDefs>
+			</filter>
+			<count>500</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>Makai_Stardust</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <Ammo_MakaiStarParticleArtilleryTurret>25</Ammo_MakaiStarParticleArtilleryTurret>
+		</products>
+		<workAmount>6000</workAmount>
+	</RecipeDef>
+
+	<!-- AmmoDef -->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleEnergyTurret</defName>
+    <label>condensed-stardust cartridges</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleLaserTurret</defName>
+    <label>condensed-stardust cartridges</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleClawTurret</defName>
+    <label>nightmare claw seal</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="StarParticleBase">
+    <defName>Ammo_MakaiStarParticleArtilleryTurret</defName>
+    <label>stardust artillery canister</label>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_dust</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<ammoClass>Makai_StarParticleAmmoClass</ammoClass>	
+	</ThingDef>
+	
+	<!-- Projectile -->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+    <defName>Bullet_MakaiEnergyWeaponTurretA</defName>
+    <label>compressed-stardust bolt</label>
+	<graphicData>
+      <texPath>Things/Building/makai_bulletA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(0.8,0.8)</drawSize>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Stardust_Accel_Bullet</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+	  <speed>20</speed>
+      <armorPenetrationSharp>35</armorPenetrationSharp>
+	  <armorPenetrationBlunt>350</armorPenetrationBlunt>
+    </projectile>
+	</ThingDef>	
+	
+	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_MakaiEnergyWeaponTurretB</defName>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<label>condensed stardust</label> 
+		<graphicData>
+			<texPath>Things/Projectile/y_beam2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>  
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>Stardust_Compress_Bullet_Ex</damageDef>
+		<damageAmountBase>75</damageAmountBase>
+		<speed>40</speed>
+		<armorPenetrationSharp>100</armorPenetrationSharp>
+		<armorPenetrationBlunt>1000</armorPenetrationBlunt>
+		<explosionRadius>3</explosionRadius>
+		<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>
+		</projectile>         
+    </ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+    <defName>Bullet_MakaiEnergyWeaponTurretC</defName>
+    <label>nightmare bolt</label>
+	<graphicData>
+      <texPath>Things/Projectile/makai_bullet_claw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>2</drawSize>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Nightmare_Claw_Bullet_DamageTwo</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+	  <speed>30</speed>
+      <armorPenetrationSharp>25</armorPenetrationSharp>
+	  <armorPenetrationBlunt>250</armorPenetrationBlunt>
+    </projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_MakaiEnergyWeaponTurretE</defName>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<label>condensed stardust</label> 
+		<graphicData>
+			<texPath>Things/Projectile/y_beam2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>(1,4)</drawSize>
+		</graphicData>  
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>Stardust_Artiliery_Bullet_Ex</damageDef>
+		<damageAmountBase>75</damageAmountBase>
+		<speed>50</speed>
+		<armorPenetrationSharp>300</armorPenetrationSharp>
+		<armorPenetrationBlunt>3000</armorPenetrationBlunt>
+		<explosionRadius>5</explosionRadius>
+		<explosionEffect>BIGLASERIMPACT</explosionEffect>
+		</projectile>
+		<comps>
+			<li Class="MakaiTech.CompProperties_FleckEmitter">
+				<alwaysOn>true</alwaysOn>
+				<moteDefs>
+					<li>Mote_WhitePuffB</li>
+				</moteDefs>
+				<scale>1</scale>
+				<scaleMax>1</scaleMax>
+				<rotationMinRate>-30</rotationMinRate>
+				<rotationMaxRate>30</rotationMaxRate>
+				<minRandomOffsetX>-0.1</minRandomOffsetX>
+				<maxRandomOffsetX>0.1</maxRandomOffsetX>
+				<minRandomOffsetY>-0.3</minRandomOffsetY>
+				<maxRandomOffsetY>0.3</maxRandomOffsetY>
+				<minRotate>-45</minRotate>
+				<maxRotate>45</maxRotate>
+				<minSpeed>-1</minSpeed>
+				<maxSpeed>1</maxSpeed>
+				<minEmissionInterval>0</minEmissionInterval>
+				<maxEmissionInterval>1</maxEmissionInterval>
+				<countPerEmit>2</countPerEmit>
+			</li>
+		</comps>
+    </ThingDef>
+	
+	
+	
+	
+</Defs>

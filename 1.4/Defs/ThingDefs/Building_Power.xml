@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThingDef ParentName="BuildingBase">
+    <defName>Makai_Powernode_TierOne</defName>
+    <label>Portable Miniature Sun</label>
+    <description>a miniature sun that you place down and plug your electrical device to it.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Items/makai_mat_minisun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>70</pathCost>
+    <fillPercent>0.4</fillPercent>
+	<stealable>false</stealable>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>WaterMill_Ambience</soundAmbient>
+    </building>
+    <constructEffect>ConstructMetal</constructEffect>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>13500</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>10</Mass>
+    </statBases>
+    <tickerType>Normal</tickerType>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<thingCategories>
+		<li>BuildingsPower</li>
+	</thingCategories>
+    <size>(1,1)</size>
+    <designationCategory>Makai_Tech</designationCategory>
+	<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+	<killedLeavings>
+      <Makai_StarSmall>1</Makai_StarSmall>
+    </killedLeavings>
+	<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <costList>
+		<Makai_StarSmall>1</Makai_StarSmall>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-5500</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+	  <li Class="CompProperties_Battery">
+			<storedEnergyMax>5500</storedEnergyMax>
+			<efficiency>1</efficiency>
+			<shortCircuitInRain>false</shortCircuitInRain>
+			<transmitsPower>true</transmitsPower>
+		  </li>
+		  <li Class="CompProperties_Flickable"/>
+	  <!--li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.1</fuelConsumptionRate>
+        <fuelCapacity>6.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>EnergyCrystal</li>
+          </thingDefs>
+        </fuelFilter>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>6.9</explosiveRadius>
+        <explosiveDamageType>Antiproton_hisa</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.15</chanceNeverExplodeFromDamage>
+      </li-->
+      <li Class="CompProperties_Glower">
+		<overlightRadius>2</overlightRadius>
+        <glowRadius>2</glowRadius>
+        <glowColor>(0,164,255)</glowColor>
+      </li>
+	  <!--li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>100</heatPerSecond>
+		<heatPushMaxTemperature>26</heatPushMaxTemperature>
+		</li-->
+    </comps>
+    <researchPrerequisites>
+      <li>Makai_EnergyRelay_Tier1</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Makai_SunC</defName>
+    <label>Sun Cradle</label>
+    <description>A highly advanced piece of technology one could call miracle. to defy the law of nature and create an almost self-sustain energy source. it has a very large light radius that bright enough for plant to grow. with local climate control to ensure plant can also grow in comforable temperature(fixed at 20c). also has a build-in mass battery to store excess power. as one would expect from a sun, if this machine is destroyed it will explode violently and in a large radius.</description>
+    <graphicData>
+      <texPath>Things/Building/Makai_SunC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+    </graphicData>
+	<uiIconPath>Things/Building/Makai_SunC</uiIconPath>
+	<drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+	<passability>Impassable</passability>
+    <pathCost>70</pathCost>
+	<stealable>false</stealable>
+    <fillPercent>0.4</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>WaterMill_Ambience</soundAmbient>
+    </building>
+	<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <constructEffect>ConstructMetal</constructEffect>
+    <statBases>
+      <MarketValue>50000</MarketValue>
+      <MaxHitPoints>60000</MaxHitPoints>
+      <WorkToBuild>60000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>1000</Mass>
+    </statBases>
+    <tickerType>Normal</tickerType>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<thingCategories>
+		<li>BuildingsPower</li>
+	</thingCategories>
+    <size>(5,5)</size>
+    <designationCategory>Makai_Tech</designationCategory>
+    <costList>
+      <Plasteel>350</Plasteel>
+      <Makai_Ingot>450</Makai_Ingot>
+      <Makai_Stardust>20</Makai_Stardust>
+	  <Makai_StarSmall>40</Makai_StarSmall>
+	  <Makai_Fabric_C>250</Makai_Fabric_C>
+    </costList>
+	<specialDisplayRadius>60</specialDisplayRadius>
+    <comps>
+		  <li Class="CompProperties_Battery">
+			<storedEnergyMax>2048000</storedEnergyMax>
+			<efficiency>1</efficiency>
+			<shortCircuitInRain>false</shortCircuitInRain>
+			<transmitsPower>true</transmitsPower>
+		  </li>
+		  <li Class="CompProperties_Power">
+			<compClass>CompPowerPlant</compClass>
+			<basePowerConsumption>-2560000</basePowerConsumption>
+			<transmitsPower>true</transmitsPower>
+		  </li>
+		  <li Class="CompProperties_Refuelable">
+			<!--fuelConsumptionRate>31.4</fuelConsumptionRate-->
+			<fuelConsumptionRate>3.14</fuelConsumptionRate>
+			<fuelCapacity>10000</fuelCapacity>
+			<fuelFilter>
+			  <thingDefs>
+				<li>Makai_StarParticle</li>
+			  </thingDefs>
+			</fuelFilter>
+			<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			<showFuelGizmo>true</showFuelGizmo>
+			<fuelGizmoLabel>Star Particle</fuelGizmoLabel>
+		  </li>
+		  <li Class="CompProperties_Flickable"/>
+		  <li Class="CompProperties_Explosive">
+			<explosiveRadius>60</explosiveRadius>
+			<explosiveDamageType>BombSuper</explosiveDamageType>
+			<postExplosionSpawnThingDef>Filth_Ash</postExplosionSpawnThingDef>
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+			<chanceNeverExplodeFromDamage>0.15</chanceNeverExplodeFromDamage>
+		  </li>
+		  <li Class="CompProperties_Glower">
+			<overlightRadius>60</overlightRadius>
+			<glowRadius>60</glowRadius>
+			<glowColor>(666,666,666)</glowColor>
+		  </li>
+		  <li Class="CompProperties_HeatPusher">
+				<heatPerSecond>100</heatPerSecond>
+				<heatPushMaxTemperature>19</heatPushMaxTemperature>
+		  </li>
+		  <li Class="CompProperties_HeatPusher">
+				<heatPerSecond>-50</heatPerSecond>
+				<heatPushMinTemperature>20</heatPushMinTemperature>
+		  </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Makai_EnergyRelay_Tier7</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>
