@@ -5,7 +5,7 @@
     <defName>Conceptual_Destruction</defName>
     <label>Defense Null</label>
 	<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-    <description>primodial concept of universe has plague the victim with curse of destruction. render in defense meaningless.</description>
+    <description>Primodial concept of the universe has plagued the victim with the curse of destruction, rendering its defense meaningless.</description>
     <isBad>true</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -41,7 +41,7 @@
     <defName>Conceptual_Null</defName>
     <label>Existence Null</label>
 	<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-    <description>The concept of existence itself has weight down on the victim, the further more they being weight down the further away from reality they're</description>
+    <description>The concept of existence itself has weighed down on the victim. The further they are being weighed down the further away from reality they are.</description>
     <isBad>false</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -115,7 +115,7 @@
     <defName>Knowledge_Stolen</defName>
     <label>Cease Thinking</label>
 	<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-    <description>The blessing of knowledge has abandoned this individual. leaving their mind incapable of thought.</description>
+    <description>The blessing of knowledge has abandoned this individual, leaving their mind incapable of thought.</description>
     <isBad>true</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -252,7 +252,7 @@
     <defName>Conceptual_Corrupt</defName>
     <label>Mind Corruption</label>
 	<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-    <description>Creeping nightmare crawl all over the victim mind, cause various mental break</description>
+    <description>Creeping nightmares crawl all over the victim's mind, causing various mental breaks.</description>
     <isBad>true</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>10</maxSeverity>
@@ -507,7 +507,7 @@
 	<HediffDef ParentName="DiseaseBase">
     <defName>Conceptual_Frost</defName>
     <label>Concept Frost</label>
-    <description>afflicted by frost magic.</description>
+    <description>Afflicted by frost magic.</description>
     <isBad>true</isBad>
 	<defaultLabelColor>(0, 214, 238)</defaultLabelColor>
 	<initialSeverity>1</initialSeverity>
@@ -546,7 +546,7 @@
   <HediffDef ParentName="DiseaseBase">
     <defName>Conceptual_Frost_Freezing</defName>
     <label>Freezing</label>
-    <description>afflicted by frost essence.</description>
+    <description>Afflicted by frost essence.</description>
     <isBad>true</isBad>
 	<defaultLabelColor>(0, 214, 238)</defaultLabelColor>
 	<initialSeverity>1</initialSeverity>
@@ -649,7 +649,7 @@
 	<HediffDef ParentName="DiseaseBase">
     <defName>Conceptual_Flame</defName>
     <label>Concept Flame</label>
-    <description>afflicted by sun heat.</description>
+    <description>Afflicted by sun heat.</description>
     <isBad>true</isBad>
 	<initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -693,7 +693,7 @@
 	<HediffDef ParentName="DiseaseBase">
     <defName>Conceptual_StarHeat</defName>
     <label>Heat of the star</label>
-    <description>afflicted by sun heat.</description>
+    <description>Afflicted by sun heat.</description>
     <isBad>true</isBad>
 	<initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -747,7 +747,7 @@
     <defName>Conceptual_Death</defName>
     <label>Deathly 13th</label>
 	<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-    <description>the curse of death coming closer.</description>
+    <description>The curse of death coming closer.</description>
     <isBad>false</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>13.5</maxSeverity>
@@ -831,7 +831,7 @@
   <HediffDef ParentName="DiseaseBase">
     <defName>Destined_Death</defName>
     <label>Death Curse</label>
-    <description>dead come for all in the end. there no going back.</description>
+    <description>Death comes for all in the end. There is no going back.</description>
     <isBad>false</isBad>
 	<initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -862,7 +862,7 @@
     <defName>Nigthmare_Claw</defName>
     <label>Creeping Nightmare</label>
 	<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-    <description>creeping nightmare</description>
+    <description>Creeping nightmare.</description>
     <isBad>true</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>10</maxSeverity>
@@ -1011,7 +1011,7 @@
 	<defName>Makai_ArmorMelt</defName>
 	<label>Armor Meltdown</label>
 	<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-    <description>armor is melting</description>
+    <description>Armor is melting.</description>
     <isBad>true</isBad>
     <initialSeverity>0.01</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -1150,7 +1150,7 @@
   <HediffDef ParentName="DiseaseBase">
     <defName>Makai_SelfBuffOnHit_ATKSPEED</defName>
     <label>Attack Frenzy</label>
-    <description>attack frenzy make this pawn attack faster</description>
+    <description>Attack frenzy makes this pawn attack faster.</description>
     <isBad>false</isBad>
 	<initialSeverity>0.001</initialSeverity>
     <maxSeverity>10</maxSeverity>
@@ -1321,7 +1321,7 @@
   <HediffDef ParentName="DiseaseBase">
     <defName>ATKSPEED_Mark</defName>
     <label>Target</label>
-    <description>attack frenzy make this pawn attack faster</description>
+    <description>Attack frenzy makes this pawn attack faster.</description>
     <isBad>false</isBad>
 	<initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -1343,7 +1343,7 @@
     <defName>Conceptual_CelestialScar</defName>
     <label>Celestial Scar</label>
 	<defaultLabelColor>(95, 87, 165)</defaultLabelColor>
-    <description>a temporal scar caused by weapon made from Celestial Steel.</description>
+    <description>A temporal scar caused by a weapon made from Celestial Steel.</description>
     <isBad>true</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>

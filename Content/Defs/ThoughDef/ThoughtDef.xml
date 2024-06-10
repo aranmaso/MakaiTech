@@ -38,7 +38,7 @@
     <stages>
       <li>
         <label>Different Bodies</label>
-        <description>I'm in a different bodies. I feel.. new, I feel reborn.</description>
+        <description>I'm in a different body. I feel.. new. I feel reborn.</description>
         <baseMoodEffect>12</baseMoodEffect>
       </li>
     </stages>
@@ -55,7 +55,7 @@
     <stages>
 	  <li>
         <label>Different Bodies</label>
-        <description>I'm in a different bodies. it feel so unsettling seeing my old bodies from a different view.</description>
+        <description>I'm in a different body. It feels so unsettling seeing my old body from a different view.</description>
         <baseMoodEffect>-12</baseMoodEffect>
       </li>
     </stages>

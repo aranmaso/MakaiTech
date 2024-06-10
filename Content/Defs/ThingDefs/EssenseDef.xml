@@ -59,7 +59,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_B-Path_E</defName>
 		<label>Essence of Bond</label>
-		<description>Essense of Connection and bond, pulsing with unimaginable power. \nCan be use to increase faction with all pawn on the map and make them happy for a while.</description>
+		<description>Essense of Connection and bond, pulsing with unimaginable power. \nCan be used to increase faction relations with all pawns on the map and make them happy for a while.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceBond</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -98,7 +98,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_F-Path_E</defName>
 		<label>Essence of Fate</label>
-		<description>Essense of Fate, pulsing with unimaginable power. \nCan be use to heal pawn and gain blessing of healing for 2h.</description>
+		<description>Essense of Fate, pulsing with unimaginable power. \nCan be use to heal pawns and gain blessing of healing for 2h.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceFate</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -130,7 +130,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_K-Path_E</defName>
 		<label>Essence of Knowledge</label>
-		<description>Essense of Knowledge, pulsing with unimaginable power. \nCan be use to increase pawn skill tremendously. once embraced pawn have to wait 2 days before they can embrace essence of knowledge again.</description>
+		<description>Essense of Knowledge, pulsing with unimaginable power. \nCan be used to increase pawn skills tremendously. Once embraced pawns will have to wait 2 days before they can embrace essence of knowledge again.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceKnowledge</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -208,7 +208,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_E-Path_E</defName>
 		<label>Essence of Existence</label>
-		<description>Essense of Existence, pulsing with unimaginable power. the pinnacle of technology advancement.</description>
+		<description>Essense of Existence, pulsing with unimaginable power. The pinnacle of technology advancement.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceExistence</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -253,7 +253,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_Dea-Path_E</defName>
 		<label>Essence of Death</label>
-		<description>Essense of Death, pulsing with unimaginable power. \nCan be use to bring back death pawn without any drawback, or borrow part of it power to create resurrector mech serum.</description>
+		<description>Essense of Death, pulsing with unimaginable power. \nCan be used to bring back dead pawn without any drawback, or borrow part of its power to create resurrector mech serum.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDeath</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -386,7 +386,7 @@
 	<ThingDef ParentName="EssenseBase" MayRequire="rim.job.world">
 		<defName>Makai_RJW-Path_E</defName>
 		<label>Essence of Lust</label>
-		<description>Essense of Lust, pulsing with unimaginable power. have more kids.</description>
+		<description>Essense of Lust, pulsing with unimaginable power. Have more kids.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -478,7 +478,7 @@
 	<ThingDef ParentName="EssenseBase" MayRequire="" Abstract="True">
 		<defName>Makai_-Path_E</defName>
 		<label>Essence of The Deep</label>
-		<description>Essense of , pulsing with unimaginable power.</description>
+		<description>Essence of the Deep, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

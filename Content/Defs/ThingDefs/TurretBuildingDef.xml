@@ -5,7 +5,7 @@
  <ThingDef ParentName="BuildingBase">
     <defName>Makai_Turret_A</defName>
     <label>&lt;color=#5F57A5&gt;Stardust-particle accelerator&lt;/color&gt;</label>
-	<description>A stardust particle accelerator. utilizing energized &lt;color=#5F57A5&gt;stardust&lt;/color&gt; as a weapon. it will melt target armor on hit.</description>
+	<description>A stardust particle accelerator. Utilizing energized &lt;color=#5F57A5&gt;stardust&lt;/color&gt; as a weapon. It will melt target armor on hit.</description>
     <thingClass>Building_TurretGun</thingClass>
 	<drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -188,7 +188,7 @@
 	<ThingDef ParentName="BuildingBase">
     <defName>Makai_Turret_B</defName>
     <label>Stardust-beam compresser</label>
-    <description>advanced turret that condense stardust into heated projectile. on impact with living being will explode into energized sphere. has build-in shield generator.</description>
+    <description>Advanced turret that condenses stardust into heated projectiles. On impact with living beings the projectile will explode into an energized sphere. Has built-in shield generator.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -505,7 +505,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Makai_Turret_C</defName>
     <label>Nightmare Claw</label>
-    <description>turret that launch claw-shaped projectile that cause living being to go on a mental break once sufficient damage is taken. ineffective against Mechanoid.</description>
+    <description>Turret that launches claw-shaped projectiles that cause living beings to go on a mental break once sufficient damage is taken. Ineffective against Mechanoids.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -696,7 +696,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Makai_Turret_D</defName>
     <label>Destined Turret</label>
-    <description>a close range turret that swing a blade at passing enemies.</description>
+    <description>A close range turret that swings a blade at passing enemies.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -873,7 +873,7 @@
 	<ThingDef ParentName="BuildingBase">
     <defName>Makai_Turret_E</defName>
     <label>Stardust Artillery Cannon</label>
-    <description>a massive stardust-compresser cannon. accelerate energized startdust across long distance, on impact will resonate with nearby living thing and deal massive damage. super effective against structure, has build-in shield generator that intercept ground projectile.</description>
+    <description>A massive stardust-compressor cannon. Accelerate energized startdust across long distance. On impact it will resonate with nearby living things and deal massive damage. Super effective against structures. Has built-in shield generator that intercepts ground projectile.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>

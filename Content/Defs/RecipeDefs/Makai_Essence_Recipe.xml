@@ -52,7 +52,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_Base_Order</defName>
 		<label>Manifest Seed of Order</label>
-		<description>Materialize the Seed of Order</description>
+		<description>Materialize the Seed of Order.</description>
 		<jobString>Manifest Seed of Order</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -98,7 +98,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_Or-Path_Seed</defName>
 		<label>Seed of Order</label>
-		<description>base essence of order, implant into pawn brain to start the process of obtaining Essence of Order.</description>
+		<description>Base essence of order. Implant into pawn's brain to start the process of obtaining Essence of Order.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceOrderSeed</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -158,7 +158,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_DeathSecond</defName>
 		<label>Manifest Fragment of Death - Second Half</label>
-		<description>Materialize the Fragment of Death</description>
+		<description>Materialize the Fragment of Death.</description>
 		<jobString>Manifest death fragment</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -197,7 +197,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_DeathComplete</defName>
 		<label>Manifest Essence of Death</label>
-		<description>Materialize the Essence of Death</description>
+		<description>Materialize the Essence of Death.</description>
 		<jobString>Manifest death essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -294,7 +294,7 @@
 	<RecipeDef>
 		<defName>Makai_CreateSoulExtracter</defName>
 		<label>create soul extracter</label>
-		<description>craft a soul extracter.</description>
+		<description>Craft a soul extracter.</description>
 		<jobString>Manifest serum</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -350,7 +350,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_Base_Bond</defName>
 		<label>Manifest Base Essence of Bond</label>
-		<description>Materialize the Base Essence of Bond</description>
+		<description>Materialize the Base Essence of Bond.</description>
 		<jobString>Manifest Base Bond Essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -396,7 +396,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_Bond</defName>
 		<label>Manifest Bond Essence</label>
-		<description>Materialize the Essence of Bond</description>
+		<description>Materialize the Essence of Bond.</description>
 		<jobString>Manifest Bond Essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -444,7 +444,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_Base_Fate</defName>
 		<label>Manifest Base Essence of Fate</label>
-		<description>Materialize the Base Essence of Fate</description>
+		<description>Materialize the Base Essence of Fate.</description>
 		<jobString>Manifest Base Fate Essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -491,7 +491,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_FateEss</defName>
 		<label>Combine Fated Fragments</label>
-		<description>Materialize the Essence of Fate</description>
+		<description>Materialize the Essence of Fate.</description>
 		<jobString>Manifest Fate Essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -531,7 +531,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_K-Path_Frag</defName>
 		<label>Fragment of Knowledge</label>
-		<description>the fragment of infinite knowledge.</description>
+		<description>The fragment of infinite knowledge.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceKnowledgeFrag</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -552,7 +552,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_KnowledgeFrag</defName>
 		<label>Manifest Fragment of Knowledge</label>
-		<description>Materialize the Fragment of Knowledge</description>
+		<description>Materialize the Fragment of Knowledge.</description>
 		<jobString>Manifest knowledge fragment</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -613,7 +613,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_DestructEss</defName>
 		<label>Manifest Essence of Destruction</label>
-		<description>Materialize the Essence of Destruction</description>
+		<description>Materialize the Essence of Destruction.</description>
 		<jobString>Manifest Destruction Essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -665,7 +665,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_DistortionEss</defName>
 		<label>Manifest Essence of Distortion</label>
-		<description>Materialize the Essence of Distortion</description>
+		<description>Materialize the Essence of Distortion.</description>
 		<jobString>Manifest Destruction Essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -709,7 +709,7 @@
 	<RecipeDef>
 		<defName>Makai_Manifest_ExistenceEss</defName>
 		<label>Manifest Essence of Existence</label>
-		<description>Materialize the Essence of Existence</description>
+		<description>Materialize the Essence of Existence.</description>
 		<jobString>Manifest Existence Essence</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>

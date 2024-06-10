@@ -121,7 +121,7 @@
 		<defName>Makai_Bow_Varia</defName>
 		<thingClass>VanillaWeaponsExpandedLaser.LaserGun</thingClass>
 		<label>Knowledge Seeker</label>
-		<description>a bow made with highly advanced targeting system. you did have to be trying to miss with this weapon. on hit will steal victim of any ability to think. also give them trauma savant just because. oh and it set them on fire.</description>
+		<description>A bow made with a highly advanced targeting system. You would have to be trying to miss with this weapon. On hit will rob victims of any ability to think. Also give them trauma savant just because. Oh and it sets them on fire.</description>
 		<graphicData>
 			<texPath>Things/Weapon/varia_bow</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -161,7 +161,6 @@
 			<!-- <li>UltratechGun</li> -->
 			<li>LaserGun</li>
 			<li>Makai_God_Weapon</li>
-			<li>Makai_God_Weapon_Ranged</li>
 		</weaponTags>
 		<generateCommonality>0.0001</generateCommonality>
 		<equippedStatOffsets>
@@ -439,7 +438,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Yuki_Staff</defName>
 		<label>Frigid Star</label>
-		<description>a staff made with the image of cold. have various shooting ability. victim feel a deathly curse of cold creeping up to them. cause hypothermia and freezing curse.</description>
+		<description>A staff made with the image of cold. Has various shooting abilities. Victims feel a deathly curse of cold creeping up on them. Causes hypothermia and freezing curse.</description>
 		<graphicData>
 			<texPath>Things/Weapon/yuki_staff</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -449,7 +448,7 @@
 		<uiIconPath>Things/Weapon/yuki_staff</uiIconPath>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<generateCommonality>0.01</generateCommonality>
-		<!-- <generateAllowChance>0.1</generateAllowChance> -->
+		<generateAllowChance>0.1</generateAllowChance>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>2</Mass>
@@ -480,7 +479,6 @@
 		<weaponTags>
 			<li>UltratechGun</li>
 			<li>Makai_God_Weapon</li>
-			<li>Makai_God_Weapon_Ranged</li>
 		</weaponTags>
 		<equippedStatOffsets>
 		</equippedStatOffsets>
@@ -702,7 +700,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Assault</defName>
 		<label>ME-A1</label>
-		<description>energy assault rifle. fire shot in 3 burst. Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. projectile is homing-type \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>Energy assault rifle. Fires shots in 3 burst. Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. Projectile is homing-type. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_A1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -710,8 +708,8 @@
 			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
-		<generateCommonality>0.1</generateCommonality>
-		<!-- <generateAllowChance>0</generateAllowChance> -->
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>2</Mass>
@@ -737,7 +735,7 @@
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<weaponTags>
-			<!-- <li>SpacerGun</li> -->
+			<li>SpacerGun</li>
 			<li>Makai_W_Ultra</li>
 		</weaponTags>
 		<equippedStatOffsets>
@@ -839,7 +837,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Bomb</defName>
 		<label>ME-G1</label>
-		<description>energy launcher. fire a single explosive shot. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>Energy launcher. Fires a single explosive shot. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_G1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -848,7 +846,7 @@
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<generateCommonality>0.1</generateCommonality>
-		<!-- <generateAllowChance>0.1</generateAllowChance> -->
+		<generateAllowChance>0.1</generateAllowChance>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>2</Mass>
@@ -874,7 +872,7 @@
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<weaponTags>
-			<!-- <li>SpacerGun</li> -->
+			<li>SpacerGun</li>
 			<li>Makai_W_Ultra_G</li>
 		</weaponTags>
 		<equippedStatOffsets>
@@ -971,7 +969,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Pistol</defName>
 		<label>ME-A2</label>
-		<description>energy pistol. fire shot in 6 burst each.Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. projectile are homing-type. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>Energy pistol. Fires shots in 6 bursts each. Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. Projectiles are homing-type. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_A2</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -979,8 +977,8 @@
 			<onGroundRandomRotateAngle>20</onGroundRandomRotateAngle>
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
-		<generateCommonality>0.1</generateCommonality>
-		<!-- <generateAllowChance>0</generateAllowChance> -->
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>2</Mass>
@@ -1006,7 +1004,7 @@
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<weaponTags>
-			<!-- <li>SpacerGun</li> -->
+			<li>SpacerGun</li>
 			<li>Makai_W_Ultra</li>
 		</weaponTags>
 		<equippedStatOffsets>
@@ -1091,7 +1089,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Stardust_Cannon</defName>
 		<label>Stardust Cannon</label>
-		<description>Compressed Stardust cannon. portable version of stardust turret. due to limited energy storage it can only launch projectile instead of firing beam of stardust, because of weight it really harder to move while carrying this weapon. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>Compressed Stardust cannon. Portable version of stardust turret. Due to limited energy storage it can only launch projectiles instead of firing a beam of stardust. Because of weight it is really hard to move while carrying this weapon. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Building/makai_turret_topB</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1100,7 +1098,7 @@
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<generateCommonality>0.1</generateCommonality>
-		<!-- <generateAllowChance>0.1</generateAllowChance> -->
+		<generateAllowChance>0.1</generateAllowChance>
 		<statBases>
 			<WorkToMake>15000</WorkToMake>
 			<Mass>2</Mass>
@@ -1127,7 +1125,7 @@
 		</costList>
 		<techLevel>Ultra</techLevel>
 		<weaponTags>
-			<!-- <li>SpacerGun</li> -->
+			<li>SpacerGun</li>
 			<li>Makai_W_Ultra</li>
 		</weaponTags>
 		<equippedStatOffsets>
@@ -1270,7 +1268,7 @@
 	<ThingDef Name="MakaiT1Weapon" ParentName="MakaiBaseMakeableGun" Abstract="True">
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<generateCommonality>0.1</generateCommonality>
-		<!-- <generateAllowChance>0.1</generateAllowChance> -->
+		<generateAllowChance>0.1</generateAllowChance>
 		<recipeMaker>
 			<researchPrerequisite>Makai_Weapon1</researchPrerequisite>
 			<skillRequirements>
@@ -1288,7 +1286,7 @@
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<weaponTags>
-			<!-- <li>SpacerGun</li> -->
+			<li>SpacerGun</li>
 			<li>Makai_W_Spacer</li>
 		</weaponTags>
 		<tradeTags>
@@ -1325,7 +1323,7 @@
 	<ThingDef ParentName="MakaiT1Weapon">
 		<defName>Makai_T1_Assault</defName>
 		<label>Stardust HMG</label>
-		<description>energy heavy machine gun. fire shot in 10 burst. \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>Energy heavy machine gun. Fires shots in 10 burst. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/MakaiHMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1434,7 +1432,7 @@
 	<ThingDef ParentName="MakaiT1Weapon">
 		<defName>Makai_T1_Sniper</defName>
 		<label>Stardust Triple-Shot</label>
-		<description>energy sniper, fire a burst of 3 super heated shot \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>Energy sniper. Fires a burst of 3 super heated shots. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/MakaiSniper</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1508,7 +1506,7 @@
 	<ThingDef ParentName="MakaiT1Weapon">
 		<defName>Makai_T1_Pistol</defName>
 		<label>Stardust RE-45</label>
-		<description>energy handgun, fire a burst of 3 super heated shot \n\n Deal &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>Energy handgun. Fires a burst of 3 super heated shots \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/MakaiPistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

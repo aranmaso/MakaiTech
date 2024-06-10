@@ -9,7 +9,7 @@
 		<defName>Makai_Celest_Floor</defName>
 		<label>celestial floor</label>
 		<designatorDropdown>Makai_FloorC</designatorDropdown>
-		<description>A celestial floor tile. very pretty to look at. like a star. this floor never get dirty so it save your pawn some work.</description>
+		<description>A celestial floor tile. Very pretty to look at. Like a star. This floor never gets dirty so it saves your pawns some work.</description>
 		<texturePath>Terrains/Floors/celest_floor_with_sun</texturePath>
 		<pathCost>0</pathCost>
 		<layerable>true</layerable>
@@ -45,7 +45,7 @@
 		<defName>Makai_Celest_Floor_NoLine</defName>
 		<label>celestial floor(no line)</label>
 		<designatorDropdown>Makai_FloorC</designatorDropdown>
-		<description>A celestial floor tile. very pretty to look at. like a star. this floor never get dirty so it save your pawn some work.</description>
+		<description>A celestial floor tile. Very pretty to look at. Like a star. This floor never gets dirty so it saves your pawns some work.</description>
 		<texturePath>Terrains/Floors/celest_floor_without_Sun_without_line</texturePath>
 		<pathCost>0</pathCost>
 		<layerable>true</layerable>
@@ -81,7 +81,7 @@
 		<defName>Makai_Green</defName>
 		<label>Green floor</label>
 		<designatorDropdown>Makai_FloorC</designatorDropdown>
-		<description>A celestial floor tile. very pretty to look at. like a star. this floor never get dirty so it save your pawn some work.</description>
+		<description>A celestial floor tile. Very pretty to look at. Like a star. This floor never gets dirty so it saves your pawns some work.</description>
 		<texturePath>Terrains/Floors/greenfloor</texturePath>
 		<pathCost>0</pathCost>
 		<layerable>true</layerable>

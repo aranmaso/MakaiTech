@@ -5,7 +5,7 @@
 	<defName>Essence_Knowledge_Cooldown</defName>
 	<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 	<label>Knowledge Essence Cooldown</label>
-	<description>you have recently acquire blessing of knowledge and can't recieve another until the cooldown runout.</description>
+	<description>You have recently acquired Blessing of Knowledge and can't receive another until the cooldown runs out.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
     <comps>
@@ -35,7 +35,7 @@
 	<defName>Essence_Fate_Proxy</defName>
 	<hediffClass>HediffWithComps</hediffClass>
 	<label>you shouldn't have time to see this(I think)</label>
-	<description>you shouldn't have time to see this(I think?)</description>
+	<description>You shouldn't have time to see this(I think?)</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
     <comps>
@@ -66,7 +66,7 @@
     <defName>Essence_Fate_Buff</defName>
     <label>Fate's Blessing</label>
 	<defaultLabelColor>(196, 145, 191)</defaultLabelColor>
-    <description>this pawn has recieve the blessing of fate, all their needs are filled and won't go down for 2h. and regeneration ability are enhanced</description>
+    <description>This pawn has received the blessing of fate. All their needs are filled and won't go down for 2h. and regeneration ability is enhanced.</description>
     <isBad>false</isBad>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>1</maxSeverity>
@@ -281,7 +281,7 @@
 	<HediffDef>
 	<defName>Essence_Order_Proxy</defName>
 	<hediffClass>HediffWithComps</hediffClass>
-	<label>you shouldn't have time to see this(I think)</label>
+	<label>You shouldn't have time to see this(I think)</label>
 	<description>. . .</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
@@ -425,7 +425,7 @@
 	<HediffDef ParentName="Essence_SurgeryInitialBase">
 	<defName>Essence_Incubating_Complete_Order</defName>
 	<label>Slumbering Essence of Order</label>
-	<description>Essence of Order ready to be extract</description>
+	<description>Essence of Order ready to be extracted.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
 	<spawnThingOnRemoved>Makai_Or-Path_E</spawnThingOnRemoved>
@@ -451,7 +451,7 @@
 	<defName>Essence_Growth_Bond_Giver</defName>
 	<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 	<label>Warmth of Bond</label>
-	<description>This pawn emit an aura of bond to nearby pawn.</description>
+	<description>This pawn emits an aura of bond to nearby pawns.</description>
 	<isBad>false</isBad>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
@@ -482,7 +482,7 @@
 	<defName>Essence_Growth_Bond_Reciever</defName>
 	<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 	<label>Feel warmth</label>
-	<description>this pawn affected by aura of bond</description>
+	<description>This pawn is affected by aura of bond.</description>
 	<isBad>false</isBad>
 	<minSeverity>0</minSeverity>
 	<initialSeverity>1</initialSeverity>
@@ -530,7 +530,7 @@
 	<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 	<!--hediffClass>Hediff_Level</hediffClass-->
 	<label>Bond</label>
-	<description>Essence of Bond is growing</description>
+	<description>Essence of Bond is growing.</description>
 	<isBad>false</isBad>
 	<minSeverity>0</minSeverity>
 	<initialSeverity>0.1</initialSeverity>
@@ -586,7 +586,7 @@
 	<defName>Essence_Incubating_Complete_Bond</defName>
 	<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 	<label>Slumbering Fragment of Bond</label>
-	<description>Essence of Bond ready to be extract</description>
+	<description>Essence of Bond ready to be extracted.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
 	<spawnThingOnRemoved>Makai_B-Path_E</spawnThingOnRemoved>
@@ -605,7 +605,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 	<defName>Essence_Fate_Buffer</defName>
 	<label>String of Fate</label>
-	<description>Bodypart is being slowly transformed into Fated Part, the entire process will take 5 days to complete. at the end Fated Encounter await.</description>
+	<description>Bodypart is being slowly transformed into Fated Part. The entire process will take 5 days to complete. The end Fated Encounter awaits.</description>
 	<isBad>false</isBad>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>5</maxSeverity>
@@ -711,7 +711,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 	<defName>Essence_Fate_Encounter</defName>
 	<label>Fated Encounter</label>
-	<description>The time has come, your challege is here. over the duration of 5 days pawn affected by Fated Encounter will enter a berserk rage. \nSurvive. and also keep this pawn alive. \nMoving,Manipulation, and Consciousness will never go lower than 100%</description>
+	<description>The time has come, your challege is here. Tver the duration of 5 days pawns affected by Fated Encounter will enter a berserk rage. \nSurvive and also keep this pawn alive. \nMoving,Manipulation, and Consciousness will never go lower than 100%</description>
 	<isBad>false</isBad>
 	<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 	<initialSeverity>1</initialSeverity>
@@ -895,7 +895,7 @@
 	<HediffDef ParentName="DiseaseBase">
     <defName>Destined_Death_Soul_Missing_Giver</defName>
     <label>Missing Soul</label>
-    <description>Soul has been removed render this pawn in permanent state of coma.</description>
+    <description>Soul has been removed, rendering this pawn in permanent state of coma.</description>
     <isBad>false</isBad>
 	<chronic>false</chronic>
 	<initialSeverity>1</initialSeverity>
@@ -927,7 +927,7 @@
     <defName>Destruction_AutoAttack</defName>
     <label>Destruction Avatar</label>
 	<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
-    <description>emitting aura of destruction, call down lightning to smite foes with every strike.</description>
+    <description>Emitting aura of destruction, call down lightning to smite foes with every strike.</description>
 	<spawnThingOnRemoved>Makai_Anva_Sword</spawnThingOnRemoved>
 	<defaultLabelColor>(32, 197, 0)</defaultLabelColor>
 	<initialSeverity>1</initialSeverity>
@@ -952,7 +952,7 @@
     <defName>Order_Enlightenment</defName>
     <label>Order Avatar</label>
 	<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
-    <description>the mind of an enlightenend one. should mental break occur. a set amount of percent will be consumed to end the mental break right away. \n\npercent gained automatically when pawn meditate. increase at the same rate as their psyfocus gain. \n\n&lt;color=#FF0000&gt;[if no Royalty]&lt;/color&gt;\n pawn will gain percent passively at slower rate instead.</description>
+    <description>The mind of an enlightenend one. Should mental break occur, a set amount of percent will be consumed to end the mental break right away. \n\nPercent gained automatically when pawn meditates. Increases at the same rate as their psyfocus gain. \n\n&lt;color=#FF0000&gt;[If no Royalty]&lt;/color&gt;\n pawn will gain percent passively at slower rate instead.</description>
     <isBad>false</isBad>
 	<spawnThingOnRemoved>Makai_Ama_Berd</spawnThingOnRemoved>
 	<defaultLabelColor>(95, 87, 165)</defaultLabelColor>
@@ -974,7 +974,7 @@
     <defName>Corruption_Avatar</defName>
     <label>Corruption Avatar</label>
 	<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
-    <description>the mark of corrupted one, the taint forever remain. for they have seen the true depth of abyss. \n\n toggleable pulsing aura that will cause nearby hostile pawn to go into a random mental break. \nradius 5 cell</description>
+    <description>The mark of corrupted one, the taint forever remains, for they have seen the true depth of the abyss. \n\n Toggleable pulsing aura that will cause nearby hostile pawn to go into a random mental break. \nradius 5 cell</description>
     <isBad>false</isBad>
 	<spawnThingOnRemoved>Makai_Alf_Claw</spawnThingOnRemoved>
 	<defaultLabelColor>(183, 171, 0)</defaultLabelColor>
@@ -996,7 +996,7 @@
     <defName>Death_Avatar</defName>
     <label>Death Avatar</label>
 	<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
-    <description>the mark of one who embrace destined death. they shall be one to rang the bell that signal the final day.</description>
+    <description>The mark of one who has embraced destined death. They shall be the one to ring the bell that signals the final day.</description>
     <isBad>false</isBad>
 	<spawnThingOnRemoved>Makai_Sari_Scy</spawnThingOnRemoved>
 	<defaultLabelColor>(140, 81, 199)</defaultLabelColor>
@@ -1013,7 +1013,7 @@
     <defName>Flame_Avatar</defName>
     <label>Flame Avatar</label>
 	<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
-    <description>the light of the radiant star. the cleansing flame pave thy road with a path of gold. no heat shall ever harm thy flesh for the blessing of the star protect thee.</description>
+    <description>The light of the radiant star. The cleansing flame. Pave thy road with a path of gold. No heat shall ever harm thy flesh for the blessing of the star protect thee.</description>
     <isBad>false</isBad>
 	<spawnThingOnRemoved>Makai_Mica_Mace</spawnThingOnRemoved>
 	<defaultLabelColor>(238, 142, 0)</defaultLabelColor>
@@ -1039,7 +1039,7 @@
     <defName>Frost_Avatar</defName>
     <label>Frost Avatar</label>
 	<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
-    <description>the frigid cold of the coldest night. numb thy pain. numb thy feeling. still thy mind as the barrier of ice.</description>
+    <description>The frigid cold of the coldest night. Numb thy pain. Numb thy feeling. Still thy mind as the barrier of ice.</description>
     <isBad>false</isBad>
 	<spawnThingOnRemoved>Makai_Yuki_Staff</spawnThingOnRemoved>
 	<defaultLabelColor>(0, 214, 238)</defaultLabelColor>
@@ -1067,7 +1067,7 @@
     <defName>Knowledge_Avatar</defName>
     <label>Knowledge Avatar</label>
 	<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
-    <description>the mark of true knowledge, seeking to unveil the unknown depth of knowledge. for all knowledge belong to thee.</description>
+    <description>The mark of true knowledge, seeking to unveil the unknown depth of knowledge. For all knowledge belongs to thee.</description>
     <isBad>false</isBad>
 	<spawnThingOnRemoved>Makai_Bow_Varia</spawnThingOnRemoved>
 	<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>

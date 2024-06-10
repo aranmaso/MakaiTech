@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BuildingBase">
     <defName>Makai_FlamePillar</defName>
     <label>Pillar of Flame</label>
-    <description>pillar of flame utilizing the essence of flame. will heat the room up to 250c</description>
+    <description>Pillar of flame utilizing the essence of flame. Will heat the room up to 250c</description>
     <graphicData>
       <texPath>Things/Building/FlamePillar</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -70,7 +70,7 @@
 	<ThingDef ParentName="BuildingBase">
     <defName>Makai_FrostPillar</defName>
     <label>Pillar of Frost</label>
-    <description>pillar of frost utilizing the essence of frost. will cool the room down to -273c</description>
+    <description>Pillar of frost utilizing the essence of frost. Will cool the room down to -273c</description>
     <graphicData>
       <texPath>Things/Building/FrostPillar</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -51,7 +51,7 @@
 	  <defName>Makai_StarParticlePipe</defName>
 	  <label>star particle pipe</label>
 	  <designatorDropdown>Makai_Pipe</designatorDropdown>
-	  <description>pipe to transfer star particle.</description>
+	  <description>Pipe to transfer star particle.</description>
 	  <thingClass>PipeSystem.Building_Pipe</thingClass> 
 	  <category>Building</category>
 	  <graphicData>
@@ -110,7 +110,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_StarParticleTank</defName>
 		<label>Particle tank</label>
-		<description>a tank to store refined star particle. doesn't explode when damaged.</description>
+		<description>A tank to store refined star particle. Doesn't explode when damaged.</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 		  <texPath>Things/Building/makai_energy_tank_st</texPath>
@@ -164,7 +164,7 @@
 	  <ThingDef ParentName="BuildingBase">
 		<defName>Makai_St_Conv</defName>
 		<label>Stardust Particle Condenser</label>
-		<description>a building to condense star particle even further into a dust-like substance called Stardust. \n\n Star Particle used : 300 \n Stardust produce : 50 \n Production time : 300tick(5s)</description>
+		<description>A building to condense star particle even further into a dust-like substance called Stardust. \n\n Star Particle used : 300 \n Stardust produced : 50 \n Production time : 300tick(5s)</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>
 		  <texPath>Things/Building/Makai_St_Conv_2</texPath>
@@ -258,7 +258,7 @@
 	  <ThingDef ParentName="BuildingBase">
 		<defName>Makai_Cs_Forg</defName>
 		<label>Celestial Steel Forge</label>
-		<description>a star forge used to create Celestial Steel. consolidate Star particle into a liquid like substance that then molded into ingot shape. \n\n Star Particle used : 100 \n Celestial Steel produce : 5 \n Production time : 3000tick(50s)</description>
+		<description>A star forge used to create Celestial Steel. Consolidate Star particle into a liquid like substance that is then molded into ingot shape. \n\n Star Particle used : 100 \n Celestial Steel produced : 5 \n Production time : 3000tick(50s)</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<!--thingClass>AnimLibrary.AnimatedThing</thingClass-->
 		<graphicData>
@@ -354,7 +354,7 @@
 	  <ThingDef ParentName="BuildingBase">
 		<defName>Makai_Cs_loom</defName>
 		<label>Celestial Fabric Loom</label>
-		<description>a loom that tailor star particle into a form of fabric. \n\n Star particle used : 50 \n Celestial Fabric produce : 10 \n Production time : 2000tick(33s)</description>
+		<description>A loom that tailors star particle into a form of fabric. \n\n Star particle used : 50 \n Celestial Fabric produced : 10 \n Production time : 2000tick(33s)</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<!--thingClass>AnimLibrary.AnimatedThing</thingClass-->
 		<graphicData>

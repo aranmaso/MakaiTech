@@ -4,7 +4,7 @@
 	<ThingDef ParentName="UnfinishedBase">
     <defName>UnfinishedMakaiStuff</defName>
     <label>unfinished makai item</label>
-    <description>An unfinished makai item.</description>
+    <description>An unfinished Makai item.</description>
     <statBases>
       <Flammability>0</Flammability>
     </statBases>

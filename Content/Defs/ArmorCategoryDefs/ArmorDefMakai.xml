@@ -50,7 +50,7 @@ Each layer of armor is applied separately, from the outside in.</description>
     <defName>StuffPower_Armor_Celestial</defName>
     <label>Armor - Celestial</label>
     <labelForFullStatList>Armor - Celestial (material factor)</labelForFullStatList>
-    <description>Armor against celestial damage found in Makai's weapon.</description>
+    <description>Armor against celestial damage found in Makai's weapons.</description>
     <category>StuffStatFactors</category>
     <defaultBaseValue>0</defaultBaseValue>
     <minValue>0</minValue>

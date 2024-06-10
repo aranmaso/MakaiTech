@@ -3,7 +3,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_Ingot</defName>
 		<label>celestial steel</label>
-		<description>a steel forged from star particle. have insane durability. incredibly dense but somehow also impossibly light as well. display a very high resistance to damage and change. only with technology from Makai one could shape this material into anything at all, but once you can. it can be shaped into almost anything. \n once being made into something, the material itself seem to understand what it being made into and vastly improve on what it suppose to do.</description>
+		<description>A steel forged from star particle. Has insane durability. Incredibly dense but somehow also impossibly light as well. Displays a very high resistance to damage and change. Only with technology from Makai could one shape this material into anything at all, but once you can, it can be shaped into almost anything. \n Once being made into something, the material itself seems to understand what it's being made into and vastly improves on what it's supposed to do.</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -94,7 +94,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_Fabric_C</defName>
 		<label>celestial fabric</label>
-		<description>a piece of fabric originate from Makai, also known as Star Cradle. extremely high heat resistance to the point it almost immune to heat. one of the needed material to create Primodial Forge or anything related to Miniature Sun. anything made from Celestial Fabric will never burn.</description>
+		<description>A piece of fabric originating from Makai, also known as Star Cradle. Extremely high heat resistance, to the point it's almost immune to heat. One of the needed materials to create the Primodial Forge or anything related to Miniature Sun. Anything made from Celestial Fabric will never burn.</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat_fabric</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -168,7 +168,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_Stardust</defName>
 		<label>stardust</label>
-		<description>Star Particle condensed into a form of Stardust. the stardust seem to have a mind of it own and can freely change it structure to match the need of anything it being filled into. \n aka. it act as both a material and Universal Fuel that you can refill anything with.</description>
+		<description>Star Particle condensed into a form of Stardust. The stardust seems to have a mind of its own and can freely change its structure to match the needs of anything it's being filled into. \n aka. It act as both a material and Universal Fuel that you can refill anything with.</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat_dust</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -203,7 +203,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_StarSmall</defName>
 		<label>miniature star</label>
-		<description>a mass-produce version of miniature sun commonly found in Makai. can be used to make other high-tier item or be placed down as portable energy source.</description>
+		<description>A mass-produced version of Miniature sun commonly found in Makai. Can be used to make other high-tier items or be placed down as a portable energy source.</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat_minisun</texPath> <!-- temporary texture -->
 			<graphicClass>Graphic_Single</graphicClass>
@@ -239,7 +239,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_StarParticle</defName>
 		<label>star particle</label>
-		<description>a miniature star keep contained in a specialized container</description>
+		<description>A miniature star kept contained in a specialized container.</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat_minisun</texPath> <!-- temporary texture -->
 			<graphicClass>Graphic_Single</graphicClass>
@@ -268,7 +268,7 @@
 	<ThingDef ParentName="ResourceBase">
     <defName>Makai_RawEnergy</defName>
     <label>Pure Energy</label>
-    <description>matter in it purest form. a pure energy</description>
+    <description>Matter in it purest form. A pure energy.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Items/makai_mat_minisun</texPath> <!-- temporary texture -->

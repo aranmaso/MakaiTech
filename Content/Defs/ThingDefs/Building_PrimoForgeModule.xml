@@ -71,7 +71,7 @@
   <ThingDef ParentName="PrimoModuleBase">
     <defName>Makai_PrimoForge_RawResourceModule</defName>
     <label>Raw Resource Module</label>
-    <description>a module that connect to Primordial Forge. allow item in Raw Resource category to be materialized.</description>
+    <description>A module that connects to the Primordial Forge. Allows item in Raw Resource category to be materialized.</description>
     <graphicData>
       <texPath>Things/Building/PrimoForgeModule/ResourceModuleVanilla</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -95,7 +95,7 @@
   <ThingDef ParentName="PrimoModuleBase">
     <defName>Makai_PrimoForge_ClothResourceModule</defName>
     <label>Cloth Module</label>
-    <description>a module that connect to Primordial Forge. allow item in Cloth category to be materialized.</description>
+    <description>A module that connects to the Primordial Forge. Allows items in Cloth category to be materialized.</description>
     <graphicData>
       <texPath>Things/Building/PrimoForgeModule/ClothModuleVanilla</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -119,7 +119,7 @@
   <ThingDef ParentName="PrimoModuleBase">
     <defName>Makai_PrimoForge_ItemModule</defName>
     <label>Item Module</label>
-    <description>a module that connect to Primordial Forge. allow item in Items category to be materialized.</description>
+    <description>A module that connects to the Primordial Forge. Allows items in the Items category to be materialized.</description>
     <graphicData>
       <texPath>Things/Building/PrimoForgeModule/ItemModuleVanilla</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -143,7 +143,7 @@
   <ThingDef ParentName="PrimoModuleBase">
     <defName>Makai_PrimoForge_ManufacturedModule</defName>
     <label>Manufacture Module</label>
-    <description>a module that connect to Primordial Forge. allow item in Manufacture category to be materialized.</description>
+    <description>A module that connects to the Primordial Forge. Allows items in the Manufacture category to be materialized.</description>
     <graphicData>
       <texPath>Things/Building/PrimoForgeModule/ManufacturedModuleVanilla</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -167,7 +167,7 @@
   <ThingDef ParentName="PrimoModuleBase">
     <defName>Makai_PrimoForge_FoodModule</defName>
     <label>Food Module</label>
-    <description>a module that connect to Primordial Forge. allow item in Food category to be materialized.</description>
+    <description>A module that connects to the Primordial Forge. Allows items in the Food category to be materialized.</description>
     <graphicData>
       <texPath>Things/Building/PrimoForgeModule/FoodModuleVanilla</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -191,7 +191,7 @@
   <ThingDef ParentName="PrimoModuleBase">
     <defName>Makai_PrimoForge_DrugModule</defName>
     <label>Drug Module</label>
-    <description>a module that connect to Primordial Forge. allow item in Drug category to be materialized.</description>
+    <description>A module that connects to the Primordial Forge. Allows items in Drug category to be materialized.</description>
     <graphicData>
       <texPath>Things/Building/PrimoForgeModule/DrugModuleVanilla</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

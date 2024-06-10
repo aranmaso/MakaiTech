@@ -174,7 +174,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>PrimordialFrag</defName>
 		<label>flame of the first forge</label>
-		<description>a mere fragment separated from primordial forge. hold immense power and can be used as subtitute fuel for any building.</description>
+		<description>A mere fragment separated from the Primordial Forge. Holds immense power and can be used as subtitute fuel for any building.</description>
 		<graphicData>
 			<texPath>Things/Items/UnfinishedMakaiThing</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -192,7 +192,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_PrimordialFrag</defName>
 		<label>Materialize Flame of the First Forge</label>
-		<description>Materialize Primordial Fragment from Primordial Forge</description>
+		<description>Materialize Primordial Fragment from Primordial Forge.</description>
 		<products>
 			<PrimordialFrag>100</PrimordialFrag>
 		</products>
@@ -202,7 +202,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_Steel</defName>
 		<label>Materialize Steel</label>
-		<description>Materialize Steel from Primordial Forge</description>
+		<description>Materialize Steel from Primordial Forge.</description>
 		<products>
 			<Steel>100</Steel>
 		</products>
@@ -210,7 +210,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_ComponentIndustrial</defName>
 		<label>Materialize Component</label>
-		<description>Materialize Component from Primordial Forge</description>
+		<description>Materialize Component from Primordial Forge.</description>
 		<products>
 			<ComponentIndustrial>100</ComponentIndustrial>
 		</products>
@@ -218,7 +218,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_ComponentSpacer</defName>
 		<label>Materialize Advanced Component</label>
-		<description>Materialize Advanced Component from Primordial Forge</description>
+		<description>Materialize Advanced Component from Primordial Forge.</description>
 		<products>
 			<ComponentSpacer>100</ComponentSpacer>
 		</products>
@@ -226,7 +226,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_Silver</defName>
 		<label>Materialize Silver</label>
-		<description>Materialize Silver from Primordial Forge</description>
+		<description>Materialize Silver from Primordial Forge.</description>
 		<products>
 			<Silver>1000</Silver>
 		</products>
@@ -234,7 +234,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_Gold</defName>
 		<label>Materialize Gold</label>
-		<description>Materialize Silver from Primordial Forge</description>
+		<description>Materialize Silver from Primordial Forge.</description>
 		<products>
 			<Gold>1000</Gold>
 		</products>
@@ -242,7 +242,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_Plasteel</defName>
 		<label>Materialize Plasteel</label>
-		<description>Materialize Plasteel from Primordial Forge</description>
+		<description>Materialize Plasteel from Primordial Forge.</description>
 		<products>
 			<Plasteel>100</Plasteel>
 		</products>
@@ -250,7 +250,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_Uranium</defName>
 		<label>Materialize Uranium</label>
-		<description>Materialize Uranium from Primordial Forge</description>
+		<description>Materialize Uranium from Primordial Forge.</description>
 		<products>
 			<Uranium>100</Uranium>
 		</products>
@@ -258,7 +258,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_Jade</defName>
 		<label>Materialize Jade</label>
-		<description>Materialize Jade from Primordial Forge</description>
+		<description>Materialize Jade from Primordial Forge.</description>
 		<products>
 			<Jade>100</Jade>
 		</products>
@@ -266,7 +266,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_WoodLog</defName>
 		<label>Materialize WoodLog</label>
-		<description>Materialize WoodLog from Primordial Forge</description>
+		<description>Materialize WoodLog from Primordial Forge.</description>
 		<products>
 			<WoodLog>100</WoodLog>
 		</products>
@@ -274,7 +274,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
 		<defName>Makai_Manifest_Makai_Ingot</defName>
 		<label>Materialize Celestial Steel</label>
-		<description>Materialize Celestial Steel from Primordial Forge</description>
+		<description>Materialize Celestial Steel from Primordial Forge.</description>
 		<products>
 			<Makai_Ingot>100</Makai_Ingot>
 		</products>
@@ -284,7 +284,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery">
 		<defName>Makai_Manifest_Cloth</defName>
 		<label>Materialize Cloth</label>
-		<description>Materialize Cloth from Primordial Forge</description>
+		<description>Materialize Cloth from Primordial Forge.</description>
 		<products>
 			<Cloth>100</Cloth>
 		</products>
@@ -292,7 +292,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery">
 		<defName>Makai_Manifest_Synthread</defName>
 		<label>Materialize Synthread</label>
-		<description>Materialize Synthread from Primordial Forge</description>
+		<description>Materialize Synthread from Primordial Forge.</description>
 		<products>
 			<Synthread>100</Synthread>
 		</products>
@@ -300,7 +300,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery">
 		<defName>Makai_Manifest_Hyperweave</defName>
 		<label>Materialize Hyperweave</label>
-		<description>Materialize Hyperweave from Primordial Forge</description>
+		<description>Materialize Hyperweave from Primordial Forge.</description>
 		<products>
 			<Hyperweave>100</Hyperweave>
 		</products>
@@ -308,7 +308,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery">
 		<defName>Makai_Manifest_Devilstrand</defName>
 		<label>Materialize Devilstrand</label>
-		<description>Materialize Devilstrand from Primordial Forge</description>
+		<description>Materialize Devilstrand from Primordial Forge.</description>
 		<products>
 			<DevilstrandCloth>100</DevilstrandCloth>
 		</products>
@@ -316,7 +316,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseClothLeathery">
 		<defName>Makai_Manifest_Makai_Fabric_C</defName>
 		<label>Materialize Celestial fabric</label>
-		<description>Materialize Celestial fabric from Primordial Forge</description>
+		<description>Materialize Celestial fabric from Primordial Forge.</description>
 		<products>
 			<Makai_Fabric_C>100</Makai_Fabric_C>
 		</products>
@@ -326,7 +326,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_Chemfuel</defName>
 		<label>Materialize Chemfuel</label>
-		<description>Materialize Chemfuel from Primordial Forge</description>
+		<description>Materialize Chemfuel from Primordial Forge.</description>
 		<products>
 			<Chemfuel>100</Chemfuel>
 		</products>
@@ -334,7 +334,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_ReinforcedBarrel</defName>
 		<label>Materialize Reinforced Barrel</label>
-		<description>Materialize Reinforced Barrel from Primordial Forge</description>
+		<description>Materialize Reinforced Barrel from Primordial Forge.</description>
 		<products>
 			<ReinforcedBarrel>10</ReinforcedBarrel>
 		</products>
@@ -342,7 +342,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_Makai_Stardust</defName>
 		<label>Materialize stardust</label>
-		<description>Materialize stardust from Primordial Forge</description>
+		<description>Materialize stardust from Primordial Forge.</description>
 		<products>
 			<Makai_Stardust>10</Makai_Stardust>
 		</products>
@@ -350,7 +350,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_Makai_StarSmall</defName>
 		<label>Materialize miniature star</label>
-		<description>Materialize miniature star from Primordial Forge</description>
+		<description>Materialize miniature star from Primordial Forge.</description>
 		<products>
 			<Makai_StarSmall>10</Makai_StarSmall>
 		</products>
@@ -361,7 +361,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Corruption</defName>
 		<label>Materialize Essence of Corruption</label>
-		<description>Materialize Essence of Corruption from Primordial Forge</description>
+		<description>Materialize Essence of Corruption from Primordial Forge.</description>
 		<products>
 			<Makai_C-Path_E>1</Makai_C-Path_E>
 		</products>
@@ -369,7 +369,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Bond</defName>
 		<label>Materialize Essence of Bond</label>
-		<description>Materialize Essence of Bond from Primordial Forge</description>
+		<description>Materialize Essence of Bond from Primordial Forge.</description>
 		<products>
 			<Makai_B-Path_E>1</Makai_B-Path_E>
 		</products>
@@ -377,7 +377,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Fate</defName>
 		<label>Materialize Essence of Fate</label>
-		<description>Materialize Essence of Fate from Primordial Forge</description>
+		<description>Materialize Essence of Fate from Primordial Forge.</description>
 		<products>
 			<Makai_F-Path_E>1</Makai_F-Path_E>
 		</products>
@@ -385,7 +385,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Knowledge</defName>
 		<label>Materialize Essence of Knowledge</label>
-		<description>Materialize Essence of Knowledge from Primordial Forge</description>
+		<description>Materialize Essence of Knowledge from Primordial Forge.</description>
 		<products>
 			<Makai_K-Path_E>1</Makai_K-Path_E>
 		</products>
@@ -393,7 +393,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Flame</defName>
 		<label>Materialize Essence of Flame</label>
-		<description>Materialize Essence of Flame from Primordial Forge</description>
+		<description>Materialize Essence of Flame from Primordial Forge.</description>
 		<products>
 			<Makai_Fla-Path_E>1</Makai_Fla-Path_E>
 		</products>
@@ -401,7 +401,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Frost</defName>
 		<label>Materialize Essence of Frost</label>
-		<description>Materialize Essence of Frost from Primordial Forge</description>
+		<description>Materialize Essence of Frost from Primordial Forge.</description>
 		<products>
 			<Makai_Fr-Path_E>1</Makai_Fr-Path_E>
 		</products>
@@ -409,7 +409,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Destruction</defName>
 		<label>Materialize Essence of Destruction</label>
-		<description>Materialize Essence of Destruction from Primordial Forge</description>
+		<description>Materialize Essence of Destruction from Primordial Forge.</description>
 		<products>
 			<Makai_D-Path_E>1</Makai_D-Path_E>
 		</products>
@@ -417,7 +417,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Order</defName>
 		<label>Materialize Essence of Order</label>
-		<description>Materialize Essence of Order from Primordial Forge</description>
+		<description>Materialize Essence of Order from Primordial Forge.</description>
 		<products>
 			<Makai_Or-Path_E>1</Makai_Or-Path_E>
 		</products>
@@ -425,7 +425,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Death</defName>
 		<label>Materialize Essence of Death</label>
-		<description>Materialize Essence of Death from Primordial Forge</description>
+		<description>Materialize Essence of Death from Primordial Forge.</description>
 		<products>
 			<Makai_Dea-Path_E>1</Makai_Dea-Path_E>
 		</products>
@@ -433,7 +433,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Distortion</defName>
 		<label>Materialize Essence of Distortion</label>
-		<description>Materialize Essence of Distortion from Primordial Forge</description>
+		<description>Materialize Essence of Distortion from Primordial Forge.</description>
 		<products>
 			<Makai_Dis-Path_E>1</Makai_Dis-Path_E>
 		</products>
@@ -441,7 +441,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBase">
 		<defName>Makai_Manifest_Essence_Existence</defName>
 		<label>Materialize Essence of Existence</label>
-		<description>Materialize Essence of Existence from Primordial Forge</description>
+		<description>Materialize Essence of Existence from Primordial Forge.</description>
 		<products>
 			<Makai_E-Path_E>1</Makai_E-Path_E>
 		</products>
@@ -451,7 +451,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="ludeon.rimworld.royalty">
 		<defName>Makai_Manifest_PsychicAmplifier</defName>
 		<label>Materialize psylink neuroformer</label>
-		<description>Materialize psylink neuroformer from Primordial Forge</description>
+		<description>Materialize psylink neuroformer from Primordial Forge.</description>
 		<products>
 			<PsychicAmplifier>1</PsychicAmplifier>
 		</products>
@@ -459,7 +459,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems">
 		<defName>Makai_Manifest_AIPersonaCore</defName>
 		<label>Materialize AI PersonaCore</label>
-		<description>Materialize AI PersonaCore from Primordial Forge</description>
+		<description>Materialize AI PersonaCore from Primordial Forge.</description>
 		<products>
 			<AIPersonaCore>10</AIPersonaCore>
 		</products>
@@ -467,7 +467,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems">
 		<defName>Makai_Manifest_MechSerumHealer</defName>
 		<label>Materialize Healer Mech-serum</label>
-		<description>Materialize Healer Mech-serum from Primordial Forge</description>
+		<description>Materialize Healer Mech-serum from Primordial Forge.</description>
 		<products>
 			<MechSerumHealer>10</MechSerumHealer>
 		</products>
@@ -475,7 +475,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems">
 		<defName>Makai_Manifest_MechSerumResurrector</defName>
 		<label>Materialize Resurrector Mech-serum</label>
-		<description>Materialize Resurrector Mech-serum from Primordial Forge</description>
+		<description>Materialize Resurrector Mech-serum from Primordial Forge.</description>
 		<products>
 			<MechSerumResurrector>10</MechSerumResurrector>
 		</products>
@@ -483,7 +483,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems">
 		<defName>Makai_Manifest_TechprofSubpersonaCore</defName>
 		<label>Materialize Techprof subpersona core</label>
-		<description>Materialize Techprof subpersona core from Primordial Forge</description>
+		<description>Materialize Techprof subpersona core from Primordial Forge.</description>
 		<products>
 			<TechprofSubpersonaCore>10</TechprofSubpersonaCore>
 		</products>
@@ -491,7 +491,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems">
 		<defName>Makai_Manifest_PsychicSoothePulser</defName>
 		<label>Materialize psychic soothe pulser</label>
-		<description>Materialize psychic soothe pulser from Primordial Forge</description>
+		<description>Materialize psychic soothe pulser from Primordial Forge.</description>
 		<products>
 			<PsychicSoothePulser>10</PsychicSoothePulser>
 		</products>
@@ -499,7 +499,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems">
 		<defName>Makai_Manifest_Makai_Dea_Path_SoulExtracter</defName>
 		<label>Materialize Soul Extracter</label>
-		<description>Materialize Soul Extracter from Primordial Forge</description>
+		<description>Materialize Soul Extracter from Primordial Forge.</description>
 		<products>
 			<Makai_Dea_Path_SoulExtracter>10</Makai_Dea_Path_SoulExtracter>
 		</products>
@@ -516,7 +516,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="ludeon.rimworld.biotech">
 		<defName>Makai_Manifest_SignalChip</defName>
 		<label>Materialize SignalChip</label>
-		<description>Materialize SignalChip from Primordial Forge</description>
+		<description>Materialize SignalChip from Primordial Forge.</description>
 		<efficiencyStat IsNull="True"/>
 		<products>
 			<SignalChip>1</SignalChip>
@@ -525,7 +525,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="ludeon.rimworld.biotech">
 		<defName>Makai_Manifest_PowerfocusChip</defName>
 		<label>Materialize PowerfocusChip</label>
-		<description>Materialize PowerfocusChip from Primordial Forge</description>
+		<description>Materialize PowerfocusChip from Primordial Forge.</description>
 		<efficiencyStat IsNull="True"/>
 		<products>
 			<PowerfocusChip>1</PowerfocusChip>
@@ -534,7 +534,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="ludeon.rimworld.biotech">
 		<defName>Makai_Manifest_NanostructuringChip</defName>
 		<label>Materialize NanostructuringChip</label>
-		<description>Materialize NanostructuringChip from Primordial Forge</description>
+		<description>Materialize NanostructuringChip from Primordial Forge.</description>
 		<efficiencyStat IsNull="True"/>
 		<products>
 			<NanostructuringChip>1</NanostructuringChip>
@@ -543,7 +543,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseItems" MayRequire="ludeon.rimworld.biotech">
 		<defName>Makai_Manifest_ArchiteCapsule</defName>
 		<label>Materialize Archite Capsule</label>
-		<description>Materialize Archite Capsule from Primordial Forge</description>
+		<description>Materialize Archite Capsule from Primordial Forge.</description>
 		<products>
 			<ArchiteCapsule>10</ArchiteCapsule>
 		</products>
@@ -553,7 +553,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_MedicineHerbal</defName>
 		<label>Materialize Herbal Medicine</label>
-		<description>Materialize Herbal Medicine from Primordial Forge</description>
+		<description>Materialize Herbal Medicine from Primordial Forge.</description>
 		<products>
 			<MedicineHerbal>100</MedicineHerbal>
 		</products>
@@ -561,7 +561,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_MedicineIndustrial</defName>
 		<label>Materialize Medicine</label>
-		<description>Materialize Medicine from Primordial Forge</description>
+		<description>Materialize Medicine from Primordial Forge.</description>
 		<products>
 			<MedicineIndustrial>100</MedicineIndustrial>
 		</products>
@@ -569,7 +569,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_MedicineUltratech</defName>
 		<label>Materialize Glitterworld Medicine</label>
-		<description>Materialize Glitterworld Medicine from Primordial Forge</description>
+		<description>Materialize Glitterworld Medicine from Primordial Forge.</description>
 		<products>
 			<MedicineUltratech>100</MedicineUltratech>
 		</products>
@@ -577,7 +577,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured">
 		<defName>Makai_Manifest_Neutroamine</defName>
 		<label>Materialize Neutroamine</label>
-		<description>Materialize Neutroamine from Primordial Forge</description>
+		<description>Materialize Neutroamine from Primordial Forge.</description>
 		<products>
 			<Neutroamine>100</Neutroamine>
 		</products>
@@ -587,7 +587,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood">
 		<defName>Makai_Manifest_MealLavish</defName>
 		<label>Materialize Lavish Meal</label>
-		<description>Materialize Lavish Meal from Primordial Forge</description>
+		<description>Materialize Lavish Meal from Primordial Forge.</description>
 		<products>
 			<MealLavish>10</MealLavish>
 		</products>
@@ -595,7 +595,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood">
 		<defName>Makai_Manifest_MealLavish_Meat</defName>
 		<label>Materialize Lavish Meal Meat</label>
-		<description>Materialize Lavish Meal Meat from Primordial Forge</description>
+		<description>Materialize Lavish Meal Meat from Primordial Forge.</description>
 		<products>
 			<MealLavish_Meat>10</MealLavish_Meat>
 		</products>
@@ -603,7 +603,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood">
 		<defName>Makai_Manifest_Kibble</defName>
 		<label>Materialize Kibble</label>
-		<description>Materialize Kibble from Primordial Forge</description>
+		<description>Materialize Kibble from Primordial Forge.</description>
 		<products>
 			<Kibble>500</Kibble>
 		</products>
@@ -611,7 +611,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood">
 		<defName>Makai_Manifest_Ambrosia</defName>
 		<label>Materialize Ambrosia</label>
-		<description>Materialize Ambrosia from Primordial Forge</description>
+		<description>Materialize Ambrosia from Primordial Forge.</description>
 		<products>
 			<Ambrosia>100</Ambrosia>
 		</products>
@@ -619,7 +619,7 @@
 	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseFood" MayRequire="farmerjoe.cherry">
 		<defName>Makai_Manifest_MealHunter</defName>
 		<label>Materialize Hunter Meal</label>
-		<description>Materialize Hunter Meal from Primordial Forge</description>
+		<description>Materialize Hunter Meal from Primordial Forge.</description>
 		<products>
 			<Joe_MealHunter>10</Joe_MealHunter>
 		</products>

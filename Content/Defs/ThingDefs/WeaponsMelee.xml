@@ -85,7 +85,7 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Anva_Sword</defName>
 		<label>Entity Null</label>
-		<description>A giant sword made in the image of the original Entity Null. have ability to reduce target armor to nothing, and can also shoot lightning. very heavy to wield for ordinary pawn. \n the blade composed of local material from Rimworld mixing with Celestial Steel making this weapon very durable and can last a long time.</description>
+		<description>A giant sword made in the image of the original Entity Null. Has the ability to reduce target armor to nothing, and can also shoot lightning. Very heavy to wield for ordinary pawns. \n The blade is composed of local material from the Rimworld mixing with Celestial Steel, making this weapon very durable.</description>
 		<graphicData>
 			<texPath>Things/Weapon/anva_sword_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -247,7 +247,7 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Ama_Berd</defName>
 		<label>Order</label>
-		<description>A giant halberd that improve user psychic ability in various aspect. and reduce mental break threshold. \n the blade feature a very refined celestial steel. which make it very strong compare to local material.</description>
+		<description>A giant halberd that improves user psychic ability in various aspects and reduces mental break threshold. \n The blade features a very refined celestial steel. Which makes it very strong compared to local materials.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ama_halberd_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -361,7 +361,7 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Ouro_Berd</defName>
 		<label>Existence</label>
-		<description>the original weapon this halberd are based on are said to have been forged from the very concept of existence itself. while this halberd is no where near that level of power, it still grant wielder the blessing from Guardian of Existence, grant them with godlike power befit the wielder of concept of existence.</description>
+		<description>The original weapon this halberd is based on is said to have been forged from the very concept of existence itself. While this halberd is no where near that level of power, it still grants the wielder the blessing from the Guardian of Existence, infusing them with godlike power befitting the wielder of the concept of existence.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ouro_wep_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -497,7 +497,7 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Alf_Claw</defName>
 		<label>Collapsed Will</label>
-		<description>a claw weapon made with the intent to corrupt someone mind. increase user melee fighting ability, make them attack faster than they normally can and sent them into a state where they won't go down with pain.</description>
+		<description>A claw weapon made with the intent to corrupt someone's mind. Increases user melee fighting ability. Makes them attack faster than they normally can and sends them into a state where they won't go down with pain.</description>
 		<graphicData>
 			<texPath>Things/Weapon/alf_claw_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -622,7 +622,7 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Mica_Blade</defName>
 		<label>Sunblade</label>
-		<description>a sword embued with the power of the sun. it blade emit extreme heat to melt away anything it touch. grant user the blessing of Guardian of Flame, make them immune to heat damage and never be harmed by fire.</description>
+		<description>A sword imbued with the power of the sun. Its blade emits extreme heat, melting away anything it touches. Grants user the blessing of Guardian of Flame, making them immune to heat damage and granting them immunity to fire.</description>
 		<graphicData>
 			<texPath>Things/Weapon/mica_sunblade_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -823,7 +823,7 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Mica_Mace</defName>
 		<label>Radiant Star</label>
-		<description>a miniature sun attach to handle with energy link. it heat can melt away target armor. can be used as throwning weapon or spin it fast enough to shoot a fireball. grant user the blessing of Guardian of Flame, make them immune to heat damage and never be harmed by fire.</description>
+		<description>A miniature sun attached to a handle with an energy link. Its heat can melt away a target's armor. Can be used as throwing weapon or spin it fast enough to shoot a fireball. Grants user the blessing of Guardian of Flame, making them immune to heat damage and granting them immunity to fire.</description>
 		<graphicData>
 			<texPath>Things/Weapon/mica_radiantstar</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1134,7 +1134,7 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>Makai_Sari_Scy</defName>
 		<label>Destined Death</label>
-		<description>An unwieldy scythe weapon that ignore armor but deals little damage. It will inflict the curse, Destined Death, which will build up to eventually kill the victim. \n\n\nVictims of &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt; cannot be resurrected.</description>
+		<description>An unwieldy scythe weapon that ignores armor but deals little damage. It will inflict the curse, Destined Death, which will build up to eventually kill the victim. \n\n\nVictims of &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt; cannot be resurrected.</description>
 		<graphicData>
 			<texPath>Things/Weapon/sari_scythe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

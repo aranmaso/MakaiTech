@@ -17,7 +17,7 @@
 	<HediffDef ParentName="FatedBaseColor" MayRequire="aranmaho.makai.demonia">
 	<defName>Makai_Fated_Wing</defName>
 	<label>Fated Wing</label>
-	<description>this body part has been blessed by Fate</description>
+	<description>This body part has been blessed by Fate.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>10</maxSeverity>
 	<addedPartProps>
@@ -141,7 +141,7 @@
 	<HediffDef ParentName="FatedBaseColorImplant" MayRequire="aranmaho.makai.demonia">
 	<defName>Makai_Fated_Wing_Complete</defName>
 	<label>Wing of Fated Fragment</label>
-	<description>The Fated Fragment has formed inside this bodypart, either extract it by removing the bodypart. or keep them.</description>
+	<description>The Fated Fragment has formed inside this bodypart. Either extract it by removing the bodypart, or keep them.</description>
 	<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 	<addedPartProps>
       <solid>true</solid>
@@ -161,7 +161,7 @@
 	<HediffDef ParentName="FatedBaseColor">
 	<defName>Makai_Fated_Arm</defName>
 	<label>Fated Arm</label>
-	<description>this body part has been blessed by Fate</description>
+	<description>This body part has been blessed by Fate.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>10</maxSeverity>
 	<addedPartProps>
@@ -285,7 +285,7 @@
 	<HediffDef ParentName="FatedBaseColorImplant">
 	<defName>Makai_Fated_Arm_Complete</defName>
 	<label>Arm of Fated Fragment</label>
-	<description>The Fated Fragment has formed inside this bodypart, either extract it by removing the bodypart. or keep them.</description>
+	<description>The Fated Fragment has formed inside this bodypart. Either extract it by removing the bodypart, or keep them.</description>
 	<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 	<addedPartProps>
       <solid>true</solid>
@@ -305,7 +305,7 @@
 	<HediffDef ParentName="FatedBaseColor">
 	<defName>Makai_Fated_Leg</defName>
 	<label>Fated Leg</label>
-	<description>this body part has been blessed by Fate</description>
+	<description>This body part has been blessed by Fate.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>10</maxSeverity>
 	<addedPartProps>
@@ -429,7 +429,7 @@
 	<HediffDef ParentName="FatedBaseColorImplant">
 	<defName>Makai_Fated_Leg_Complete</defName>
 	<label>Leg of Fated Fragment</label>
-	<description>The Fated Fragment has formed inside this bodypart, either extract it by removing the bodypart. or keep them.</description>
+	<description>The Fated Fragment has formed inside this bodypart. Either extract it by removing the bodypart, or keep them.</description>
 	<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 	<addedPartProps>
       <solid>true</solid>
@@ -449,7 +449,7 @@
 	<HediffDef ParentName="FatedBaseColor">
 	<defName>Makai_Fated_Lung</defName>
 	<label>Fated Lung</label>
-	<description>this body part has been blessed by Fate</description>
+	<description>This body part has been blessed by Fate.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>10</maxSeverity>
 	<addedPartProps>
@@ -573,7 +573,7 @@
 	<HediffDef ParentName="FatedBaseColorImplant">
 	<defName>Makai_Fated_Lung_Complete</defName>
 	<label>Breath of Fated Fragment</label>
-	<description>The Fated Fragment has formed inside this bodypart, either extract it by removing the bodypart. or keep them.</description>
+	<description>The Fated Fragment has formed inside this bodypart. Either extract it by removing the bodypart, or keep them.</description>
 	<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 	<addedPartProps>
       <solid>true</solid>
@@ -793,7 +793,7 @@
 	<HediffDef ParentName="FatedBaseColorImplant">
 	<defName>Makai_Fated_Eye_Complete</defName>
 	<label>Sight of Fated Fragment</label>
-	<description>The Fated Fragment has formed inside this bodypart, either extract it by removing the bodypart. or keep them.</description>
+	<description>The Fated Fragment has formed inside this bodypart. Either extract it by removing the bodypart, or keep them.</description>
 	<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 	<addedPartProps>
       <solid>true</solid>
@@ -813,7 +813,7 @@
 	<HediffDef ParentName="FatedBaseColor">
 	<defName>Makai_Fated_Heart</defName>
 	<label>Fated Heart</label>
-	<description>this body part has been blessed by Fate</description>
+	<description>This body part has been blessed by Fate.</description>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>5</maxSeverity>
 	<addedPartProps>
@@ -899,7 +899,7 @@
 	<HediffDef ParentName="FatedBaseColorImplant">
 	<defName>Makai_Fated_Heart_Complete</defName>
 	<label>Heart of Fated Fragment</label>
-	<description>The Fated Fragment has formed inside this bodypart, either extract it by removing the bodypart. or keep them.</description>
+	<description>The Fated Fragment has formed inside this bodypart. Either extract it by removing the bodypart, or keep them.</description>
 	<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 	<addedPartProps>
       <solid>true</solid>

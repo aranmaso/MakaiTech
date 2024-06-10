@@ -5,7 +5,7 @@
 		<defName>Makai_Dea_Path_Soul</defName>
 		<thingClass>MakaiTech.Soul</thingClass>
 		<label>Soul(MakaiTech)</label>
-		<description>a soul extracted from living being</description>
+		<description>A soul extracted from a living being.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDeathSoul</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -37,7 +37,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_Dea_Path_SoulExtracter</defName>
 		<label>soul extractor</label>
-		<description>a mythical item of Makai origin said to be able to extract soul from a deceased corpse, an extracted soul can then be later transplant onto a new body with an Missing Soul.</description>
+		<description>A mythical item of Makai origin said to be able to extract souls from a deceased corpse. An extracted soul can then later be transplanted into a new body with a Missing Soul.</description>
 		<graphicData>
 			<texPath>Things/Items/SoulExtracter</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -79,7 +79,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_Dea-Path_FragFirst</defName>
 		<label>Fragment of Death - First Half</label>
-		<description>first half of death essence.</description>
+		<description>First half of death essence.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDeath1st</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -99,7 +99,7 @@
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_Dea-Path_FragSecond</defName>
 		<label>Fragment of Death - Second Half</label>
-		<description>second half of death essence.</description>
+		<description>Second half of death essence.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDeath2nd</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

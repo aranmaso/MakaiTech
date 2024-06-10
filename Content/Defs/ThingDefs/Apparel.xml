@@ -15,7 +15,7 @@
 <ThingDef ParentName="MakaiApparelBase">
     <defName>Makai_Varia_Brace</defName>
     <label>Bracelet of Knowledge</label>
-    <description>a bracelet with the blessing of knowledge. rumor in the rim has it that anyone can become Einstein by simply wearing this bracelet, whoever that person is.</description>
+    <description>A bracelet with the blessing of knowledge. Rumor in the rim has it that anyone can become Einstein by simply wearing this bracelet, whoever that person is.</description>
     <techLevel>Ultra</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
@@ -90,7 +90,7 @@
   <ThingDef ParentName="MakaiApparelBase">
     <defName>Makai_Aria_Ring</defName>
     <label>Ring of Bond</label>
-    <description>a ring that bestow the user with blessing of bonding. make pawn more attractive and have incredible social potential. pawn near the user will also experience good mood if the user is in high spirit.</description>
+    <description>A ring that bestows the user with blessing of bonding. Makes the pawn more attractive and grants incredible social potential. Pawns near the user will also experience good mood if the user is in high spirits.</description>
     <techLevel>Ultra</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
@@ -302,7 +302,7 @@
   <ThingDef ParentName="MakaiApparelBase">
     <defName>Makai_Anva_Ring</defName>
     <label>Ring of Lightning</label>
-    <description>a piece of equipment that bestow user with blessing of lightning. will protect wearer from harm by shooting lightning ball at any threat.</description>
+    <description>A piece of equipment that bestows the user with the blessing of lightning. Will protect wearer from harm by shooting lightning balls at any threat.</description>
     <techLevel>Archotech</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
@@ -455,7 +455,7 @@
 	<ThingDef ParentName="MakaiApparelBase">
     <defName>Makai_Ama_Sigil</defName>
     <label>Sigil of Absolute Order</label>
-    <description>a sigil that hold the blessing of Order. give pawn a calm state of mind. and make them more comfortable.</description>
+    <description>A sigil that holds the blessing of Order. Gives pawns a calm state of mind and makes them more comfortable.</description>
     <techLevel>Archotech</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
@@ -533,7 +533,7 @@
 <ThingDef ParentName="OrbitalUtilityBase">
     <defName>Makai_Alf_Sigil</defName>
     <label>Insanity Pillar</label>
-    <description>Sigil of corruption. point toward your enemies call down light pillar of insanity, drive all pawn in the area berserk.</description>
+    <description>Sigil of corruption. Point it towards your enemies and call down light pillar of insanity. Drive all pawns in the area berserk.</description>
     <graphicData>
       <texPath>Things/Projectile/makai_bullet_claw</texPath>
       <drawSize>(1,1)</drawSize>

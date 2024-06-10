@@ -4,7 +4,7 @@
 	<RecipeDef>
 		<defName>AskForIngot</defName>
 		<label>Bargain for Celestial Steel x10</label>
-		<description>attempt to bargain a vast amount of resouce for 10 Celestial Ingot. the makainian has yet to fully trust you. so they want a huge amount of resource in return when giving out celestial steel. \n\n This is a very inefficient way of getting celestial steel as once you go deeper into Makai research tree. there will be a building to create Makai's material for way cheaper cost.</description>
+		<description>Attempt to bargain a vast amount of resouces for 10 Celestial Ingot. The Makainian has yet to fully trust you, so they want a huge amount of resources in return when giving out celestial steel. \n\n This is a very inefficient way of getting celestial steel as, once you go deeper into the Makai research tree, there will be a building to create Makai's material for a much cheaper cost.</description>
 		<jobString>Bargain Ingot.</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -61,7 +61,7 @@
 	<RecipeDef>
 		<defName>AskForIngotx10</defName>
 		<label>Bargain for Celestial Steel x100</label>
-		<description>attempt to bargain a vast amount of resouce for 100 Celestial Ingot. the makainian has yet to fully trust you. so they want a huge amount of resource in return when giving out celestial steel. \n\n This is a very inefficient way of getting celestial steel as once you go deeper into Makai research tree. there will be a building to create Makai's material for way cheaper cost.</description>
+		<description>Attempt to bargain a vast amount of resouces for 100 Celestial Ingots. The Makainian has yet to fully trust you, so they want a huge amount of resources in return when giving out celestial steel. \n\n This is a very inefficient way of getting celestial steel as, once you go deeper into the Makai research tree, there will be a building to create Makai's material for a much cheaper cost.</description>
 		<jobString>Bargain Ingot.</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -117,7 +117,7 @@
 	<RecipeDef>
 		<defName>Forge_Miniature_Sun</defName>
 		<label>Forge Miniature Sun</label>
-		<description>Combine various material to create a miniature sun.</description>
+		<description>Combine various materials to create a miniature sun.</description>
 		<jobString>Creating Star</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
@@ -173,7 +173,7 @@
 	<RecipeDef MayRequire="ducks.insaneskills">
 		<defName>Manifest_Ducks</defName>
 		<label>Manifest Essense of Infinity</label>
-		<description>Materialize the Essense of Infinity</description>
+		<description>Materialize the Essense of Infinity.</description>
 		<jobString>Manifest Infinity</jobString>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>

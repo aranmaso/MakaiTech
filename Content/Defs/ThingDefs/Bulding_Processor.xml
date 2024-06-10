@@ -8,7 +8,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_FlameEssenceProcessor</defName>
 		<label>Essence Consolidator - Flame</label>
-		<description>a building use to gather essence particle</description>
+		<description>A building used to gather essence particle.</description>
 		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Makai_Processor</texPath>
@@ -133,7 +133,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_FrostEssenceProcessor</defName>
 		<label>Essence Consolidator - Frost</label>
-		<description>a building use to gather essence particle</description>
+		<description>A building used to gather essence particle.</description>
 		<thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Makai_Processor</texPath>

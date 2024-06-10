@@ -14,7 +14,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>Makai_Bench</defName>
 		<label>Makai Fabrication Altar</label>
-		<description>an altar used to make various Makai related item. doesn't require power to use.</description>
+		<description>An altar used to make various Makai related items. Doesn't require power to use.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/makai_bench</texPath>
@@ -84,7 +84,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>Makai_PrimordialForge</defName>
 		<label>Primordial Forge</label>
-		<description>a forge created in the image of The First Forge, and inherit part of it power. it has forged a foundation for all thing that exist. and that yet to exist. those who control the Primordial Forge, control the very foundation of the universe. \n your colony has come far to reach this point. only thing limiting you at this point is the pawn own imagination. any item can be forged here, even those that yet to exist in our world. \n\n Think of this forge as a source of infinite resource, support quite a few modden material(more can be added based on request)</description>
+		<description>A forge created in the image of The First Forge that inherits part of it power. It has forged a foundation for all things that exist and that are yet to exist. Those who control the Primordial Forge, control the very foundation of the universe. \n Your colony has come far to reach this point. The only thing limiting you at this point is the pawn's own imagination. Any item can be forged here, even those that are yet to exist in our world. \n\n Think of this forge as a source of infinite resources. Supports quite a few modded materials(more can be added based on request)</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/primoforge</texPath>
@@ -177,7 +177,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>MakainiumWall</defName>
 		<label>Celestial Wall</label>
-		<description>A wall created with celestial steel. very durable. rumor has it that once certain condition are met it can fully repair itself overnight.</description>
+		<description>A wall created with celestial steel. Very durable. Rumor has it that once certain conditions are met it can fully repair itself overnight.</description>
 		<category>Building</category>
 		<graphicData>
 			<texPath>Things/Building/makai_wall_atlas</texPath>
@@ -251,7 +251,7 @@
 	<ThingDef ParentName="BuildingBase">
     <defName>Makai_Powerlink_Relay</defName>
     <label>Makai Energy Relay Node</label>
-    <description>a power uplink connected to makai home dimension to receive power sended from there. this piece of technology is a vital part of makai expedition fleet to recieve power in different dimension. \n sadly with our own technology. this powernode won't give any usable power. you will need to research into a power converter to convert energy sended from makai into a usable power. \n put this building near a research bench seem to make people smarter somehow. \nMax simultaneous 2.</description>
+    <description>A power uplink connected to the Makai home dimension to receive power sent from there. This piece of technology is a vital part of the Makai expedition fleet's ability to receive power in different dimensions. \n Sadly, with our own technology, this powernode won't give any usable power. You will need to research into a power converter to convert energy sent from Makai into a usable power. \n Put this building near a research bench seem to make people smarter somehow. \nMax simultaneous 2.</description>
     <graphicData>
       <texPath>Things/Building/powernode_researchlink</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -338,7 +338,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Makai_PointDefense</defName>
     <label>Point-Defense Laser System</label>
-    <description>a point-defense laser node, capable of destroying or reflect incoming projectile.</description>
+    <description>A point-defense laser node capable of destroying or reflect incoming projectiles.</description>
 	<drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Building/PDLaser</texPath>
@@ -445,7 +445,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Makai_DestructionEssenceMaker</defName>
     <label>Destruction Singularity</label>
-    <description>a gathering point that condense the power of destruction \n with MakaiTech - Psycast module, this building is capable of calling down lightning to smite foes.</description>
+    <description>A gathering point that condenses the power of destruction. \n With MakaiTech - Psycast module, this building is capable of calling down lightning to smite foes.</description>
 	<drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Building/destruction_singularity</texPath>

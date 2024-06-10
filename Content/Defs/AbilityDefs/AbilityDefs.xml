@@ -4,7 +4,7 @@
 	<AbilityDef>
     <defName>Makai_Corruption_ClawGrab</defName>
     <label>Claw Grab</label>
-    <description>launch a claw of nightmare at target pawn.and pull target pawn to caster location.</description>
+    <description>Launch a claw of nightmare at a target pawn and pull target pawn to caster location.</description>
     <iconPath>Things/Abilities/Corruption/ClawGrab</iconPath>
     <aiCanUse>true</aiCanUse>
 	<groupDef>Makai_Weapon_Ability</groupDef>
@@ -35,7 +35,7 @@
   <AbilityDef>
     <defName>Makai_Corruption_Pulse</defName>
     <label>Pulse Now</label>
-    <description>launch a claw of nightmare at target pawn.and pull target pawn to caster location.</description>
+    <description>Pulse a wave of nightmare around caster, causing hostile to go on a mental break</description>
     <iconPath>Things/Abilities/Corruption/ClawGrab</iconPath>
     <aiCanUse>true</aiCanUse>
 	<groupDef>Makai_Weapon_Ability</groupDef>

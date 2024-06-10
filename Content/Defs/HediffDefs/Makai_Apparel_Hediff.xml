@@ -19,7 +19,7 @@
 						<label>Chad Energy</label>
 						<defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
 						<labelNoun>a chad energy</labelNoun>
-						<description>The user is emiting chad aura</description>
+						<description>The user is emitting chad aura.</description>
 						<descriptionHyperlinks><ThingDef>Makai_Aria_Ring</ThingDef></descriptionHyperlinks>
 						<isBad>false</isBad>
 						<stages>
@@ -48,7 +48,7 @@
 					<hediffClass>HediffWithComps</hediffClass>
 					<label>Chad Energy</label>
 					<labelNoun>a chad buff</labelNoun>
-					<description>The wearer is chad</description>
+					<description>The wearer is chad.</description>
 					<stages>	
 						<li>
 							<becomeVisible>false</becomeVisible>
@@ -82,7 +82,7 @@
 					<stages>
 					  <li>
 						<label>Chad Aura: {HARMONIZER_labelShort}</label>
-						<description>My friend chad energy make me feel thing.</description>
+						<description>My friend's chad energy makes me feel things.</description>
 						<baseMoodEffect>5</baseMoodEffect>
 					  </li>
 					</stages>
@@ -127,7 +127,7 @@
 				  <HediffDef>
 					<defName>AriaChadBuff</defName>
 					<label>Charmed by chad</label>
-					<description>Mental state are improved by {HARMONIZER_labelShort}</description>
+					<description>Mental states are improved by {HARMONIZER_labelShort}</description>
 					<hediffClass>HediffWithComps</hediffClass>
 					<comps>
 					  <li Class="HediffCompProperties_Disappears">
@@ -156,7 +156,7 @@
     <defName>Sigil_Order_Buff</defName>
     <label>Order's Blessing</label>
 	<defaultLabelColor>(196, 145, 191)</defaultLabelColor>
-    <description>has recieve the blessing of order. Comfort need will always be full.</description>
+    <description>Has received the blessing of order. Comfort need will always be full.</description>
     <isBad>false</isBad>
     <comps>
 	  <li Class="MakaiTech.HediffCompProperties_ChangeNeedMultiple">

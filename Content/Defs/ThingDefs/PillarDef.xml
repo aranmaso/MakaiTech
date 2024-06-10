@@ -4,7 +4,7 @@
 <ThingDef ParentName="BuildingBase" MayRequire="OskarPotocki.VFE.Mechanoid">
     <defName>Makai_PillarProxiTest</defName>
     <label>BroadcastTest</label>
-    <description>this building is for testing purpose only. will be removed in further update</description>
+    <description>This building is for testing purposes only. Will be removed in further updates.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/makai_bulletA</texPath>

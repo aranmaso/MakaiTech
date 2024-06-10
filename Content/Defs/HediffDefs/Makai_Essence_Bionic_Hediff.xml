@@ -3,7 +3,7 @@
 	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
 		<defName>Makai_Install_DistortArmBase</defName>
 		<label>Install distorted arm</label>
-		<description>expose pawn to essence of distortion, and distort it part into something else entirely.</description>
+		<description>Expose a pawn to the essence of distortion, and distort its part into something else entirely.</description>
 		<jobString>expose TargetA. to essence of distortion</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>false</hideBodyPartNames>
@@ -128,7 +128,7 @@
 	<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
 		<defName>Makai_Install_DistortSkinBase</defName>
 		<label>Install distorted skin plating</label>
-		<description>expose pawn to essence of distortion, and distort it part into something else entirely.</description>
+		<description>Expose pawn to essence of distortion, and distort its part into something else entirely.</description>
 		<jobString>expose TargetA. to essence of distortion</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>false</hideBodyPartNames>
@@ -277,7 +277,7 @@
     <defName>Distorted_Arm_Base_ArrowReact</defName>
     <label>Adapt - Arrow Immune</label>
 	<defaultLabelColor>(201, 95, 99)</defaultLabelColor>
-    <description>Adaptive module to immune Arrow damage.</description>
+    <description>Adaptive module to grant Arrow damage immunity.</description>
     <isBad>false</isBad>
     <comps>
 		<li Class="HediffCompProperties_Disappears">
@@ -704,7 +704,7 @@
 	<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
 		<defName>Makai_Install_DistortTargeting</defName>
 		<label>install distorted eye implant</label>
-		<description>expose pawn to essence of distortion, and distort it part into something else entirely.</description>
+		<description>Expose pawn to essence of distortion, and distort its part into something else entirely.</description>
 		<jobString>expose TargetA. to essence of distortion</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>false</hideBodyPartNames>
@@ -761,7 +761,7 @@
     <defName>Makai_Distorted_EyeImplant</defName>
     <label>Distorted Eye Plating</label>
 	<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
-    <description>Distorted Plating made from exposing pawn to Essence of Distortion. this retina plating seem to guide any projectile they shot. making them bounce between target.</description>
+    <description>Distorted Plating made from exposing pawn to Essence of Distortion. This retina plating seems to guide any projectiles they shoot, making them bounce between targets.</description>
     <isBad>false</isBad>
     <comps>
 		<li Class="MakaiTech.HediffCompProperties_BouncingHediff">
@@ -782,7 +782,7 @@
 	<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
 		<defName>Makai_Install_FatedReverse</defName>
 		<label>embed reversed fate fragment</label>
-		<description>expose pawn to essence of fate, grant them the blessing of reversed fate.</description>
+		<description>Expose pawn to essence of fate, granting them the blessing of reversed fate.</description>
 		<workerClass>Recipe_AddHediff</workerClass>
 		<jobString>expose TargetA. to essence of fate</jobString>
 		<workAmount>1000</workAmount>
@@ -824,7 +824,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
     <defName>Makai_Fate_Reverse</defName>
     <label>Reverse Fate Fragment</label>
-    <description>Fragment of reversed fate embed into this individual, causing the corse of fate for their injury and condition to go in reverse. basically healing and reversing any hediff they currently have. or restoring lost limb. the fragment only lasted 24h. \n\n\n be warn, the string of fate may yield unexpected result in certain circumstances.</description>
+    <description>Fragment of reversed fate embedded into this individual, causing the course of fate for their injury and condition to go in reverse. Basically healing and reversing any hediff they currently have, or restoring lost limbs. The fragment only lasts 24h. \n\n\n Be warned, the string of fate may yield unexpected results in certain circumstances.</description>
     <defaultLabelColor>(95, 87, 165)</defaultLabelColor>
 	<initialSeverity>1</initialSeverity>
 	<maxSeverity>1</maxSeverity>
