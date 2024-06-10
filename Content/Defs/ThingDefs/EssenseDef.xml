@@ -115,9 +115,9 @@
         <hediff>Essence_Fate_Buff</hediff>
         <bodyPart>Brain</bodyPart>
 		</li>
-		<li Class="CompProperties_UseEffect">
-			<compClass>CompUseEffect_FixWorstHealthCondition</compClass>
-		</li>
+		<!-- <li Class="CompProperties_UseEffect"> -->
+			<!-- <compClass>CompUseEffect_FixWorstHealthCondition</compClass> -->
+		<!-- </li> -->
 		<li Class="CompProperties_UseEffectPlaySound">
 			<soundOnUsed>MechSerumUsed</soundOnUsed>
 		</li>
