@@ -105,7 +105,7 @@
 	<passability>Impassable</passability>
     <pathCost>70</pathCost>
 	<stealable>false</stealable>
-    <fillPercent>1</fillPercent>
+    <fillPercent>0.5</fillPercent>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <canOverlapZones>false</canOverlapZones>
     <castEdgeShadows>false</castEdgeShadows>

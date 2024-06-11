@@ -408,7 +408,7 @@
 			<uiIcon>Things/Gizmos/Point_Defense</uiIcon>
 			<fuelPerReflect>10</fuelPerReflect>
 			<fuelPerDefense>5</fuelPerDefense>
-			<targetOverhead>false</targetOverhead>
+			<targetOverhead>true</targetOverhead>
 			<fleckOnIntercept>Fleck_YellowDeflectBullet</fleckOnIntercept>
 		</li>
 		<li Class="CompProperties_Refuelable">
