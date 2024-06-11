@@ -173,7 +173,7 @@
 				<postExplosionSpawnChance>1</postExplosionSpawnChance>
 				<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
 				<chanceNeverExplodeFromDamage>0.15</chanceNeverExplodeFromDamage>
-			</li>
+			</li> 
 			<li Class="CompProperties_Glower">
 				<overlightRadius>60</overlightRadius>
 				<glowRadius>60</glowRadius>

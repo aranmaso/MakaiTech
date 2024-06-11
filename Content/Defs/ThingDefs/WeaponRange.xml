@@ -332,6 +332,9 @@
 		<weaponTags>
 			<li>Gun</li>
 		</weaponTags>
+		<tradeTags>
+			<li>Makai_Weapons_Ranged</li>
+		</tradeTags>
 	</ThingDef>
  
 	<ThingDef ParentName="BaseBullet">
