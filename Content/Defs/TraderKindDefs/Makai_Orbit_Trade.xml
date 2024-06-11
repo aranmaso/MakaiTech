@@ -103,9 +103,6 @@
 			<li Class="StockGenerator_MarketValue">
 				<tradeTag>Makai_Weapons_Ranged</tradeTag>
 				<countRange>0~4</countRange>
-				<excludedThingDefs>
-					<li>Makai_Yuki_Staff</li>
-				</excludedThingDefs>
 			</li>
 			<!-- Apparel -->
 			<!-- Implants -->
@@ -294,9 +291,6 @@
 			<li Class="StockGenerator_MarketValue">
 				<tradeTag>Makai_Weapons_Ranged</tradeTag>
 				<countRange>0~4</countRange>
-				<excludedThingDefs>
-					<li>Makai_Yuki_Staff</li>
-				</excludedThingDefs>
 			</li>
 			<!-- Apparel -->
 			<!-- Implants -->
