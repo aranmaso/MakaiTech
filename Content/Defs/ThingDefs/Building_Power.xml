@@ -179,11 +179,18 @@
 				<glowRadius>60</glowRadius>
 				<glowColor>(666,666,666)</glowColor>
 			</li>
-			<li Class="CompProperties_TempControl">
-				<energyPerSecond>200</energyPerSecond>
-				<defaultTargetTemperature>21</defaultTargetTemperature>
-				<minTargetTemperature>-100</minTargetTemperature>
-				<maxTargetTemperature>2000</maxTargetTemperature>
+			<!-- <li Class="CompProperties_TempControl"> -->
+				<!-- <energyPerSecond>200</energyPerSecond> -->
+				<!-- <defaultTargetTemperature>21</defaultTargetTemperature> -->
+				<!-- <minTargetTemperature>-100</minTargetTemperature> -->
+				<!-- <maxTargetTemperature>2000</maxTargetTemperature> -->
+			<!-- </li> -->
+			<li Class="MakaiTech.CompProperties_HeatPusherSunCradle">
+				<targetTemp>20</targetTemp>
+				<heatPerSecond>100</heatPerSecond>
+				<coldPerSecond>-50</coldPerSecond>
+				<heatPushMaxTemperature>19</heatPushMaxTemperature>
+				<heatPushMinTemperature>20</heatPushMinTemperature>
 			</li>
 			<!-- <li Class="CompProperties_HeatPusher"> -->
 			<!-- <heatPerSecond>100</heatPerSecond> -->

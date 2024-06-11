@@ -180,8 +180,8 @@
 		<graphicData>
 		  <texPath>Things/Building/makai_energy_tank_r</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
-		  <drawOffset>(0,0,0.40)</drawOffset>
-		  <drawSize>(3.3,3.3)</drawSize>
+		  <drawOffset>(0,0,1)</drawOffset>
+		  <drawSize>(5,5)</drawSize>
 		</graphicData>
 		<uiIconPath>Things/Building/makai_energy_tank_r</uiIconPath>
 		<altitudeLayer>Building</altitudeLayer>
