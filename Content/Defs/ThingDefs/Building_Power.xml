@@ -186,11 +186,9 @@
 				<!-- <maxTargetTemperature>2000</maxTargetTemperature> -->
 			<!-- </li> -->
 			<li Class="MakaiTech.CompProperties_HeatPusherSunCradle">
-				<targetTemp>20</targetTemp>
+				<defaultTemp>20</defaultTemp>
 				<heatPerSecond>100</heatPerSecond>
 				<coldPerSecond>-50</coldPerSecond>
-				<heatPushMaxTemperature>19</heatPushMaxTemperature>
-				<heatPushMinTemperature>20</heatPushMinTemperature>
 			</li>
 			<!-- <li Class="CompProperties_HeatPusher"> -->
 			<!-- <heatPerSecond>100</heatPerSecond> -->
