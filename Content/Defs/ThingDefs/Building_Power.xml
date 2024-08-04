@@ -95,22 +95,24 @@
 		<label>Sun Cradle</label>
 		<description>A highly advanced piece of technology one could call a miracle. To defy the laws of nature and create an almost self-sustaining energy source. It has a very large light radius that is bright enough for plants to grow. With local climate control to ensure plants can also grow in comforable temperature(fixed at 20c). Also has a built-in mass battery to store excess power, as one would expect from a sun. If this machine is destroyed it will explode violently and in a large radius.</description>
 		<graphicData>
-			<texPath>Things/Building/Makai_SunC</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/sun_Anim</texPath>
+			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>			
+			<drawOffset>(0,0,0)</drawOffset>
 			<drawSize>(5,5)</drawSize>
 		</graphicData>
 		<uiIconPath>Things/Building/Makai_SunC</uiIconPath>
-		<drawerType>MapMeshAndRealTime</drawerType>
+		<drawerType>RealtimeOnly</drawerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
-		<pathCost>70</pathCost>
 		<stealable>false</stealable>
 		<fillPercent>0.5</fillPercent>
-		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>		
+		<disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
 		<canOverlapZones>false</canOverlapZones>
 		<castEdgeShadows>false</castEdgeShadows>
 		<staticSunShadowHeight>0</staticSunShadowHeight>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<blockLight>false</blockLight>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
@@ -141,6 +143,15 @@
 		</costList>
 		<specialDisplayRadius>60</specialDisplayRadius>
 		<comps>
+			<li Class="MakaiTech.CompProperties_AnimatedMakai">
+				<frameSpeed>5</frameSpeed>
+				<graphicData>
+					<texPath>Things/Building/sunbase</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5,5)</drawSize>
+					<drawOffset>(0,-0.1,0)</drawOffset>
+				</graphicData>
+			</li>
 			<li Class="CompProperties_Battery">
 				<storedEnergyMax>2048000</storedEnergyMax>
 				<efficiency>2</efficiency>

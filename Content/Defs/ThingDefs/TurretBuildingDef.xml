@@ -1059,11 +1059,11 @@
 				<maxEmissionInterval>1</maxEmissionInterval>
 				<countPerEmit>2</countPerEmit>
 			</li>
-			<li Class="VFECore.CompProperties_HomingProjectile">
-				<homingDistanceFractionPassed>0.2</homingDistanceFractionPassed>
-				<homingCorrectionTickRate>5</homingCorrectionTickRate>
-				<initialDispersionFromTarget>0</initialDispersionFromTarget>
-			</li>
+			<!-- <li Class="VFECore.CompProperties_HomingProjectile"> -->
+				<!-- <homingDistanceFractionPassed>0.2</homingDistanceFractionPassed> -->
+				<!-- <homingCorrectionTickRate>5</homingCorrectionTickRate> -->
+				<!-- <initialDispersionFromTarget>0</initialDispersionFromTarget> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
   

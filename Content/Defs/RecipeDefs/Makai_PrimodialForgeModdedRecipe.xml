@@ -1077,5 +1077,57 @@
 		</products>
 	</RecipeDef>
 	
+	<!-- Sunset Weapon Technology 2 -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="sunsetmoderteam.sunsetweapontechnology2">
+		<defName>Makai_Manifest_super_heavy_matter_cy</defName>
+		<label>Materialize SCS material</label>
+		<description>Materialize SCS material from Primordial Forge.</description>
+		<products>
+			<super_heavy_matter_cy>10</super_heavy_matter_cy>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="sunsetmoderteam.sunsetweapontechnology2">
+		<defName>Makai_Manifest_polymer_cy</defName>
+		<label>Materialize SCS polymer</label>
+		<description>Materialize SCS polymer from Primordial Forge.</description>
+		<products>
+			<polymer_cy>100</polymer_cy>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="sunsetmoderteam.sunsetweapontechnology2">
+		<defName>Makai_Manifest_SCS_Synthetic_jade_cy</defName>
+		<label>Materialize SCS synthetic jade</label>
+		<description>Materialize SCS synthetic jade from Primordial Forge.</description>
+		<products>
+			<SCS_Synthetic_jade_cy>100</SCS_Synthetic_jade_cy>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="sunsetmoderteam.sunsetweapontechnology2">
+		<defName>Makai_Manifest_SCSgel</defName>
+		<label>Materialize SCS gel</label>
+		<description>Materialize SCS gel from Primordial Forge.</description>
+		<products>
+			<SCSgel>100</SCSgel>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug" MayRequire="sunsetmoderteam.sunsetweapontechnology2">
+		<defName>Makai_Manifest_SCS_Orange</defName>
+		<label>Materialize SCS orangous</label>
+		<description>Materialize SCS orangous from Primordial Forge.</description>
+		<products>
+			<SCS_Orange>25</SCS_Orange>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="sunsetmoderteam.sunsetweapontechnology2">
+		<defName>Makai_Manifest_Medicine_cy</defName>
+		<label>Materialize SCS Medicine</label>
+		<description>Materialize SCS Medicine from Primordial Forge.</description>
+		<products>
+			<Medicine_cy>25</Medicine_cy>
+		</products>
+	</RecipeDef>
 	
 </Defs>

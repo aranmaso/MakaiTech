@@ -27,6 +27,7 @@
     <li IfModActive="squirtingelephant.planetarydrill,mlie.omnicoredrill,ogliss.thewhitecrayon.quarry">Warrant</li>
 	<li IfModActive="V1024.EBFramework">EliteBionicFramework</li>
 	<li IfModActive="ludeon.rimworld.ideology">Ideology</li>
+	<li IfModActive="annoprofi.adaptablemechanoids">Content/Mods/AdaptiveMechanoid</li>
 	<!-- IfModNotActive -->
   </v1.5>
 </loadFolders>
