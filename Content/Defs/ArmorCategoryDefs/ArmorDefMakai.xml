@@ -70,6 +70,7 @@ Each layer of armor is applied separately, from the outside in.</description>
     <verb>
       <verbClass>Verb_MeleeAttackDamage</verbClass>
       <meleeDamageDef>Makai_Celestial_Cut</meleeDamageDef>
+	  <impactFleck>Fleck_PurpleHitMark</impactFleck>
     </verb>
     <logEntryDef>MeleeAttack</logEntryDef>
     <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>

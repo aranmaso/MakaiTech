@@ -1,0 +1,16 @@
+<Defs>
+
+	<KeyBindingCategoryDef>
+		<defName>MakaiKeyBindingCategory</defName>
+		<label>MakaiTech</label>
+		<description>Change various keybind for makaitech</description>				
+		<isGameUniversal>true</isGameUniversal>
+  	</KeyBindingCategoryDef>
+	<KeyBindingDef>
+		<category>MakaiKeyBindingCategory</category>
+		<defName>Makai_ForgeShortcut</defName>		
+		<label>Forge Interface shortcut</label>
+		<defaultKeyCodeA>T</defaultKeyCodeA>
+  	</KeyBindingDef>
+
+</Defs>

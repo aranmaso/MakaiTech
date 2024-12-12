@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/StatDef[defName="MarketValue"]/parts</xpath>
-		<value>
-			<li Class="MakaiTech.StatPart_SoulWorth"/>
-		</value>
-	</Operation>
+	<!-- moved to C -->
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/StatDef[defName="MarketValue"]/parts</xpath> -->
+		<!-- <value> -->
+			<!-- <li Class="MakaiTech.StatPart_SoulWorth"/> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
 	
 	<!-- <Operation Class="PatchOperationAdd"> -->
 	<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath> -->
@@ -16,23 +17,24 @@
 	<!-- </value> -->
 	<!-- </Operation> -->
 	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath>
-			<value>
-				<parts>
-					<li Class="MakaiTech.StatPart_CelestialScar"/>
-				</parts>
-			</value>
-		</nomatch>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath>
-			<value>
-				<li Class="MakaiTech.StatPart_CelestialScar"/>
-			</value>
-		</match>
-	</Operation>
+	<!-- moved to C -->
+	<!-- <Operation Class="PatchOperationConditional"> -->
+		<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath> -->
+		<!-- <nomatch Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath> -->
+			<!-- <value> -->
+				<!-- <parts> -->
+					<!-- <li Class="MakaiTech.StatPart_CelestialScar"/> -->
+				<!-- </parts> -->
+			<!-- </value> -->
+		<!-- </nomatch> -->
+		<!-- <match Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath> -->
+			<!-- <value> -->
+				<!-- <li Class="MakaiTech.StatPart_CelestialScar"/> -->
+			<!-- </value> -->
+		<!-- </match> -->
+	<!-- </Operation> -->
 	
 	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
 	<!-- <modId>Aranmaho.Makai</modId> -->
@@ -314,19 +316,22 @@
 	<!-- </Operation> -->
 	<!-- </caseTrue> -->
 	<!-- </Operation> -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
-		<value>
-			<li>Makai_Stardust</li>
-		</value>
-	</Operation>
 	
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
-		<value>
-			<li>PrimordialFrag</li>
-		</value>
-	</Operation>
+	<!-- <Operation Class="MakaiTech.PatchOperation_IsUniversalFuel"> -->
+		<!-- <match Class="PatchOperationAdd">			 -->
+			<!-- <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath> -->
+			<!-- <value> -->
+				<!-- <li>Makai_Stardust</li> -->
+			<!-- </value> -->
+		<!-- </match>		 -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath> -->
+		<!-- <value> -->
+			<!-- <li>PrimordialFrag</li> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
 	
 	<!--Operation Class="XmlExtensions.OptionalPatch">
 		<modId>Aranmaho.Makai</modId>

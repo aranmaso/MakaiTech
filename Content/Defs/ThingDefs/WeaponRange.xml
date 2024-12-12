@@ -78,23 +78,6 @@
     
 		<seam>0.25</seam>
 	</ThingDef>
-  
-	<ThingDef ParentName="BaseBullet">
-		<defName>Makai_Bullet_Varia</defName>
-		<label>precise shot</label>
-		<graphicData>
-			<texPath>Things/Projectile/Shot_Bow_Red</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<projectile>
-			<speed>50</speed>
-			<damageDef>Knowledge_Seeker</damageDef>
-			<damageAmountBase>10</damageAmountBase>
-			<armorPenetrationBase>0.75</armorPenetrationBase>
-			<stoppingPower>3</stoppingPower>
-		</projectile>
-	</ThingDef>
 	
 	<!--Varia Bow-->
 	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
@@ -262,14 +245,78 @@
 					</south>
 				</weaponCarryDrawOffsets>
 			</li>
+			<li Class="MakaiTech.ModExtension_SkillDrain">
+				<skillDefs>
+					<li>
+						<skillDef>Shooting</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Melee</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Construction</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Mining</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Cooking</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Plants</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Animals</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Crafting</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Artistic</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Medicine</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Social</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+					<li>
+						<skillDef>Intellectual</skillDef>
+						<drainAmount>2500</drainAmount>
+						<transferSkillPoint>true</transferSkillPoint>
+					</li>
+				</skillDefs>
+			</li>
 		</modExtensions>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
-			<li Class="MakaiTech.CompProperties_SkillDrain">
-				<skillToDrain>Intellectual</skillToDrain>
-				<xpToDrain>5000</xpToDrain>
-				<transferSkillPoints>true</transferSkillPoints>
-			</li>
+			<!-- <li Class="MakaiTech.CompProperties_SkillDrain"> -->
+				<!-- <skillToDrain>Intellectual</skillToDrain> -->
+				<!-- <xpToDrain>5000</xpToDrain> -->
+				<!-- <transferSkillPoints>true</transferSkillPoints> -->
+			<!-- </li> -->
 			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
 				<traitDef>Makai_Trait_Knowledge</traitDef>
 				<hediffDef>Knowledge_Avatar</hediffDef>

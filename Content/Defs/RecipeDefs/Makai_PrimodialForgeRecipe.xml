@@ -625,4 +625,78 @@
 		</products>
 	</RecipeDef>
 	
+	<!-- Drug -->
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_Beer</defName>
+		<label>Materialize Beer</label>
+		<description>Materialize Beer from Primordial Forge.</description>
+		<products>
+			<Beer>10</Beer>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_GoJuice</defName>
+		<label>Materialize Go-Juice</label>
+		<description>Materialize Go-Juice from Primordial Forge.</description>
+		<products>
+			<GoJuice>10</GoJuice>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_Luciferium</defName>
+		<label>Materialize Luciferium</label>
+		<description>Materialize Luciferium from Primordial Forge.</description>
+		<products>
+			<Luciferium>10</Luciferium>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_Penoxycyline</defName>
+		<label>Materialize Penoxycyline</label>
+		<description>Materialize Penoxycyline from Primordial Forge.</description>
+		<products>
+			<Penoxycyline>10</Penoxycyline>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_Flake</defName>
+		<label>Materialize Flake</label>
+		<description>Materialize Flake from Primordial Forge.</description>
+		<products>
+			<Flake>10</Flake>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_PsychiteTea</defName>
+		<label>Materialize Psychite Tea</label>
+		<description>Materialize Psychite Tea from Primordial Forge.</description>
+		<products>
+			<PsychiteTea>10</PsychiteTea>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_Yayo</defName>
+		<label>Materialize Yayo</label>
+		<description>Materialize Yayo from Primordial Forge.</description>
+		<products>
+			<Yayo>10</Yayo>
+		</products>
+	</RecipeDef>	
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_SmokeleafJoint</defName>
+		<label>Materialize Smokeleaf Joint</label>
+		<description>Materialize Smokeleaf Joint from Primordial Forge.</description>
+		<products>
+			<SmokeleafJoint>10</SmokeleafJoint>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseDrug">
+		<defName>Makai_Manifest_WakeUp</defName>
+		<label>Materialize WakeUp</label>
+		<description>Materialize WakeUp from Primordial Forge.</description>
+		<products>
+			<WakeUp>10</WakeUp>
+		</products>
+	</RecipeDef>
+	
 </Defs>

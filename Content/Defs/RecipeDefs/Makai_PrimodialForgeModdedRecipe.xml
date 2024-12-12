@@ -218,7 +218,7 @@
 	<!-- ============================================================================== -->
 	
 	<!-- Glitter Tech Resource-->
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequireAnyOf="xavior.glittertech">
 		<defName>Makai_Manifest_Titanium</defName>
 		<label>Materialize Titanium</label>
 		<description>Materialize Titanium from Primordial Forge.</description>
@@ -226,7 +226,15 @@
 			<Titanium_GT>100</Titanium_GT>
 		</products>
 	</RecipeDef>
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequireAnyOf="gt.sam.glittertech">
+		<defName>Makai_Manifest_Titanium</defName>
+		<label>Materialize Titanium</label>
+		<description>Materialize Titanium from Primordial Forge.</description>
+		<products>
+			<Titanium>100</Titanium>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequireAnyOf="xavior.glittertech,gt.sam.glittertech">
 		<defName>Makai_Manifest_AlphaPoly</defName>
 		<label>Materialize AlphaPoly</label>
 		<description>Materialize AlphaPoly from Primordial Forge.</description>
@@ -234,7 +242,7 @@
 			<AlphaPoly>100</AlphaPoly>
 		</products>
 	</RecipeDef>
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource" MayRequireAnyOf="xavior.glittertech,gt.sam.glittertech">
 		<defName>Makai_Manifest_BetaPoly</defName>
 		<label>Materialize BetaPoly</label>
 		<description>Materialize BetaPoly from Primordial Forge.</description>
@@ -243,7 +251,7 @@
 		</products>
 	</RecipeDef>
 	<!-- Glitter Tech Component -->
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequireAnyOf="xavior.glittertech,gt.sam.glittertech">
 		<defName>Makai_Manifest_MagneticCoil</defName>
 		<label>Materialize MagneticCoil</label>
 		<description>Materialize MagneticCoil from Primordial Forge.</description>
@@ -251,7 +259,7 @@
 			<MagneticCoil>100</MagneticCoil>
 		</products>
 	</RecipeDef>
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequireAnyOf="xavior.glittertech,gt.sam.glittertech">
 		<defName>Makai_Manifest_Silicon</defName>
 		<label>Materialize Silicon</label>
 		<description>Materialize Silicon from Primordial Forge.</description>
@@ -259,7 +267,7 @@
 			<Silicon>100</Silicon>
 		</products>
 	</RecipeDef>
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequireAnyOf="xavior.glittertech,gt.sam.glittertech">
 		<defName>Makai_Manifest_ComputerComp</defName>
 		<label>Materialize Computer components</label>
 		<description>Materialize Computer components from Primordial Forge.</description>
@@ -268,7 +276,7 @@
 		</products>
 	</RecipeDef>
 	<!-- Glitter Tech Med -->
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequireAnyOf="xavior.glittertech,gt.sam.glittertech">
 		<defName>Makai_Manifest_Ethanol</defName>
 		<label>Materialize Ethanol</label>
 		<description>Materialize Ethanol from Primordial Forge.</description>
@@ -276,7 +284,7 @@
 			<Ethanol>100</Ethanol>
 		</products>
 	</RecipeDef>
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequireAnyOf="xavior.glittertech">
 		<defName>Makai_Manifest_Bandage</defName>
 		<label>Materialize Bandage</label>
 		<description>Materialize Bandage from Primordial Forge.</description>
@@ -284,7 +292,7 @@
 			<Bandage>100</Bandage>
 		</products>
 	</RecipeDef>
-	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="xavior.glittertech">
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequireAnyOf="xavior.glittertech,gt.sam.glittertech">
 		<defName>Makai_Manifest_Serum</defName>
 		<label>Materialize Serum</label>
 		<description>Materialize Serum from Primordial Forge.</description>
@@ -626,6 +634,24 @@
 		<description>Materialize archotech ammo from Primordial Forge.</description>
 		<products>
 			<AmmoArchotech>100</AmmoArchotech>
+		</products>
+	</RecipeDef>
+	
+	<!-- Eccentric Tech - Core -->	
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="aelanna.eccentrictech.core">
+		<defName>Makai_Manifest_Eccentric_Nanoweave</defName>
+		<label>Materialize nanoweave</label>
+		<description>Materialize nanoweave from Primordial Forge.</description>
+		<products>
+			<Eccentric_Nanoweave>10</Eccentric_Nanoweave>
+		</products>
+	</RecipeDef>
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseManufactured" MayRequire="aelanna.eccentrictech.core">
+		<defName>Makai_Manifest_Eccentric_HexCell</defName>
+		<label>Materialize high-density hex-cell</label>
+		<description>Materialize high-density hex-cell from Primordial Forge.</description>
+		<products>
+			<Eccentric_HexCell>10</Eccentric_HexCell>
 		</products>
 	</RecipeDef>
 	

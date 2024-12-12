@@ -410,6 +410,25 @@
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
+		<defName>Makai_Essence5_Bionic</defName>
+		<label>Essence Implaantation - Destruction &amp; Death</label>
+		<description>Research into how to utilize Essence ofDestruction &amp; Death as Bionics and Implants. Operation will be available on any pawn once the essence is acquired.</description>
+		<baseCost>75000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Essence5</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>4.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
 		<defName>Makai_Essence6</defName>
 		<label>Essence of Order &amp; Distortion</label>
 		<description>Research into how to manifest Essence of Order &amp; Distortion into our world. Essence of order process is similar to corruption. As for essence of distortion you combine Order and Corruption at the altar.</description>

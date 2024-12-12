@@ -425,4 +425,53 @@
     </children>
   </EffecterDef>
   
+   <EffecterDef>
+    <defName>Makai_ForgeInterfaceSummonItem</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>Fleck_PrimoForgeSummonItem</fleckDef>
+        <scale>5~5</scale>
+		<rotation>0</rotation>
+		<positionOffset>(0,0,1.5)</positionOffset>
+		<spawnLocType>OnSource</spawnLocType>
+      </li>	
+	  <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>Makai_Mote_PsychicEmanatorEffect</moteDef>
+        <scale>3~3</scale>
+		<spawnLocType>OnSource</spawnLocType>
+      </li>
+	  <!-- <li> -->
+        <!-- <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass> -->
+        <!-- <moteDef>Mote_YellowGlow</moteDef> -->
+        <!-- <positionLerpFactor>0.6</positionLerpFactor> -->
+        <!-- <chancePerTick>0.2</chancePerTick> -->
+        <!-- <scale> -->
+          <!-- <min>2</min> -->
+          <!-- <max>2</max> -->
+        <!-- </scale> -->
+        <!-- <spawnLocType>OnSource</spawnLocType> -->
+      <!-- </li> -->
+	  <!-- <li> -->
+        <!-- <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass> -->
+        <!-- <moteDef>Mote_YellowRing</moteDef> -->
+        <!-- <positionLerpFactor>0.6</positionLerpFactor> -->
+        <!-- <chancePerTick>0.2</chancePerTick> -->
+        <!-- <scale> -->
+          <!-- <min>0.5</min> -->
+          <!-- <max>0.5</max> -->
+        <!-- </scale> -->
+        <!-- <spawnLocType>OnSource</spawnLocType> -->
+      <!-- </li> -->
+	  <!-- <li> -->
+        <!-- <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass> -->
+        <!-- <moteDef>Mote_PsychicEmanatorEffect</moteDef> -->
+        <!-- <scale>1~1</scale> -->
+		<!-- <spawnLocType>OnSource</spawnLocType> -->
+      <!-- </li> -->
+    </children>
+	<!--positionRadius>0.01</positionRadius-->
+  </EffecterDef>
+  
   </Defs>

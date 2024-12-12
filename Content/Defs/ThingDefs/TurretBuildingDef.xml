@@ -1119,13 +1119,13 @@
       </li>
     </verbs>
 	<comps>
-		<li Class="MakaiTech.CompProperties_ProjectileOffset">
-		  <offsets>
-			<li>(0,0,3)</li>
-			<li>(2,0,3)</li>
-			<li>(-2,0,3)</li>
-		  </offsets>
-		</li>
+		<!-- <li Class="MakaiTech.CompProperties_ProjectileOffset"> -->
+		  <!-- <offsets> -->
+			<!-- <li>(0,0,3)</li> -->
+			<!-- <li>(2,0,3)</li> -->
+			<!-- <li>(-2,0,3)</li> -->
+		  <!-- </offsets> -->
+		<!-- </li> -->
 	</comps>
   </ThingDef>
 </Defs>

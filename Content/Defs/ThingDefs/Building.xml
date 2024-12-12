@@ -115,6 +115,8 @@
 			<Makai_E-Path_E>1</Makai_E-Path_E>
 			<Makai_Ingot>1000</Makai_Ingot>
 		</costList>
+		<stuffCategories Inherit="False"/>
+		<costStuffCount Inherit="False"/>
 		<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.5</fillPercent>
@@ -351,6 +353,29 @@
 			<stoppingPower>3</stoppingPower>
 		</projectile>
 	</ThingDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_AntiProjectileLaser</defName>
+		<graphicData>
+			<texPath>Things/Projectile/laserDefense</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>0.24</solidTime>
+		<fadeOutTime>0.25</fadeOutTime>
+		<growthRate>-0.4</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_AntiProjectileHit</defName>
+		<graphicData>
+		  <texPath>Things/Projectile/makai_bullet_meg</texPath>
+		  <shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<!-- <landSound>Laser_cy</landSound> -->
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.08</fadeInTime>
+		<solidTime>0.53</solidTime>
+		<fadeOutTime>0.45</fadeOutTime>
+	</FleckDef>
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_PointDefense</defName>
 		<label>Point-Defense Laser System</label>
@@ -470,7 +495,7 @@
 			<drawOffset>(0,0.2,0.5)</drawOffset>
 		</graphicData>
 		<uiIconPath>Things/Building/destruction_singularity</uiIconPath>
-		<uiIconScale>0.85</uiIconScale>		
+		<uiIconScale>0.85</uiIconScale>
 		<researchPrerequisites>
 			<li>Makai_Essence5</li>
 		</researchPrerequisites>

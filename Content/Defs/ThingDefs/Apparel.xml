@@ -16,7 +16,8 @@
     <defName>Makai_Varia_Brace</defName>
     <label>Bracelet of Knowledge</label>
     <description>A bracelet with the blessing of knowledge. Rumor in the rim has it that anyone can become Einstein by simply wearing this bracelet, whoever that person is.</description>
-    <techLevel>Ultra</techLevel>
+    <techLevel>Archotech</techLevel>
+	<useHitPoints>false</useHitPoints>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
       <researchPrerequisite>Makai_Apparel1</researchPrerequisite>
@@ -53,12 +54,13 @@
 		<li Class="CompProperties_Forbiddable"/>
 	</comps>
     <statBases>
-	  <MaxHitPoints>100</MaxHitPoints>
+	  <!-- <MaxHitPoints>100</MaxHitPoints> -->
       <WorkToMake>14000</WorkToMake>
 	  <MarketValue>6000</MarketValue>
       <Mass>10</Mass>
-      <Flammability>0.2</Flammability>
+      <Flammability>0</Flammability>
       <EquipDelay>1</EquipDelay>
+	  <DeteriorationRate>0</DeteriorationRate>
     </statBases>
 		<equippedStatOffsets>
 			<AimingDelayFactor>-0.25</AimingDelayFactor>
@@ -70,6 +72,7 @@
     <apparel>
       <scoreOffset>4</scoreOffset>
       <careIfWornByCorpse>false</careIfWornByCorpse>
+	  <developmentalStageFilter>Child, Adult</developmentalStageFilter>
       <careIfDamaged>false</careIfDamaged>
       <wearPerDay>0</wearPerDay>
       <bodyPartGroups>
@@ -656,6 +659,5 @@
     <defName>BackDecor</defName>
     <label>Back Equipment</label>
     <drawOrder>510</drawOrder>
-	</ApparelLayerDef>
-
+	</ApparelLayerDef>	
 </Defs>
