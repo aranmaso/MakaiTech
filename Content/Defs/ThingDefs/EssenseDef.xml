@@ -7,7 +7,7 @@
 		<parent>Items</parent>
 	</ThingCategoryDef>
 	
-	<ThingDef Name="EssenseBase" ParentName="ResourceBase" Abstract="True">
+	<ThingDef Name="EssenceBase" ParentName="ResourceBase" Abstract="True">
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_claw</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -40,10 +40,11 @@
 		</thingSetMakerTags>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_C-Path_E</defName>
 		<label>Essence of Corruption</label>
-		<description>Essense of pure corruption, pulsing with unimaginable power.</description>
+		<description>Essence of Corruption, made from the concept of Corruption itself, pulsing with unimaginable universe cosmic power. one of the 11 core components to create the Primordial Forge.
+		\nCan be activate to cause all pawns on the map that isn't belong to player faction to go into random mental break.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceCorruption</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -53,13 +54,24 @@
 			<MarketValue>5000</MarketValue>
 		</statBases>
 		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Activate the essence of corruption</useLabel>
+				<useDuration>1000</useDuration>
+			</li>
+			<li Class="MakaiTech.CompProperties_UseEffectMassInsanity">
+				<dontAffectColonist>true</dontAffectColonist>
+			</li>
+			<li Class="CompProperties_UseEffectPlaySound">
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
+			</li>
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_B-Path_E</defName>
 		<label>Essence of Bond</label>
-		<description>Essense of Connection and bond, pulsing with unimaginable power. \nCan be used to increase faction relations with all pawns on the map and make them happy for a while.</description>
+		<description>Essence of Connection and bond, pulsing with unimaginable power. one of the 11 core components to create the Primordial Forge. \nCan be used to increase faction relations with all pawns on the map and make them happy for a while.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceBond</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -95,10 +107,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_F-Path_E</defName>
 		<label>Essence of Fate</label>
-		<description>Essense of Fate, pulsing with unimaginable power. \nCan be use to heal pawns and gain blessing of healing for 2h.</description>
+		<description>Essence of Fate, formed from the concept of fate itself, pulsing with unimaginable universe cosmic power. One of the 11 core components to create the Primordial Forge. \nCan be use to heal pawns and gain blessing of healing for 2h.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceFate</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -108,7 +120,7 @@
 		<comps>
 		<li Class="CompProperties_Usable">
 			<useJob>UseItem</useJob>
-			<useLabel>Use Essense of Fate</useLabel>
+			<useLabel>Use Essence of Fate</useLabel>
 			<useDuration>200</useDuration>
 		</li>
 		<li Class="MakaiTech.CompProperties_UseEffectGiveHediff">
@@ -127,10 +139,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_K-Path_E</defName>
 		<label>Essence of Knowledge</label>
-		<description>Essense of Knowledge, pulsing with unimaginable power. \nCan be used to increase pawn skills tremendously. Once embraced pawns will have to wait 2 days before they can embrace essence of knowledge again.</description>
+		<description>Essence of Knowledge, formed from the concept of Knowledge itself. pulsing with unimaginable universe cosmic power. One of the 11 core components to create the Primordial Forge. \nCan be used to increase pawn skills tremendously. Once embraced pawns will have to wait 2 days before they can embrace essence of knowledge again.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceKnowledge</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -146,26 +158,11 @@
 				<hediffDef>Essence_Knowledge_Cooldown</hediffDef>
 				<bodyPart>Brain</bodyPart>
 			</li>
-			<li Class="MakaiTech.MakaiCompUsableProperties_Learn">
-				<SkillDefName>Shooting</SkillDefName>
-				<SkillDefs>
-					<li>Shooting</li>
-					<li>Melee</li>
-					<li>Construction</li>
-					<li>Mining</li>
-					<li>Cooking</li>
-					<li>Plants</li>
-					<li>Animals</li>
-					<li>Crafting</li>
-					<li>Artistic</li>
-					<li>Medicine</li>
-					<li>Social</li>
-					<li>Intellectual</li>
-				</SkillDefs>
+			<li Class="MakaiTech.CompProperties_UseEffectLearn">
 				<ExpLearned>69500</ExpLearned>
 			</li>
 			<li Class="CompProperties_UseEffectPlaySound">
-			<soundOnUsed>MechSerumUsed</soundOnUsed>
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
 			</li>
 			<!--li Class="CompProperties_UseEffect">
 			<compClass>CompUseEffect_DestroySelf</compClass>
@@ -173,10 +170,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_Fr-Path_E</defName>
 		<label>Essence of Frost</label>
-		<description>Essense of Frost, pulsing with unimaginable power.</description>
+		<description>Essence of Frost, formed from the concept of coldness itself. pulsing with unimaginable universe cosmic power. One of the 11 core components to create the Primordial Forge.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceFrost</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -189,10 +186,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_Fla-Path_E</defName>
 		<label>Essence of Flame</label>
-		<description>Essense of Flame, pulsing with unimaginable power.</description>
+		<description>Essence of Flame, formed from the concept of heat itself. pulsing with unimaginable universe cosmic power. One of the 11 core components to create the Primordial Forge.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceFlame</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -205,10 +202,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_E-Path_E</defName>
 		<label>Essence of Existence</label>
-		<description>Essense of Existence, pulsing with unimaginable power. The pinnacle of technology advancement.</description>
+		<description>Essence of Existence, formed from the concept of existence itself. the root of all thing. it could cause the reality to break down without proper containment. the Core component of the 11 required to create Primordial Forge.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceExistence</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -221,23 +218,29 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_D-Path_E</defName>
 		<label>Essence of Destruction</label>
-		<description>Essense of Destruction, pulsing with unimaginable power.</description>
+		<description>Essence of Destruction, formed from the concept of destruction itself. pulsing with unimaginable violent universe cosmic power. One of the 11 core components to create the Primordial Forge. \nperiodically call upon several lightning onto the map. prioritizing home area.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDestruction</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.25</drawSize>
 		</graphicData>
+		<tickerType>Long</tickerType>
 		<comps>
+			<li Class="MakaiTech.CompProperties_EssenceOfDestructionRandomLightning">
+				<damageDef>Existence_Null_Lightning</damageDef>
+				<lightningCount>1~10</lightningCount>
+				<damAmount>1~5</damAmount>
+			</li>
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_Or-Path_E</defName>
 		<label>Essence of Order</label>
-		<description>Essense of Order, pulsing with unimaginable power.</description>
+		<description>Essence of Order, formed from the concept of order itself. pulsing with unimaginable universe cosmic power. One of the 11 core components to create the Primordial Forge. can be activate by colonist to stop all mental break for all colonist on the map.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceOrder</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -247,13 +250,24 @@
 			<MarketValue>5000</MarketValue>
 		</statBases>
 		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Activate the essence of order</useLabel>
+				<useDuration>1000</useDuration>
+			</li>
+			<li Class="MakaiTech.CompProperties_UseEffectCalmAll">
+				<affectColonistOnly>true</affectColonistOnly>
+			</li>
+			<li Class="CompProperties_UseEffectPlaySound">
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
+			</li>
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_Dea-Path_E</defName>
 		<label>Essence of Death</label>
-		<description>Essense of Death, pulsing with unimaginable power. \nCan be used to bring back dead pawn without any drawback, or borrow part of its power to create resurrector mech serum.</description>
+		<description>Essence of Death, formed from the concept of death itself, pulsing with unimaginable universe cosmic power. One of the 11 core components to create the Primordial Forge. \nCan be used to bring back dead pawn without any drawback, or borrow part of its power to create resurrector mech serum.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDeath</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -276,23 +290,33 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_Dis-Path_E</defName>
 		<label>Essence of Distortion</label>
-		<description>Essense of Distortion, pulsing with unimaginable power.</description>
+		<description>Essence of Distortion, formed from the concept of distortion itself, pulsing with unimaginable universe cosmic power. One of the 11 core components to create the Primordial Forge. 
+		\nCan be interact with to force random event to happen, regardless of good or bad.</description>
 		<graphicData>
 			<texPath>Things/Items/Essence/EssenceDistortion</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
 		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>use essence of distortion to tear apart reality</useLabel>
+				<useDuration>1000</useDuration>
+			</li>
+			<li Class="MakaiTech.CompProperties_UseEffectCauseRandomShit" />
+			<li Class="CompProperties_UseEffectPlaySound">
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
+			</li>
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="explodoboy.snsambitioncosmic">
+	<ThingDef ParentName="EssenceBase" MayRequire="explodoboy.snsambitioncosmic">
 		<defName>Makai_SNS-Path_E</defName>
 		<label>Essence of Beyond</label>
-		<description>Essense of Beyond, pulsing with unimaginable power.</description>
+		<description>Essence of Beyond, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -302,10 +326,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="mrkociak.morearchotechstuffandthingsreupload">
+	<ThingDef ParentName="EssenceBase" MayRequire="mrkociak.morearchotechstuffandthingsreupload">
 		<defName>Makai_MAG-Path_E</defName>
 		<label>Essence of Archotech</label>
-		<description>Essense of Archotech, pulsing with unimaginable power.</description>
+		<description>Essence of Archotech, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -315,10 +339,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="xavior.glittertech">
+	<ThingDef ParentName="EssenceBase" MayRequire="xavior.glittertech">
 		<defName>Makai_GT-Path_E</defName>
 		<label>Essence of Glitter</label>
-		<description>Essense of Glitter, pulsing with unimaginable power.</description>
+		<description>Essence of Glitter, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -328,10 +352,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="ducks.insaneskills">
+	<ThingDef ParentName="EssenceBase" MayRequire="ducks.insaneskills">
 		<defName>Makai_Ducks-Path_E</defName>
 		<label>Essence of Infinity</label>
-		<description>Essense of Infinity, pulsing with unimaginable power.</description>
+		<description>Essence of Infinity, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -341,10 +365,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="nemonian.my">
+	<ThingDef ParentName="EssenceBase" MayRequire="nemonian.my">
 		<defName>Makai_Moyo-Path_E</defName>
 		<label>Essence of The Deep</label>
-		<description>Essense of The Deep, pulsing with unimaginable power.</description>
+		<description>Essence of The Deep, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -354,10 +378,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="oskarpotocki.vfe.mechanoid">
+	<ThingDef ParentName="EssenceBase" MayRequire="oskarpotocki.vfe.mechanoid">
 		<defName>Makai_VFEM-Path_E</defName>
 		<label>Essence of Warfare</label>
-		<description>Essense of War, pulsing with unimaginable power.</description>
+		<description>Essence of War, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -367,10 +391,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="pb3n.simplewarrants">
+	<ThingDef ParentName="EssenceBase" MayRequire="pb3n.simplewarrants">
 		<defName>Makai_De-Path_E</defName>
 		<label>Essence of Desire</label>
-		<description>Essense of Desire, pulsing with unimaginable power.</description>
+		<description>Essence of Desire, pulsing with unimaginable power.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -383,10 +407,10 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="rim.job.world">
+	<ThingDef ParentName="EssenceBase" MayRequire="rim.job.world">
 		<defName>Makai_RJW-Path_E</defName>
 		<label>Essence of Lust</label>
-		<description>Essense of Lust, pulsing with unimaginable power. Have more kids.</description>
+		<description>Essence of Lust, pulsing with unimaginable power. Have more kids.</description>
 		<graphicData>
 			<texPath>Things/Projectile/makai_bullet_meg</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -475,7 +499,7 @@
 		</stages>
 	</HediffDef>
 	
-	<ThingDef ParentName="EssenseBase" MayRequire="" Abstract="True">
+	<ThingDef ParentName="EssenceBase" MayRequire="" Abstract="True">
 		<defName>Makai_-Path_E</defName>
 		<label>Essence of The Deep</label>
 		<description>Essence of the Deep, pulsing with unimaginable power.</description>

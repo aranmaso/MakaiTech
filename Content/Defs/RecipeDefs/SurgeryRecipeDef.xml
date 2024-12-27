@@ -192,6 +192,93 @@
 		</products>
 	</RecipeDef>
 	
+	<!-- Distortion -->
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>Makai_Induce_Distortion</defName>
+		<label>Induce Distortion</label>
+		<description>Incubate essence of Distortion in target.</description>
+		<jobString>Induce insanity into TargetA.</jobString>
+		<workAmount>1000</workAmount>
+		<!-- <hideBodyPartNames>true</hideBodyPartNames> -->
+		<isViolation>false</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<addsHediff>Essence_Incubating_Distortion</addsHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully induced order in {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence6</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+			<li MayRequire="ludeon.rimworld.anomaly">CreepJoiner</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter><categories><li>Medicine</li></categories></filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_Dis-Path_Seed</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Makai_Dis-Path_Seed</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<!-- <appliedOnFixedBodyParts> -->
+			<!-- <li>Brain</li> -->
+		<!-- </appliedOnFixedBodyParts> -->
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Makai_Harvest_Distortion</defName>
+		<label>Extract Essence - Distortion</label>
+		<description>Extract incubating essence from target.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>extract essence from TargetA.</jobString>
+		<workAmount>500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<removesHediff>Essence_Incubating_Complete_Distortion</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully extract essence of distortion from {1}.</successfullyRemovedHediffMessage>
+		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+		<anesthetize>false</anesthetize>
+		<researchPrerequisites>
+				<li>Makai_Essence6</li>
+		</researchPrerequisites>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+			<li MayRequire="ludeon.rimworld.anomaly">CreepJoiner</li>
+		</recipeUsers>
+		<ingredients>
+		</ingredients>
+		<fixedIngredientFilter>
+		</fixedIngredientFilter>
+		<!-- <appliedOnFixedBodyParts> -->
+			<!-- <li>Brain</li> -->
+		<!-- </appliedOnFixedBodyParts> -->
+		<products>
+			<Makai_Dis-Path_E>1</Makai_Dis-Path_E>
+		</products>
+	</RecipeDef>
+	
 	<!--Bond-->
 	<ThingDef ParentName="EssenseBase">
 		<defName>Makai_B-Path_Seed</defName>

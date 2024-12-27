@@ -111,7 +111,7 @@
 		</thingCategories>
 		<comps>
 		</comps>
-	</ThingDef>
+	</ThingDef>	
 	
 	<!-- Death -->
 	<RecipeDef>
@@ -704,6 +704,70 @@
    		 </skillRequirements>
     		<researchPrerequisite>Makai_Essence6</researchPrerequisite>
 	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>Makai_Manifest_Base_Distortion</defName>
+		<label>Manifest Seed of Distortion</label>
+		<description>Materialize the Seed of Distortion.</description>
+		<jobString>Manifest Seed of Distortion</jobString>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<workAmount>60000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>Makai_Bench</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+			<filter>
+			  <thingDefs>
+				<li>Makai_Ingot</li>
+			  </thingDefs>
+			</filter>
+			<count>25</count>
+			</li>
+			<li>
+			<filter>
+			  <thingDefs>
+				<li>Makai_Stardust</li>
+			  </thingDefs>
+			</filter>
+			<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+		<thingDefs>
+		</thingDefs>
+		<specialFiltersToDisallow>
+		</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<products>
+			<Makai_Dis-Path_Seed>1</Makai_Dis-Path_Seed>
+		</products>
+		<skillRequirements>
+			<Crafting>15</Crafting>
+   		 </skillRequirements>
+    		<researchPrerequisite>Makai_Essence6</researchPrerequisite>
+	</RecipeDef>
+	<ThingDef ParentName="EssenseBase">
+		<defName>Makai_Dis-Path_Seed</defName>
+		<label>Seed of Distortion</label>
+		<description>Base essence of distortion. Implant into pawn's brain to start the process of obtaining Essence of Distortion.</description>
+		<graphicData>
+			<texPath>Things/Items/Essence/EssenceOrderSeed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<tradeTags>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<comps>
+		</comps>
+	</ThingDef>
 	
 	<!-- Existence -->
 	<RecipeDef>

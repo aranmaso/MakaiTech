@@ -23,6 +23,9 @@
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
+			<li MayRequire="keyz.keyzitemleveling" Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>WeaponRanged</thingType>
+            </li>
 		</comps>
 		<thingSetMakerTags Inherit="False">
 			<li>RewardStandardLowFreq</li>
@@ -361,6 +364,9 @@
 				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
 				<minQualityForArtistic>Excellent</minQualityForArtistic>
 			</li>
+			<li MayRequire="keyz.keyzitemleveling" Class="KeyzItemLeveling.Comps.CompProperties_ItemLevelling">
+                <thingType>WeaponRanged</thingType>
+            </li>
 		</comps>
 	</ThingDef>
 
@@ -1381,7 +1387,7 @@
 			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
 		</graphicData>
 		<statBases>
-			<MarketValue>2000</MarketValue>
+			<!-- <MarketValue>2000</MarketValue> -->
 			<WorkToMake>15000</WorkToMake>
 			<Mass>5</Mass>
 			<AccuracyTouch>0.75</AccuracyTouch>
