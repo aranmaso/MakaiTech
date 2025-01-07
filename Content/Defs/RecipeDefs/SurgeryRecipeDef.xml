@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!--Corruption-->
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_C-Path_Seed</defName>
 		<label>Seed of Corruption</label>
 		<description>Base seed of corruption. Implant into a pawn's brain to start the process of obtaining Essence of Corruption.</description>
@@ -280,7 +280,7 @@
 	</RecipeDef>
 	
 	<!--Bond-->
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_B-Path_Seed</defName>
 		<label>Base Essence of Bond</label>
 		<description>Base essence of bond. Implant into a pawn to start the process of obtaining Essence of Bond.</description>
@@ -300,7 +300,7 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_B-Path_Frag</defName>
 		<label>Bond Fragment</label>
 		<description>Bond shard. 2 of this and 1 Base Essence of Bond can be combined into Essence of Bond at Makai Fabrication Altar.</description>
@@ -320,7 +320,7 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_B-Path_Level</defName>
 		<label>Bond Level</label>
 		<description>Condensed bond formed after being near a pawn with Warmth of Bond.</description>
@@ -507,7 +507,7 @@
 	</RecipeDef>
 	
 	<!--Fate-->
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_F-Path_Seed</defName>
 		<label>Base Essence of Fate</label>
 		<description>Base essence with aspect of fate imbued into it. Implant this into a pawn to start the process of obtaining Essence of Fate. 
@@ -534,7 +534,7 @@ By that time all Fated Implants should reach full severity and turn into Fated F
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_F-Path_Frag</defName>
 		<label>Fated Fragment</label>
 		<description>Fated Fragment pulsing with unimaginable power. Collect 10 of these to combine them into Essence of Fate</description>

@@ -95,7 +95,7 @@
    		 </skillRequirements>
     		<researchPrerequisite>Makai_Essence6</researchPrerequisite>
 	</RecipeDef>
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_Or-Path_Seed</defName>
 		<label>Seed of Order</label>
 		<description>Base essence of order. Implant into pawn's brain to start the process of obtaining Essence of Order.</description>
@@ -528,7 +528,7 @@
 	</RecipeDef>
 	
 	<!-- Knowledge -->
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_K-Path_Frag</defName>
 		<label>Fragment of Knowledge</label>
 		<description>The fragment of infinite knowledge.</description>
@@ -751,7 +751,7 @@
    		 </skillRequirements>
     		<researchPrerequisite>Makai_Essence6</researchPrerequisite>
 	</RecipeDef>
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>Makai_Dis-Path_Seed</defName>
 		<label>Seed of Distortion</label>
 		<description>Base essence of distortion. Implant into pawn's brain to start the process of obtaining Essence of Distortion.</description>

@@ -6,7 +6,8 @@
 	<Makai_BringIngrediantDesc>bring ingrediant to the consolidater</Makai_BringIngrediantDesc>
 	<Makai_BondGainLevel>{PAWN_labelShort} has lost a {1} implant level due to {2}.</Makai_BondGainLevel>
 	<Makai_SkillNeurotrainerUsed>{USER_labelShort} has embrace the essence of {1} to go from level {2} to level {3}.</Makai_SkillNeurotrainerUsed>
-
+	<Makai_ForgeInterface>Primordial Forge Interface</Makai_ForgeInterface>
+	<Makai_ForgeInterfaceDesc>in the event where forge module doesn't support certain item, use forge interface to memomrize it and materialize them freely.</Makai_ForgeInterfaceDesc>
 
 
 </LanguageData>

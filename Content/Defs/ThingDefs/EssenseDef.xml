@@ -56,7 +56,7 @@
 		<comps>
 			<li Class="CompProperties_Usable">
 				<useJob>UseItem</useJob>
-				<useLabel>Activate the essence of corruption</useLabel>
+				<useLabel>release mass insanity</useLabel>
 				<useDuration>1000</useDuration>
 			</li>
 			<li Class="MakaiTech.CompProperties_UseEffectMassInsanity">

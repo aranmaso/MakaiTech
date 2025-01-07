@@ -171,7 +171,7 @@
 	</RecipeDef>
 
 	
-	<ThingDef ParentName="EssenseBase">
+	<ThingDef ParentName="EssenceBase">
 		<defName>PrimordialFrag</defName>
 		<label>flame of the first forge</label>
 		<description>A mere fragment separated from the Primordial Forge. Holds immense power and can be used as subtitute fuel for any building.</description>

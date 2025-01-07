@@ -90,7 +90,7 @@
 			<texPath>Things/Building/PrimoForgeAnim</texPath>
 			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>
 			<drawSize>(6,7)</drawSize>
-			<drawOffset>(0,0,2)</drawOffset>
+			<drawOffset>(0,1,2)</drawOffset>
 			<shadowData>
 				<volume>(0,0.3,0)</volume>
 				<offset>(0, 0, 0)</offset>
@@ -171,18 +171,23 @@
 			<li Class="MakaiTech.CompProperties_AnimatedMakai">
 				<frameSpeed>5</frameSpeed>
 				<texturePath>Things/Mote/ForgeRing</texturePath>
-				<altitudeLayerMatrix>Building</altitudeLayerMatrix>
+				<altitudeLayerMatrix>BuildingBelowTop</altitudeLayerMatrix>
 				<shaderTypeForMatrix>TransparentPostLight</shaderTypeForMatrix>
 				<drawOffset>(3,0,3)</drawOffset>
 				<drawPosOffset>(0,-0.1,0)</drawPosOffset>
 				<rotateSpeed>0.2</rotateSpeed>
 				
 				<texturePath2>Things/Mote/BlackSunRingOuter</texturePath2>
-				<altitudeLayerMatrix2>Building</altitudeLayerMatrix2>
+				<altitudeLayerMatrix2>BuildingBelowTop</altitudeLayerMatrix2>
 				<shaderTypeForMatrix2>TransparentPostLight</shaderTypeForMatrix2>
 				<drawOffset2>(5,0,5)</drawOffset2>
 				<drawPosOffset2>(0,-0.1,0)</drawPosOffset2>
 				<rotateSpeed2>-0.2</rotateSpeed2>
+			</li>
+			<li Class="MakaiTech.CompProperties_PrimordialForgeInterface">
+				<maxMemorySlot>30</maxMemorySlot>
+				<uiIcon>Things/Items/ForgeInterface</uiIcon>
+				<effecterDef>Makai_ForgeInterfaceSummonItem</effecterDef>
 			</li>
 		</comps>
 		<designationHotKey>Misc2</designationHotKey>
