@@ -20,7 +20,7 @@
 		<li>Makai_Primordial_Forge</li>
 	</researchPrerequisites>
     <size>(1,1)</size>
-    <rotatable>true</rotatable>
+    <rotatable>false</rotatable>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <castEdgeShadows>false</castEdgeShadows>

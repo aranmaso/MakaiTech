@@ -93,7 +93,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_SunC</defName>
 		<label>Sun Cradle</label>
-		<description>A highly advanced piece of technology one could call a miracle. To defy the laws of nature and create an almost self-sustaining energy source. It has a very large light radius that is bright enough for plants to grow. With local climate control to ensure plants can also grow in comforable temperature(fixed at 20c). Also has a built-in mass battery to store excess power, as one would expect from a sun. If this machine is destroyed it will explode violently and in a large radius.</description>
+		<description>A highly advanced piece of technology, the sun that hangs high in the sky, now contains within a cradle made of celestial fabric. It emit bright light to a large radius capable of sustaining plant growth.Built-in with a self-regulating temperature system to ensure optimal map temperature.</description>
 		<graphicData>
 			<texPath>Things/Building/sun_Anim</texPath>
 			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>			
@@ -200,6 +200,11 @@
 				<defaultTemp>20</defaultTemp>
 				<heatPerSecond>100</heatPerSecond>
 				<coldPerSecond>-50</coldPerSecond>
+			</li>
+			<li Class="CompProperties_TempControl">
+				<compClass>Comp_AtmosphericHeater</compClass>
+				<lowPowerConsumptionFactor>0.05</lowPowerConsumptionFactor>
+				<inspectString>Target outdoor temperature</inspectString>
 			</li>
 			<!-- <li Class="CompProperties_HeatPusher"> -->
 			<!-- <heatPerSecond>100</heatPerSecond> -->

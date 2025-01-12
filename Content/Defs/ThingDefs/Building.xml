@@ -16,15 +16,13 @@
 		<label>Makai Fabrication Altar</label>
 		<description>An altar used to make various Makai related items. Doesn't require power to use.</description>
 		<thingClass>Building_WorkTable</thingClass>
+		<drawerType>RealtimeOnly</drawerType>
 		<graphicData>
-			<texPath>Things/Building/makai_bench</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>Things/Building/FabAltar</texPath>
+			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(5,5)</drawSize>
-			<shadowData>
-				<volume>(0,0.3,0)</volume>
-				<offset>(0, 0, 0)</offset>
-			</shadowData>
+			<drawSize>(4,4.25)</drawSize>
+			<drawOffset>(0,0,0.70)</drawOffset>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
@@ -32,6 +30,7 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
+		<uiIconPath>Things/Building/FabAltar/FabAltar_00000</uiIconPath>
 		<costList>
 			<Steel>120</Steel>
 			<Plasteel>65</Plasteel>
@@ -50,7 +49,7 @@
 			<Cleanliness>1</Cleanliness>
 			<WorkTableWorkSpeedFactor>2.5</WorkTableWorkSpeedFactor>
 		</statBases>
-		<size>(5,4)</size>
+		<size>(3,3)</size>
 		<designationCategory>Makai_Tech</designationCategory>
 		<researchPrerequisites>
 			<li>Makai_Communication</li>
@@ -58,7 +57,7 @@
 		<passability>PassThroughOnly</passability>
 		<pathCost>50</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
-		<interactionCellOffset>(0,0,-3)</interactionCellOffset>
+		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
 		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
 		<surfaceType>Item</surfaceType>
 		<inspectorTabs>
@@ -68,6 +67,10 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 		<comps>
+			<li Class="MakaiTech.CompProperties_AnimatedMakai">
+				<frameSpeed>4</frameSpeed>
+				<haveExtraGraphic>false</haveExtraGraphic>				
+			</li>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>ToolCabinet</li>
@@ -275,18 +278,20 @@
 		<defName>Makai_Powerlink_Relay</defName>
 		<label>Makai Energy Relay Node</label>
 		<description>A power uplink connected to the Makai home dimension to receive power sent from there. This piece of technology is a vital part of the Makai expedition fleet's ability to receive power in different dimensions. \n Sadly, with our own technology, this powernode won't give any usable power. You will need to research into a power converter to convert energy sent from Makai into a usable power. \n Put this building near a research bench seem to make people smarter somehow. \nMax simultaneous 2.</description>
+		<drawerType>RealtimeOnly</drawerType>
 		<graphicData>
-			<texPath>Things/Building/powernode_researchlink</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2,2)</drawSize>
-			<drawOffset>(0,0.2,0.5)</drawOffset>
+			<texPath>Things/Building/powernode</texPath>
+			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>
+			<drawSize>(1.25,1.25)</drawSize>
+			<drawOffset>(0,0,0.15)</drawOffset>
 		</graphicData>
 		<uiIconScale>0.85</uiIconScale>
+		<uiIconPath>Things/Building/powernode_researchlink</uiIconPath>
 		<researchPrerequisites>
 			<li>Makai_EnergyRelay_Tier1</li>
 		</researchPrerequisites>
 		<size>(1,1)</size>
-		<rotatable>true</rotatable>
+		<rotatable>False</rotatable>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<castEdgeShadows>false</castEdgeShadows>
@@ -313,6 +318,10 @@
 			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
 		</building>
 		<comps>
+			<li Class="MakaiTech.CompProperties_AnimatedMakai">
+				<frameSpeed>4</frameSpeed>
+				<haveExtraGraphic>false</haveExtraGraphic>				
+			</li>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
@@ -324,6 +333,10 @@
 					<ResearchSpeedFactor>0.5</ResearchSpeedFactor>
 				</statOffsets>
 				<maxSimultaneous>2</maxSimultaneous>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2.9</glowRadius>
+				<glowColor>(95,87,165)</glowColor>
 			</li>
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>Makai_Raw_EnergyNet</pipeNet>
