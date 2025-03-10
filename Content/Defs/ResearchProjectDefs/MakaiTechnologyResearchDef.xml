@@ -114,7 +114,7 @@
 		<tab>MaTab</tab>
 		<researchViewX>5.00</researchViewX>
 		<researchViewY>3.40</researchViewY>
-	</ResearchProjectDef>
+	</ResearchProjectDef>	
 	
 	<ResearchProjectDef>
 		<defName>Makai_EnergyRelay_Tier6</defName>
@@ -234,6 +234,26 @@
 		<researchViewY>1.40</researchViewY>
 	</ResearchProjectDef>
 	
+	<ResearchProjectDef>
+		<defName>Makai_Bionic_Tier1</defName>
+		<label>Celestial Body Augmentation</label>
+		<description>Manufacturing artificial part utilizing celestial steel and stardust, pushing the boundary of body modification beyond even the archotech.</description>
+		<baseCost>25000</baseCost>
+		<techLevel>Archotech</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+			<li>Makai_Powerlink_Relay</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>Makai_Weapon3</li>
+			<li>Makai_EnergyRelay_Tier5</li>
+		</prerequisites>
+		<tab>MaTab</tab>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.40</researchViewY>
+	</ResearchProjectDef>
+		
 	<ResearchProjectDef>
 		<defName>Makai_Weapon4</defName>
 		<label>Guardian's Weapon Replica</label>

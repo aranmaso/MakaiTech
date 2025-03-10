@@ -81,8 +81,11 @@
 			</li>
 		</modExtensions>
 	</ThingDef-->
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality" Name="MakaiMeleeBase" Abstract="True">
+		<generateAllowChance>1</generateAllowChance>
+	</ThingDef>
 	
-	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Anva_Sword</defName>
 		<label>Entity Null</label>
 		<description>A giant sword made in the image of the original Entity Null. Has the ability to reduce target armor to nothing, and can also shoot lightning. Very heavy to wield for ordinary pawns. \n The blade is composed of local material from the Rimworld mixing with Celestial Steel, making this weapon very durable.</description>
@@ -226,25 +229,48 @@
 		</comps>
 		<modExtensions>
 			<li Class="VFECore.ThingDefExtension">
+				<!-- <meleeRangeOverride>2</meleeRangeOverride> -->
 				<weaponCarryDrawOffsets>
 					<north>
-						<drawOffset>(0.8,0,0.5)</drawOffset>
+						<drawOffset>(-0.8,0,0.5)</drawOffset>
+						<angleOffset>70</angleOffset>						
 					</north>
 					<east>
 						<drawOffset>(0.8,0,0.5)</drawOffset>
+						<angleOffset>230</angleOffset>						
 					</east>
 					<west>
 						<drawOffset>(-0.8,0,0.5)</drawOffset>
+						<angleOffset>-230</angleOffset>						
 					</west>
 					<south>
-						<drawOffset>(0.8,0,0.5)</drawOffset>
+						<drawOffset>(-0.8,0,0.5)</drawOffset>
+						<angleOffset>220</angleOffset>
 					</south>
 				</weaponCarryDrawOffsets>
+				<weaponDraftedDrawOffsets>
+					<north>
+						<!-- <drawOffset>(0.8,0,0.5)</drawOffset> -->
+						<angleOffset>0</angleOffset>
+					</north>
+					<east>
+						<!-- <drawOffset>(0.8,0,0.5)</drawOffset> -->
+						<angleOffset>-70</angleOffset>
+					</east>
+					<south>
+						<!-- <drawOffset>(0.8,0,0.5)</drawOffset> -->
+						<angleOffset>40</angleOffset>
+					</south>
+					<west>
+						<!-- <drawOffset>(-0.8,0,0.5)</drawOffset> -->
+						<angleOffset>70</angleOffset>
+					</west>
+				</weaponDraftedDrawOffsets>
 			</li>
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Ama_Berd</defName>
 		<label>Order</label>
 		<description>A giant halberd that improves user psychic ability in various aspects and reduces mental break threshold. \n The blade features a very refined celestial steel. Which makes it very strong compared to local materials.</description>
@@ -340,6 +366,7 @@
 		</comps>
 		<modExtensions>
 			<li Class="VFECore.ThingDefExtension">
+				<!-- <meleeRangeOverride>2</meleeRangeOverride> -->
 				<weaponCarryDrawOffsets>
 					<north>
 						<drawOffset>(0.5,0,0.6)</drawOffset>
@@ -358,7 +385,7 @@
 		</modExtensions>
 	</ThingDef>
 	<!--============= Ouro Berd =============-->
-	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Ouro_Berd</defName>
 		<label>Existence</label>
 		<description>The original weapon this halberd is based on is said to have been forged from the very concept of existence itself. While this halberd is no where near that level of power, it still grants the wielder the blessing from the Guardian of Existence, infusing them with godlike power befitting the wielder of the concept of existence.</description>
@@ -374,8 +401,9 @@
 		<weaponTags>
 			<li>SpacerMeleeAdvanced</li>
 			<li>Makai_God_Weapon</li>
+			<li>Makai_God_Weapon_Supreme</li>
 		</weaponTags>
-		<generateCommonality>0</generateCommonality>
+		<generateCommonality>0.01</generateCommonality>
 		<costList>
 			<Makai_Stardust>250</Makai_Stardust>
 			<ComponentSpacer>10</ComponentSpacer>
@@ -494,7 +522,7 @@
 		</modExtensions>
 	</ThingDef>
 	<!--============= Alf Claw =============-->
-	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Alf_Claw</defName>
 		<label>Collapsed Will</label>
 		<description>A claw weapon made with the intent to corrupt someone's mind. Increases user melee fighting ability. Makes them attack faster than they normally can and sends them into a state where they won't go down with pain.</description>
@@ -619,7 +647,7 @@
 		</projectile>
 	</ThingDef>
 	
-	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Mica_Blade</defName>
 		<label>Sunblade</label>
 		<description>A sword imbued with the power of the sun. Its blade emits extreme heat, melting away anything it touches. Grants user the blessing of Guardian of Flame, making them immune to heat damage and granting them immunity to fire.</description>
@@ -820,7 +848,7 @@
 		<minDistanceToAffect>2</minDistanceToAffect>
 	</VFECore.ExpandableProjectileDef>
 	
-	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Mica_Mace</defName>
 		<label>Radiant Star</label>
 		<description>A miniature sun attached to a handle with an energy link. Its heat can melt away a target's armor. Can be used as throwing weapon or spin it fast enough to shoot a fireball. Grants user the blessing of Guardian of Flame, making them immune to heat damage and granting them immunity to fire.</description>
@@ -883,24 +911,24 @@
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 			</li>
-			<li>
-				<label>Fire Ball</label>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Mica_Project</defaultProjectile>
-				<warmupTime>2</warmupTime>
-				<range>13</range>
-				<minRange>2</minRange>
-				<forcedMissRadius>1.9</forcedMissRadius>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<burstShotCount>1</burstShotCount>
-				<soundCast>InfernoCannon_Fire</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>14</muzzleFlashScale>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
+			<!-- <li> -->
+				<!-- <label>Fire Ball</label> -->
+				<!-- <verbClass>Verb_Shoot</verbClass> -->
+				<!-- <hasStandardCommand>true</hasStandardCommand> -->
+				<!-- <defaultProjectile>Mica_Project</defaultProjectile> -->
+				<!-- <warmupTime>2</warmupTime> -->
+				<!-- <range>13</range> -->
+				<!-- <minRange>2</minRange> -->
+				<!-- <forcedMissRadius>1.9</forcedMissRadius> -->
+				<!-- <ticksBetweenBurstShots>10</ticksBetweenBurstShots> -->
+				<!-- <burstShotCount>1</burstShotCount> -->
+				<!-- <soundCast>InfernoCannon_Fire</soundCast> -->
+				<!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
+				<!-- <muzzleFlashScale>14</muzzleFlashScale> -->
+				<!-- <targetParams> -->
+					<!-- <canTargetLocations>true</canTargetLocations> -->
+				<!-- </targetParams> -->
+			<!-- </li> -->
 		</verbs>
 		<tools>
 			<li>
@@ -980,13 +1008,6 @@
 				<compClass>CompEquippable</compClass>
 				<ConsiderMelee>true</ConsiderMelee>
 				<verbProps>
-					<li>
-						<label>Fire Ball</label>
-						<graphic>
-							<texPath>Things/Projectile/makai_bullet_fire</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-					</li>
 					<li>
 						<label>Swing thrown</label>
 						<graphic>
@@ -1131,7 +1152,7 @@
 		<stopWhenHit>false</stopWhenHit>
 	</VFECore.ExpandableProjectileDef>
 	
-	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Sari_Scy</defName>
 		<label>Destined Death</label>
 		<description>An unwieldy scythe weapon that ignores armor but deals little damage. It will inflict the curse, Destined Death, which will build up to eventually kill the victim. \n\n\nVictims of &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt; cannot be resurrected.</description>

@@ -1184,34 +1184,97 @@
 			<explosionEffect>BIGLASERIMPACT</explosionEffect>
 		</projectile>
 		<comps>
-			<li Class="MakaiTech.CompProperties_FleckEmitter">
-				<alwaysOn>true</alwaysOn>
-				<moteDefs>
-					<li>Mote_WhitePuffB</li>
-				</moteDefs>
-				<scale>1</scale>
-				<scaleMax>1</scaleMax>
-				<rotationMinRate>-30</rotationMinRate>
-				<rotationMaxRate>30</rotationMaxRate>
-				<minRandomOffsetX>-0.1</minRandomOffsetX>
-				<maxRandomOffsetX>0.1</maxRandomOffsetX>
-				<minRandomOffsetY>-0.3</minRandomOffsetY>
-				<maxRandomOffsetY>0.3</maxRandomOffsetY>
-				<minRotate>-45</minRotate>
-				<maxRotate>45</maxRotate>
-				<minSpeed>-1</minSpeed>
-				<maxSpeed>1</maxSpeed>
-				<minEmissionInterval>1</minEmissionInterval>
-				<maxEmissionInterval>1</maxEmissionInterval>
-				<countPerEmit>2</countPerEmit>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>Makai_StardustShell_Stream</effecterDef>
 			</li>
-			<!-- <li Class="VFECore.CompProperties_HomingProjectile"> -->
-			<!-- <homingDistanceFractionPassed>0.2</homingDistanceFractionPassed> -->
-			<!-- <homingCorrectionTickRate>5</homingCorrectionTickRate> -->
-			<!-- <initialDispersionFromTarget>0</initialDispersionFromTarget> -->
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>Makai_StardustShell_Launched</effecterDef>
+			</li>
+			<!-- <li Class="MakaiTech.CompProperties_FleckEmitter"> -->
+				<!-- <alwaysOn>true</alwaysOn> -->
+				<!-- <moteDefs> -->
+					<!-- <li>Mote_WhitePuffB</li> -->
+				<!-- </moteDefs> -->
+				<!-- <scale>1</scale> -->
+				<!-- <scaleMax>1</scaleMax> -->
+				<!-- <rotationMinRate>-30</rotationMinRate> -->
+				<!-- <rotationMaxRate>30</rotationMaxRate> -->
+				<!-- <minRandomOffsetX>-0.1</minRandomOffsetX> -->
+				<!-- <maxRandomOffsetX>0.1</maxRandomOffsetX> -->
+				<!-- <minRandomOffsetY>-0.3</minRandomOffsetY> -->
+				<!-- <maxRandomOffsetY>0.3</maxRandomOffsetY> -->
+				<!-- <minRotate>-45</minRotate> -->
+				<!-- <maxRotate>45</maxRotate> -->
+				<!-- <minSpeed>-1</minSpeed> -->
+				<!-- <maxSpeed>1</maxSpeed> -->
+				<!-- <minEmissionInterval>1</minEmissionInterval> -->
+				<!-- <maxEmissionInterval>1</maxEmissionInterval> -->
+				<!-- <countPerEmit>2</countPerEmit> -->
 			<!-- </li> -->
+			<li Class="VFECore.CompProperties_HomingProjectile">
+			<homingDistanceFractionPassed>0.2</homingDistanceFractionPassed>
+			<homingCorrectionTickRate>5</homingCorrectionTickRate>
+			<initialDispersionFromTarget>0</initialDispersionFromTarget>
+			</li>
 		</comps>
 	</ThingDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_FleckSmokeA</defName>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.7</solidTime>
+		<fadeOutTime>0.35</fadeOutTime>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<growthRate>1</growthRate>
+		<speedPerTime>-5</speedPerTime>
+		<graphicData>
+			<texPath>Things/Mote/Smoke</texPath>
+			<shaderType>Transparent</shaderType>
+			<drawSize>1</drawSize>
+			<renderQueue>3200</renderQueue>
+		</graphicData>
+	</FleckDef>
+	
+	<EffecterDef>
+		<defName>Makai_StardustShell_Launched</defName>
+		<offsetTowardsTarget>1</offsetTowardsTarget>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>Makai_FleckSmokeA</fleckDef>
+				<scale>1~3</scale>
+				<burstCount>25~50</burstCount>
+				<spawnLocType>OnSource</spawnLocType>
+				<absoluteAngle>false</absoluteAngle>
+				<positionOffset>(1,0,0)</positionOffset>
+				<positionRadius>0.1</positionRadius>
+				<positionRadiusMin>0</positionRadiusMin>
+				<angle>-70~70</angle>
+				<speed>-10~-15</speed>
+				<rotation>0~360</rotation>
+				<fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<EffecterDef>
+		<defName>Makai_StardustShell_Stream</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<chancePerTick>1</chancePerTick>
+				<fleckDef>Makai_FleckSmokeA</fleckDef>
+				<positionRadius>0</positionRadius>
+				<burstCount>6~12</burstCount>
+				<scale>0.25~1</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<speed>0.55~1.0</speed>
+				<angle>0~359</angle>
+				<rotationRate>20~30</rotationRate>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+		</children>
+	</EffecterDef>
   
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>Makai_Turret_TopE</defName>

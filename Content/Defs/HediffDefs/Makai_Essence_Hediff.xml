@@ -299,6 +299,8 @@
 		<maxSeverity>5.1</maxSeverity>
 		<comps Inherit="False">
 			<li Class="MakaiTech.HediffCompProperties_GatheringOrderChecker">
+				<removeWhenHasHediff>Essence_Incubating_Complete_Order</removeWhenHasHediff>
+				<finishHediff>Essence_Incubating_Complete_Order</finishHediff>
 				<minimumMoodThreshold>0.75</minimumMoodThreshold>
 				<interval>250</interval>
 				<maxSeverity>5.1</maxSeverity>

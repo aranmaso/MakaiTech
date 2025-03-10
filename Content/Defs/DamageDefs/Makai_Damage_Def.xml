@@ -29,11 +29,16 @@
     <label>Celestial Scar</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} has it existence made null</deathMessage>
+    <deathMessage>{0} has suffered from temporal damage</deathMessage>
     <hediff>Cut</hediff>
     <hediffSolid>Crush</hediffSolid>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <additionalHediffs />
+    <additionalHediffs>
+		<li>
+			<hediff>Conceptual_CelestialScar</hediff>
+			<severityPerDamageDealt>1</severityPerDamageDealt>
+		</li>
+	</additionalHediffs>
     <impactSoundType>Slice</impactSoundType>
     <armorCategory>Celestial</armorCategory>
     <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>

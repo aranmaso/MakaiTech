@@ -32,7 +32,7 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Makai_Stardust</thingDef>
-				<countRange>50~100</countRange>
+				<countRange>500~2500</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Steel</thingDef>
@@ -108,6 +108,11 @@
 			<!-- Implants -->
 			<li Class="StockGenerator_Tag">
 				<tradeTag>TechHediff</tradeTag>
+				<thingDefCountRange>3~5</thingDefCountRange>
+				<countRange>1~5</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Makai_Implant</tradeTag>
 				<thingDefCountRange>3~5</thingDefCountRange>
 				<countRange>1~5</countRange>
 			</li>
@@ -220,7 +225,7 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Makai_Stardust</thingDef>
-				<countRange>50~100</countRange>
+				<countRange>500~1000</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Steel</thingDef>
@@ -296,6 +301,11 @@
 			<!-- Implants -->
 			<li Class="StockGenerator_Tag">
 				<tradeTag>TechHediff</tradeTag>
+				<thingDefCountRange>3~5</thingDefCountRange>
+				<countRange>1~5</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Makai_Implant</tradeTag>
 				<thingDefCountRange>3~5</thingDefCountRange>
 				<countRange>1~5</countRange>
 			</li>

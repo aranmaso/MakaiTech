@@ -201,11 +201,6 @@
 				<heatPerSecond>100</heatPerSecond>
 				<coldPerSecond>-50</coldPerSecond>
 			</li>
-			<li Class="CompProperties_TempControl">
-				<compClass>Comp_AtmosphericHeater</compClass>
-				<lowPowerConsumptionFactor>0.05</lowPowerConsumptionFactor>
-				<inspectString>Target outdoor temperature</inspectString>
-			</li>
 			<!-- <li Class="CompProperties_HeatPusher"> -->
 			<!-- <heatPerSecond>100</heatPerSecond> -->
 			<!-- <heatPushMaxTemperature>19</heatPushMaxTemperature> -->

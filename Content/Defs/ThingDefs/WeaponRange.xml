@@ -148,7 +148,7 @@
 			<li>LaserGun</li>
 			<li>Makai_God_Weapon</li>
 		</weaponTags>
-		<generateCommonality>0.0001</generateCommonality>
+		<generateCommonality>0.02</generateCommonality>
 		<equippedStatOffsets>
 			<MoveSpeed>0.65</MoveSpeed><!-- drawback -->
 			<GlobalLearningFactor>0.5</GlobalLearningFactor>

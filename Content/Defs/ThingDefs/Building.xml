@@ -275,6 +275,81 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
+		<defName>MakainiumWallPaintable</defName>
+		<label>Celestial Wall(paintable)</label>
+		<description>A wall created with celestial steel. Very durable. Rumor has it that once certain conditions are met it can fully repair itself overnight.</description>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/makai_wall_atlas_paintable</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<designationCategory>Makai_Tech</designationCategory>
+		<researchPrerequisites>
+			<li>Makai_Structure_Tier1</li>
+		</researchPrerequisites>
+		<uiIconPath>Things/Building/makai_wall_icon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>50000</MaxHitPoints>
+			<WorkToBuild>400</WorkToBuild>
+			<Flammability>0</Flammability>
+			<Beauty>1</Beauty>
+			<Cleanliness>0.5</Cleanliness>
+		</statBases>
+		<costStuffCount>5</costStuffCount>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<fillPercent>1</fillPercent>
+		<coversFloor>true</coversFloor>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<comps>
+			<!--li Class="CompProperties_SelfhealHitpointsFull">
+				<ticksPerHeal>1000</ticksPerHeal>
+			</li-->
+		</comps>
+		<costList>
+			<Makai_Ingot>10</Makai_Ingot>
+		</costList>
+		<building>
+			<isInert>true</isInert>
+			<paintable>true</paintable>
+			<ai_chillDestination>false</ai_chillDestination>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+			<supportsWallAttachments>true</supportsWallAttachments>
+		</building>
+		<designationHotKey>Misc3</designationHotKey>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_Powerlink_Relay</defName>
 		<label>Makai Energy Relay Node</label>
 		<description>A power uplink connected to the Makai home dimension to receive power sent from there. This piece of technology is a vital part of the Makai expedition fleet's ability to receive power in different dimensions. \n Sadly, with our own technology, this powernode won't give any usable power. You will need to research into a power converter to convert energy sent from Makai into a usable power. \n Put this building near a research bench seem to make people smarter somehow. \nMax simultaneous 2.</description>
@@ -299,7 +374,7 @@
 		<designationHotKey>Misc4</designationHotKey>
 		<designationCategory>Makai_Tech</designationCategory>
 		<minifiedDef>MinifiedThing</minifiedDef>
-		<canOverlapZones>false</canOverlapZones>
+		<canOverlapZones>true</canOverlapZones>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<thingCategories>
 			<li>BuildingsMisc</li>
@@ -351,6 +426,7 @@
 		</placeWorkers>
 		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
 	</ThingDef>
+	
   
 	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
 		<defName>Makai_AntiProjectileShield</defName>
@@ -506,6 +582,7 @@
 		<label>Destruction Singularity</label>
 		<description>A gathering point that condenses the power of destruction. \n With MakaiTech - Psycast module, this building is capable of calling down lightning to smite foes.</description>
 		<drawerType>RealtimeOnly</drawerType>
+		<thingClass>Building_TurretGun</thingClass>
 		<graphicData>
 			<texPath>Things/Building/DestructSingularity</texPath>
 			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>
@@ -544,6 +621,8 @@
 		</costList>
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+			<turretGunDef>Makai_SingularityTurret</turretGunDef>
+			<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
 		</building>
 		<comps>
 			<li Class="MakaiTech.CompProperties_AnimatedMakai">
@@ -567,8 +646,96 @@
 				<projectile>MakaiPsy_TD_Beam</projectile>
 				<damageDef>TrueDestruction_LightningTower</damageDef>
 			</li>
+			<li Class="MakaiTech.CompProperties_DestructionAutoLaunchProjectile">
+				<projectileDef>Makai_GreenLaser</projectileDef>
+				<soundDef>anva_gl</soundDef>
+				<fleckDef>Makai_GreenSphere</fleckDef>
+				<delay>60</delay>
+			</li>
+			<li></li>
 		</comps>
 		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>Makai_SingularityTurret</defName>
+		<label>destruction singularity</label>
+		<graphicData>
+			<texPath>Things/Mote/mote_invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<description>Top of a stardust turret A</description>
+		<soundInteract>Interact_ChargeLance</soundInteract>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<AccuracyTouch>1</AccuracyTouch>
+			<AccuracyShort>1</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>1</AccuracyLong>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<weaponTags>
+			<li>TurretGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Makai_SingularityProj</defaultProjectile>
+				<ai_AvoidFriendlyFireRadius>2</ai_AvoidFriendlyFireRadius>
+				<range>40</range>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<burstShotCount>0</burstShotCount>
+				<!--forcedMissRadius>282</forcedMissRadius-->
+				<!-- <muzzleFlashScale>9</muzzleFlashScale> -->
+				<!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Makai_SingularityProj</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Mote/mote_invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>1000</speed>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<armorPenetrationBase>0</armorPenetrationBase>
+			<stoppingPower>0</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+		<defName>Makai_GreenLaser</defName>
+		<label>singularity shot</label>
+		<description>A focused, long range laser arrow.</description>
+		<textures>
+			<li>Things/Projectile/g_beam</li>
+		</textures>
+		<seam>0.1</seam>
+		<causefireChance>0</causefireChance>
+		<beamWidth>1.5</beamWidth>
+		<lifetime>60</lifetime>
+		<!-- <explosionEffect>Ring_ExpandY</explosionEffect> -->
+		<projectile>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+		</projectile>
 	</ThingDef>
 
 </Defs>
