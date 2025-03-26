@@ -75,13 +75,16 @@
 				<severityPerDay>-12</severityPerDay>
 				<showHoursToRecover>true</showHoursToRecover>
 			</li>
-			<li Class="MakaiTech.HediffCompProperties_ChangeNeedMultiple">
-				<needDef>Joy</needDef>
-				<needDef2>Mood</needDef2>
-				<needDef3>Rest</needDef3>
-				<needDef4>Food</needDef4>
-				<needDef5>Comfort</needDef5>
-				<needDef6>Beauty</needDef6>
+			<li Class="MakaiTech.HediffCompProperties_ChangeNeeds">
+				<needs>
+					<li>Joy</li>
+					<li>Mood</li>
+					<li>Rest</li>
+					<li>Food</li>
+					<li>Comfort</li>
+					<li>Beauty</li>
+					<li MayRequire="mrkociak.cyberpsychosismod">MKT_Cyberpsychosis</li>
+				</needs>
 				<percentPerDay>100</percentPerDay>
 			</li>
 		</comps>
@@ -134,7 +137,7 @@
 		<defName>Essence_Incubating_Insanity</defName>
 		<label>Incubating Insanity</label>
 		<isBad>false</isBad>
-		<description>The essence of insanity is embedded into this pawn, slowly gathering universal power. During the process, the pawn will experience severe mental instability. Every 1 hour, the seed will force them into a mental break. At random, with 25% chance of it being a berserk state. After which To seed will absorb the madness the the pawn. To prevent interruption, seed of corruption will prevent pawn from ever be downed.</description>
+		<description>The essence of insanity is embedded into this pawn, slowly gathering universal power. During the process, the pawn will experience severe mental instability. Every 1 hour, the seed will force them into a mental break at random, with 25% chance of it being a berserk state. After which To seed will absorb the madness from the pawn. To prevent interruption, seed of corruption will prevent pawn from ever be downed. \nthe process take a total of 5 days</description>
 		<defaultLabelColor>(183, 171, 0)</defaultLabelColor>
 		<initialSeverity>0.1</initialSeverity>
 		<maxSeverity>5.1</maxSeverity>
@@ -832,7 +835,7 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>Essence_Fate_Encounter</defName>
 		<label>Fated Encounter</label>
-		<description>The time has come, your challege is here. Tver the duration of 5 days pawns affected by Fated Encounter will enter a berserk rage. \nSurvive and also keep this pawn alive. \nMoving,Manipulation, and Consciousness will never go lower than 100%</description>
+		<description>The time has come, your challege is here. Over the duration of 5 days pawns affected by Fated Encounter will enter a berserk rage. \nSurvive and also keep this pawn alive. \nMoving,Manipulation, and Consciousness will never go lower than 100%</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 		<initialSeverity>1</initialSeverity>
@@ -847,9 +850,11 @@
 				<severityPerDay>1</severityPerDay>
 				<showHoursToRecover>false</showHoursToRecover>
 			</li>
-			<li Class="MakaiTech.HediffCompProperties_ChangeNeedMultiple">
-				<needDef>Food</needDef>
-				<needDef2>Rest</needDef2>
+			<li Class="MakaiTech.HediffCompProperties_ChangeNeeds">
+				<needs>
+					<li>Food</li>
+					<li>Rest</li>
+				</needs>
 				<percentPerDay>10</percentPerDay>
 			</li>
 		</comps>
@@ -1246,7 +1251,8 @@ You shall be exalted in strength.</description>
 		<stages>
 			<li>
 				<minSeverity>1</minSeverity>
-				<label>beginning</label>
+				<!-- <label>beginning</label> -->
+				<label>1st layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1273,7 +1279,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>2</minSeverity>
-				<label>strive</label>
+				<!-- <label>strive</label> -->
+				<label>2nd layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1300,7 +1307,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>3</minSeverity>
-				<label>struggle</label>
+				<!-- <label>struggle</label> -->
+				<label>3rd layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1327,7 +1335,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>4</minSeverity>
-				<label>survive</label>
+				<!-- <label>survive</label> -->
+				<label>4th layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1354,7 +1363,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>5</minSeverity>
-				<label>thrive</label>
+				<!-- <label>thrive</label> -->
+				<label>5th layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1381,7 +1391,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>6</minSeverity>
-				<label>rise</label>
+				<!-- <label>rise</label> -->
+				<label>6th layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1408,7 +1419,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>7</minSeverity>
-				<label>prosper</label>
+				<!-- <label>prosper</label> -->
+				<label>7th layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1435,7 +1447,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>8</minSeverity>
-				<label>conclusion</label>
+				<!-- <label>conclusion</label> -->
+				<label>8th layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -1462,7 +1475,8 @@ You shall be exalted in strength.</description>
 			</li>
 			<li>
 				<minSeverity>9</minSeverity>
-				<label>Journey End</label>
+				<!-- <label>Journey End</label> -->
+				<label>9th layer</label>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>

@@ -21,8 +21,8 @@
 	
 	<RecipeDef ParentName="SurgeryInstallImplantBase">
 		<defName>Makai_Induce_Insanity</defName>
-		<label>Induce insanity</label>
-		<description>Incubate Seed of Corruption into target</description>
+		<label>Induce Corruption</label>
+		<description>Incubate Seed of Corruption inside a target</description>
 		<jobString>Induce insanity into TargetA.</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>true</hideBodyPartNames>
@@ -511,7 +511,7 @@
 		<defName>Makai_F-Path_Seed</defName>
 		<label>Base Essence of Fate</label>
 		<description>Base essence with aspect of fate imbued into it. Implant this into a pawn to start the process of obtaining Essence of Fate. 
-\n &lt;color=#FF0000&gt;Warning&lt;/color&gt; Transformation process won't work on artificial bodyparts and needs to be a natural part, otherwise you don't get enough Fated Fragment. 
+\n &lt;color=#FF0000&gt;Warning&lt;/color&gt; Transformation process won't work on artificial bodyparts and needs to be a natural part, otherwise you don't get enough Fated Fragment. during the process, pawn will never be downable. 
 \n\n\n The process will happen over the duration of 5 days. After that pawn will gain Fated Encounter hediff and sent into berserk rage for 5 days.
 Pawns with Fated Encounter don't need to eat or rest and will increase in tier by 1 per day. All fated parts will gradually get stronger every day for 5 days.
 Do your best to survive and "DON'T" kill the Fated pawn. If you survive the trial until Fated Encounter reaches tier 6, they are no longer forced into a berserk rage.

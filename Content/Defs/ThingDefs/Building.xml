@@ -67,10 +67,6 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 		<comps>
-			<li Class="MakaiTech.CompProperties_AnimatedMakai">
-				<frameSpeed>4</frameSpeed>
-				<haveExtraGraphic>false</haveExtraGraphic>				
-			</li>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>ToolCabinet</li>
@@ -82,12 +78,18 @@
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
 		</placeWorkers>
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
+				<frameSpeed>4</frameSpeed>
+				<isUsingComp>false</isUsingComp>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	
 	<ThingDef ParentName="BenchBase">
 		<defName>Makai_PrimordialForge</defName>
 		<label>Primordial Forge</label>
-		<description>A forge created in the image of The First Forge that inherits part of it power. It has forged a foundation for all things that exist and that are yet to exist. Those who control the Primordial Forge, control the very foundation of the universe. \n Your colony has come far to reach this point. The only thing limiting you at this point is the pawn's own imagination. Any item can be forged here, even those that are yet to exist in our world. \n\n Think of this forge as a source of infinite resources. Supports quite a few modded materials(more can be added based on request)</description>
+		<description>An dimensional access interface connecting to the Primordial Forge of this universe, The very root of all existence in all layers of dimension. The interface is sustained by all the essences of the universe that form it structure. It is connected to The First Forge residing outside this universe that supplies endless amounts of dimensional energy to sustain this universe's continued existence. All things in existence can be forged here, even those that are yet to exist. \n\n Your colony has come far to reach this point. With access to Primordial Forge, you now control the casualty of this universe itself. Everything is in your hand.\n\n This grants access to infinite resources, support all modded items.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/PrimoForgeAnim</texPath>
@@ -171,8 +173,7 @@
 				<maxSimultaneous>1</maxSimultaneous>
 				<maxDistance>20</maxDistance>
 			</li>
-			<li Class="MakaiTech.CompProperties_AnimatedMakai">
-				<frameSpeed>5</frameSpeed>
+			<li Class="MakaiTech.CompProperties_AnimatedMakai">				
 				<texturePath>Things/Mote/ForgeRing</texturePath>
 				<altitudeLayerMatrix>BuildingBelowTop</altitudeLayerMatrix>
 				<shaderTypeForMatrix>TransparentPostLight</shaderTypeForMatrix>
@@ -193,6 +194,12 @@
 				<effecterDef>Makai_ForgeInterfaceSummonItem</effecterDef>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
+				<frameSpeed>4</frameSpeed>
+				<isUsingComp>true</isUsingComp>
+			</li>
+		</modExtensions>
 		<designationHotKey>Misc2</designationHotKey>
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
@@ -203,7 +210,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>MakainiumWall</defName>
 		<label>Celestial Wall</label>
-		<description>A wall created with celestial steel. Very durable. Rumor has it that once certain conditions are met it can fully repair itself overnight.</description>
+		<description>A wall created with celestial steel. Very durable and beautiful</description>
 		<category>Building</category>
 		<graphicData>
 			<texPath>Things/Building/makai_wall_atlas</texPath>
@@ -256,9 +263,7 @@
 		<blockLight>true</blockLight>
 		<canOverlapZones>false</canOverlapZones>
 		<comps>
-			<!--li Class="CompProperties_SelfhealHitpointsFull">
-				<ticksPerHeal>1000</ticksPerHeal>
-			</li-->
+			<!-- <li Class="MakaiTech.CompProperties_SelfHealPerDay" /> -->
 		</comps>
 		<costList>
 			<Makai_Ingot>10</Makai_Ingot>
@@ -277,7 +282,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>MakainiumWallPaintable</defName>
 		<label>Celestial Wall(paintable)</label>
-		<description>A wall created with celestial steel. Very durable. Rumor has it that once certain conditions are met it can fully repair itself overnight.</description>
+		<description>A wall created with celestial steel. Very durable. this one stuffable.</description>
 		<category>Building</category>
 		<graphicData>
 			<texPath>Things/Building/makai_wall_atlas_paintable</texPath>
@@ -304,13 +309,12 @@
 		</researchPrerequisites>
 		<uiIconPath>Things/Building/makai_wall_icon</uiIconPath>
 		<statBases>
-			<MaxHitPoints>50000</MaxHitPoints>
+			<MaxHitPoints>25000</MaxHitPoints>
 			<WorkToBuild>400</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Beauty>1</Beauty>
 			<Cleanliness>0.5</Cleanliness>
 		</statBases>
-		<costStuffCount>5</costStuffCount>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
@@ -330,13 +334,17 @@
 		<blockLight>true</blockLight>
 		<canOverlapZones>false</canOverlapZones>
 		<comps>
-			<!--li Class="CompProperties_SelfhealHitpointsFull">
-				<ticksPerHeal>1000</ticksPerHeal>
-			</li-->
+			<!-- <li Class="MakaiTech.CompProperties_SelfHealPerDay" /> -->
 		</comps>
 		<costList>
-			<Makai_Ingot>10</Makai_Ingot>
+			<Makai_Ingot>5</Makai_Ingot>
 		</costList>
+		<stuffCategories>
+			  <li>Metallic</li>
+			  <li>Woody</li>
+			  <li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>5</costStuffCount>
 		<building>
 			<isInert>true</isInert>
 			<paintable>true</paintable>
@@ -393,10 +401,10 @@
 			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
 		</building>
 		<comps>
-			<li Class="MakaiTech.CompProperties_AnimatedMakai">
-				<frameSpeed>4</frameSpeed>
-				<haveExtraGraphic>false</haveExtraGraphic>				
-			</li>
+			<!-- <li Class="MakaiTech.CompProperties_AnimatedMakai"> -->
+				<!-- <frameSpeed>4</frameSpeed> -->
+				<!-- <haveExtraGraphic>false</haveExtraGraphic>				 -->
+			<!-- </li> -->
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
@@ -421,6 +429,12 @@
 				<!--soundAmbientReceivingResource>SoundDef</soundAmbientReceivingResource-->
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
+				<frameSpeed>4</frameSpeed>
+				<isUsingComp>false</isUsingComp>
+			</li>
+		</modExtensions>
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
@@ -580,7 +594,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_DestructionEssenceMaker</defName>
 		<label>Destruction Singularity</label>
-		<description>A gathering point that condenses the power of destruction. \n With MakaiTech - Psycast module, this building is capable of calling down lightning to smite foes.</description>
+		<description>a Singularity point made in order to form a essence of destruction. it store all incoming destructive energy inside, which when sufficient amount is gathered, a Essence of Destruction is formed. outside of that purpose it is capable of acting as defensive structure.</description>
 		<drawerType>RealtimeOnly</drawerType>
 		<thingClass>Building_TurretGun</thingClass>
 		<graphicData>
@@ -625,9 +639,9 @@
 			<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
 		</building>
 		<comps>
-			<li Class="MakaiTech.CompProperties_AnimatedMakai">
-				<frameSpeed>15</frameSpeed>
-			</li>
+			<!-- <li Class="MakaiTech.CompProperties_AnimatedMakai"> -->
+				<!-- <frameSpeed>15</frameSpeed> -->
+			<!-- </li> -->
 			<li Class="MakaiTech.CompProperties_GatheringDestruction">
 				<totalDamageNeeded>250000</totalDamageNeeded>
 				<thingToSpawnOnceDestroy>Makai_D-Path_E</thingToSpawnOnceDestroy>
@@ -636,27 +650,49 @@
 				<glowRadius>2.9</glowRadius>
 				<glowColor>(25,244,92)</glowColor>
 			</li>
-			<li Class="MakaiTechPsycast.TrueDestruction.CompProperties_LightningTower" MayRequire="aranmaho.makai.psycast">
-				<conduct>VPE_UnLucky</conduct>
-				<tickRate>100</tickRate>
-				<radius>20</radius>
-				<targetCount>6</targetCount>
-				<canToggleLaserBeam>false</canToggleLaserBeam>
-				<uiIcon>Weather/g_lightningBeam</uiIcon>
-				<projectile>MakaiPsy_TD_Beam</projectile>
-				<damageDef>TrueDestruction_LightningTower</damageDef>
-			</li>
+			<!-- <li Class="MakaiTechPsycast.TrueDestruction.CompProperties_LightningTower" MayRequire="aranmaho.makai.psycast"> -->
+				<!-- <conduct>VPE_UnLucky</conduct> -->
+				<!-- <tickRate>100</tickRate> -->
+				<!-- <radius>20</radius> -->
+				<!-- <targetCount>6</targetCount> -->
+				<!-- <canToggleLaserBeam>false</canToggleLaserBeam> -->
+				<!-- <uiIcon>Weather/g_lightningBeam</uiIcon> -->
+				<!-- <projectile>MakaiPsy_TD_Beam</projectile> -->
+				<!-- <damageDef>TrueDestruction_LightningTower</damageDef> -->
+			<!-- </li> -->
 			<li Class="MakaiTech.CompProperties_DestructionAutoLaunchProjectile">
 				<projectileDef>Makai_GreenLaser</projectileDef>
 				<soundDef>anva_gl</soundDef>
 				<fleckDef>Makai_GreenSphere</fleckDef>
 				<delay>60</delay>
+				<spawnPos>
+					<!-- north -->
+					<li>(0,0,3)</li>
+					<!-- north east -->
+					<li>(2,0,2)</li>
+					<!-- east -->
+					<li>(3,0,0)</li>
+					<!-- south east -->
+					<li>(2,0,-2)</li>
+					<!-- south -->
+					<li>(0,0,-3)</li>
+					<!-- south west -->
+					<li>(-2,0,-2)</li>
+					<!-- west -->
+					<li>(-3,0,0)</li>					
+					<!-- north west -->
+					<li>(-2,0,2)</li>
+				</spawnPos>
 			</li>
-			<li></li>
 		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
+				<frameSpeed>15</frameSpeed>
+				<isUsingComp>false</isUsingComp>
+			</li>
+		</modExtensions>
 		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
-	</ThingDef>
-	
+	</ThingDef>	
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>Makai_SingularityTurret</defName>
 		<label>destruction singularity</label>
@@ -697,45 +733,6 @@
 				<!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
 			</li>
 		</verbs>
-	</ThingDef>
-	
-	<ThingDef ParentName="BaseBullet">
-		<defName>Makai_SingularityProj</defName>
-		<label>energy shot</label>
-		<graphicData>
-			<texPath>Things/Mote/mote_invisible</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>MoteGlow</shaderType>
-			<drawSize>1</drawSize>
-		</graphicData>
-		<projectile>
-			<speed>1000</speed>
-			<damageDef>Cut</damageDef>
-			<damageAmountBase>0</damageAmountBase>
-			<armorPenetrationBase>0</armorPenetrationBase>
-			<stoppingPower>0</stoppingPower>
-		</projectile>
-		<comps>
-		</comps>
-	</ThingDef>
-	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
-		<defName>Makai_GreenLaser</defName>
-		<label>singularity shot</label>
-		<description>A focused, long range laser arrow.</description>
-		<textures>
-			<li>Things/Projectile/g_beam</li>
-		</textures>
-		<seam>0.1</seam>
-		<causefireChance>0</causefireChance>
-		<beamWidth>1.5</beamWidth>
-		<lifetime>60</lifetime>
-		<!-- <explosionEffect>Ring_ExpandY</explosionEffect> -->
-		<projectile>
-			<damageDef>ME_Bullet_T1</damageDef>
-			<damageAmountBase>10</damageAmountBase>
-			<armorPenetrationBase>0.75</armorPenetrationBase>
-			<stoppingPower>3</stoppingPower>
-		</projectile>
-	</ThingDef>
+	</ThingDef>		
 
 </Defs>

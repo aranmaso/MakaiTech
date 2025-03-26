@@ -136,6 +136,46 @@
 		<fadeOutTime>0</fadeOutTime>
 		<!-- <growthRate>-0.25</growthRate> -->
 		<speedPerTime>-1</speedPerTime>
-	</FleckDef>	
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_FleckSmokeA</defName>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.7</solidTime>
+		<fadeOutTime>0.35</fadeOutTime>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<growthRate>1</growthRate>
+		<speedPerTime>-5</speedPerTime>
+		<graphicData>
+			<texPath>Things/Mote/Smoke</texPath>
+			<shaderType>Transparent</shaderType>
+			<drawSize>1</drawSize>
+			<renderQueue>3200</renderQueue>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_Fleck_Glitch</defName>
+		<altitudeLayer>MoteOverheadLow</altitudeLayer>
+		<fadeInTime>0.4</fadeInTime>
+		<solidTime>0.25</solidTime>
+		<fadeOutTime>0</fadeOutTime>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>MotePsychicSkipRing</shaderType>
+			<texPath>Things/Mote/Glitch/1</texPath>
+			<shaderParameters>
+				<_innerRingSize>0.0</_innerRingSize>
+				<_outerRingSize>0.75</_outerRingSize>
+				<_distortionIntensity>1</_distortionIntensity>
+				<_brightnessMultiplier>-10</_brightnessMultiplier>
+				<_solidTime>0.25</_solidTime>
+				<!-- <_outTime>0.5</_outTime> -->
+				<_fadeOutTime>0</_fadeOutTime>
+				<_AgeOffset>1</_AgeOffset>
+			</shaderParameters>
+			<drawSize>4</drawSize>
+		</graphicData>
+	</FleckDef>
 
 </Defs>

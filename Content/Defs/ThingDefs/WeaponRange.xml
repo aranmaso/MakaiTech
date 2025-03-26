@@ -66,7 +66,7 @@
    
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>Things/Projectile/Charge_Small</texPath>
+			<texPath>Things/Mote/mote_invisible</texPath>
 			<shaderType>TransparentPostLight</shaderType>
 			<drawSize>1.5</drawSize>
 		</graphicData>
@@ -82,7 +82,6 @@
 		<seam>0.25</seam>
 	</ThingDef>
 	
-	<!--Varia Bow-->
 	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
 		<defName>VWEL_Bullet_Varia</defName>
 		<label>precise shot</label>
@@ -102,12 +101,33 @@
 			<stoppingPower>3</stoppingPower>
 		</projectile>
 	</ThingDef>
+	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+		<defName>VWEL_Bullet_Varia_Multi</defName>
+		<label>precise shot</label>
+		<description>A focused, long range laser arrow.</description>
+		<textures>
+			<!-- <li>Things/Projectile/g_beam</li> -->
+			<!-- <li>Things/Projectile/p_beam</li> -->
+			<li>Things/Projectile/y_beam</li>
+		</textures>
+		<seam>0.1</seam>
+		<causefireChance>0</causefireChance>
+		<beamWidth>1.5</beamWidth>
+		<lifetime>60</lifetime>
+		<explosionEffect>Ring_ExpandY</explosionEffect>
+		<projectile>
+			<damageDef>Knowledge_Seeker</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+		</projectile>
+	</ThingDef>
 	
 	<ThingDef ParentName="BaseMakaiRangedLaser">
 		<defName>Makai_Bow_Varia</defName>
 		<thingClass>VanillaWeaponsExpandedLaser.LaserGun</thingClass>
 		<label>Knowledge Seeker</label>
-		<description>A bow made with a highly advanced targeting system. You would have to be trying to miss with this weapon. On hit will rob victims of any ability to think. Also give them trauma savant just because. Oh and it sets them on fire.</description>
+		<description>An energy bow made from the essence of knowledge, fashioned with a sophisticated targeting system, the energized arrow, upon hitting a sentience target, will absorb all forms of knowledge they have into an energized particle, before sending it back to the weapon,the weapon then transfer these knowledge to its wielder. This process will greatly damage the victim brain, making them lose the ability to think. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/varia_bow</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -170,6 +190,19 @@
 				<targetParams>
 					<canTargetLocations>false</canTargetLocations>
 				</targetParams>
+			</li>
+			<li>
+				<label>MultiShot</label>
+				<verbClass>MakaiTech.Verb_ShootingOffset</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>VWEL_Bullet_Varia_Multi</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>40</range>
+				<ticksBetweenBurstShots>12.5</ticksBetweenBurstShots>
+				<burstShotCount>5</burstShotCount>
+				<soundCast>Shot_ChargeBlaster</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 			<!--li>
 			<verbClass>Verb_Shoot</verbClass>
@@ -494,7 +527,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Yuki_Staff</defName>
 		<label>Frigid Star</label>
-		<description>A staff made with the image of cold. Has various shooting abilities. Victims feel a deathly curse of cold creeping up on them. Causes hypothermia and freezing curse.</description>
+		<description>A staff forged from the essence of frost, Capable of displaying various forms of attack, the essence of frost imbued within granting its wielder immunity to cold, each attack from this staff inflicts target with a freezing curse, which will eventually kill its victim once the cold energy is sufficient. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/yuki_staff</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -537,6 +570,7 @@
 			<li>Makai_God_Weapon</li>
 		</weaponTags>
 		<equippedStatOffsets>
+			<ComfyTemperatureMin>-10000</ComfyTemperatureMin>
 		</equippedStatOffsets>
 		<equippedAngleOffset>-180</equippedAngleOffset>
 		<verbs>
@@ -746,8 +780,8 @@
 		</projectile>
 		<comps>
 			<li Class="VFECore.CompProperties_HomingProjectile">
-				<homingDistanceFractionPassed>0.2</homingDistanceFractionPassed>
-				<homingCorrectionTickRate>5</homingCorrectionTickRate>
+				<homingDistanceFractionPassed>0.3</homingDistanceFractionPassed>
+				<homingCorrectionTickRate>20</homingCorrectionTickRate>
 				<initialDispersionFromTarget>30</initialDispersionFromTarget>
 			</li>
 		</comps>
@@ -756,7 +790,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Assault</defName>
 		<label>ME-A1</label>
-		<description>Energy assault rifle. Fires shots in 3 burst. Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. Projectile is homing-type. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A Makainian homing-type weapon, its body is made entirely from celestial steel; a dimensional uplink is embedded within its core. Upon pulling the trigger, it connects to an energy field deep within the 5th dimension, gathering dimensional energy into the core before launching it. The target is embedded with an energy signature upon pulling the trigger, making the projectile seek out the target with the same signature. the energy drawing from the 5th dimension enhance this weapon, making each cycle faster the longer it fire toward the target with matching energy signature. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_A1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -791,8 +825,8 @@
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<weaponTags>
-			<li>SpacerGun</li>
-			<li>Makai_W_Ultra</li>
+			<!-- <li>SpacerGun</li> -->
+			<li>Makai_W_Homing</li>
 		</weaponTags>
 		<equippedStatOffsets>
 		</equippedStatOffsets>
@@ -893,7 +927,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Bomb</defName>
 		<label>ME-G1</label>
-		<description>Energy launcher. Fires a single explosive shot. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A Makainian bombarding-type weapon, fashioned with sophisticated Makainian technology. A dimensional unlink is embedded within its core, connecting to an energy field within the 5th dimension. Upon pulling the trigger, it gathers a highly volatile energy mass within the weapon before launching it toward the target area, devastating anything caught by it.​ \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_G1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1007,16 +1041,16 @@
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
 		<projectile>
-			<speed>20</speed>
+			<speed>30</speed>
 			<damageDef>ME_Bullet_A</damageDef>
 			<damageAmountBase>3</damageAmountBase>
 			<armorPenetrationBase>0.75</armorPenetrationBase>
 			<stoppingPower>1</stoppingPower>
 		</projectile>
-		<comps>
+		<comps>			
 			<li Class="VFECore.CompProperties_HomingProjectile">
 				<homingDistanceFractionPassed>0.3</homingDistanceFractionPassed>
-				<homingCorrectionTickRate>5</homingCorrectionTickRate>
+				<homingCorrectionTickRate>20</homingCorrectionTickRate>
 				<initialDispersionFromTarget>10</initialDispersionFromTarget>
 			</li>
 		</comps>
@@ -1025,7 +1059,7 @@
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Early_Pistol</defName>
 		<label>ME-A2</label>
-		<description>Energy pistol. Fires shots in 6 bursts each. Due to its unstable trigger, the longer it fires at the same target, the faster its rate of fire will become. Projectiles are homing-type. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A Makainian homing-type weapon, its body is made entirely from celestial steel; a dimensional uplink is embedded within its core. Upon pulling the trigger, it connects to an energy field deep within the 5th dimension, gathering dimensional energy into the core before launching it. The target is embedded with an energy signature upon pulling the trigger, making the projectile seek out the target with the same signature. the energy drawing from the 5th dimension enhance this weapon, making each cycle faster the longer it fire toward the target with matching energy signature. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ME_A2</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1060,8 +1094,8 @@
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<weaponTags>
-			<li>SpacerGun</li>
-			<li>Makai_W_Ultra</li>
+			<!-- <li>SpacerGun</li> -->
+			<li>Makai_W_Homing</li>
 		</weaponTags>
 		<equippedStatOffsets>
 		</equippedStatOffsets>
@@ -1140,12 +1174,25 @@
 			<stoppingPower>1</stoppingPower>
 			<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>
 		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>Makai_StardustShell_Stream</effecterDef>
+			</li>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>Makai_StardustShell_Launched</effecterDef>
+			</li>
+			<li Class="VFECore.CompProperties_HomingProjectile">
+				<homingDistanceFractionPassed>0.5</homingDistanceFractionPassed>
+				<homingCorrectionTickRate>20</homingCorrectionTickRate>
+				<initialDispersionFromTarget>0</initialDispersionFromTarget>
+			</li>
+		</comps>
 	</ThingDef>
 	
 	<ThingDef ParentName="MakaiBaseMakeableGun">
 		<defName>Makai_Stardust_Cannon</defName>
 		<label>Stardust Cannon</label>
-		<description>Compressed Stardust cannon. Portable version of stardust turret. Due to limited energy storage it can only launch projectiles instead of firing a beam of stardust. Because of weight it is really hard to move while carrying this weapon. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A Makainian bombardment-type weapon, an attempt at making a portable version of Makai's Stardust-beam compresser. Its core is connected to an energy field deep within the 6th dimension, supplying it with endless power. Upon pulling the trigger, an energy regulator will pull upon energy from the connected energy field, gather it into a highly destructive projectile before launching it toward the target. This volatile energy will dismantle anything it comes into contact with down to atomic level. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Building/makai_turret_topB</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1379,7 +1426,7 @@
 	<ThingDef ParentName="MakaiT1Weapon">
 		<defName>Makai_T1_Assault</defName>
 		<label>Stardust HMG</label>
-		<description>Energy heavy machine gun. Fires shots in 10 burst. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A Makainian assualt-type weapon, powered by stardust energy. made as a mass-produced weapons for makainian soldier. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/MakaiHMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1488,7 +1535,7 @@
 	<ThingDef ParentName="MakaiT1Weapon">
 		<defName>Makai_T1_Sniper</defName>
 		<label>Stardust Triple-Shot</label>
-		<description>Energy sniper. Fires a burst of 3 super heated shots. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A Makainian assassination-type weapon, powered by stardust energy. made as a mass-produced weapons for makainian sniper. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/MakaiSniper</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1562,7 +1609,7 @@
 	<ThingDef ParentName="MakaiT1Weapon">
 		<defName>Makai_T1_Pistol</defName>
 		<label>Stardust RE-45</label>
-		<description>Energy handgun. Fires a burst of 3 super heated shots \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A Makainian support-type weapon, powered by stardust energy. made as a mass-produced weapons for makainian guard. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/MakaiPistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

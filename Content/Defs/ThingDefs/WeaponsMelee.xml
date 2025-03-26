@@ -87,8 +87,8 @@
 	
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Anva_Sword</defName>
-		<label>Entity Null</label>
-		<description>A giant sword made in the image of the original Entity Null. Has the ability to reduce target armor to nothing, and can also shoot lightning. Very heavy to wield for ordinary pawns. \n The blade is composed of local material from the Rimworld mixing with Celestial Steel, making this weapon very durable.</description>
+		<label>Guardian greatsword</label>
+		<description>A gigantic sword forged from the essence of destruction. Its blade is fashioned with Celestial Steel and Stardust, making it extremely durable. Each swing of this weapon strikes a target with the pure essence of destruction, nulifying all forms of defense. The energy core embed within this sword is capable of resonating with local atmosphere, calling down destructive lightning as this weapon strike.\n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/anva_sword_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -112,7 +112,8 @@
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
-			<li>Stony</li>
+			<!-- <li>Stony</li> -->
+			<li>Makai_Celestial</li>
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<thingSetMakerTags>
@@ -273,7 +274,7 @@
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Ama_Berd</defName>
 		<label>Order</label>
-		<description>A giant halberd that improves user psychic ability in various aspects and reduces mental break threshold. \n The blade features a very refined celestial steel. Which makes it very strong compared to local materials.</description>
+		<description>A massive halberd forged from the essence of order. Its blade is fashioned with celestial steel, making whoever struck by it suffer from temporal scars, a condition which nullifies all forms of damage reduction. The essence of order embedded within, granting the wielder extraordinary mind stability, preventing all forms of mental interference. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ama_halberd_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -297,6 +298,7 @@
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
+			<li>Makai_Celestial</li>
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<equippedStatOffsets>
@@ -311,6 +313,7 @@
 			<MaxHitPoints>2000</MaxHitPoints>
 			<WorkToMake>120000</WorkToMake>
 			<Mass>1.5</Mass>
+			<VEF_MeleeWeaponRange>2.84</VEF_MeleeWeaponRange>
 			<!-- <MarketValue>6000</MarketValue> -->
 		</statBases>
 		<relicChance>1</relicChance>
@@ -388,7 +391,7 @@
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Ouro_Berd</defName>
 		<label>Existence</label>
-		<description>The original weapon this halberd is based on is said to have been forged from the very concept of existence itself. While this halberd is no where near that level of power, it still grants the wielder the blessing from the Guardian of Existence, infusing them with godlike power befitting the wielder of the concept of existence.</description>
+		<description>A massive halberd forged from the concept of existence itself. Its blades are formed from Celestial Steel, making whoever struck by it suffer from temporal scars. The essence of existence embedded within the weapon grants the wielder with near-unstoppable power, giving them superb regeneration ability. Whenever its wielder would falls, this weapon refreshes their minds and bodies anew, ensuring that its user will never fall in the battlefield. If, in any case, its wielder suffers fatal damage, it will pull upon layers of casuality, remaking their entire existence, making them stronger, until eventually, nothing is capable of harming them anymore.\n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ouro_wep_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -414,6 +417,7 @@
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
+			<li>Makai_Celestial</li>
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<equippedStatOffsets>
@@ -429,6 +433,7 @@
 			<MaxHitPoints>2000</MaxHitPoints>
 			<WorkToMake>120000</WorkToMake>
 			<Mass>12.3</Mass>
+			<VEF_MeleeWeaponRange>2.84</VEF_MeleeWeaponRange>
 			<!-- <MarketValue>6000</MarketValue> -->
 		</statBases>
 		<relicChance>1</relicChance>
@@ -499,6 +504,7 @@
 			<li Class="MakaiTech.CompProperties_WeaponGiveTraitOrHediff">
 				<traitDef>Makai_Trait_Existence</traitDef>
 				<hediffDef>Existence_Resurrection</hediffDef>
+				<isExistence>true</isExistence>
 				<removeHediffOnUnequip>false</removeHediffOnUnequip>
 			</li>
 		</comps>
@@ -524,8 +530,8 @@
 	<!--============= Alf Claw =============-->
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Alf_Claw</defName>
-		<label>Collapsed Will</label>
-		<description>A claw weapon made with the intent to corrupt someone's mind. Increases user melee fighting ability. Makes them attack faster than they normally can and sends them into a state where they won't go down with pain.</description>
+		<label>Claw of insanity</label>
+		<description>A claw-like weapon forged from the essence of corruption. Its blade is fashioned with celestial steel, making whoever struck by it suffer from temporal scars. The essence of corruption embedded within this weapon granting its wielder a frenzy-like melee ability, making them ignore pain and attack with unbelievable speed. Each strike of this weapon inflicts target with insanity, slowly corroding their mind until eventually they break down. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/alf_claw_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -549,6 +555,7 @@
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
+			<li>Makai_Celestial</li>
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<equippedStatOffsets>
@@ -650,7 +657,7 @@
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Mica_Blade</defName>
 		<label>Sunblade</label>
-		<description>A sword imbued with the power of the sun. Its blade emits extreme heat, melting away anything it touches. Grants user the blessing of Guardian of Flame, making them immune to heat damage and granting them immunity to fire.</description>
+		<description>a sword forged from the essnce of flame. a miniature sun is embed into this weapon as a core, radiating massive amount of heat which contained with the area around the blade, making a strike from this weapon incredibly destructive. the essence of flame imbued within granting it wielder complete immunity to heat. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/mica_sunblade_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -675,11 +682,13 @@
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
+			<li>Makai_Celestial</li>
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<equippedStatOffsets>
 			<ArmorRating_Heat>100</ArmorRating_Heat>
 			<Flammability>-10</Flammability>
+			<ComfyTemperatureMax>10000</ComfyTemperatureMax>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
@@ -851,7 +860,7 @@
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Mica_Mace</defName>
 		<label>Radiant Star</label>
-		<description>A miniature sun attached to a handle with an energy link. Its heat can melt away a target's armor. Can be used as throwing weapon or spin it fast enough to shoot a fireball. Grants user the blessing of Guardian of Flame, making them immune to heat damage and granting them immunity to fire.</description>
+		<description>​A flail-like weapon, made from the essence of flame, a miniature sun is used as the head for this weapon, connected with an energy link covered by celestial fabric. The link can extend itself to a certain distance, giving it a wide range of attack. The essence of flame imbued within granting it wielder complete immunity to heat. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/mica_radiantstar</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -876,11 +885,13 @@
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
+			<li>Makai_Celestial</li>
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<equippedStatOffsets>
 			<ArmorRating_Heat>100</ArmorRating_Heat>
 			<Flammability>-10</Flammability>
+			<ComfyTemperatureMax>10000</ComfyTemperatureMax>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
@@ -1155,7 +1166,7 @@
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Sari_Scy</defName>
 		<label>Destined Death</label>
-		<description>An unwieldy scythe weapon that ignores armor but deals little damage. It will inflict the curse, Destined Death, which will build up to eventually kill the victim. \n\n\nVictims of &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt; cannot be resurrected.</description>
+		<description>Destined death, the ultimate killing weapon, it capable of granting its victim a true death, removing them from the cycle of rebirth. this weapon is forged from the essence of death itself, with its blades hidden within the immaterial plane, while projecting its existence onto the physical plane, making it bypass all obstruction between itself and the target. Each strike deals very little damage, but it will chip away at the target's lifeforce, inflicting them with a death curse, which upon reaching the 13th layer, finally kills its target. \n\n\nVictims that die by &lt;color=#5F57A5&gt;Destined Death&lt;/color&gt;'s curse cannot be resurrected.</description>
 		<graphicData>
 			<texPath>Things/Weapon/sari_scythe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1179,6 +1190,7 @@
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
+			<li>Makai_Celestial</li>
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<equippedStatOffsets>

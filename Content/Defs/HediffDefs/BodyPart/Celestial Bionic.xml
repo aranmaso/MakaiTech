@@ -43,7 +43,7 @@
 	<!-- Celestial eye -->
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>Makai_CelestialEye</defName>
-		<hediffClass>MakaiTech.Hediff_DynamicStage</hediffClass>
+		<!-- <hediffClass>MakaiTech.Hediff_DynamicStage</hediffClass> -->
 		<label>celestial eye</label>
 		<labelNoun>an celestial eye</labelNoun>
 		<description>An installed celestial eye.</description>
@@ -62,42 +62,22 @@
 			<li>Celestial_Bionic</li>
 		</tags>
 		<stages>
-			<!-- <li> -->
-				<!-- <capMods> -->
-				<!-- </capMods> -->
-				<!-- <statFactors> -->
-					<!-- <MeleeHitChance>5.0</MeleeHitChance> -->
-					<!-- <MeleeDodgeChance>5.0</MeleeDodgeChance> -->
-					<!-- <ReadingSpeed>2.0</ReadingSpeed> -->
-				<!-- </statFactors> -->
-				<!-- <statOffsets> -->
+			<li>
+				<capMods>
+				</capMods>
+				<statFactors>
+					<MeleeHitChance>5.0</MeleeHitChance>
+					<MeleeDodgeChance>5.0</MeleeDodgeChance>
+					<ReadingSpeed>2.0</ReadingSpeed>
+				</statFactors>
+				<statOffsets>
 					
-				<!-- </statOffsets> -->
-			<!-- </li> -->
+				</statOffsets>
+			</li>
 		</stages>
 		<comps>
-			<li Class="MakaiTech.HediffCompProperties_DynamicHediff">
-				<hediffStageSets>
-					<li>
-						<hediffStageData>
-							<label>One</label>
-						</hediffStageData>
-						<activeAtSeverity>0.1</activeAtSeverity>
-					</li>
-					<li>
-						<hediffStageData>
-							<label>Two</label>
-						</hediffStageData>
-						<activeAtSeverity>0.5</activeAtSeverity>
-					</li>
-					<li>
-						<hediffStageData>
-							<label>Three</label>
-						</hediffStageData>
-						<activeAtSeverity>1</activeAtSeverity>
-					</li>
-				</hediffStageSets>
-				<checkInterval>250</checkInterval>
+			<li Class="MakaiTech.HediffCompProperties_CelestialEyeTeleportControl">
+				<uiIcon>Things/Items/BodyPart/CelestialBodyPart</uiIcon>
 			</li>
 		</comps>
 	</HediffDef>

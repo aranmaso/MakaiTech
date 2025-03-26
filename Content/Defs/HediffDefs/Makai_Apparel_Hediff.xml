@@ -159,8 +159,10 @@
 		<description>Has received the blessing of order. Comfort need will always be full.</description>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="MakaiTech.HediffCompProperties_ChangeNeedMultiple">
-				<needDef>Comfort</needDef>
+			<li Class="MakaiTech.HediffCompProperties_ChangeNeeds">
+				<needs>
+					<li>Comfort</li>
+				</needs>
 				<percentPerDay>10</percentPerDay>
 			</li>
 		</comps>

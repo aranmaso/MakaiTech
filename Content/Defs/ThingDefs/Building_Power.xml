@@ -142,9 +142,15 @@
 			<Makai_Fabric_C>250</Makai_Fabric_C>
 		</costList>
 		<specialDisplayRadius>60</specialDisplayRadius>
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
+				<frameSpeed>5</frameSpeed>
+				<isUsingComp>true</isUsingComp>
+			</li>
+		</modExtensions>
 		<comps>
 			<li Class="MakaiTech.CompProperties_AnimatedMakai">
-				<frameSpeed>5</frameSpeed>
+				<!-- <frameSpeed>5</frameSpeed> -->
 				<graphicData>
 					<texPath>Things/Building/sunbase</texPath>
 					<graphicClass>Graphic_Single</graphicClass>

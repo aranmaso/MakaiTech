@@ -211,6 +211,23 @@
 		</graphicData>
 	</ThingDef>
   
-	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_Glitch</defName>
+		<graphicData>
+			<texPath>Things/Mote/Glitch</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+			<fadeInTime>0.01</fadeInTime>
+			<solidTime>0.1</solidTime>
+			<fadeOutTime>0.1</fadeOutTime>
+		</mote>
+	</ThingDef>
 	
 </Defs>

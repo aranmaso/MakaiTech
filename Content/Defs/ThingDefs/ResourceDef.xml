@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<StuffCategoryDef>
+		<defName>Makai_Celestial</defName>
+		<label>celestial</label>
+		<noun>celest</noun>
+		<destroySoundSmall>BuildingDestroyed_Metal_Small</destroySoundSmall>
+		<destroySoundMedium>BuildingDestroyed_Metal_Medium</destroySoundMedium>
+		<destroySoundLarge>BuildingDestroyed_Metal_Big</destroySoundLarge>
+	</StuffCategoryDef>
+	
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_Ingot</defName>
 		<label>celestial steel</label>
@@ -31,6 +40,7 @@
 			<stuffAdjective>starborne</stuffAdjective>
 			<categories>
 				<li>Metallic</li>
+				<li>Makai_Celestial</li>
 				<li>Fabric</li>
 				<li>Woody</li>
 				<li>Stony</li>

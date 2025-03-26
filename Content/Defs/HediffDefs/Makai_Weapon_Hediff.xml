@@ -113,7 +113,7 @@
   
 	<HediffDef ParentName="DiseaseBase">
 		<defName>Knowledge_Stolen</defName>
-		<label>Cease Thinking</label>
+		<label>stopped thinking</label>
 		<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
 		<description>The blessing of knowledge has abandoned this individual, leaving their mind incapable of thought.</description>
 		<isBad>true</isBad>
@@ -127,11 +127,6 @@
 				<severityPerDay>-12.0</severityPerDay>
 				<showHoursToRecover>true</showHoursToRecover>
 			</li>
-			<!--li Class="HediffCompProperties_Discoverable">
-		<sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
-		<discoverLetterLabel>Brain Cease</discoverLetterLabel>
-		<discoverLetterText>Brain no work, no more.</discoverLetterText>
-	  </li-->
 		</comps>
 		<hediffGivers>
 			<li Class="HediffGiver_Random">
@@ -145,7 +140,7 @@
 		</hediffGivers>
 		<stages>
 			<li>
-				<label>Stopped Thinking</label>
+				<label>brain no work</label>
 				<painFactor>0</painFactor>
 				<capMods>
 					<li>
@@ -186,7 +181,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>Mak_Var_Bless</defName>
 		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
-		<label>Varia's Blessing</label>
+		<label>knowledge Blessing</label>
 		<isBad>false</isBad>
 		<labelNoun>has been granted blessing of knowledge</labelNoun>
 		<description>. . .</description>
@@ -506,7 +501,7 @@
 
 	<HediffDef ParentName="DiseaseBase">
 		<defName>Conceptual_Frost</defName>
-		<label>Concept Frost</label>
+		<label>Aspect of Frost</label>
 		<description>Afflicted by frost magic.</description>
 		<isBad>true</isBad>
 		<defaultLabelColor>(0, 214, 238)</defaultLabelColor>
@@ -648,7 +643,7 @@
 
 	<HediffDef ParentName="DiseaseBase">
 		<defName>Conceptual_Flame</defName>
-		<label>Concept Flame</label>
+		<label>Aspect of Flame</label>
 		<description>Afflicted by sun heat.</description>
 		<isBad>true</isBad>
 		<initialSeverity>1</initialSeverity>
@@ -676,7 +671,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>0.90</offset>
+						<offset>-0.25</offset>
 					</li>
 					<li>
 						<capacity>Consciousness</capacity>
@@ -719,7 +714,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>0.90</offset>
+						<offset>-0.25</offset>
 					</li>
 					<li>
 						<capacity>Sight</capacity>
@@ -731,7 +726,7 @@
 					<ArmorRating_Blunt>-1</ArmorRating_Blunt>
 				</statOffsets>
 				<restFallFactorOffset>0.5</restFallFactorOffset>
-				<hungerRateFactorOffset>-1</hungerRateFactorOffset>
+				<!-- <hungerRateFactorOffset>-1</hungerRateFactorOffset> -->
 			</li>
 		</stages>
 	</HediffDef>
@@ -745,7 +740,7 @@
 		<defName>Conceptual_Death</defName>
 		<label>Deathly 13th</label>
 		<defaultLabelColor>(0.9, 0.9, 0.5)</defaultLabelColor>
-		<description>The curse of death coming closer. once the 13th arrive, death is inevitable.</description>
+		<description>The curse of death coming closer. once the 13th arrive, death is inevitable. pawn death by the 13th can't be resurrected by normal mean.</description>
 		<isBad>false</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>13.5</maxSeverity>
@@ -1318,8 +1313,8 @@
   
 	<HediffDef ParentName="DiseaseBase">
 		<defName>ATKSPEED_Mark</defName>
-		<label>Target</label>
-		<description>Attack frenzy makes this pawn attack faster.</description>
+		<label>Dimensional Signal</label>
+		<description>signal mark by dimensional energy from the 5th dimension, attract dimension energy with the matching signal.</description>
 		<isBad>false</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1</maxSeverity>

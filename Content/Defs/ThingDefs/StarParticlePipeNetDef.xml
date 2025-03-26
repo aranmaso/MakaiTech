@@ -203,15 +203,21 @@
 			<ComponentSpacer>25</ComponentSpacer>
 			<ComponentIndustrial>10</ComponentIndustrial>
 		</costList>
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
+				<frameSpeed>10</frameSpeed>
+				<isUsingComp>false</isUsingComp>
+			</li>
+		</modExtensions>
 		<comps>
 			<!--li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
 				<randomGraphics>
 					<li>Things/Building/Makai_St_Conv_2</li>
 				</randomGraphics>
 			</li-->
-			<li Class="MakaiTech.CompProperties_AnimatedMakai">
-				<frameSpeed>10</frameSpeed>
-			</li>
+			<!-- <li Class="MakaiTech.CompProperties_AnimatedMakai"> -->
+				<!-- <frameSpeed>10</frameSpeed> -->
+			<!-- </li> -->
 			<li Class="PipeSystem.CompProperties_ResourceProcessor">
 				<pipeNet>Makai_StarParticleNet</pipeNet>
 				<showBufferInfo>false</showBufferInfo>
@@ -300,6 +306,12 @@
 			<Makai_Ingot>10</Makai_Ingot>
 			<ComponentSpacer>25</ComponentSpacer>
 		</costList>
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
+				<frameSpeed>10</frameSpeed>
+				<isUsingComp>true</isUsingComp>
+			</li>
+		</modExtensions>
 		<comps>
 			<li Class="MakaiTech.CompProperties_AnimatedMakai">
 				<frameSpeed>10</frameSpeed>
@@ -405,10 +417,16 @@
 			<Makai_Ingot>10</Makai_Ingot>
 			<ComponentSpacer>25</ComponentSpacer>
 		</costList>
-		<comps>
-			<li Class="MakaiTech.CompProperties_AnimatedMakai">
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
 				<frameSpeed>15</frameSpeed>
+				<isUsingComp>false</isUsingComp>
 			</li>
+		</modExtensions>
+		<comps>
+			<!-- <li Class="MakaiTech.CompProperties_AnimatedMakai"> -->
+				<!-- <frameSpeed>15</frameSpeed> -->
+			<!-- </li> -->
 			<li Class="PipeSystem.CompProperties_ResourceProcessor">
 				<pipeNet>Makai_StarParticleNet</pipeNet>
 				<showBufferInfo>false</showBufferInfo>

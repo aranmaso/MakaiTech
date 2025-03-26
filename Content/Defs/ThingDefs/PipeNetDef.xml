@@ -140,11 +140,17 @@
 			<ComponentSpacer>25</ComponentSpacer>
 		</costList>
 		<rotatable>false</rotatable>
-		<comps>
-			<li Class="MakaiTech.CompProperties_AnimatedMakai">
+		<modExtensions>
+			<li Class="MakaiTech.ThingExtension_Animated">
 				<frameSpeed>4</frameSpeed>
-				<haveExtraGraphic>false</haveExtraGraphic>
+				<isUsingComp>false</isUsingComp>
 			</li>
+		</modExtensions>
+		<comps>
+			<!-- <li Class="MakaiTech.CompProperties_AnimatedMakai"> -->
+				<!-- <frameSpeed>4</frameSpeed> -->
+				<!-- <haveExtraGraphic>false</haveExtraGraphic> -->
+			<!-- </li> -->
 			<li Class="PipeSystem.CompProperties_ResourceTrader">
 				<pipeNet>Makai_Raw_EnergyNet</pipeNet>
 				<!-- Amount used per tick, it it's negative, it's producing -->
