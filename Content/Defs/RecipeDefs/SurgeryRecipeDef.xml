@@ -110,7 +110,7 @@
 		<defName>Makai_Induce_Order</defName>
 		<label>Induce Order</label>
 		<description>Incubate essence of Order in target.</description>
-		<jobString>Induce insanity into TargetA.</jobString>
+		<jobString>Induce order into TargetA.</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>true</hideBodyPartNames>
 		<isViolation>false</isViolation>
@@ -342,8 +342,8 @@
 	
 	<RecipeDef ParentName="SurgeryInstallImplantBase">
 		<defName>Makai_Induce_Bond</defName>
-		<label>Empowering Bond</label>
-		<description>embed base essence of bond.</description>
+		<label>Induce seed of bond</label>
+		<description>embed seed of bond.</description>
 		<jobString>Embed base essence into TargetA.</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>true</hideBodyPartNames>
@@ -392,7 +392,7 @@
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Makai_Harvest_Bond_Frag</defName>
 		<label>Extract Bond Level</label>
-		<description>Extract Bond into material needed to extract Slumbering Fragment of Bond.</description>
+		<description>Extract Bond level into material needed to extract Slumbering Fragment of Bond.</description>
 		<workerClass>Recipe_RemoveHediff</workerClass>
 		<jobString>extract bond from TargetA.</jobString>
 		<workAmount>500</workAmount>
@@ -426,16 +426,16 @@
 	
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Makai_Harvest_Bond_Seed</defName>
-		<label>Harvest Base Essence - Bond</label>
-		<description>Extract seed from target</description>
+		<label>Remove Base Essence - Bond</label>
+		<description>Remove seed from target</description>
 		<workerClass>Recipe_RemoveHediff</workerClass>
-		<jobString>extract base essence from TargetA.</jobString>
+		<jobString>remove base essence from TargetA.</jobString>
 		<workAmount>500</workAmount>
 		<hideBodyPartNames>true</hideBodyPartNames>
 		<isViolation>false</isViolation>
 		<targetsBodyPart>true</targetsBodyPart>
 		<removesHediff>Essence_Growth_Bond_Giver</removesHediff>
-		<successfullyRemovedHediffMessage>{0} has successfully harvested seed of bond from {1}.</successfullyRemovedHediffMessage>
+		<successfullyRemovedHediffMessage>{0} has successfully remove base essence of bond from {1}.</successfullyRemovedHediffMessage>
 		<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
 		<anesthetize>false</anesthetize>
 		<researchPrerequisites>
@@ -512,7 +512,7 @@
 		<label>Base Essence of Fate</label>
 		<description>Base essence with aspect of fate imbued into it. Implant this into a pawn to start the process of obtaining Essence of Fate. 
 \n &lt;color=#FF0000&gt;Warning&lt;/color&gt; Transformation process won't work on artificial bodyparts and needs to be a natural part, otherwise you don't get enough Fated Fragment. during the process, pawn will never be downable. 
-\n\n\n The process will happen over the duration of 5 days. After that pawn will gain Fated Encounter hediff and sent into berserk rage for 5 days.
+\n\n\n The transformation will happen over the duration of 5 days, after which pawn will gain Fated Encounter hediff and be sent into berserk rage for 5 days.
 Pawns with Fated Encounter don't need to eat or rest and will increase in tier by 1 per day. All fated parts will gradually get stronger every day for 5 days.
 Do your best to survive and "DON'T" kill the Fated pawn. If you survive the trial until Fated Encounter reaches tier 6, they are no longer forced into a berserk rage.
 By that time all Fated Implants should reach full severity and turn into Fated Fragment Part. You now have a choice. Keep this pawn as a super pawn, or harvest all of their Fated Parts for Fated Fragments.</description>
@@ -608,8 +608,8 @@ By that time all Fated Implants should reach full severity and turn into Fated F
 	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
 		<defName>Makai_Replace_FatedLung</defName>
 		<label>Install fake lung</label>
-		<description>A temporary lung that will last long enough for you to get the rest of the fated fragments. \n\n\nWhy vanilla don't have bionic lung :(</description>
-		<jobString>get fated fragment from TargetA.</jobString>
+		<description>A temporary lung that will last long enough for you to get the rest of the fated fragments.</description>
+		<jobString>get install fake lung into TargetA.</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>false</hideBodyPartNames>
 		<isViolation>false</isViolation>
@@ -719,7 +719,7 @@ By that time all Fated Implants should reach full severity and turn into Fated F
 	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>Makai_Dea_Path_Soul_Extraction</defName>
 		<label>Take Soul</label>
-		<description>Soul Extraction</description>
+		<description>extract soul from this individual, render them as nothing but empty vessel, after which, you can either restore their soul to this body, or find someone else soul to fill in the void.</description>
 		<workerClass>MakaiTech.Recipe_TakeSoul</workerClass>
 		<jobString>Take soul from TargetA.</jobString>
 		<workAmount>300</workAmount>

@@ -503,6 +503,66 @@
 			</li>
 		</children>
 	</EffecterDef>
+	
+	<EffecterDef>
+		<defName>Makai_StardustHandheldShell_Stream</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<chancePerTick>1</chancePerTick>
+				<fleckDef>Makai_FleckSmokeShortA</fleckDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(-0.5,0,0)</positionOffset>
+				<positionRadius>0</positionRadius>
+				<absoluteAngle>false</absoluteAngle>
+				<burstCount>3~6</burstCount>
+				<scale>0.25~1</scale>
+				<speed>-1.0~1.0</speed>
+				<angle>-30~30</angle>
+				<rotation>0~360</rotation>
+			</li>
+			<!-- <li> -->
+				<!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
+				<!-- <chancePerTick>1</chancePerTick> -->
+				<!-- <fleckDef>Makai_Fleck_Glitch</fleckDef> -->
+				<!-- <spawnLocType>OnSource</spawnLocType> -->
+				<!-- <positionOffset>(0,0,0)</positionOffset> -->
+				<!-- <positionRadius>0</positionRadius> -->
+				<!-- <absoluteAngle>false</absoluteAngle> -->
+				<!-- <burstCount>1~1</burstCount> -->
+				<!-- <scale>0.75~0.75</scale> -->
+				<!-- <angle>-30~30</angle> -->
+				<!-- <rotation>0~360</rotation> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
+				<!-- <chancePerTick>1</chancePerTick> -->
+				<!-- <fleckDef>Makai_FleckSmokeShortA</fleckDef> -->
+				<!-- <spawnLocType>OnSource</spawnLocType> -->
+				<!-- <positionRadius>0</positionRadius> -->
+				<!-- <absoluteAngle>false</absoluteAngle> -->
+				<!-- <burstCount>3~6</burstCount> -->
+				<!-- <scale>0.25~1</scale> -->
+				<!-- <speed>6.0~6.0</speed> -->
+				<!-- <angle>-30~30</angle> -->
+				<!-- <rotation>0~360</rotation> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
+				<!-- <chancePerTick>1</chancePerTick> -->
+				<!-- <fleckDef>Makai_FleckSmokeShortA</fleckDef> -->
+				<!-- <spawnLocType>OnSource</spawnLocType> -->
+				<!-- <positionRadius>0</positionRadius> -->
+				<!-- <absoluteAngle>false</absoluteAngle> -->
+				<!-- <burstCount>3~6</burstCount> -->
+				<!-- <scale>0.25~1</scale> -->
+				<!-- <speed>-6.0~-6.0</speed> -->
+				<!-- <angle>-30~30</angle> -->
+				<!-- <rotation>0~360</rotation> -->
+			<!-- </li> -->
+			
+		</children>
+	</EffecterDef>
   
   <EffecterDef>
     <defName>Makai_GlitchWarp</defName>

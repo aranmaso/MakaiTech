@@ -137,7 +137,7 @@
 		<defName>Essence_Incubating_Insanity</defName>
 		<label>Incubating Insanity</label>
 		<isBad>false</isBad>
-		<description>The essence of insanity is embedded into this pawn, slowly gathering universal power. During the process, the pawn will experience severe mental instability. Every 1 hour, the seed will force them into a mental break at random, with 25% chance of it being a berserk state. After which To seed will absorb the madness from the pawn. To prevent interruption, seed of corruption will prevent pawn from ever be downed. \nthe process take a total of 5 days</description>
+		<description>The essence of insanity is embedded into this pawn, slowly gathering universal power. During the process, the pawn will experience severe mental instability. Every 1 hour, the seed will force them into a mental break at random, with 25% chance of it being a berserk state. After which To seed will absorb the madness from the pawn. To prevent interruption, seed of corruption will keep pawn from ever be downed. \nthe process take a total of 5 days \n&lt;color=#CE010E&gt;process will reset if mood is above 50%&lt;/color&gt;</description>
 		<defaultLabelColor>(183, 171, 0)</defaultLabelColor>
 		<initialSeverity>0.1</initialSeverity>
 		<maxSeverity>5.1</maxSeverity>
@@ -432,7 +432,7 @@
 		<label>Distortion Manifest</label>
 		<isBad>false</isBad>
 		<description>Essence of Distortion is incubating inside this pawn. during 5 days duration random thing will happen with said pawn as the center, either they suddenly combust, spawn random stuff. or teleport randomly. try to keep them alive for 5 days.</description>
-		<defaultLabelColor>(183, 171, 0)</defaultLabelColor>
+		<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
 		<initialSeverity>0.1</initialSeverity>
 		<maxSeverity>5.1</maxSeverity>
 		<comps Inherit="False">
@@ -575,7 +575,7 @@
 		<defName>Essence_Growth_Bond_Giver</defName>
 		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 		<label>Warmth of Bond</label>
-		<description>This pawn emits an aura of bond to nearby pawns.</description>
+		<description>base essence of bond implanted within, by staying near at least 2 other people they will gain the warmth which slowly increase their bond level.</description>
 		<isBad>false</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1</maxSeverity>
@@ -606,7 +606,7 @@
 		<defName>Essence_Growth_Bond_Reciever</defName>
 		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 		<label>Feel warmth</label>
-		<description>This pawn is affected by aura of bond.</description>
+		<description>affected by warmth of bond, the longer they stay near warmth giver, the more their bond level increase.</description>
 		<isBad>false</isBad>
 		<minSeverity>0</minSeverity>
 		<initialSeverity>1</initialSeverity>
@@ -631,13 +631,13 @@
 				<hediffGivers>
 					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
 						<hediff>Essence_Growth_Bond</hediff>
-						<mtbDays>0.001</mtbDays>
+						<mtbDays>0.0001</mtbDays>
 						<partsToAffect>
 							<li>Heart</li>
 						</partsToAffect>
 						<countToAffect>1</countToAffect>
 					</li>
-					<li Class="HediffGiver_AddSeverity">
+					<li Class="MakaiTech.HediffGiver_AddSeverityIfAlreadyExist">
 						<hediff>Essence_Growth_Bond</hediff>
 						<severityAmount>0.05</severityAmount>
 						<mtbHours>0.1</mtbHours>
@@ -710,7 +710,7 @@
 		<defName>Essence_Incubating_Complete_Bond</defName>
 		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
 		<label>Slumbering Fragment of Bond</label>
-		<description>Essence of Bond ready to be extracted.</description>
+		<description>Essence of Bond ready to be extracted. in order to do so, remove bond level through operation to get a Bond Level item, which is a material needed to extract fragment of bond.</description>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1</maxSeverity>
 		<spawnThingOnRemoved>Makai_B-Path_E</spawnThingOnRemoved>
@@ -729,7 +729,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>Essence_Fate_Buffer</defName>
 		<label>String of Fate</label>
-		<description>Bodypart is being slowly transformed into Fated Part. The entire process will take 5 days to complete. The end Fated Encounter awaits.</description>
+		<description>Bodypart is being slowly transformed into Fated Part. The entire process will take 5 days to complete. after which, Fated Encounter awaits.</description>
 		<isBad>false</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>5</maxSeverity>
@@ -835,7 +835,10 @@
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>Essence_Fate_Encounter</defName>
 		<label>Fated Encounter</label>
-		<description>The time has come, your challege is here. Over the duration of 5 days pawns affected by Fated Encounter will enter a berserk rage. \nSurvive and also keep this pawn alive. \nMoving,Manipulation, and Consciousness will never go lower than 100%</description>
+		<description>The time has come, your challenge is here. Over the duration of 5 days Fated Encounter will cause a berserk rage. \nSurvive and also keep this pawn alive. \nMoving,Manipulation, and Consciousness will never go lower than 100%, \nFood and Rest need will never go down.
+		\n\n\nPawns with Fated Encounter don't need to eat or rest and will increase in tier by 1 per day. All fated parts will gradually get stronger every day for 5 days.
+Do your best to survive and try not to kill this pawn,. If you survive the trial until Fated Encounter reaches tier 6, they are no longer forced into a berserk rage.
+By that time all Fated Implants should reach full severity and turn into Fated Fragment Part. You now have a choice. Keep this pawn as a super pawn, or harvest all of their Fated Parts for Fated Fragments.</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
 		<initialSeverity>1</initialSeverity>
@@ -1021,7 +1024,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>Destined_Death_Soul_Missing_Giver</defName>
 		<label>Missing Soul</label>
-		<description>Soul has been removed, rendering this pawn in permanent state of coma.</description>
+		<description>Soul has been removed, rendering this pawn in permanent state of coma, return the previous owner's to this body, or find a replacement soul.</description>
 		<isBad>false</isBad>
 		<chronic>false</chronic>
 		<initialSeverity>1</initialSeverity>
@@ -1046,13 +1049,13 @@
 	<HediffDef ParentName="DiseaseBase" Name="MakaiAvatarHediffBase" Abstract="True">
 		<isBad>false</isBad>
 		<priceImpact>true</priceImpact>
+		<hediffClass>HediffWithComps</hediffClass>
 	</HediffDef>
   
 	<!-- Destruction -->
 	<HediffDef ParentName="MakaiAvatarHediffBase">
 		<defName>Destruction_AutoAttack</defName>
 		<label>Destruction Avatar</label>
-		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
 		<description>Emitting aura of destruction, call down lightning to smite foes with every strike.</description>
 		<spawnThingOnRemoved>Makai_Anva_Sword</spawnThingOnRemoved>
 		<defaultLabelColor>(32, 197, 0)</defaultLabelColor>
@@ -1077,7 +1080,6 @@
 	<HediffDef ParentName="MakaiAvatarHediffBase">
 		<defName>Order_Enlightenment</defName>
 		<label>Order Avatar</label>
-		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
 		<description>The mind of an enlightenend one. Should mental break occur, a set amount of percent will be consumed to end the mental break right away. \n\nPercent gained automatically when pawn meditates. Increases at the same rate as their psyfocus gain. \n\n&lt;color=#FF0000&gt;[If no Royalty]&lt;/color&gt;\n pawn will gain percent passively at slower rate instead.</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_Ama_Berd</spawnThingOnRemoved>
@@ -1099,7 +1101,6 @@
 	<HediffDef ParentName="MakaiAvatarHediffBase">
 		<defName>Corruption_Avatar</defName>
 		<label>Corruption Avatar</label>
-		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
 		<description>The mark of corrupted one, the taint forever remains, for they have seen the true depth of the abyss. \n\n Toggleable pulsing aura that will cause nearby hostile pawn to go into a random mental break. \nradius 5 cell</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_Alf_Claw</spawnThingOnRemoved>
@@ -1121,7 +1122,6 @@
 	<HediffDef ParentName="MakaiAvatarHediffBase">
 		<defName>Death_Avatar</defName>
 		<label>Death Avatar</label>
-		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
 		<description>The mark of one who has embraced destined death. They shall be the one to ring the bell that signals the final day.</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_Sari_Scy</spawnThingOnRemoved>
@@ -1138,7 +1138,6 @@
 	<HediffDef ParentName="MakaiAvatarHediffBase">
 		<defName>Flame_Avatar</defName>
 		<label>Flame Avatar</label>
-		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
 		<description>The light of the radiant star. The cleansing flame. Pave thy road with a path of gold. No heat shall ever harm thy flesh for the blessing of the star protect thee.</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_Mica_Mace</spawnThingOnRemoved>
@@ -1164,7 +1163,6 @@
 	<HediffDef ParentName="MakaiAvatarHediffBase">
 		<defName>Frost_Avatar</defName>
 		<label>Frost Avatar</label>
-		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
 		<description>The frigid cold of the coldest night. Numb thy pain. Numb thy feeling. Still thy mind as the barrier of ice.</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_Yuki_Staff</spawnThingOnRemoved>
@@ -1192,7 +1190,6 @@
 	<HediffDef ParentName="MakaiAvatarHediffBase">
 		<defName>Knowledge_Avatar</defName>
 		<label>Knowledge Avatar</label>
-		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
 		<description>The mark of true knowledge, seeking to unveil the unknown depth of knowledge. For all knowledge belongs to thee.</description>
 		<isBad>false</isBad>
 		<spawnThingOnRemoved>Makai_Bow_Varia</spawnThingOnRemoved>

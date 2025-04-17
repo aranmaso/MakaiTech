@@ -73,4 +73,12 @@
 		<li>Makai_PrimoForge_FoodModule</li>
     </fixedBillGiverDefs>
 	</WorkGiverDef>
+	
+	<WorkGiverDef ParentName="ForgeCraftBase">
+    <defName>DoBillPrimoForgeDrug</defName>
+    <label>materialize matter</label>
+    <fixedBillGiverDefs>
+		<li>Makai_PrimoForge_DrugModule</li>
+    </fixedBillGiverDefs>
+	</WorkGiverDef>
 </Defs>

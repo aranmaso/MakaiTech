@@ -89,14 +89,22 @@
 			<li>Makai_EnergyRelay_Tier1</li>
 		</researchPrerequisites>
 	</ThingDef>
-  
+	
+	<GameConditionDef>
+		<defName>Makai_SunCradleClimateControl</defName>
+		<conditionClass>MakaiTech.GameCondition_SunCradle</conditionClass>
+		<label>sun cradle</label>
+		<description>wide field of climate alteration from sun cradle is changing local atmosphere.</description>
+		<!-- <displayOnUI>false</displayOnUI> -->
+	</GameConditionDef>
+	
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_SunC</defName>
 		<label>Sun Cradle</label>
 		<description>A highly advanced piece of technology, the sun that hangs high in the sky, now contains within a cradle made of celestial fabric. It emit bright light to a large radius capable of sustaining plant growth.Built-in with a self-regulating temperature system to ensure optimal map temperature.</description>
 		<graphicData>
 			<texPath>Things/Building/sun_Anim</texPath>
-			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>			
+			<graphicClass>MakaiTech.Graphic_Animated</graphicClass>
 			<drawOffset>(0,0,0)</drawOffset>
 			<drawSize>(5,5)</drawSize>
 		</graphicData>
@@ -106,7 +114,7 @@
 		<passability>Impassable</passability>
 		<stealable>false</stealable>
 		<fillPercent>0.5</fillPercent>
-		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>		
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
 		<canOverlapZones>false</canOverlapZones>
 		<castEdgeShadows>false</castEdgeShadows>
@@ -185,36 +193,28 @@
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>60</explosiveRadius>
-				<explosiveDamageType>BombSuper</explosiveDamageType>
+				<explosiveDamageType>Makai_Vaporize</explosiveDamageType>
 				<postExplosionSpawnThingDef>Filth_Ash</postExplosionSpawnThingDef>
 				<postExplosionSpawnChance>1</postExplosionSpawnChance>
 				<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
 				<chanceNeverExplodeFromDamage>0.15</chanceNeverExplodeFromDamage>
-			</li> 
+			</li>
 			<li Class="CompProperties_Glower">
 				<overlightRadius>60</overlightRadius>
 				<glowRadius>60</glowRadius>
 				<glowColor>(666,666,666)</glowColor>
 			</li>
 			<!-- <li Class="CompProperties_TempControl"> -->
-				<!-- <energyPerSecond>200</energyPerSecond> -->
-				<!-- <defaultTargetTemperature>21</defaultTargetTemperature> -->
-				<!-- <minTargetTemperature>-100</minTargetTemperature> -->
-				<!-- <maxTargetTemperature>2000</maxTargetTemperature> -->
+			<!-- <energyPerSecond>1000</energyPerSecond> -->
+			<!-- <defaultTargetTemperature>21</defaultTargetTemperature> -->
+			<!-- <minTargetTemperature>-100</minTargetTemperature> -->
+			<!-- <maxTargetTemperature>2000</maxTargetTemperature> -->
 			<!-- </li> -->
 			<li Class="MakaiTech.CompProperties_HeatPusherSunCradle">
 				<defaultTemp>20</defaultTemp>
 				<heatPerSecond>100</heatPerSecond>
 				<coldPerSecond>-50</coldPerSecond>
 			</li>
-			<!-- <li Class="CompProperties_HeatPusher"> -->
-			<!-- <heatPerSecond>100</heatPerSecond> -->
-			<!-- <heatPushMaxTemperature>19</heatPushMaxTemperature> -->
-			<!-- </li> -->
-			<!-- <li Class="CompProperties_HeatPusher"> -->
-			<!-- <heatPerSecond>-50</heatPerSecond> -->
-			<!-- <heatPushMinTemperature>20</heatPushMinTemperature> -->
-			<!-- </li> -->
 		</comps>
 		<researchPrerequisites>
 			<li>Makai_EnergyRelay_Tier7</li>

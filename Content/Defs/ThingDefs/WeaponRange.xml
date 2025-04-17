@@ -137,7 +137,6 @@
 		<soundInteract>Interact_ChargeLance</soundInteract>
 		<statBases>
 			<WorkToMake>12050</WorkToMake>
-			<!-- <MarketValue>3600</MarketValue> -->
 			<Mass>3.8</Mass>
 			<AccuracyTouch>2</AccuracyTouch>
 			<AccuracyShort>2</AccuracyShort>
@@ -204,66 +203,7 @@
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
-			<!--li>
-			<verbClass>Verb_Shoot</verbClass>
-			<label>ExtraShot</label>
-			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>Bullet_Turret_Makai_A</defaultProjectile>
-			<warmupTime>2</warmupTime>
-			<range>50</range>
-			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-			<burstShotCount>40</burstShotCount>
-			<forcedMissRadius>90</forcedMissRadius>
-			<soundCast>pewpewthree</soundCast>
-			<soundCastTail>GunTail_Heavy</soundCastTail>
-			<muzzleFlashScale>4</muzzleFlashScale>
-			<targetParams>
-				<canTargetLocations>false</canTargetLocations>
-			</targetParams>
-		</li>
-	  	<li>
-			<verbClass>Verb_Shoot</verbClass>
-			<label>ExtraShot2</label>
-			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>VWEL_Bullet_Varia</defaultProjectile>
-			<warmupTime>2</warmupTime>
-			<range>50</range>
-			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-			<burstShotCount>1</burstShotCount>
-			<soundCast>VWE_LaserShot_Heavy</soundCast>
-			<soundCastTail>GunTail_Heavy</soundCastTail>
-			<muzzleFlashScale>4</muzzleFlashScale>
-			<targetParams>
-				<canTargetLocations>false</canTargetLocations>
-			</targetParams>
-		</li-->
 		</verbs>
-		<!--comps Inherit="False">
-    <li Class="MVCF.Comps.CompProperties_VerbProps">
-      <compClass>CompEquippable</compClass>
-      <verbProps>
-					<li>
-						<draw>true</draw>
-						<canBeToggled>true</canBeToggled>
-						<graphic>
-							<texPath>Things/Weapon/varia_bow_mini</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-						<canFireIndependently>true</canFireIndependently>
-						<label>ExtraShot</label>
-					</li>
-					<li>
-						<draw>true</draw>
-						<canBeToggled>true</canBeToggled>
-						<graphic>
-							<texPath>Things/Weapon/varia_bow_mini</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-						<canFireIndependently>true</canFireIndependently>
-						<label>ExtraShot2</label>
-					</li>
-		</verbProps>
-    </li-->
 		<modExtensions>
 			<li Class="VFECore.ThingDefExtension">
 				<weaponCarryDrawOffsets>
@@ -689,7 +629,7 @@
 						</comps>
 					</li>
 					<li>
-						<canBeToggled>False</canBeToggled>
+						<canBeToggled>True</canBeToggled>
 						<graphic>
 							<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
 							<graphicClass>Graphic_Single</graphicClass>
@@ -757,23 +697,6 @@
 		<projectile>
 			<speed>28</speed>
 			<damageDef>ME_Bullet_A</damageDef>
-			<!--extraDamages>
-				<li>
-					<def>Nightmare_Claw_Bullet_DamageTwo</def>
-					<amount>5</amount>
-					<armorPenetration>1</armorPenetration>
-				</li>
-				<li>
-					<def>Knowledge_Seeker</def>
-					<amount>5</amount>
-					<armorPenetration>1</armorPenetration>
-				</li>
-				<li>
-					<def>EMP</def>
-					<amount>11115</amount>
-					<armorPenetration>2</armorPenetration>
-				</li>
-			</extraDamages-->
 			<damageAmountBase>5</damageAmountBase>
 			<armorPenetrationBase>0.75</armorPenetrationBase>
 			<stoppingPower>2</stoppingPower>
@@ -1176,7 +1099,7 @@
 		</projectile>
 		<comps>
 			<li Class="CompProperties_ProjectileEffecter">
-				<effecterDef>Makai_StardustShell_Stream</effecterDef>
+				<effecterDef>Makai_StardustHandheldShell_Stream</effecterDef>
 			</li>
 			<li Class="CompProperties_ProjectileEffecter">
 				<effecterDef>Makai_StardustShell_Launched</effecterDef>

@@ -3,7 +3,7 @@
 	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
 		<defName>Makai_Install_DistortArmBase</defName>
 		<label>Install distorted arm</label>
-		<description>Expose a pawn to the essence of distortion, and distort its part into something else entirely.</description>
+		<description>Expose a pawn to the essence of distortion, and alter their arm into a distorted arm.</description>
 		<jobString>expose TargetA. to essence of distortion</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>false</hideBodyPartNames>
@@ -48,7 +48,7 @@
 		<defName>Makai_Distorted_Arm_Base</defName>
 		<label>Distorted Arm</label>
 		<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
-		<description>Distorted Arm made from exposing a pawn to Essence of Distortion.</description>
+		<description>Distorted Arm made from exposing a pawn to Essence of Distortion. upon taking damage, it react based on damage type, which provide pawn with better protection.</description>
 		<isBad>false</isBad>
 		<addedPartProps>
 			<solid>true</solid>
@@ -128,7 +128,7 @@
 		<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
 		<defName>Makai_Install_DistortSkinBase</defName>
 		<label>Install distorted skin plating</label>
-		<description>Expose pawn to essence of distortion, and distort its part into something else entirely.</description>
+		<description>Expose pawn to essence of distortion, and alter their skin with aspect of distortion.</description>
 		<jobString>expose TargetA. to essence of distortion</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>false</hideBodyPartNames>
@@ -185,7 +185,7 @@
 		<defName>Makai_Distorted_Skin_Base</defName>
 		<label>Distorted Skin Plating</label>
 		<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
-		<description>Distorted Plating made from exposing pawn to Essence of Distortion.</description>
+		<description>Distorted Plating made from exposing pawn to Essence of Distortion. upon taking damage, it react based on damage type, which provide pawn with better protection.</description>
 		<isBad>false</isBad>
 		<comps>
 			<li Class="MakaiTech.HediffCompProperties_AdaptiveArmor">
@@ -323,6 +323,10 @@
 				</statOffsets>
 				<statFactors>
 				</statFactors>
+				<damageFactors>
+					<Flame>0.9</Flame>
+					<Burn>0.9</Burn>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 2</label>
@@ -337,6 +341,10 @@
 				<statOffsets>
 					<ArmorRating_Heat>0.15</ArmorRating_Heat>
 				</statOffsets>
+				<damageFactors>
+					<Flame>0.8</Flame>
+					<Burn>0.8</Burn>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 3</label>
@@ -351,6 +359,10 @@
 				<statOffsets>
 					<ArmorRating_Heat>0.2</ArmorRating_Heat>
 				</statOffsets>
+				<damageFactors>
+					<Flame>0.7</Flame>
+					<Burn>0.7</Burn>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 4</label>
@@ -365,6 +377,10 @@
 				<statOffsets>
 					<ArmorRating_Heat>0.25</ArmorRating_Heat>
 				</statOffsets>
+				<damageFactors>
+					<Flame>0.6</Flame>
+					<Burn>0.6</Burn>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 5</label>
@@ -379,6 +395,10 @@
 				<statOffsets>
 					<ArmorRating_Heat>0.3</ArmorRating_Heat>
 				</statOffsets>
+				<damageFactors>
+					<Flame>0.5</Flame>
+					<Burn>0.5</Burn>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 6</label>
@@ -393,6 +413,10 @@
 				<statOffsets>
 					<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				</statOffsets>
+				<damageFactors>
+					<Flame>0.25</Flame>
+					<Burn>0.25</Burn>
+				</damageFactors>
 			</li>
 		</stages>
 	</HediffDef>
@@ -424,6 +448,10 @@
 				</statOffsets>
 				<statFactors>
 				</statFactors>
+				<damageFactors>
+					<Blunt>0.9</Blunt>
+					<Crush>0.9</Crush>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 2</label>
@@ -438,6 +466,10 @@
 				<statOffsets>
 					<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 				</statOffsets>
+				<damageFactors>
+					<Blunt>0.8</Blunt>
+					<Crush>0.8</Crush>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 3</label>
@@ -452,6 +484,10 @@
 				<statOffsets>
 					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
 				</statOffsets>
+				<damageFactors>
+					<Blunt>0.7</Blunt>
+					<Crush>0.7</Crush>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 4</label>
@@ -466,6 +502,10 @@
 				<statOffsets>
 					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
 				</statOffsets>
+				<damageFactors>
+					<Blunt>0.6</Blunt>
+					<Crush>0.6</Crush>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 5</label>
@@ -480,6 +520,10 @@
 				<statOffsets>
 					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 				</statOffsets>
+				<damageFactors>
+					<Blunt>0.5</Blunt>
+					<Crush>0.5</Crush>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 6</label>
@@ -494,6 +538,10 @@
 				<statOffsets>
 					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				</statOffsets>
+				<damageFactors>
+					<Blunt>0.25</Blunt>
+					<Crush>0.25</Crush>
+				</damageFactors>
 			</li>
 		</stages>
 	</HediffDef>
@@ -525,6 +573,9 @@
 				</statOffsets>
 				<statFactors>
 				</statFactors>
+				<damageFactors>
+					<Cut>0.9</Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 2</label>
@@ -539,6 +590,9 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 				</statOffsets>
+				<damageFactors>
+					<Cut>0.8</Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 3</label>
@@ -553,6 +607,9 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
 				</statOffsets>
+				<damageFactors>
+					<Cut>0.7</Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 4</label>
@@ -567,6 +624,9 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 				</statOffsets>
+				<damageFactors>
+					<Cut>0.6</Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 5</label>
@@ -581,6 +641,9 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
 				</statOffsets>
+				<damageFactors>
+					<Cut>0.5</Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 6</label>
@@ -595,6 +658,9 @@
 				<statOffsets>
 					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				</statOffsets>
+				<damageFactors>
+					<Cut>0.25</Cut>
+				</damageFactors>
 			</li>
 		</stages>
 	</HediffDef>
@@ -626,6 +692,9 @@
 				</statOffsets>
 				<statFactors>
 				</statFactors>
+				<damageFactors>
+					<Makai_Celestial_Cut>0.9</Makai_Celestial_Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 2</label>
@@ -640,6 +709,9 @@
 				<statOffsets>
 					<ArmorRating_Celestial>0.15</ArmorRating_Celestial>
 				</statOffsets>
+				<damageFactors>
+					<Makai_Celestial_Cut>0.8</Makai_Celestial_Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 3</label>
@@ -654,6 +726,9 @@
 				<statOffsets>
 					<ArmorRating_Celestial>0.2</ArmorRating_Celestial>
 				</statOffsets>
+				<damageFactors>
+					<Makai_Celestial_Cut>0.7</Makai_Celestial_Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 4</label>
@@ -668,6 +743,9 @@
 				<statOffsets>
 					<ArmorRating_Celestial>0.25</ArmorRating_Celestial>
 				</statOffsets>
+				<damageFactors>
+					<Makai_Celestial_Cut>0.6</Makai_Celestial_Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 5</label>
@@ -682,6 +760,9 @@
 				<statOffsets>
 					<ArmorRating_Celestial>0.3</ArmorRating_Celestial>
 				</statOffsets>
+				<damageFactors>
+					<Makai_Celestial_Cut>0.5</Makai_Celestial_Cut>
+				</damageFactors>
 			</li>
 			<li>
 				<label>Level 6</label>
@@ -696,6 +777,9 @@
 				<statOffsets>
 					<ArmorRating_Celestial>0.5</ArmorRating_Celestial>
 				</statOffsets>
+				<damageFactors>
+					<Makai_Celestial_Cut>0.25</Makai_Celestial_Cut>
+				</damageFactors>
 			</li>
 		</stages>
 	</HediffDef>
@@ -704,7 +788,7 @@
 		<!--RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase"-->
 		<defName>Makai_Install_DistortTargeting</defName>
 		<label>install distorted eye implant</label>
-		<description>Expose pawn to essence of distortion, and distort its part into something else entirely.</description>
+		<description>Expose pawn to essence of distortion, and alter their eye with aspect of distortion.</description>
 		<jobString>expose TargetA. to essence of distortion</jobString>
 		<workAmount>1000</workAmount>
 		<hideBodyPartNames>false</hideBodyPartNames>
@@ -761,7 +845,7 @@
 		<defName>Makai_Distorted_EyeImplant</defName>
 		<label>Distorted Eye Plating</label>
 		<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
-		<description>Distorted Plating made from exposing pawn to Essence of Distortion. This retina plating seems to guide any projectiles they shoot, making them bounce between targets.</description>
+		<description>Distorted Plating made from exposing pawn to Essence of Distortion. the plating store cosmic energy overtime, which will alter the trajectory of most projectile originate from this pawn, cause it to bounce between target deemed hostile by this pawn.</description>
 		<isBad>false</isBad>
 		<comps>
 			<li Class="MakaiTech.HediffCompProperties_BouncingHediff">
@@ -824,7 +908,7 @@
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>Makai_Fate_Reverse</defName>
 		<label>Reverse Fate Fragment</label>
-		<description>Fragment of reversed fate embedded into this individual, causing the course of fate for their injury and condition to go in reverse. Basically healing and reversing any hediff they currently have, or restoring lost limbs. The fragment only lasts 24h. \n\n\n Be warned, the string of fate may yield unexpected results in certain circumstances.</description>
+		<description>Fragment of reversed fate embedded into this individual, causing the course of fate for their injury and condition to go in reverse. Basically healing and reversing any hediff they currently have, or restoring lost limbs. The fragment only lasts 24h. \n\n\n Be warned, the string of fate may yield unexpected results in certain circumstances. aka, unexpected mod interaction.</description>
 		<defaultLabelColor>(95, 87, 165)</defaultLabelColor>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1</maxSeverity>
@@ -946,7 +1030,7 @@
 	<ThingDef ParentName="BodyPartBase">
 		<defName>Makai_ForgeInterfaceImplant</defName>
 		<label>primordial forge interface</label>
-		<description>core interface of the Primordial Forge, can be merged into living body, grant the the ability to use the primordial forge from anywhere. made the same way your would construct primordial forge. except you put it into a person instead of being stationary. due to limitation of a living body, it only allow user to memorise up to 6 items and materialize more of memorised item out of nothing. aka. a portable version of primordial forge, with some limitation.</description>
+		<description>core interface of the Primordial Forge, can be merged into living body, grant the ability to use the primordial forge from anywhere. made the same way your would construct primordial forge. except you put it into a person instead of being stationary. due to limitation of a living body, it only allow user to memorise up to 6 items, after which the saved item can be materialize out of nothing. aka. a portable version of primordial forge, but with a lot of limitation.</description>
 		<descriptionHyperlinks>
 			<RecipeDef>InstallMakai_ForgeInterfaceImplant</RecipeDef>
 		</descriptionHyperlinks>
@@ -987,6 +1071,7 @@
 		<thingCategories>
 			<li>BodyParts</li>
 		</thingCategories>
+		<!-- <tradeability>Sellable</tradeability> -->
 	</ThingDef>
 	
 	<HediffDef ParentName="ImplantHediffBase">

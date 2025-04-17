@@ -1,0 +1,21 @@
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="Makai_CelestialArm"]/comps/li/tools</xpath>
+    <value>
+      <tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>fist</label>
+					<capacities>
+						<li>Makai_Celestial</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>2</cooldownTime>
+					<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+					<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+				</li>
+		</tools>
+    </value>
+  </Operation>
+
+</Patch>

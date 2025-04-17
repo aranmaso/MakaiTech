@@ -1,0 +1,34 @@
+<Patch>
+	
+	<!-- Ingot -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Makai_Ingot"]/statBases</xpath>
+				<value>
+				  <Bulk>0.15</Bulk>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Makai_Ingot"]/stuffProps/categories</xpath>
+				<value>
+				  <li>Steeled</li>
+				  <li>Metallic_Weapon</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<!-- Fabric -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Makai_Fabric_C"]/statBases</xpath>
+				<value>
+				  <Bulk>0.15</Bulk>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,22 @@
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Makai_Varia_Brace" 
+							or defName="Makai_Anva_Ring" 
+							or defName="Makai_Ama_Sigil" 
+							or defName="Makai_Alf_Sigil"]/statBases</xpath>
+		<value>
+			<Bulk>5</Bulk>
+			<WornBulk>2.5</WornBulk>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Makai_Anva_Ring"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryWeight>50</CarryWeight>
+			<MoveSpeed>1</MoveSpeed>
+		</value>
+	</Operation>
+
+</Patch>

@@ -46,7 +46,7 @@
 		<!-- <hediffClass>MakaiTech.Hediff_DynamicStage</hediffClass> -->
 		<label>celestial eye</label>
 		<labelNoun>an celestial eye</labelNoun>
-		<description>An installed celestial eye.</description>
+		<description>An artificial eye made from celestial steel and stardust with Makainian tech, capable of perceiving up to the 6th dimension, allowing user to see beyond the physical and material planes. \nBy perceiving the flow of time, it allows the user to see an attack before it lands, or perceive the trajectory of the bullet before the trigger is pulled. By visualizing all possible frequencies of wavelength, and automatically adjusting according to user desire, it allows user to have unobstructed vision and any kind of vision.</description>
 		<descriptionHyperlinks>
 			<ThingDef>Makai_CelestialEye</ThingDef>
 		</descriptionHyperlinks>
@@ -138,7 +138,7 @@
 		<defName>Makai_CelestialArm</defName>
 		<label>celestial arm</label>
 		<labelNoun>an celestial arm</labelNoun>
-		<description>An installed celestial arm.</description>
+		<description>An artificial arm made from celestial steel and stardust with Makainian tech. It's strong enough to mold tungsten as if molding clay. The stardust that makes up the arm can seamlessly change its shape to fit the task at hand, improving effectiveness in performing the task to an unimaginable degree. Celestial Steel covering the arm is hard enough to fend against most conventional attacks, while providing superb attack power.</description>
 		<descriptionHyperlinks>
 			<ThingDef>Makai_CelestialArm</ThingDef>
 		</descriptionHyperlinks>
@@ -247,7 +247,7 @@
 		<defName>Makai_CelestialLeg</defName>
 		<label>celestial leg</label>
 		<labelNoun>an celestial leg</labelNoun>
-		<description>An installed celestial leg.</description>
+		<description>An artificial leg made from celestial steel and stardust with Makainian tech, capable of providing users with an unimaginable level of movement. A pair of these can help the user to break the sound barrier at sea level, given there is enough running space and sufficient protection from the friction.</description>
 		<descriptionHyperlinks>
 			<ThingDef>Makai_CelestialLeg</ThingDef>
 		</descriptionHyperlinks>
@@ -332,7 +332,7 @@
 		<defName>Makai_CelestialLung</defName>
 		<label>celestial lung</label>
 		<labelNoun>an celestial lung</labelNoun>
-		<description>An installed celestial lung.</description>
+		<description>An artificial lung made from celestial steel and stardust with Makainian tech, capable of protecting users from the most toxic environment, the stardust form a thin network connected to various parts of the user's body, and provide stable nutrition to the user by converting any substance breath in from the air.</description>
 		<descriptionHyperlinks>
 			<ThingDef>Makai_CelestialLung</ThingDef>
 		</descriptionHyperlinks>
@@ -435,7 +435,7 @@
 		<defName>Makai_CelestialHeart</defName>
 		<label>celestial heart</label>
 		<labelNoun>an celestial heart</labelNoun>
-		<description>An installed celestial heart.</description>
+		<description>An artificial heart made from celestial steel and stardust with Makainian tech, improving user blood filteration and blood pumping to a superb level, stardust stored inside also provide user with super-regeneration overtime. the Celestial Core embedded in it allow user to move between physical plane and immaterial plane, allowing them to phase throught most obstacle.</description>
 		<descriptionHyperlinks>
 			<ThingDef>Makai_CelestialHeart</ThingDef>
 		</descriptionHyperlinks>
@@ -452,8 +452,10 @@
 			<li Class="AnimalBehaviours.HediffCompProperties_Regeneration">
 				<healAmount>1</healAmount>
 			</li>
-			<li>
-				<compClass>VFECore.HediffComp_Phasing</compClass>
+			<li Class="MakaiTech.HediffCompProperties_ToggleHediff">
+				<HediffDef>Makai_PhasingBuff</HediffDef>
+				<severity>1</severity>
+				<uiIcon>Things/Abilities/HediffToggle/Phase</uiIcon>
 			</li>
 		</comps>
 		<modExtensions>
@@ -491,6 +493,25 @@
 				</statOffsets>
 			</li>
 		</stages>		
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Makai_PhasingBuff</defName>
+		<label>Phasing</label>
+		<description>is currently phasing through wall.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li>
+				<compClass>VFECore.HediffComp_Phasing</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
 	</HediffDef>
 	
 	<ThingDef ParentName="BodyPartCelestialBase">

@@ -9,7 +9,8 @@
 				defName = "Makai_Turret_B" or		
 				defName = "Makai_Turret_C" or
 				defName = "Makai_Turret_D" or
-				defName = "Makai_Turret_E"
+				defName = "Makai_Turret_E" or
+				defName = "Makai_Turret_F"
 			]/comps/li[@Class = "CompProperties_Refuelable"]</xpath>
 			</li>
 			
@@ -19,7 +20,8 @@
 				defName = "Makai_Turret_B" or		
 				defName = "Makai_Turret_C" or
 				defName = "Makai_Turret_D" or
-				defName = "Makai_Turret_E"
+				defName = "Makai_Turret_E" or
+				defName = "Makai_Turret_F"
 			]/thingClass</xpath>
 			<value>
 				<thingClass>CombatExtended.Building_TurretGunCE</thingClass>
@@ -32,7 +34,8 @@
 				defName = "Makai_Turret_B" or		
 				defName = "Makai_Turret_C" or
 				defName = "Makai_Turret_D" or
-				defName = "Makai_Turret_E"
+				defName = "Makai_Turret_E" or
+				defName = "Makai_Turret_F"
 			]/fillPercent</xpath>
 			<value>
 				<fillPercent>0.85</fillPercent>
@@ -45,7 +48,8 @@
 				defName = "Makai_Turret_B" or		
 				defName = "Makai_Turret_C" or
 				defName = "Makai_Turret_D" or
-				defName = "Makai_Turret_E"
+				defName = "Makai_Turret_E" or
+				defName = "Makai_Turret_F"
 			]/statBases</xpath>
 			<value>
 				<AimingAccuracy>0.5</AimingAccuracy>
@@ -58,7 +62,8 @@
 				defName = "Makai_Turret_B" or		
 				defName = "Makai_Turret_C" or
 				defName = "Makai_Turret_D" or
-				defName = "Makai_Turret_E"
+				defName = "Makai_Turret_E" or
+				defName = "Makai_Turret_F"
 			]/statBases/ShootingAccuracyTurret</xpath>
 			<value>
 				<ShootingAccuracyTurret>0.75</ShootingAccuracyTurret>
@@ -71,7 +76,8 @@
 				defName = "Makai_Turret_B" or		
 				defName = "Makai_Turret_C" or
 				defName = "Makai_Turret_D" or
-				defName = "Makai_Turret_E"
+				defName = "Makai_Turret_E" or
+				defName = "Makai_Turret_F"
 			]/building/turretBurstCooldownTime</xpath>
 			<value>
 				<turretBurstCooldownTime>1.1</turretBurstCooldownTime>

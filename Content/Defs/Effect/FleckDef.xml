@@ -155,6 +155,23 @@
 	</FleckDef>
 	
 	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_FleckSmokeShortA</defName>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.3</solidTime>
+		<fadeOutTime>0.35</fadeOutTime>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<growthRate>1</growthRate>
+		<speedPerTime>-5</speedPerTime>
+		<graphicData>
+			<texPath>Things/Mote/Smoke</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+			<!-- <color>(255,255,0)</color> -->
+			<renderQueue>3200</renderQueue>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
 		<defName>Makai_Fleck_Glitch</defName>
 		<altitudeLayer>MoteOverheadLow</altitudeLayer>
 		<fadeInTime>0.4</fadeInTime>

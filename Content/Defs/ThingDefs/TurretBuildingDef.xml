@@ -1190,27 +1190,6 @@
 			<li Class="CompProperties_ProjectileEffecter">
 				<effecterDef>Makai_StardustShell_Launched</effecterDef>
 			</li>
-			<!-- <li Class="MakaiTech.CompProperties_FleckEmitter"> -->
-				<!-- <alwaysOn>true</alwaysOn> -->
-				<!-- <moteDefs> -->
-					<!-- <li>Mote_WhitePuffB</li> -->
-				<!-- </moteDefs> -->
-				<!-- <scale>1</scale> -->
-				<!-- <scaleMax>1</scaleMax> -->
-				<!-- <rotationMinRate>-30</rotationMinRate> -->
-				<!-- <rotationMaxRate>30</rotationMaxRate> -->
-				<!-- <minRandomOffsetX>-0.1</minRandomOffsetX> -->
-				<!-- <maxRandomOffsetX>0.1</maxRandomOffsetX> -->
-				<!-- <minRandomOffsetY>-0.3</minRandomOffsetY> -->
-				<!-- <maxRandomOffsetY>0.3</maxRandomOffsetY> -->
-				<!-- <minRotate>-45</minRotate> -->
-				<!-- <maxRotate>45</maxRotate> -->
-				<!-- <minSpeed>-1</minSpeed> -->
-				<!-- <maxSpeed>1</maxSpeed> -->
-				<!-- <minEmissionInterval>1</minEmissionInterval> -->
-				<!-- <maxEmissionInterval>1</maxEmissionInterval> -->
-				<!-- <countPerEmit>2</countPerEmit> -->
-			<!-- </li> -->
 			<li Class="VFECore.CompProperties_HomingProjectile">
 				<homingDistanceFractionPassed>0.5</homingDistanceFractionPassed>
 				<homingCorrectionTickRate>20</homingCorrectionTickRate>
@@ -1218,11 +1197,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-	
-	
-	
-	
-  
+
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>Makai_Turret_TopE</defName>
 		<label>Artillery Cannon</label>

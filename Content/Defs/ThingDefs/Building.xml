@@ -40,7 +40,6 @@
 		</costList>
 		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.5</fillPercent>
-		<minifiedDef>MinifiedThing</minifiedDef>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
 			<WorkToBuild>25000</WorkToBuild>
@@ -49,6 +48,7 @@
 			<Cleanliness>1</Cleanliness>
 			<WorkTableWorkSpeedFactor>2.5</WorkTableWorkSpeedFactor>
 		</statBases>
+		<rotatable>false</rotatable>		
 		<size>(3,3)</size>
 		<designationCategory>Makai_Tech</designationCategory>
 		<researchPrerequisites>
@@ -127,7 +127,7 @@
 		<fillPercent>0.5</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<statBases>
-			<WorkToBuild>25000</WorkToBuild>
+			<WorkToBuild>250000</WorkToBuild>
 			<Flammability>0</Flammability>
 			<Cleanliness>1</Cleanliness>
 			<WorkTableWorkSpeedFactor>3</WorkTableWorkSpeedFactor>
@@ -664,6 +664,7 @@
 				<projectileDef>Makai_GreenLaser</projectileDef>
 				<soundDef>anva_gl</soundDef>
 				<fleckDef>Makai_GreenSphere</fleckDef>
+				<interval>100~250</interval>
 				<delay>60</delay>
 				<spawnPos>
 					<!-- north -->

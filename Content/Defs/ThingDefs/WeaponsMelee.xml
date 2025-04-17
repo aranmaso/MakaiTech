@@ -82,7 +82,8 @@
 		</modExtensions>
 	</ThingDef-->
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality" Name="MakaiMeleeBase" Abstract="True">
-		<generateAllowChance>1</generateAllowChance>
+		<generateAllowChance>0.01</generateAllowChance>
+		<tradeability>Sellable</tradeability>
 	</ThingDef>
 	
 	<ThingDef ParentName="MakaiMeleeBase">
@@ -99,7 +100,7 @@
 		<uiIconPath>Things/Weapon/anva_sword_new</uiIconPath>
 		<techLevel>Archotech</techLevel>
 		<weaponTags>
-			<li>UltratechMelee</li>
+			<!-- <li>UltratechMelee</li> -->
 			<li>Makai_God_Weapon</li>
 		</weaponTags>
 		<generateCommonality>0.01</generateCommonality>
@@ -125,26 +126,10 @@
 			<Mass>20</Mass>
 			<!-- <MarketValue>6000</MarketValue> -->
 		</statBases>
+		<equippedStatOffsets />
 		<relicChance>1</relicChance>
 		<equippedAngleOffset>-135</equippedAngleOffset>
 		<verbs>
-			<!-- <li> -->
-			<!-- <label>G_Attack</label> -->
-			<!-- <verbClass>Verb_Shoot</verbClass> -->
-			<!-- <hasStandardCommand>true</hasStandardCommand> -->
-			<!-- <defaultProjectile>Makai_Lightning_G</defaultProjectile> -->
-			<!-- <warmupTime>2</warmupTime> -->
-			<!-- <range>13</range> -->
-			<!-- <minRange>2</minRange> -->
-			<!-- <ticksBetweenBurstShots>10</ticksBetweenBurstShots> -->
-			<!-- <burstShotCount>1</burstShotCount> -->
-			<!-- <soundCast>anva_gl</soundCast> -->
-			<!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
-			<!-- <muzzleFlashScale>14</muzzleFlashScale> -->
-			<!-- <targetParams> -->
-			<!-- <canTargetLocations>true</canTargetLocations> -->
-			<!-- </targetParams> -->
-			<!-- </li> -->
 		</verbs>
 		<tools>
 			<li>
@@ -198,7 +183,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
 			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
@@ -349,7 +334,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
 			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
@@ -487,7 +472,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
 			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
@@ -609,7 +594,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
 			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
@@ -757,7 +742,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
 			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
@@ -984,7 +969,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
 			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
@@ -1060,7 +1045,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Sari_13th</damageDef>
-			<speed>50</speed>
+			<speed>10000</speed>
 			<damageAmountBase>1</damageAmountBase>
 			<armorPenetrationBase>66.6</armorPenetrationBase>
 		</projectile>
@@ -1144,7 +1129,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Sari_13th</damageDef>
-			<speed>25</speed>
+			<speed>10000</speed>
 			<damageAmountBase>1</damageAmountBase>
 			<armorPenetrationBase>66.6</armorPenetrationBase>
 		</projectile>
@@ -1312,7 +1297,7 @@
 		<recipeMaker>
 			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
 			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
-			<recipeUsers>
+			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>

@@ -4,6 +4,8 @@
 		<defName>Makai_Trade_General</defName>
 		<label>Makai Salesman</label>
 		<orbital>true</orbital>
+		<commonality>0.5</commonality>
+		<hideThingsNotWillingToTrade>true</hideThingsNotWillingToTrade>
 		<stockGenerators>
 			<!-- Resources -->
 			<li Class="StockGenerator_SingleDef">
@@ -32,7 +34,7 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Makai_Stardust</thingDef>
-				<countRange>500~2500</countRange>
+				<countRange>100~500</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Steel</thingDef>
@@ -225,7 +227,7 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Makai_Stardust</thingDef>
-				<countRange>500~1000</countRange>
+				<countRange>50~100</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Steel</thingDef>

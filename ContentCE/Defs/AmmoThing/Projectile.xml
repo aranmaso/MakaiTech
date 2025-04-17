@@ -1,0 +1,330 @@
+<Defs>
+
+	<!-- Projectile -->
+  
+	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletBlue">
+		<defName>Bullet_Laser_VariaBow</defName>
+		<label>laser beam</label>
+		<graphicData>
+			<color>(255,255,0)</color>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Knowledge_Seeker</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>35.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>350.5</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Small Projectile -->
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseMakaiEnergyBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>50</speed>
+			<!-- <dropsCasings>true</dropsCasings> -->
+			<flyOverhead>false</flyOverhead>
+			<castShadow>true</castShadow>
+			<alwaysFreeIntercept>true</alwaysFreeIntercept>
+			<arcHeightFactor>0</arcHeightFactor>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_Ice_YukiStaff</defName>
+		<label>frigid star shard</label>
+		<!-- <thingClass>Bullet</thingClass> -->
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Yuki_Cold</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_Ice_YukiStaffExtra</defName>
+		<label>frigid star shard</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Yuki_Cold_Extra</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+			<alwaysFreeIntercept>true</alwaysFreeIntercept>
+			<suppressionFactor>3.0</suppressionFactor>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>ME_ProCE</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<!-- <trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker> -->
+			<speed>28</speed>
+			<speedGain>5</speedGain>
+			<damageDef>ME_Bullet_A</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<damageAdjacentTiles>true</damageAdjacentTiles>
+			<stoppingPower>2</stoppingPower>
+			<gravityFactor>1.5</gravityFactor>
+			<!-- <alwaysFreeIntercept>true</alwaysFreeIntercept> -->
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>ME_ProMiniCE</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_mea</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<!-- <trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker> -->
+			<speed>28</speed>
+			<speedGain>4</speedGain>
+			<damageDef>ME_Bullet_A</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+			<alwaysFreeIntercept>true</alwaysFreeIntercept>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>MEG_ProCE</defName>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<label>star particle bolt</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_meg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>ME_Bullet_G</damageDef>
+			<damageAmountBase>30</damageAmountBase>
+			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<speed>20</speed>
+			<gravityFactor>1</gravityFactor>
+			<flyOverhead>false</flyOverhead>
+			<explosionRadius>2.9</explosionRadius>
+			<soundExplode>ThumpCannon_Impact</soundExplode>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<tickToTruePos>0</tickToTruePos>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<MEG_ProCE_Frag>25</MEG_ProCE_Frag>
+				</fragments>
+				<!-- <fragXZAngleRange>-5~5</fragXZAngleRange> -->
+				<!-- <fragAngleRange>0~1</fragAngleRange> -->
+				<!-- <fragSpeedFactor>0.01</fragSpeedFactor> -->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>MEG_ProCE_Frag</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_meg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>40</speed>
+			<damageDef>Makai_Celestial_Cut</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_Turret_Makai_B_EX_HELDCE</defName>
+		<label>Condensed Shot</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/y_beam2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">	
+			<speed>40</speed>		
+			<speedGain>10</speedGain>
+			<!-- <trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker> -->
+			<damageDef>Stardust_Compress_Bullet_Ex_HELD</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationBase>2</armorPenetrationBase>			
+			<!-- <gravityFactor>1</gravityFactor> -->
+			<flyOverhead>false</flyOverhead>
+			<explosionRadius>2.9</explosionRadius>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>			
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<ME_Pro_TOne_FragCE>25</ME_Pro_TOne_FragCE>
+				</fragments>
+				<!-- <fragXZAngleRange>-5~5</fragXZAngleRange> -->
+				<!-- <fragShadowChance>1</fragShadowChance> -->
+				<!-- <fragAngleRange>0~5</fragAngleRange> -->
+				<!-- <fragSpeedFactor>0.01</fragSpeedFactor> -->
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>ME_Pro_TOneCE</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>55</speed>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>ME_Pro_TOne_PisCE</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>55</speed>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>ME_Pro_TOne_FragCE</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>40</speed>
+			<damageDef>Makai_Celestial_Cut</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>ME_Pro_TOne_SniperCE</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>55</speed>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>55</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	
+	
+	<!-- TurretProjectile -->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_Turret_Makai_ACE</defName>
+		<label>stardust particle</label>
+		<graphicData>
+			<texPath>Things/Building/makai_bulletA</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.8,0.8)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">		
+			<damageDef>Stardust_Accel_Bullet</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+			<speed>25</speed>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">	
+		<defName>Makai_God_Bullet_C_TypeTwoCE</defName>
+		<label>Corrupted Claw</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_bullet_claw</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">		
+			<speed>30</speed>
+			<damageDef>Nightmare_Claw_Bullet_DamageTwo</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>0.9</armorPenetrationBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<stoppingPower>1</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+</Defs>

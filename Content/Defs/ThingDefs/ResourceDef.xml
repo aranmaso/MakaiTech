@@ -12,7 +12,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_Ingot</defName>
 		<label>celestial steel</label>
-		<description>A steel forged from star particle. Has insane durability. Incredibly dense but somehow also impossibly light as well. Displays a very high resistance to damage and change. Only with technology from Makai could one shape this material into anything at all, but once you can, it can be shaped into almost anything. \n Once being made into something, the material itself seems to understand what it's being made into and vastly improves on what it's supposed to do.</description>
+		<description>A steel forged from star particle. Has insane durability. Incredibly dense but somehow also impossibly light as well. Displays a very high resistance to damage and change. Only with technology from Makai could one shape this material into anything at all, but once you can, it can be shaped into almost anything. \n Once being made into something, the material itself seems to understand what it's being made into and vastly improves on what it's supposed to do. \n\n\nWeapon or Security Turret made from Celestial Steel will inflict Celestial Scar.</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -111,7 +111,7 @@
 		</graphicData>
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
-		<useHitPoints>true</useHitPoints>
+		<useHitPoints>false</useHitPoints>
 		<statBases>
 			<MarketValue>250</MarketValue>
 			<Mass>0.15</Mass>
@@ -175,10 +175,17 @@
 		</tradeTags>
 	</ThingDef>
 	
+	<ThingCategoryDef>
+		<defName>Makai_Stardust_Category</defName>
+		<label>Stardust Material</label>
+		<parent>ResourcesRaw</parent>
+		<iconPath>Things/Items/makai_mat_dust</iconPath>
+	</ThingCategoryDef>
+	
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_Stardust</defName>
 		<label>stardust</label>
-		<description>Star Particle condensed into a form of Stardust. The stardust seems to have a mind of its own and can freely change its structure to match the needs of anything it's being filled into. \n aka. It act as both a material and Universal Fuel that you can refill anything with.</description>
+		<description>Star Particle condensed into a form of Stardust. The stardust seems to have a mind of its own and can freely change its structure to match the needs of anything it's being applied to. \n aka. It act as both a universal substitute material and universal fuel that you can refill anything with or substitute missing crafting material with. (if mod setting allow it).</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat_dust</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -191,16 +198,17 @@
 			</li>
 		</comps>
 		<stackLimit>75</stackLimit>
-		<healthAffectsPrice>false</healthAffectsPrice>
+		<useHitPoints>false</useHitPoints>
 		<statBases>
-			<MaxHitPoints>1000</MaxHitPoints>
-			<MarketValue>50</MarketValue>
+			<!-- <MaxHitPoints>1000</MaxHitPoints> -->
+			<MarketValue>25</MarketValue>
 			<Mass>0.1</Mass>
 			<Flammability>0</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
 		<thingCategories>
-			<li>ResourcesRaw</li>
+			<li>Makai_Stardust_Category</li>
+			<!-- <li>ResourcesRaw</li> -->
 		</thingCategories>
 		<tradeTags>
 			<li>ExoticMisc</li>
@@ -213,7 +221,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Makai_StarSmall</defName>
 		<label>miniature star</label>
-		<description>A mass-produced version of Miniature sun commonly found in Makai. Can be used to make other high-tier items or be placed down as a portable energy source.</description>
+		<description>a miniature sun confined with highly complicated casing, can be place down as portable power source once researched.</description>
 		<graphicData>
 			<texPath>Things/Items/makai_mat_minisun</texPath> <!-- temporary texture -->
 			<graphicClass>Graphic_Single</graphicClass>
@@ -270,6 +278,7 @@
 			<Flammability>0</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
+		<tradeTags Inherit="False" />
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
@@ -294,6 +303,7 @@
       <Flammability>2</Flammability>
       <DeteriorationRate>1.0</DeteriorationRate>
     </statBases>
+	<tradeTags Inherit="False" />
     <thingCategories>
       <li>Manufactured</li>
     </thingCategories>

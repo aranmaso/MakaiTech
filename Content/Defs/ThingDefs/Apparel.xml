@@ -368,13 +368,14 @@
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
+		<useHitPoints>false</useHitPoints>
 		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
 			<WorkToMake>14000</WorkToMake>
 			<MarketValue>6000</MarketValue>
 			<Mass>10</Mass>
 			<Flammability>0</Flammability>
 			<EquipDelay>1</EquipDelay>
+			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
 		<equippedStatOffsets>
 			<PainShockThreshold>0.5</PainShockThreshold>

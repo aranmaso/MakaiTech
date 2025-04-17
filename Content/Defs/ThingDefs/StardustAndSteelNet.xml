@@ -195,6 +195,12 @@
 		<costList>
 		  <Plasteel>500</Plasteel>
 		</costList>
+		<building>
+			<relatedBuildCommands>
+				<li>makai_stardust_tap</li>
+				<li>Makai_StardustPipe</li>
+			</relatedBuildCommands>
+		</building>
 		<rotatable>false</rotatable>
 		<comps>
 		  <li Class="PipeSystem.CompProperties_ResourceStorage">

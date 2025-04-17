@@ -140,6 +140,11 @@
 		<costList>
 			<Plasteel>500</Plasteel>
 		</costList>
+		<building>
+			<relatedBuildCommands>
+				<li>Makai_StarParticlePipe</li>
+			</relatedBuildCommands>
+		</building>
 		<rotatable>false</rotatable>
 		<comps>
 			<li Class="PipeSystem.CompProperties_ResourceStorage">
@@ -164,7 +169,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_St_Conv</defName>
 		<label>Stardust Particle Condenser</label>
-		<description>A building to condense star particle even further into a dust-like substance called Stardust. \n\n Star Particle used : 300 \n Stardust produced : 100 \n Production time : 300tick(5s)</description>
+		<description>A building to condense star particle even further into a dust-like substance called Stardust. \n\n Star Particle used : 300 \n Stardust produced : 50 \n Production time : 300tick(5s) \n Star Particle used per day: 60,000 u/d \n Production Per Day: 10,000 u/d</description>
 		<drawerType>RealtimeOnly</drawerType>
 		<graphicData>
 			<texPath>Things/Building/StardustCondenser</texPath>
@@ -203,6 +208,13 @@
 			<ComponentSpacer>25</ComponentSpacer>
 			<ComponentIndustrial>10</ComponentIndustrial>
 		</costList>
+		<building>
+			<relatedBuildCommands>
+				<li>makai_stardust_tap</li>
+				<li>Makai_StardustPipe</li>
+				<li>Makai_StardustTank</li>
+			</relatedBuildCommands>
+		</building>
 		<modExtensions>
 			<li Class="MakaiTech.ThingExtension_Animated">
 				<frameSpeed>10</frameSpeed>
@@ -216,7 +228,7 @@
 				</randomGraphics>
 			</li-->
 			<!-- <li Class="MakaiTech.CompProperties_AnimatedMakai"> -->
-				<!-- <frameSpeed>10</frameSpeed> -->
+			<!-- <frameSpeed>10</frameSpeed> -->
 			<!-- </li> -->
 			<li Class="PipeSystem.CompProperties_ResourceProcessor">
 				<pipeNet>Makai_StarParticleNet</pipeNet>
@@ -226,7 +238,7 @@
 						<countNeeded>300</countNeeded>
 						<eachTicks>300</eachTicks>
 						<net>Makai_StarDustNet</net>
-						<netCount>100</netCount>
+						<netCount>50</netCount>
 					</li>
 				</results>
 				<soundAmbient/>
@@ -249,7 +261,7 @@
 			<!-- </li> -->
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>600</basePowerConsumption>
+				<basePowerConsumption>5000</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
 			<li Class="CompProperties_Flickable"/>
@@ -267,7 +279,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_Cs_Forg</defName>
 		<label>Celestial Steel Forge</label>
-		<description>A star forge used to create Celestial Steel. Consolidate Star particle into a liquid like substance that is then molded into ingot shape. \n\n Star Particle used : 100 \n Celestial Steel produced : 5 \n Production time : 3000tick(50s)</description>
+		<description>A star forge used to create Celestial Steel. Consolidate Star particle into a liquid like substance that is then molded into ingot shape. \n\n Star Particle used : 100 \n Celestial Steel produced : 5 \n Production time : 3000tick(50s) \n Star Particle used per day: 2000 u/d \n Production per day: 100 u/d</description>
 		<drawerType>RealtimeOnly</drawerType>
 		<!--thingClass>AnimLibrary.AnimatedThing</thingClass-->
 		<graphicData>
@@ -306,6 +318,12 @@
 			<Makai_Ingot>10</Makai_Ingot>
 			<ComponentSpacer>25</ComponentSpacer>
 		</costList>
+		<building>
+			<relatedBuildCommands>
+				<li>makai_celes_tap</li>
+				<li>Makai_CelesPipe</li>
+			</relatedBuildCommands>
+		</building>
 		<modExtensions>
 			<li Class="MakaiTech.ThingExtension_Animated">
 				<frameSpeed>10</frameSpeed>
@@ -372,7 +390,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>Makai_Cs_loom</defName>
 		<label>Celestial Fabric Loom</label>
-		<description>A loom that tailors star particle into a form of fabric. \n\n Star particle used : 50 \n Celestial Fabric produced : 10 \n Production time : 2000tick(33s)</description>
+		<description>A loom that tailors star particle into a form of fabric. \n\n Star particle used : 50 \n Celestial Fabric produced : 10 \n Production time : 2000tick(33s) \n Star Particle used per day: 1500 u/d \n Production per day: 300u/d</description>
 		<drawerType>RealtimeOnly</drawerType>
 		<!--thingClass>AnimLibrary.AnimatedThing</thingClass-->
 		<graphicData>
@@ -417,6 +435,12 @@
 			<Makai_Ingot>10</Makai_Ingot>
 			<ComponentSpacer>25</ComponentSpacer>
 		</costList>
+		<building>
+			<relatedBuildCommands>
+				<li>makai_fab_tap</li>
+				<li>Makai_FabPipe</li>
+			</relatedBuildCommands>
+		</building>
 		<modExtensions>
 			<li Class="MakaiTech.ThingExtension_Animated">
 				<frameSpeed>15</frameSpeed>
@@ -425,7 +449,7 @@
 		</modExtensions>
 		<comps>
 			<!-- <li Class="MakaiTech.CompProperties_AnimatedMakai"> -->
-				<!-- <frameSpeed>15</frameSpeed> -->
+			<!-- <frameSpeed>15</frameSpeed> -->
 			<!-- </li> -->
 			<li Class="PipeSystem.CompProperties_ResourceProcessor">
 				<pipeNet>Makai_StarParticleNet</pipeNet>
