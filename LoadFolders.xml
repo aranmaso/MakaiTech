@@ -21,13 +21,25 @@
   <!-- </v1.4> -->
   <v1.5>
 	<li>Common</li>
-	<li>Content</li>
+	<li>1.5</li>
 	<li IfModActive="ceteam.combatextended">ContentCE</li>
 	<li IfModActive="ducks.insaneskills">DuckInfinity</li>
     <li IfModActive="squirtingelephant.planetarydrill,mlie.omnicoredrill,ogliss.thewhitecrayon.quarry">Warrant</li>
 	<li IfModActive="V1024.EBFramework">EliteBionicFramework</li>
 	<li IfModActive="ludeon.rimworld.ideology">Ideology</li>
-	<li IfModActive="annoprofi.adaptablemechanoids">Content/Mods/AdaptiveMechanoid</li>
+	<li IfModActive="annoprofi.adaptablemechanoids">1.5/Mods/AdaptiveMechanoid</li>
 	<!-- IfModNotActive -->
   </v1.5>
+  <v1.6>
+	<li>Common</li>
+	<li>Current</li>
+	<li IfModActive="ceteam.combatextended">ContentCE</li>
+	<li IfModActive="ducks.insaneskills">DuckInfinity</li>
+    <li IfModActive="squirtingelephant.planetarydrill,mlie.omnicoredrill,ogliss.thewhitecrayon.quarry">Warrant</li>
+	<li IfModActive="V1024.EBFramework">EliteBionicFramework</li>
+	<li IfModActive="ludeon.rimworld.ideology">Ideology</li>
+	<li IfModActive="annoprofi.adaptablemechanoids">Current/Mods/AdaptiveMechanoid</li>
+	<li IfModActive="sumghai.medpod">Current/Mods/MedPod</li>
+	<!-- IfModNotActive -->
+  </v1.6>
 </loadFolders>

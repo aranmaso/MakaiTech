@@ -238,6 +238,7 @@
 						<canTargetLocations>False</canTargetLocations>
 					</targetParams>
 					<muzzleFlashScale>9</muzzleFlashScale>
+					<recoilPattern>Mounted</recoilPattern>					
 				</Properties>
 				<AmmoUser>
 					<magazineSize>250</magazineSize>

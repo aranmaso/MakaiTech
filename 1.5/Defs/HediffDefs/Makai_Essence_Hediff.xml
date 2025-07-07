@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Essence_Knowledge_Cooldown</defName>
+		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
+		<label>Knowledge Essence Cooldown</label>
+		<description>You have recently acquired Blessing of Knowledge and can't receive another until the cooldown runs out.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>120000</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>1</minSeverity>
+				<hediffGivers>
+					<!--li Class="MakaiTech.HediffGiver_RandomNoAlert">
+			<hediff>Essence_Fate_Buff</hediff>
+			<mtbDays>0.0001</mtbDays>
+			<countToAffect>1</countToAffect>
+			</li-->
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	
+	
+	<HediffDef>
+		<defName>Essence_Fate_Proxy</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>you shouldn't have time to see this(I think)</label>
+		<description>You shouldn't have time to see this(I think?)</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>60</disappearsAfterTicks> -->
+			<!-- </li> -->
+			<!-- <li Class="HediffCompProperties_GiveHediff"> -->
+			<!-- <hediffDef>Essence_Fate_Buff</hediffDef> -->
+			<!-- <skipIfAlreadyExists>false</skipIfAlreadyExists> -->
+			<!-- </li> -->
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>1</minSeverity>
+				<hediffGivers>
+					<!--li Class="MakaiTech.HediffGiver_RandomNoAlert">
+			<hediff>Essence_Fate_Buff</hediff>
+			<mtbDays>0.0001</mtbDays>
+			<countToAffect>1</countToAffect>
+			</li-->
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Essence_Fate_Buff</defName>
+		<label>Fate's Blessing</label>
+		<defaultLabelColor>(196, 145, 191)</defaultLabelColor>
+		<description>This pawn has received the blessing of fate. All their needs are filled and won't go down for 2h. and regeneration ability is enhanced.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-12</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="MakaiTech.HediffCompProperties_ChangeNeeds">
+				<needs>
+					<li>Joy</li>
+					<li>Mood</li>
+					<li>Rest</li>
+					<li>Food</li>
+					<li>Comfort</li>
+					<li>Beauty</li>
+					<li MayRequire="mrkociak.cyberpsychosismod">MKT_Cyberpsychosis</li>
+				</needs>
+				<percentPerDay>100</percentPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<naturalHealingFactor>1.5</naturalHealingFactor>
+				<regeneration>100</regeneration>
+				<capMods>
+				</capMods>
+				<statFactors>
+					<ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.5</InjuryHealingFactor>
+				</statFactors>
+				<statOffsets>
+			
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef ParentName="DiseaseBase" Name="Essence_SurgeryInitialBase" Abstract="True">
+		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
+		<isBad>true</isBad>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>5</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>300300</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>1</severityPerDay>
+				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+				</capMods>
+				<mentalStateGivers>
+				</mentalStateGivers>
+				<statFactors>
+				</statFactors>
+				<statOffsets>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- Corrupt -->
+	<HediffDef ParentName="Essence_SurgeryInitialBase">
+		<defName>Essence_Incubating_Insanity</defName>
+		<label>Incubating Insanity</label>
+		<isBad>false</isBad>
+		<description>The essence of insanity is embedded into this pawn, slowly gathering universal power. During the process, the pawn will experience severe mental instability. Every 1 hour, the seed will force them into a mental break at random, with 25% chance of it being a berserk state. After which To seed will absorb the madness from the pawn. To prevent interruption, seed of corruption will keep pawn from ever be downed. \nthe process take a total of 5 days \n&lt;color=#CE010E&gt;process will reset if mood is above 50%&lt;/color&gt;</description>
+		<defaultLabelColor>(183, 171, 0)</defaultLabelColor>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>5.1</maxSeverity>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_CorruptionChecker">
+				<interval>2500</interval>
+				<maximumMoodThreshold>0.5</maximumMoodThreshold>
+				<finishedHediff>Essence_Incubating_Complete_Insanity</finishedHediff>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.HediffExtension_MinCapacity">
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<minLevel>0.5</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>1</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+		<stages>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.1</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>10%</label>
+				<minSeverity>0.5</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>25%</label>
+				<minSeverity>1.25</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>50%</label>
+				<minSeverity>2.50</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>75%</label>
+				<minSeverity>3.75</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>100%</label>
+				<minSeverity>5.00</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Essence_Incubating_Complete_Insanity</defName>
+		<label>Slumbering Essence of Insanity</label>
+		<isBad>false</isBad>
+		<description>Essence of Insanity ready to be extract</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<spawnThingOnRemoved>Makai_C-Path_E</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Order -->
+	<HediffDef>
+		<defName>Essence_Order_Proxy</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>You shouldn't have time to see this(I think)</label>
+		<description>. . .</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<!-- <li Class="HediffCompProperties_Disappears"> -->
+			<!-- <disappearsAfterTicks>60</disappearsAfterTicks> -->
+			<!-- <showRemainingTime>true</showRemainingTime> -->
+			<!-- </li> -->
+		
+			<!-- <li Class="HediffCompProperties_GiveHediff"> -->
+			<!-- <hediffDef>Essence_Incubating_Order</hediffDef> -->
+			<!-- <skipIfAlreadyExists>false</skipIfAlreadyExists> -->
+			<!-- </li> -->
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>1</minSeverity>
+				<hediffGivers>
+					<!--li Class="MakaiTech.HediffGiver_RandomNoAlert">
+			<hediff>Essence_Fate_Buff</hediff>
+			<mtbDays>0.0001</mtbDays>
+			<countToAffect>1</countToAffect>
+			</li-->
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="Essence_SurgeryInitialBase">
+		<defName>Essence_Incubating_Order</defName>
+		<label>Gathering Order</label>
+		<isBad>false</isBad>
+		<description>Essence of order is imbued into the body, slowly gathering the universal power over the duration of 5 days. during which player must keep their mood from dropping below 75%. otherwise the process will be interrupted. going into any mental break at all will also reset the progress.</description>
+		<defaultLabelColor>(183, 171, 0)</defaultLabelColor>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>5.1</maxSeverity>
+		<comps Inherit="False">
+			<li Class="MakaiTech.HediffCompProperties_GatheringOrderChecker">
+				<removeWhenHasHediff>Essence_Incubating_Complete_Order</removeWhenHasHediff>
+				<finishHediff>Essence_Incubating_Complete_Order</finishHediff>
+				<minimumMoodThreshold>0.75</minimumMoodThreshold>
+				<interval>250</interval>
+				<maxSeverity>5.1</maxSeverity>
+			</li>
+			<!-- <li Class="HediffCompProperties_Disappears"> -->
+				<!-- <disappearsAfterTicks>295300</disappearsAfterTicks> -->
+			<!-- </li> -->
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>1</severityPerDay>
+				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.1</minSeverity>
+				<capMods>
+				</capMods>
+				<statOffsets>
+					<!-- <MentalBreakThreshold>-1</MentalBreakThreshold> -->
+					<SocialImpact>1</SocialImpact>
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+			<li>
+				<label>10%</label>
+				<minSeverity>0.5</minSeverity>
+				<capMods>
+				</capMods>
+				<statOffsets>
+					<!-- <MentalBreakThreshold>-1</MentalBreakThreshold> -->
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+			<li>
+				<label>25%</label>
+				<minSeverity>1.25</minSeverity>
+				<capMods>
+				</capMods>
+				<statOffsets>
+					<!-- <MentalBreakThreshold>-1</MentalBreakThreshold> -->
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+			<li>
+				<label>50%</label>
+				<minSeverity>2.50</minSeverity>
+				<capMods>
+				</capMods>
+				<statOffsets>
+					<!-- <MentalBreakThreshold>-1</MentalBreakThreshold> -->
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+			<li>
+				<label>75%</label>
+				<minSeverity>3.75</minSeverity>
+				<capMods>
+				</capMods>
+				<statOffsets>
+					<!-- <MentalBreakThreshold>-1</MentalBreakThreshold> -->
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+			<li>
+				<label>100%</label>
+				<minSeverity>5.00</minSeverity>
+				<capMods>
+				</capMods>
+				<statOffsets>
+					<!-- <MentalBreakThreshold>-1</MentalBreakThreshold> -->
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+				</statFactors>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Essence_Incubating_Complete_Order</hediff>
+						<mtbDays>0.001</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="Essence_SurgeryInitialBase">
+		<defName>Essence_Incubating_Complete_Order</defName>
+		<label>Slumbering Essence of Order</label>
+		<description>Essence of Order ready to be extracted. as a bonus benefit, by having this Essence of Order slumbering within will make one never experience mental break.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<spawnThingOnRemoved>Makai_Or-Path_E</spawnThingOnRemoved>
+		<comps>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<capMods>
+				</capMods>
+				<statOffsets>
+					<MentalBreakThreshold>-1</MentalBreakThreshold>
+				</statOffsets>
+				<statFactors>
+					<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Distortion -->
+	<HediffDef ParentName="Essence_SurgeryInitialBase">
+		<defName>Essence_Incubating_Distortion</defName>
+		<label>Distortion Manifest</label>
+		<isBad>false</isBad>
+		<description>Essence of Distortion is incubating inside this pawn. during 5 days duration random thing will happen with said pawn as the center, either they suddenly combust, spawn random stuff. or teleport randomly. try to keep them alive for 5 days.</description>
+		<defaultLabelColor>(160, 58, 62)</defaultLabelColor>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>5.1</maxSeverity>
+		<comps Inherit="False">
+			<li Class="MakaiTech.HediffCompProperties_DistortionRandomShit">
+				<interval>500~2500</interval>
+				<totalDuration>300000</totalDuration>
+				<finishedHediff>Essence_Incubating_Complete_Distortion</finishedHediff>
+				<possibleHediffs>
+					<li>AmbrosiaHigh</li>
+					<li>SmokeleafHigh</li>
+					<li>YayoHigh</li>
+					<li>AlcoholHigh</li>
+					<li>LuciferiumHigh</li>
+					<li>PenoxycylineHigh</li>
+				</possibleHediffs>
+				<possibleExplosionDamageDef>
+					<li>Bomb</li>
+					<li>Flame</li>
+					<li>EMP</li>
+					<li>Yuki_Cold_Extra</li>
+					<li>Mica_Fire</li>
+					<li>Mica_Star</li>
+					<li>Stardust_Compress_Bullet_Ex</li>
+				</possibleExplosionDamageDef>
+				<possibleGasTypes>
+					<li>BlindSmoke</li>
+					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
+					<li>RotStink</li>
+					<li MayRequire="ludeon.rimworld.anomaly">DeadlifeDust</li>
+				</possibleGasTypes>
+				<possibleProjectileToSpawn>
+					<li>Bullet_Revolver</li>
+					<li>Proj_GrenadeFrag</li>
+					<li>Bullet_Turret_Makai_B_EX_HELD</li>
+					<li>ME_Pro_TOne_Sniper</li>
+					<li>Makai_StarFlail_Extend</li>
+					<li>Mica_Project</li>
+					<li>Makai_Sari_Swipe</li>
+					<li>Makai_Lightning_Ball</li>
+				</possibleProjectileToSpawn>
+				<blacklistedProjectile>
+					<li>Bullet_Shell_AntigrainWarhead</li>
+					<li MayRequire="ogliss.muvluvbeta">BETA_LuxLaser</li>
+					<li MayRequire="ogliss.muvluvbeta">BETA_MagnusLuxLaser</li>
+					<li MayRequire="ogliss.muvluvbeta">BETA_DestroyerClassCharge</li>
+				</blacklistedProjectile>
+				<teleportRange>5~20</teleportRange>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.1</minSeverity>
+			</li>
+			<li>
+				<label>10%</label>
+				<minSeverity>0.5</minSeverity>
+			</li>
+			<li>
+				<label>25%</label>
+				<minSeverity>1.25</minSeverity>
+			</li>
+			<li>
+				<label>50%</label>
+				<minSeverity>2.50</minSeverity>
+			</li>
+			<li>
+				<label>75%</label>
+				<minSeverity>3.75</minSeverity>
+			</li>
+			<li>
+				<label>100%</label>
+				<minSeverity>5.00</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="Essence_SurgeryInitialBase">
+		<defName>Essence_Incubating_Complete_Distortion</defName>
+		<label>Energized Essence of Distortion</label>
+		<description>Essence of Distortion ready to be extracted.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<spawnThingOnRemoved>Makai_Dis-Path_E</spawnThingOnRemoved>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_DistortionRandomShit">
+				<interval>500~2500</interval>
+				<totalDuration>300000</totalDuration>
+				<finishedHediff>Essence_Incubating_Complete_Distortion</finishedHediff>
+				<possibleHediffs>
+					<li>AmbrosiaHigh</li>
+					<li>SmokeleafHigh</li>
+					<li>YayoHigh</li>
+					<li>AlcoholHigh</li>
+					<li>LuciferiumHigh</li>
+					<li>PenoxycylineHigh</li>
+				</possibleHediffs>
+				<possibleExplosionDamageDef>
+					<li>Bomb</li>
+					<li>Flame</li>
+					<li>EMP</li>
+					<li>Yuki_Cold_Extra</li>
+					<li>Mica_Fire</li>
+					<li>Mica_Star</li>
+					<li>Stardust_Compress_Bullet_Ex</li>
+				</possibleExplosionDamageDef>
+				<possibleGasTypes>
+					<li>BlindSmoke</li>
+					<li MayRequire="ludeon.rimworld.biotech">ToxGas</li>
+					<li>RotStink</li>
+					<li MayRequire="ludeon.rimworld.anomaly">DeadlifeDust</li>
+				</possibleGasTypes>
+				<possibleProjectileToSpawn>
+					<li>Bullet_Revolver</li>
+					<li>Proj_GrenadeFrag</li>
+					<li>Bullet_Turret_Makai_B_EX_HELD</li>
+					<li>ME_Pro_TOne_Sniper</li>
+					<li>Makai_StarFlail_Extend</li>
+					<li>Mica_Project</li>
+					<li>Makai_Sari_Swipe</li>
+					<li>Makai_Lightning_Ball</li>
+				</possibleProjectileToSpawn>
+				<blacklistedProjectile>
+					<li>Bullet_Shell_AntigrainWarhead</li>
+					<li MayRequire="ogliss.muvluvbeta">BETA_LuxLaser</li>
+					<li MayRequire="ogliss.muvluvbeta">BETA_MagnusLuxLaser</li>
+					<li MayRequire="ogliss.muvluvbeta">BETA_DestroyerClassCharge</li>
+				</blacklistedProjectile>
+				<teleportRange>5~20</teleportRange>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Bond -->
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Essence_Growth_Bond_Giver</defName>
+		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
+		<label>Warmth of Bond</label>
+		<description>base essence of bond implanted within, by staying near at least 2 other people they will gain the warmth which slowly increase their bond level.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>30</range>
+				<hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>Essence_Growth_Bond_Reciever</hediff>
+				<initialSeverity>1</initialSeverity>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Essence_Growth_Bond_Reciever</defName>
+		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
+		<label>Feel warmth</label>
+		<description>affected by warmth of bond, the longer they stay near warmth giver, the more their bond level increase.</description>
+		<isBad>false</isBad>
+		<minSeverity>0</minSeverity>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+			</li>
+			<!--li Class="MakaiTech.MakaiHediffCompProperties_ChangeImplantLevel">
+			<implant>Essence_Growth_Bond</implant>
+			<levelOffset>1</levelOffset>
+			<probabilityPerStageOfThisHediff>
+			<li>
+				<mtbDays>0.001</mtbDays>
+				<minIntervalDays>1</minIntervalDays>
+			</li>
+			</probabilityPerStageOfThisHediff>
+		</li-->
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Essence_Growth_Bond</hediff>
+						<mtbDays>0.0001</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+					<li Class="MakaiTech.HediffGiver_AddSeverityIfAlreadyExist">
+						<hediff>Essence_Growth_Bond</hediff>
+						<severityAmount>0.05</severityAmount>
+						<mtbHours>0.1</mtbHours>
+					</li>
+				</hediffGivers>
+				<capMods>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Essence_Growth_Bond</defName>
+		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
+		<!--hediffClass>Hediff_Level</hediffClass-->
+		<label>Bond</label>
+		<description>Essence of Bond is growing.</description>
+		<isBad>false</isBad>
+		<minSeverity>0</minSeverity>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>5</maxSeverity>
+		<makesAlert>false</makesAlert>
+		<comps>
+		</comps>
+		<stages>
+			<li>
+				<label>Level 1</label>
+				<minSeverity>1</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
+			<li>
+				<label>Level 2</label>
+				<minSeverity>2</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
+			<li>
+				<label>Level 3</label>
+				<minSeverity>3</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
+			<li>
+				<label>Level 4</label>
+				<minSeverity>4</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
+			<li>
+				<label>Level 5</label>
+				<minSeverity>5</minSeverity>
+				<capMods>
+				</capMods>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Essence_Incubating_Complete_Bond</hediff>
+						<mtbDays>0.001</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Essence_Incubating_Complete_Bond</defName>
+		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
+		<label>Slumbering Fragment of Bond</label>
+		<description>Essence of Bond ready to be extracted. in order to do so, remove bond level through operation to get a Bond Level item, which is a material needed to extract fragment of bond.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<spawnThingOnRemoved>Makai_B-Path_E</spawnThingOnRemoved>
+		<comps>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Fate -->
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>Essence_Fate_Buffer</defName>
+		<label>String of Fate</label>
+		<description>Bodypart is being slowly transformed into Fated Part. The entire process will take 5 days to complete. after which, Fated Encounter awaits.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>5</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>1</severityPerDay>
+				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>300100</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_ChangeNeed">
+				<needDef>Food</needDef>
+				<percentPerDay>10</percentPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<partEfficiencyOffset>1</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.01</setMax>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Makai_Fated_Arm</hediff>
+						<mtbDays>0.1</mtbDays>
+						<partsToAffect>
+							<li>Arm</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Makai_Fated_Leg</hediff>
+						<mtbDays>0.1</mtbDays>
+						<partsToAffect>
+							<li>Leg</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Makai_Fated_Lung</hediff>
+						<mtbDays>0.1</mtbDays>
+						<partsToAffect>
+							<li>Lung</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Makai_Fated_Eye</hediff>
+						<mtbDays>0.1</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert" MayRequire="aranmaho.makai.demonia">
+						<hediff>Makai_Fated_Wing</hediff>
+						<mtbDays>0.1</mtbDays>
+						<partsToAffect>
+							<li>Demonian_Wing</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+				<statFactors>
+				</statFactors>
+			</li>
+			<li>
+				<label>Changing</label>
+				<minSeverity>5</minSeverity>
+				<partEfficiencyOffset>2</partEfficiencyOffset>
+				<capMods>
+				</capMods>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Makai_Fated_Heart</hediff>
+						<mtbDays>0.001</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Essence_Fate_Encounter</hediff>
+						<mtbDays>0.0001</mtbDays>
+						<partsToAffect>
+							<li>Spine</li>
+						</partsToAffect>
+						<countToAffect>1</countToAffect>
+						<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					</li>
+				</hediffGivers>
+				<statFactors>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Essence_Fate_Encounter</defName>
+		<label>Fated Encounter</label>
+		<description>The time has come, your challenge is here. Over the duration of 5 days Fated Encounter will cause a berserk rage. \nSurvive and also keep this pawn alive. \nMoving,Manipulation, and Consciousness will never go lower than 100%, \nFood and Rest need will never go down.
+		\n\n\nPawns with Fated Encounter don't need to eat or rest and will increase in tier by 1 per day. All fated parts will gradually get stronger every day for 5 days.
+Do your best to survive and try not to kill this pawn,. If you survive the trial until Fated Encounter reaches tier 6, they are no longer forced into a berserk rage.
+By that time all Fated Implants should reach full severity and turn into Fated Fragment Part. You now have a choice. Keep this pawn as a super pawn, or harvest all of their Fated Parts for Fated Fragments.</description>
+		<isBad>false</isBad>
+		<spawnThingOnRemoved>Makai_F-Path_Frag</spawnThingOnRemoved>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>6</maxSeverity>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>1</severityPerDay>
+				<showHoursToRecover>false</showHoursToRecover>
+			</li>
+			<li Class="MakaiTech.HediffCompProperties_ChangeNeeds">
+				<needs>
+					<li>Food</li>
+					<li>Rest</li>
+				</needs>
+				<percentPerDay>10</percentPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Tier 1</label>
+				<minSeverity>1</minSeverity>
+				<partEfficiencyOffset>1</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>1</setMax>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>MurderousRage</mentalState>
+						<mtbDays>0.001</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Essence_Fate_Buff</hediff>
+						<mtbDays>0.08</mtbDays>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+				<statFactors>
+				</statFactors>
+			</li>
+			<li>
+				<label>Tier 2</label>
+				<minSeverity>2</minSeverity>
+				<partEfficiencyOffset>2</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>1</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>MurderousRage</mentalState>
+						<mtbDays>0.001</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Essence_Fate_Buff</hediff>
+						<mtbDays>0.08</mtbDays>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+				<statFactors>
+				</statFactors>
+			</li>
+			<li>
+				<label>Tier 3</label>
+				<minSeverity>3</minSeverity>
+				<partEfficiencyOffset>3</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>1</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>MurderousRage</mentalState>
+						<mtbDays>0.001</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Essence_Fate_Buff</hediff>
+						<mtbDays>0.08</mtbDays>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+				<statFactors>
+				</statFactors>
+			</li>
+			<li>
+				<label>Tier 4</label>
+				<minSeverity>4</minSeverity>
+				<partEfficiencyOffset>4</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>1</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>MurderousRage</mentalState>
+						<mtbDays>0.001</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Essence_Fate_Buff</hediff>
+						<mtbDays>0.08</mtbDays>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+				<statFactors>
+				</statFactors>
+			</li>
+			<li>
+				<label>Tier 5</label>
+				<minSeverity>5</minSeverity>
+				<partEfficiencyOffset>5</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>1</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>MurderousRage</mentalState>
+						<mtbDays>0.001</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<hediffGivers>
+					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+						<hediff>Essence_Fate_Buff</hediff>
+						<mtbDays>0.08</mtbDays>
+						<countToAffect>1</countToAffect>
+					</li>
+				</hediffGivers>
+				<statFactors>
+				</statFactors>
+			</li>
+			<li>
+				<label>Tier 6 - Fated Fragment formed</label>
+				<minSeverity>5.2</minSeverity>
+				<partEfficiencyOffset>6</partEfficiencyOffset>
+				<capMods>
+				</capMods>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="MakaiTech.HediffExtension_MinCapacity">
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>1</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</HediffDef>
+	
+	<!-- Death Soul -->
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Destined_Death_Soul_Missing_Giver</defName>
+		<label>Missing Soul</label>
+		<description>Soul has been removed, rendering this pawn in permanent state of coma, return the previous owner's to this body, or find a replacement soul.</description>
+		<isBad>false</isBad>
+		<chronic>false</chronic>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.01</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="DiseaseBase" Name="MakaiAvatarHediffBase" Abstract="True">
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<hediffClass>HediffWithComps</hediffClass>
+	</HediffDef>
+  
+	<!-- Destruction -->
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Destruction_AutoAttack</defName>
+		<label>Destruction Avatar</label>
+		<description>Emitting aura of destruction, call down lightning to smite foes with every strike.</description>
+		<spawnThingOnRemoved>Makai_Anva_Sword</spawnThingOnRemoved>
+		<defaultLabelColor>(32, 197, 0)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_DestructionAutoLightning">
+				<radius>20</radius>
+				<uiIcon>Things/Projectile/makai_bullet_green</uiIcon>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<Flammability>0</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<!-- Order -->
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Order_Enlightenment</defName>
+		<label>Order Avatar</label>
+		<description>The mind of an enlightenend one. Should mental break occur, a set amount of percent will be consumed to end the mental break right away. \n\nPercent gained automatically when pawn meditates. Increases at the same rate as their psyfocus gain. \n\n&lt;color=#FF0000&gt;[If no Royalty]&lt;/color&gt;\n pawn will gain percent passively at slower rate instead.</description>
+		<isBad>false</isBad>
+		<spawnThingOnRemoved>Makai_Ama_Berd</spawnThingOnRemoved>
+		<defaultLabelColor>(95, 87, 165)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_Enlightenment">
+				<maxStack>1</maxStack>
+				<tickToIncrease>250</tickToIncrease>
+				<costPerTrigger>0.25</costPerTrigger>
+			</li>
+		</comps>
+		<stages>
+		</stages>
+	</HediffDef>
+  
+	<!-- Corruption -->
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Corruption_Avatar</defName>
+		<label>Corruption Avatar</label>
+		<description>The mark of corrupted one, the taint forever remains, for they have seen the true depth of the abyss. \n\n Toggleable pulsing aura that will cause nearby hostile pawn to go into a random mental break. \nradius 5 cell</description>
+		<isBad>false</isBad>
+		<spawnThingOnRemoved>Makai_Alf_Claw</spawnThingOnRemoved>
+		<defaultLabelColor>(183, 171, 0)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_CorruptionAura">
+				<uiIcon>Things/Weapon/alf_claw</uiIcon>
+				<abilityDef>Makai_Corruption_Pulse</abilityDef>
+				<pulseInterval>250</pulseInterval>
+			</li>
+		</comps>
+		<stages>
+		</stages>
+	</HediffDef>
+  
+	<!-- Death -->
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Death_Avatar</defName>
+		<label>Death Avatar</label>
+		<description>The mark of one who has embraced destined death. They shall be the one to ring the bell that signals the final day.</description>
+		<isBad>false</isBad>
+		<spawnThingOnRemoved>Makai_Sari_Scy</spawnThingOnRemoved>
+		<defaultLabelColor>(140, 81, 199)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+		</comps>
+		<stages>
+		</stages>
+	</HediffDef>
+  
+	<!-- Flame -->
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Flame_Avatar</defName>
+		<label>Flame Avatar</label>
+		<description>The light of the radiant star. The cleansing flame. Pave thy road with a path of gold. No heat shall ever harm thy flesh for the blessing of the star protect thee.</description>
+		<isBad>false</isBad>
+		<spawnThingOnRemoved>Makai_Mica_Mace</spawnThingOnRemoved>
+		<defaultLabelColor>(238, 142, 0)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Heat>4</ArmorRating_Heat>
+					<ComfyTemperatureMax>256</ComfyTemperatureMax>
+				</statOffsets>
+				<statFactors>
+					<Flammability>0</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<!-- Frost -->
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Frost_Avatar</defName>
+		<label>Frost Avatar</label>
+		<description>The frigid cold of the coldest night. Numb thy pain. Numb thy feeling. Still thy mind as the barrier of ice.</description>
+		<isBad>false</isBad>
+		<spawnThingOnRemoved>Makai_Yuki_Staff</spawnThingOnRemoved>
+		<defaultLabelColor>(0, 214, 238)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0</painFactor>
+				<statOffsets>
+					<ArmorRating_Heat>2</ArmorRating_Heat>
+					<ComfyTemperatureMin>-273.15</ComfyTemperatureMin>
+				</statOffsets>
+				<statFactors>
+					<MentalBreakThreshold>0.1</MentalBreakThreshold>
+					<Flammability>0</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<!-- Knowledge -->
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Knowledge_Avatar</defName>
+		<label>Knowledge Avatar</label>
+		<description>The mark of true knowledge, seeking to unveil the unknown depth of knowledge. For all knowledge belongs to thee.</description>
+		<isBad>false</isBad>
+		<spawnThingOnRemoved>Makai_Bow_Varia</spawnThingOnRemoved>
+		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>2.5</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+				</statOffsets>
+				<statFactors>
+					<GlobalLearningFactor>2.5</GlobalLearningFactor>
+					<PsychicSensitivity>2.5</PsychicSensitivity>
+					<ResearchSpeed>2.5</ResearchSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+  
+  
+	<!-- Existence Buff -->
+	
+	<HediffDef ParentName="MakaiAvatarHediffBase">
+		<defName>Existence_Resurrection</defName>
+		<label>Existence Avatar</label>
+		<!-- <description>tied thy life to the concept of existence, endlessly being brought back with every death, each time stronger than the last.</description> -->
+		<description>Life, in the grand scheme of things, is quite fragile- apply a strong force on just the right part of the body, and you break a man’s neck. But existence is immutable, and by binding your vitality to it, death cannot claim you. And each time you return from the underworld… 
+
+You shall be exalted in strength.</description>
+		<hediffClass>MakaiTech.Hediff_LevelWithNullPart</hediffClass>
+		<spawnThingOnRemoved>Makai_Ouro_Berd</spawnThingOnRemoved>
+		<defaultLabelColor>(95, 87, 165)</defaultLabelColor>
+		<isBad>false</isBad>
+		<minSeverity>1</minSeverity>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>10</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>5000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="MakaiTech.HediffCompProperties_ExistenceAvatar">
+				<weaponToEquip>Makai_Ouro_Berd</weaponToEquip>
+				<traitRequirement>Makai_Trait_Existence</traitRequirement>
+				<shouldEverBeDowned>false</shouldEverBeDowned>
+				<!-- <uiIcon>Things/Items/Essence/EssenceExistence</uiIcon> -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<!-- <label>beginning</label> -->
+				<label>1st layer</label>
+				<regeneration>25</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.1</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.1</ArmorRating_Heat>
+					<MeleeHitChance>0.1</MeleeHitChance>
+					<MeleeDodgeChance>0.1</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+					<ToxicResistance>0.1</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.9</IncomingDamageFactor>
+					<AimingDelayFactor>0.9</AimingDelayFactor>
+					<Flammability>0.9</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.1</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.9</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.9</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<!-- <label>strive</label> -->
+				<label>2nd layer</label>
+				<regeneration>50</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.2</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.2</ArmorRating_Heat>
+					<MeleeHitChance>0.2</MeleeHitChance>
+					<MeleeDodgeChance>0.2</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+					<ToxicResistance>0.2</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+					<AimingDelayFactor>0.8</AimingDelayFactor>
+					<Flammability>0.8</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.2</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.8</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.8</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<!-- <label>struggle</label> -->
+				<label>3rd layer</label>
+				<regeneration>75</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.3</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.3</ArmorRating_Heat>
+					<MeleeHitChance>0.3</MeleeHitChance>
+					<MeleeDodgeChance>0.3</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+					<ToxicResistance>0.3</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.7</IncomingDamageFactor>
+					<AimingDelayFactor>0.7</AimingDelayFactor>
+					<Flammability>0.7</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.3</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.7</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.7</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>4</minSeverity>
+				<!-- <label>survive</label> -->
+				<label>4th layer</label>
+				<regeneration>100</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.4</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.4</ArmorRating_Heat>
+					<MeleeHitChance>0.4</MeleeHitChance>
+					<MeleeDodgeChance>0.4</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+					<ToxicResistance>0.4</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.6</IncomingDamageFactor>
+					<AimingDelayFactor>0.6</AimingDelayFactor>
+					<Flammability>0.6</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.4</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.6</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.6</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>5</minSeverity>
+				<!-- <label>thrive</label> -->
+				<label>5th layer</label>
+				<regeneration>125</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.5</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.5</ArmorRating_Heat>
+					<MeleeHitChance>0.5</MeleeHitChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+					<ToxicResistance>0.5</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+					<AimingDelayFactor>0.5</AimingDelayFactor>
+					<Flammability>0.5</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.5</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.5</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.5</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>6</minSeverity>
+				<!-- <label>rise</label> -->
+				<label>6th layer</label>
+				<regeneration>150</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.6</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.6</ArmorRating_Heat>
+					<MeleeHitChance>0.6</MeleeHitChance>
+					<MeleeDodgeChance>0.6</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+					<ToxicResistance>0.6</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.4</IncomingDamageFactor>
+					<AimingDelayFactor>0.4</AimingDelayFactor>
+					<Flammability>0.4</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.6</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.4</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.4</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>7</minSeverity>
+				<!-- <label>prosper</label> -->
+				<label>7th layer</label>
+				<regeneration>175</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.7</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.7</ArmorRating_Heat>
+					<MeleeHitChance>0.7</MeleeHitChance>
+					<MeleeDodgeChance>0.7</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.7</ShootingAccuracyPawn>
+					<ToxicResistance>0.7</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.3</IncomingDamageFactor>
+					<AimingDelayFactor>0.3</AimingDelayFactor>
+					<Flammability>0.3</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.7</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.3</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.3</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>8</minSeverity>
+				<!-- <label>conclusion</label> -->
+				<label>8th layer</label>
+				<regeneration>200</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.8</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.8</ArmorRating_Heat>
+					<MeleeHitChance>0.8</MeleeHitChance>
+					<MeleeDodgeChance>0.8</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.8</ShootingAccuracyPawn>
+					<ToxicResistance>0.8</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.2</IncomingDamageFactor>
+					<AimingDelayFactor>0.2</AimingDelayFactor>
+					<Flammability>0.2</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.8</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.2</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.2</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>9</minSeverity>
+				<!-- <label>Journey End</label> -->
+				<label>9th layer</label>
+				<regeneration>225</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>1.9</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.9</ArmorRating_Heat>
+					<MeleeHitChance>0.9</MeleeHitChance>
+					<MeleeDodgeChance>0.9</MeleeDodgeChance>
+					<ShootingAccuracyPawn>0.9</ShootingAccuracyPawn>
+					<ToxicResistance>0.9</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0.1</IncomingDamageFactor>
+					<AimingDelayFactor>0.1</AimingDelayFactor>
+					<Flammability>0.1</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.9</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.1</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.1</StaggerDurationFactor>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>10</minSeverity>
+				<label>[ ]</label>
+				<regeneration>9999999</regeneration>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>2</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>2</ArmorRating_Sharp>
+					<ArmorRating_Blunt>2</ArmorRating_Blunt>
+					<ArmorRating_Heat>2</ArmorRating_Heat>
+					<MeleeHitChance>2</MeleeHitChance>
+					<MeleeDodgeChance>2</MeleeDodgeChance>
+					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+					<ToxicResistance>1</ToxicResistance>
+				</statOffsets>
+				<statFactors>
+					<IncomingDamageFactor>0</IncomingDamageFactor>
+					<AimingDelayFactor>0</AimingDelayFactor>
+					<Flammability>0</Flammability>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">2</MeleeDamageFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0</RangedCooldownFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0</StaggerDurationFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="MakaiTech.HediffExtension_MinCapacity">
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Moving</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<minLevel>1</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+	</HediffDef>
+  
+	<!--HediffDef ParentName="DiseaseBase">
+    <defName>Destined_Death_Soul_Missing</defName>
+    <label>Missing Soul</label>
+    <description>This pawn is missing a soul, thus unable to be restored to life until soul has been restored..</description>
+    <isBad>false</isBad>
+	<initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+    </comps>
+    <stages>
+		<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.01</setMax>
+					</li>
+				</capMods>
+		</li>
+    </stages>
+  </HediffDef-->
+	
+	
+</Defs>

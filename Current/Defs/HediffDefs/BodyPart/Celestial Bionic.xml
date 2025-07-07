@@ -1,0 +1,568 @@
+<Defs>
+	<ThingCategoryDef>
+		<defName>Makai_BodyPart_Category</defName>
+		<label>Celestial BodyPart</label>
+		<parent>BodyParts</parent>
+	</ThingCategoryDef>
+
+	<ThingDef Name="BodyPartCelestialBase" ParentName="BodyPartBase" Abstract="True">
+		<techLevel>Archotech</techLevel>
+		<thingCategories>
+			<li>Makai_BodyPart_Category</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Items/BodyPart/CelestialBodyPart</texPath>
+			<!-- <color>(95,87,165)</color> -->
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.25</drawSize>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0</DeteriorationRate>
+			<WorkToMake>26000</WorkToMake>
+		</statBases>
+		<tradeTags>
+			<li>Makai_Implant</li>
+		</tradeTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>Makai_Bionic_Tier1</researchPrerequisite>
+			<recipeUsers>
+				<li>Makai_Bench</li>
+			</recipeUsers>
+			<displayPriority>300</displayPriority>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- Celestial eye -->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Makai_CelestialEye</defName>
+		<!-- <hediffClass>MakaiTech.Hediff_DynamicStage</hediffClass> -->
+		<label>celestial eye</label>
+		<labelNoun>an celestial eye</labelNoun>
+		<description>An artificial eye made from celestial steel and stardust with Makainian tech, capable of perceiving up to the 6th dimension, allowing user to see beyond the physical and material planes. \nBy perceiving the flow of time, it allows the user to see an attack before it lands, or perceive the trajectory of the bullet before the trigger is pulled. By visualizing all possible frequencies of wavelength, and automatically adjusting according to user desire, it allows user to have unobstructed vision and any kind of vision.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialEye</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>Makai_CelestialEye</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>3.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<tags>
+			<li>Celestial_Bionic</li>
+		</tags>
+		<stages>
+			<li>
+				<capMods>
+				</capMods>
+				<statFactors>
+					<MeleeHitChance>5.0</MeleeHitChance>
+					<MeleeDodgeChance>5.0</MeleeDodgeChance>
+					<ReadingSpeed>2.0</ReadingSpeed>
+				</statFactors>
+				<statOffsets>
+					
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_CelestialEyeTeleportControl">
+				<uiIcon>Things/Items/BodyPart/CelestialBodyPart</uiIcon>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartCelestialBase">
+		<defName>Makai_CelestialEye</defName>
+		<label>celestial eye</label>
+		<description>An artificial eye made from celestial steel and stardust with Makainian tech, capable of perceiving up to the 6th dimension, allowing user to see beyond the physical and material planes. \nBy perceiving the flow of time, it allows the user to see an attack before it lands, or perceive the trajectory of the bullet before the trigger is pulled. By visualizing all possible frequencies of wavelength, and automatically adjusting according to user desire, it allows user to have unobstructed vision and any kind of vision.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Makai_InstallCelestialEye</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>20000</MarketValue>
+			<Mass>0.3</Mass>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardCore</li>
+		</thingSetMakerTags>
+		<costList>
+			<Makai_Stardust>250</Makai_Stardust>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Makai_Ingot>25</Makai_Ingot>
+		</costList>
+	</ThingDef>
+  
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>Makai_InstallCelestialEye</defName>
+		<label>install celestial eye</label>
+		<description>Install an celestial eye.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialEye</ThingDef>
+			<HediffDef>Makai_CelestialEye</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing celestial eye.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_CelestialEye</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_CelestialEye</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Eye</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Makai_CelestialEye</addsHediff>
+	</RecipeDef>
+	
+	<!-- Celestial Arm -->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Makai_CelestialArm</defName>
+		<label>celestial arm</label>
+		<labelNoun>an celestial arm</labelNoun>
+		<description>An artificial arm made from celestial steel and stardust with Makainian tech. It's strong enough to mold tungsten as if molding clay. The stardust that makes up the arm can seamlessly change its shape to fit the task at hand, improving effectiveness in performing the task to an unimaginable degree. Celestial Steel covering the arm is hard enough to fend against most conventional attacks, while providing superb attack power.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialArm</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>Makai_CelestialArm</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>3.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<tags>
+			<li>Celestial_Bionic</li>
+		</tags>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>2</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+					<MiningSpeed>2.00</MiningSpeed>
+					<DeepDrillingSpeed>2.00</DeepDrillingSpeed>
+					<SmoothingSpeed>2.00</SmoothingSpeed>
+					<PlantWorkSpeed>2.00</PlantWorkSpeed>
+					<ConstructionSpeed>2.00</ConstructionSpeed>
+					<CleaningSpeed>2.00</CleaningSpeed>
+				</statFactors>
+				<statOffsets>
+					
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Makai_Celestial</li>
+						</capacities>
+						<power>14</power>
+						<cooldownTime>2</cooldownTime>
+						<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+						<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+					</li>
+				</tools>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartCelestialBase">
+		<defName>Makai_CelestialArm</defName>
+		<label>celestial arm</label>
+		<description>An artificial arm made from celestial steel and stardust with Makainian tech. It's strong enough to mold tungsten as if molding clay. The stardust that makes up the arm can seamlessly change its shape to fit the task at hand, improving effectiveness in performing the task to an unimaginable degree. Celestial Steel covering the arm is hard enough to fend against most conventional attacks, while providing superb attack power.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Makai_InstallCelestialArm</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>20000</MarketValue>
+			<Mass>0.3</Mass>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardCore</li>
+		</thingSetMakerTags>
+		<costList>
+			<Makai_Stardust>250</Makai_Stardust>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Makai_Ingot>25</Makai_Ingot>
+		</costList>
+	</ThingDef>
+  
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>Makai_InstallCelestialArm</defName>
+		<label>install celestial arm</label>
+		<description>Install an celestial arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialArm</ThingDef>
+			<HediffDef>Makai_CelestialArm</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing celestial arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_CelestialArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_CelestialArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Makai_CelestialArm</addsHediff>
+	</RecipeDef>
+	
+	<!-- Celestial Leg -->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Makai_CelestialLeg</defName>
+		<label>celestial leg</label>
+		<labelNoun>an celestial leg</labelNoun>
+		<description>An artificial leg made from celestial steel and stardust with Makainian tech, capable of providing users with an unimaginable level of movement. A pair of these can help the user to break the sound barrier at sea level, given there is enough running space and sufficient protection from the friction.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialLeg</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>Makai_CelestialLeg</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>3.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<tags>
+			<li>Celestial_Bionic</li>
+		</tags>
+		<stages>
+			<li>
+				<capMods>
+				</capMods>
+				<statFactors>
+				</statFactors>
+				<statOffsets>
+					<MoveSpeed>10.0</MoveSpeed>					
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<!-- <li Class="AnimalBehaviours.HediffCompProperties_Floating" /> -->
+		</comps>
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartCelestialBase">
+		<defName>Makai_CelestialLeg</defName>
+		<label>celestial leg</label>
+		<description>An artificial leg made from celestial steel and stardust with Makainian tech, capable of providing users with an unimaginable level of movement. A pair of these can help the user to break the sound barrier at sea level, given there is enough running space and sufficient protection from the friction.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Makai_InstallCelestialLeg</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>20000</MarketValue>
+			<Mass>0.3</Mass>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardCore</li>
+		</thingSetMakerTags>
+		<costList>
+			<Makai_Stardust>250</Makai_Stardust>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Makai_Ingot>25</Makai_Ingot>
+		</costList>
+	</ThingDef>
+  
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>Makai_InstallCelestialLeg</defName>
+		<label>install celestial leg</label>
+		<description>Install an celestial leg.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialLeg</ThingDef>
+			<HediffDef>Makai_CelestialLeg</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing celestial leg.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_CelestialLeg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_CelestialLeg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Makai_CelestialLeg</addsHediff>
+	</RecipeDef>
+	
+	<!-- Celestial Lung -->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Makai_CelestialLung</defName>
+		<label>celestial lung</label>
+		<labelNoun>an celestial lung</labelNoun>
+		<description>An artificial lung made from celestial steel and stardust with Makainian tech, capable of protecting users from the most toxic environment, the stardust form a thin network connected to various parts of the user's body, and provide stable nutrition to the user by converting any substance breath in from the air.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialLung</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>Makai_CelestialLung</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>3.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<tags>
+			<li>Celestial_Bionic</li>
+		</tags>
+		<comps>
+			<li Class="HediffCompProperties_ChangeNeed">
+				<needDef>Food</needDef>
+				<percentPerDay>0.5</percentPerDay>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.HediffExtension_MinCapacity">
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>Breathing</capacity>
+						<minLevel>1</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>2</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					
+				</statFactors>
+				<statOffsets>
+					<ToxicResistance>1</ToxicResistance>
+				</statOffsets>
+			</li>
+		</stages>		
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartCelestialBase">
+		<defName>Makai_CelestialLung</defName>
+		<label>celestial lung</label>
+		<description>An artificial lung made from celestial steel and stardust with Makainian tech, capable of protecting users from the most toxic environment, the stardust form a thin network connected to various parts of the user's body, and provide stable nutrition to the user by converting any substance breath in from the air.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Makai_InstallCelestialLung</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>20000</MarketValue>
+			<Mass>0.3</Mass>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardCore</li>
+		</thingSetMakerTags>
+		<costList>
+			<Makai_Stardust>250</Makai_Stardust>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Makai_Ingot>25</Makai_Ingot>
+		</costList>
+	</ThingDef>
+  
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>Makai_InstallCelestialLung</defName>
+		<label>install celestial lung</label>
+		<description>Install an celestial lung.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialLung</ThingDef>
+			<HediffDef>Makai_CelestialLung</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing celestial lung.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_CelestialLung</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_CelestialLung</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Lung</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Makai_CelestialLung</addsHediff>
+	</RecipeDef>
+	
+	<!-- Celestial Heart -->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Makai_CelestialHeart</defName>
+		<label>celestial heart</label>
+		<labelNoun>an celestial heart</labelNoun>
+		<description>An artificial heart made from celestial steel and stardust with Makainian tech, improving user blood filteration and blood pumping to a superb level, stardust stored inside also provide user with super-regeneration overtime. the Celestial Core embedded in it allow user to move between physical plane and immaterial plane, allowing them to phase throught most obstacle.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialHeart</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>Makai_CelestialHeart</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>3.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<tags>
+			<li>Celestial_Bionic</li>
+		</tags>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Regeneration">
+				<healAmount>1</healAmount>
+			</li>
+			<!-- <li Class="MakaiTech.HediffCompProperties_ToggleHediff"> -->
+				<!-- <HediffDef>Makai_PhasingBuff</HediffDef> -->
+				<!-- <severity>1</severity> -->
+				<!-- <uiIcon>Things/Abilities/HediffToggle/Phase</uiIcon> -->
+			<!-- </li> -->
+		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.HediffExtension_MinCapacity">
+				<pawnCapacityMinLevels>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<minLevel>1</minLevel>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<minLevel>1</minLevel>
+					</li>
+				</pawnCapacityMinLevels>
+			</li>
+		</modExtensions>
+		<stages>
+			<li>
+				<regeneration>10</regeneration>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>2</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>2</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					
+				</statFactors>
+				<statOffsets>
+				
+				</statOffsets>
+			</li>
+		</stages>		
+	</HediffDef>
+	
+	<!-- <HediffDef ParentName="DiseaseBase"> -->
+		<!-- <defName>Makai_PhasingBuff</defName> -->
+		<!-- <label>Phasing</label> -->
+		<!-- <description>is currently phasing through wall.</description> -->
+		<!-- <isBad>false</isBad> -->
+		<!-- <initialSeverity>1</initialSeverity> -->
+		<!-- <maxSeverity>1</maxSeverity> -->
+		<!-- <comps> -->
+			<!-- <li> -->
+				<!-- <compClass>VEF.Hediffs.HediffComp_Phasing</compClass> -->
+			<!-- </li> -->
+		<!-- </comps> -->
+		<!-- <stages> -->
+			<!-- <li> -->
+				<!-- <becomeVisible>false</becomeVisible> -->
+			<!-- </li> -->
+		<!-- </stages> -->
+	<!-- </HediffDef> -->
+	
+	<ThingDef ParentName="BodyPartCelestialBase">
+		<defName>Makai_CelestialHeart</defName>
+		<label>celestial heart</label>
+		<description>An artificial heart made from celestial steel and stardust with Makainian tech, improving user blood filteration and blood pumping to a superb level, stardust stored inside also provide user with super-regeneration overtime. the Celestial Core embedded in it allow user to move between physical plane and immaterial plane, allowing them to phase throught most obstacle.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Makai_InstallCelestialHeart</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>20000</MarketValue>
+			<Mass>0.3</Mass>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardCore</li>
+		</thingSetMakerTags>
+		<costList>
+			<Makai_Stardust>250</Makai_Stardust>
+			<ComponentSpacer>10</ComponentSpacer>
+			<Makai_Ingot>25</Makai_Ingot>
+		</costList>
+	</ThingDef>
+  
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>Makai_InstallCelestialHeart</defName>
+		<label>install celestial heart</label>
+		<description>Install an celestial heart.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Makai_CelestialHeart</ThingDef>
+			<HediffDef>Makai_CelestialHeart</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing celestial heart.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Makai_CelestialHeart</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Makai_CelestialHeart</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Makai_CelestialHeart</addsHediff>
+	</RecipeDef>
+	
+</Defs>

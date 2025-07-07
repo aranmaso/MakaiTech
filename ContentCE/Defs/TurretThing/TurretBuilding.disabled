@@ -1,0 +1,145 @@
+<Defs>
+
+	<!-- Stardust Accel -->
+	<ThingDef ParentName="TurretBase">
+		<defName>Makai_Turret_A_CE</defName>
+		<label>Stardust-particle accelerator</label>
+		<description>A stardust particle accelerator. Utilizing energized &lt;color=#5F57A5&gt;stardust&lt;/color&gt; as a weapon. It will melt target armor on hit.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/makai_turret_base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/makai_turret_topA</uiIconPath>
+		<uiIconScale>0.90</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<rotatable>false</rotatable>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>1500</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<WorkToBuild>3000</WorkToBuild>
+			<Mass>100</Mass>
+			<Beauty>1</Beauty>
+			<ShootingAccuracyTurret>0.95</ShootingAccuracyTurret>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1500</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Forbiddable"/>
+			<!-- <li Class="CompProperties_Breakdownable"/> -->
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>Stardust_Compress_Bullet_Ex_HELD</explosiveDamageType>
+				<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(164,0,255)</glowColor>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Shots until rearm</fuelLabel>
+				<fuelGizmoLabel>Stardust particle storage</fuelGizmoLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Makai_Stardust</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>2500</fuelCapacity>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.75</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<fuelMultiplier>10</fuelMultiplier>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<outOfFuelMessage>Cannot shoot: Needs refuel</outOfFuelMessage>
+				<fuelIconPath>Things/Items/makai_mat_dust</fuelIconPath>
+			</li>
+			<li Class="PipeSystem.CompProperties_RefillWithPipes">
+				<pipeNet>Makai_StarDustNet</pipeNet>
+				<thing>Makai_Stardust</thing>
+			</li>
+		</comps>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>75</costStuffCount>
+		<costList>
+			<Steel>125</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Makai_Stardust>1</Makai_Stardust>
+		</costList>
+		<designationCategory>Security</designationCategory>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<building>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Makai_Turret_TopA_CE</turretGunDef>
+			<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<designationHotKey>Misc2</designationHotKey>
+		<researchPrerequisites>
+			<li>Makai_Weapon3</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseAutoTurretGun">
+		<defName>Makai_Turret_TopA_CE</defName>
+		<label>stardust-compresser turret</label>		
+		<graphicData>
+			<texPath>Things/Building/makai_turret_topA</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<description>Top of a stardust turret A</description>
+		<soundInteract>Interact_ChargeLance</soundInteract>
+		<statBases>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.06</ShotSpread>
+			<SwayFactor>0.86</SwayFactor>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+			<Mass>40</Mass>
+		</statBases>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<recoilAmount>0.90</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Turret_Makai_ACE</defaultProjectile>
+				<range>40</range>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<burstShotCount>10</burstShotCount>
+				<soundCast>pewpewthree</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CombatExtended.CompProperties_AmmoUser">
+				<magazineSize>100</magazineSize>
+				<reloadTime>7.8</reloadTime>
+				<ammoSet>AmmoSet_8x35mmCharged</ammoSet>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

@@ -24,7 +24,7 @@
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>50</speed>
+			<speed>120</speed>
 			<!-- <dropsCasings>true</dropsCasings> -->
 			<flyOverhead>false</flyOverhead>
 			<castShadow>true</castShadow>
@@ -79,7 +79,7 @@
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<!-- <trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker> -->
-			<speed>28</speed>
+			<speed>75</speed>
 			<speedGain>5</speedGain>
 			<damageDef>ME_Bullet_A</damageDef>
 			<damageAmountBase>5</damageAmountBase>
@@ -103,7 +103,7 @@
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<!-- <trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker> -->
-			<speed>28</speed>
+			<speed>75</speed>
 			<speedGain>4</speedGain>
 			<damageDef>ME_Bullet_A</damageDef>
 			<damageAmountBase>5</damageAmountBase>
@@ -129,15 +129,16 @@
 			<damageDef>ME_Bullet_G</damageDef>
 			<damageAmountBase>30</damageAmountBase>
 			<armorPenetrationBase>0.5</armorPenetrationBase>
-			<speed>20</speed>
+			<speed>45</speed>
 			<gravityFactor>1</gravityFactor>
-			<flyOverhead>false</flyOverhead>
 			<explosionRadius>2.9</explosionRadius>
 			<soundExplode>ThumpCannon_Impact</soundExplode>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			<tickToTruePos>0</tickToTruePos>
+			<flyOverhead>true</flyOverhead>
+			<alwaysFreeIntercept>false</alwaysFreeIntercept>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_Fragments">
@@ -162,7 +163,7 @@
 			<drawSize>0.5</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>40</speed>
+			<speed>60</speed>
 			<damageDef>Makai_Celestial_Cut</damageDef>
 			<damageAmountBase>2</damageAmountBase>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
@@ -183,22 +184,25 @@
 			<drawSize>1</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">	
-			<speed>40</speed>		
-			<speedGain>10</speedGain>
+			<speed>55</speed>		
+			<speedGain>90</speedGain>
 			<!-- <trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker> -->
 			<damageDef>Stardust_Compress_Bullet_Ex_HELD</damageDef>
-			<damageAmountBase>20</damageAmountBase>
-			<armorPenetrationBase>2</armorPenetrationBase>			
-			<!-- <gravityFactor>1</gravityFactor> -->
-			<flyOverhead>false</flyOverhead>
+			<damageAmountBase>60</damageAmountBase>
+			<armorPenetrationBase>2</armorPenetrationBase>
 			<explosionRadius>2.9</explosionRadius>
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
-			<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>			
+			<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>						
+			<flyOverhead>false</flyOverhead>
+			<damageFalloff>false</damageFalloff>
+			<alwaysFreeIntercept>false</alwaysFreeIntercept>
+			<dropsCasings>false</dropsCasings>
+			<gravityFactor>20</gravityFactor>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_Fragments">
 				<fragments>
-					<ME_Pro_TOne_FragCE>25</ME_Pro_TOne_FragCE>
+					<ME_Pro_TOne_FragCE>45</ME_Pro_TOne_FragCE>
 				</fragments>
 				<!-- <fragXZAngleRange>-5~5</fragXZAngleRange> -->
 				<!-- <fragShadowChance>1</fragShadowChance> -->
@@ -218,7 +222,7 @@
 			<drawSize>1</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>55</speed>
+			<speed>125</speed>
 			<damageDef>ME_Bullet_T1</damageDef>
 			<damageAmountBase>15</damageAmountBase>
 			<armorPenetrationBase>0.75</armorPenetrationBase>
@@ -238,7 +242,7 @@
 			<drawSize>1</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>55</speed>
+			<speed>125</speed>
 			<damageDef>ME_Bullet_T1</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<armorPenetrationBase>0.75</armorPenetrationBase>
@@ -258,9 +262,9 @@
 			<drawSize>0.5</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>40</speed>
+			<speed>75</speed>
 			<damageDef>Makai_Celestial_Cut</damageDef>
-			<damageAmountBase>2</damageAmountBase>
+			<damageAmountBase>15</damageAmountBase>
 			<armorPenetrationBase>0.25</armorPenetrationBase>
 			<stoppingPower>2</stoppingPower>
 		</projectile>
@@ -278,7 +282,7 @@
 			<drawSize>1</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>55</speed>
+			<speed>125</speed>
 			<damageDef>ME_Bullet_T1</damageDef>
 			<damageAmountBase>55</damageAmountBase>
 			<armorPenetrationBase>0.75</armorPenetrationBase>
@@ -304,7 +308,7 @@
 			<damageDef>Stardust_Accel_Bullet</damageDef>
 			<damageAmountBase>5</damageAmountBase>
 			<armorPenetrationBase>1</armorPenetrationBase>
-			<speed>25</speed>
+			<speed>85</speed>
 		</projectile>
 	</ThingDef>
 	
@@ -318,7 +322,7 @@
 			<drawSize>2</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">		
-			<speed>30</speed>
+			<speed>75</speed>
 			<damageDef>Nightmare_Claw_Bullet_DamageTwo</damageDef>
 			<damageAmountBase>5</damageAmountBase>
 			<armorPenetrationBase>0.9</armorPenetrationBase>
@@ -327,4 +331,111 @@
 		</projectile>
 	</ThingDef>
 	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_Turret_Makai_ECE</defName>
+		<label>Condensed Shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/y_beam2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>(1,4)</drawSize>
+		</graphicData>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>75</speed>
+			<damageDef>Stardust_Artiliery_Bullet_Ex</damageDef>
+			<damageAmountBase>750</damageAmountBase>
+			<armorPenetrationBase>2</armorPenetrationBase>
+			<explosionRadius>5</explosionRadius>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>Explosion_EMP</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<explosionEffect>BIGLASERIMPACT</explosionEffect>
+			<flyOverhead>true</flyOverhead>
+			<dropsCasings>false</dropsCasings>
+			<gravityFactor>15</gravityFactor>
+			<damageFalloff>false</damageFalloff>
+			<alwaysFreeIntercept>false</alwaysFreeIntercept>
+			<shellingProps>
+				<iconPath>Things/WorldObjects/Munitions/Mortar</iconPath>
+				<tilesPerTick>0.06</tilesPerTick>
+				<range>40</range>
+			</shellingProps>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Bullet_Turret_Makai_ECE_Frag>6</Bullet_Turret_Makai_ECE_Frag>
+				</fragments>
+				<!-- <fragXZAngleRange>-45~45</fragXZAngleRange> -->
+				<fragShadowChance>1</fragShadowChance>
+				<fragAngleRange>0~5</fragAngleRange>
+				<fragSpeedFactor>0.75</fragSpeedFactor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="CombatExtended.GenericLabelExtension">
+				<genericLabel>stardust compressed</genericLabel>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>Bullet_Turret_Makai_ECE_Frag</defName>
+		<label>Condensed Shot</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/y_beam2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">	
+			<speed>20</speed>		
+			<speedGain>10</speedGain>
+			<!-- <trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker> -->
+			<damageDef>Stardust_Compress_Bullet_Ex_HELD</damageDef>
+			<damageAmountBase>40</damageAmountBase>
+			<armorPenetrationBase>2</armorPenetrationBase>			
+			<!-- <gravityFactor>1</gravityFactor> -->
+			<flyOverhead>false</flyOverhead>
+			<explosionRadius>2.9</explosionRadius>
+			<damageFalloff>false</damageFalloff>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>			
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<ME_Pro_TOne_FragCE>25</ME_Pro_TOne_FragCE>
+					<ME_Pro_TOne_FragCE_Small>25</ME_Pro_TOne_FragCE_Small>
+				</fragments>
+				<!-- <fragXZAngleRange>-5~5</fragXZAngleRange> -->
+				<!-- <fragShadowChance>1</fragShadowChance> -->
+				<fragAngleRange>0~5</fragAngleRange>
+				<fragSpeedFactor>0.2</fragSpeedFactor>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMakaiEnergyBullet">
+		<defName>ME_Pro_TOne_FragCE_Small</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/makai_spacer_bullet_T1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>80</speed>
+			<damageDef>Makai_Celestial_Cut</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
 </Defs>

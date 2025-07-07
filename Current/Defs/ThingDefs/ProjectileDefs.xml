@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="PawnFlyerBase">
+        <defName>Makai_Pull</defName>
+        <thingClass>MakaiTech.PawnFlyer_CorruptionPulled</thingClass>
+        <pawnFlyer>
+            <flightDurationMin>0.2</flightDurationMin>
+            <flightSpeed>13</flightSpeed>
+        </pawnFlyer>
+    </ThingDef>
+	
+	<AbilityGroupDef>
+		<defName>Makai_Weapon_Ability</defName>
+		<cooldownTicks>600</cooldownTicks>
+	</AbilityGroupDef>
+	
+	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>MakaiPsy_CP_ClawGrab</defName>
+		<label>claw grab</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Claw_Go</texPath>
+			<texPathFadeOut>Things/Projectile/Claw_Back</texPathFadeOut>
+			<shaderType>Cutout</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Alf_Corruption</damageDef>
+			<speed>120</speed>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
+		<lifeTimeDuration>18</lifeTimeDuration>
+		<widthScaleFactor>0.4</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, 0)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>1</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>false</dealsDamageOnce>
+		<minDistanceToAffect>1</minDistanceToAffect>
+		<stopWhenHit>false</stopWhenHit>
+	</VEF.Weapons.ExpandableProjectileDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Makai_SingularityProj</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Mote/mote_invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>1000</speed>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<armorPenetrationBase>0</armorPenetrationBase>
+			<stoppingPower>0</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Makai_SingularityProjGreenOrb</defName>
+		<label>balls</label>
+		<graphicData>
+			<texPath>Things/Mote/Mote_MakaiGreenEnergy</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>25</speed>
+			<damageDef>Makai_Celestial_Cut</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>1.75</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>Makai_StardustShell_StreamSlow</effecterDef>
+			</li>
+			<!-- <li Class="VFECore.CompProperties_HomingProjectile"> -->
+				<!-- <homingDistanceFractionPassed>0.2</homingDistanceFractionPassed> -->
+				<!-- <homingCorrectionTickRate>5</homingCorrectionTickRate> -->
+				<!-- <initialDispersionFromTarget>180</initialDispersionFromTarget> -->
+			<!-- </li> -->
+			<!-- <li Class="CompProperties_ProjectileInterceptor"> -->
+				<!-- <radius>1.5</radius> -->
+				<!-- <interceptGroundProjectiles>true</interceptGroundProjectiles> -->
+				<!-- <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles> -->
+				<!-- <interceptNonHostileProjectiles>false</interceptNonHostileProjectiles> -->
+				<!-- <color>(0, 255, 0)</color> -->
+				<!-- <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect> -->
+				<!-- <activeSound>BulletShield_Ambience</activeSound> -->
+				<!-- <hitPoints>200</hitPoints> -->
+				<!-- <drawWithNoSelection>True</drawWithNoSelection> -->
+		  <!-- </li> -->
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="Makai_BulletLaser" Class="VEF.Weapons.LaserBeamDef">
+		<defName>Makai_GreenLaser</defName>
+		<label>singularity shot</label>
+		<description>A focused, long range laser arrow.</description>
+		<textures>
+			<li>Things/Projectile/Shot_Bow_green</li>
+		</textures>
+		<seam>0.1</seam>
+		<causefireChance>0</causefireChance>
+		<beamWidth>1.5</beamWidth>
+		<lifetime>60</lifetime>
+		<!-- <explosionEffect>Ring_ExpandY</explosionEffect> -->
+		<projectile>
+			<damageDef>ME_Bullet_T1</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+		</projectile>
+	</ThingDef>
+	
+</Defs>

@@ -17,6 +17,7 @@
 							<power>3</power>
 							<cooldownTime>1.3</cooldownTime>
 							<armorPenetrationBlunt>5</armorPenetrationBlunt>
+							<armorPenetration>0.45</armorPenetration>
 							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 						</li>
 						<li Class="CombatExtended.ToolCE">
@@ -33,6 +34,7 @@
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>2.2</cooldownTime>
+							<armorPenetration>1.90</armorPenetration>
 							<!-- <armorPenetrationSharp>55</armorPenetrationSharp> -->
 							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 						</li>
@@ -50,6 +52,7 @@
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>2.75</cooldownTime>
+							<armorPenetration>1.50</armorPenetration>
 							<!-- <armorPenetrationSharp>60</armorPenetrationSharp> -->
 							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 						</li>
@@ -100,9 +103,9 @@
 				<value>
 					<li>CE_TwoHandedWeapon</li>
 				</value>
-			</li>		
-		</operations>	
-	</Operation>	
+			</li>
+		</operations>
+	</Operation>
 	
 	<!-- Order -->
 	<Operation Class="PatchOperationSequence">
@@ -131,7 +134,7 @@
 							</capacities>
 							<power>15</power>
 							<cooldownTime>2.2</cooldownTime>
-							<armorPenetrationSharp>55</armorPenetrationSharp>
+							<armorPenetration>1.30</armorPenetration>
 							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 						</li>
 						<li Class="CombatExtended.ToolCE">
@@ -142,7 +145,7 @@
 							</capacities>
 							<power>15</power>
 							<cooldownTime>2.75</cooldownTime>
-							<armorPenetrationSharp>55</armorPenetrationSharp>
+							<armorPenetration>1.40</armorPenetration>
 							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 						</li>
 					</tools>
@@ -158,9 +161,9 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName="Makai_Ama_Berd"]/equippedStatOffsets</xpath>
 				<value>
-						<MeleeCritChance>0.17</MeleeCritChance>
-						<MeleeParryChance>0.5</MeleeParryChance>
-						<MeleeDodgeChance>0.3</MeleeDodgeChance>
+					<MeleeCritChance>0.17</MeleeCritChance>
+					<MeleeParryChance>0.5</MeleeParryChance>
+					<MeleeDodgeChance>0.3</MeleeDodgeChance>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
@@ -169,7 +172,75 @@
 					<li>CE_TwoHandedWeapon</li>
 				</value>
 			</li>
-		</operations>	
+		</operations>
+	</Operation>
+	
+	<!-- Existence -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Makai_Ouro_Berd"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>Handle</label>
+							<capacities>
+								<!-- <li>Blunt</li> -->
+								<li>Makai_Celestial</li>
+							</capacities>
+							<power>50</power>
+							<cooldownTime>0.55</cooldownTime>
+							<armorPenetration>2</armorPenetration>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>point</label>
+							<capacities>
+								<li>Makai_Celestial</li>
+							</capacities>
+							<power>80</power>
+							<cooldownTime>3.25</cooldownTime>
+							<armorPenetration>2</armorPenetration>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							
+							<label>edge</label>
+							<capacities>
+								<li>Makai_Celestial</li>
+							</capacities>
+							<power>80</power>
+							<cooldownTime>3.35</cooldownTime>
+							<armorPenetration>2</armorPenetration>
+							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]/statBases</xpath>
+				<value>
+					<Bulk>20</Bulk>
+					<MeleeCounterParryBonus>2</MeleeCounterParryBonus>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]/equippedStatOffsets</xpath>
+				<value>
+					<MeleeCritChance>1</MeleeCritChance>
+					<MeleeParryChance>0.5</MeleeParryChance>
+					<MeleeDodgeChance>0.3</MeleeDodgeChance>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]/weaponTags</xpath>
+				<value>
+					<li>CE_TwoHandedWeapon</li>
+				</value>
+			</li>
+		</operations>
 	</Operation>
 	
 	<!-- Claw of Insanity -->
@@ -192,7 +263,7 @@
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>0.55</cooldownTime>
-							<armorPenetrationSharp>35</armorPenetrationSharp>
+							<armorPenetration>1.20</armorPenetration>
 							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 						</li>
 						<li Class="CombatExtended.ToolCE">
@@ -208,6 +279,7 @@
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>0.75</cooldownTime>
+							<armorPenetration>1.20</armorPenetration>
 							<armorPenetrationSharp>35</armorPenetrationSharp>
 							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 						</li>
@@ -224,9 +296,9 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName="Makai_Alf_Claw"]/equippedStatOffsets</xpath>
 				<value>
-						<MeleeCritChance>0.17</MeleeCritChance>
-						<MeleeParryChance>0.75</MeleeParryChance>
-						<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<MeleeCritChance>0.17</MeleeCritChance>
+					<MeleeParryChance>0.75</MeleeParryChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
@@ -235,7 +307,7 @@
 					<li>CE_OneHandedWeapon</li>
 				</value>
 			</li>
-		</operations>	
+		</operations>
 	</Operation>
 	
 	<!-- Mica Sword -->
@@ -258,8 +330,8 @@
 									<amount>1</amount>
 								</li>
 							</extraMeleeDamages>
-							<cooldownTime>2.2</cooldownTime>
-							<!-- <armorPenetrationSharp>85</armorPenetrationSharp> -->
+							<cooldownTime>1.45</cooldownTime>
+							<armorPenetration>1.40</armorPenetration>
 							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 						</li>
 						<li Class="CombatExtended.ToolCE">
@@ -275,8 +347,8 @@
 									<amount>1</amount>
 								</li>
 							</extraMeleeDamages>
-							<cooldownTime>2.75</cooldownTime>
-							<!-- <armorPenetrationSharp>85</armorPenetrationSharp> -->
+							<cooldownTime>1.75</cooldownTime>
+							<armorPenetration>1.40</armorPenetration>
 							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 						</li>
 					</tools>
@@ -285,7 +357,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName="Makai_Mica_Blade"]/statBases</xpath>
 				<value>
-					<Bulk>5</Bulk>
+					<Bulk>25</Bulk>
 					<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
 				</value>
 			</li>
@@ -293,8 +365,8 @@
 				<xpath>/Defs/ThingDef[defName="Makai_Mica_Blade"]/equippedStatOffsets</xpath>
 				<value>
 					<MeleeCritChance>0.17</MeleeCritChance>
-						<MeleeParryChance>0.5</MeleeParryChance>
-						<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<MeleeParryChance>0.5</MeleeParryChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
@@ -306,7 +378,7 @@
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/ThingDef[defName="Makai_Mica_Blade"]/verbs</xpath>
 			</li>
-		</operations>	
+		</operations>
 	</Operation>
 	<!-- Mica Mace -->
 	<Operation Class="PatchOperationSequence">
@@ -321,7 +393,7 @@
 							<capacities>
 								<li>Makai_Celestial</li>
 							</capacities>
-							<power>25</power>
+							<power>14</power>
 							<extraMeleeDamages>
 								<li>
 									<def>Mica_Star</def>
@@ -329,12 +401,11 @@
 								</li>
 								<li>
 									<def>Flame</def>
-									<amount>1</amount>
+									<amount>5</amount>
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>2.2</cooldownTime>
-							<armorPenetrationSharp>200</armorPenetrationSharp>
-							<armorPenetrationBlunt>2000</armorPenetrationBlunt>
+							<armorPenetration>1.40</armorPenetration>
 							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 						</li>
 						<li Class="CombatExtended.ToolCE">
@@ -343,7 +414,7 @@
 							<capacities>
 								<li>Makai_Celestial</li>
 							</capacities>
-							<power>25</power>
+							<power>14</power>
 							<extraMeleeDamages>
 								<li>
 									<def>Mica_Star</def>
@@ -351,12 +422,11 @@
 								</li>
 								<li>
 									<def>Flame</def>
-									<amount>1</amount>
+									<amount>5</amount>
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>2.75</cooldownTime>
-							<armorPenetrationSharp>200</armorPenetrationSharp>
-							<armorPenetrationBlunt>2000</armorPenetrationBlunt>
+							<armorPenetration>1.60</armorPenetration>
 							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
 						</li>
 					</tools>
@@ -365,18 +435,16 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName="Makai_Mica_Mace"]/statBases</xpath>
 				<value>
-					<Bulk>5</Bulk>
+					<Bulk>25</Bulk>
 					<MeleeCounterParryBonus>2</MeleeCounterParryBonus>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName="Makai_Mica_Mace"]</xpath>
+				<xpath>/Defs/ThingDef[defName="Makai_Mica_Mace"]/equippedStatOffsets</xpath>
 				<value>
-					<equippedStatOffsets>
-						<MeleeCritChance>0.17</MeleeCritChance>
-						<MeleeParryChance>0.5</MeleeParryChance>
-						<MeleeDodgeChance>0.5</MeleeDodgeChance>
-					</equippedStatOffsets>
+					<MeleeCritChance>0.17</MeleeCritChance>
+					<MeleeParryChance>0.5</MeleeParryChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
@@ -389,14 +457,14 @@
 				<xpath>Defs/ThingDef[defName="Makai_Mica_Mace"]/verbs</xpath>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Makai_Mica_Mace"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>		
+				<xpath>Defs/ThingDef[defName="Makai_Mica_Mace"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
 				<value>
 					<li>
-						<compClass>CompEquippable</compClass>	
+						<compClass>CompEquippable</compClass>
 					</li>
 				</value>
 			</li>
-		</operations>	
+		</operations>
 	</Operation>
 	
 	<!-- Sari Scythe -->
@@ -420,6 +488,7 @@
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>2.2</cooldownTime>
+							<armorPenetration>66.6</armorPenetration>
 							<armorPenetrationSharp>6666</armorPenetrationSharp>
 							<armorPenetrationBlunt>6666</armorPenetrationBlunt>
 							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
@@ -438,6 +507,7 @@
 								</li>
 							</extraMeleeDamages>
 							<cooldownTime>2.75</cooldownTime>
+							<armorPenetration>66.6</armorPenetration>
 							<armorPenetrationSharp>6666</armorPenetrationSharp>
 							<armorPenetrationBlunt>6666</armorPenetrationBlunt>
 							<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
@@ -448,18 +518,16 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName="Makai_Sari_Scy"]/statBases</xpath>
 				<value>
-					<Bulk>5</Bulk>
+					<Bulk>15</Bulk>
 					<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName="Makai_Sari_Scy"]</xpath>
+				<xpath>/Defs/ThingDef[defName="Makai_Sari_Scy"]/equippedStatOffsets</xpath>
 				<value>
-					<equippedStatOffsets>
-						<MeleeCritChance>0.17</MeleeCritChance>
-						<MeleeParryChance>0.5</MeleeParryChance>
-						<MeleeDodgeChance>0.5</MeleeDodgeChance>
-					</equippedStatOffsets>
+					<MeleeCritChance>0.17</MeleeCritChance>
+					<MeleeParryChance>0.5</MeleeParryChance>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
@@ -472,14 +540,14 @@
 				<xpath>Defs/ThingDef[defName="Makai_Sari_Scy"]/verbs</xpath>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="Makai_Sari_Scy"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>		
+				<xpath>Defs/ThingDef[defName="Makai_Sari_Scy"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
 				<value>
 					<li>
-						<compClass>CompEquippable</compClass>	
+						<compClass>CompEquippable</compClass>
 					</li>
 				</value>
 			</li>
-		</operations>	
+		</operations>
 	</Operation>
 	
 </Patch>

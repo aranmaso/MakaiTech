@@ -3,18 +3,18 @@
 <Patch>
 	<Operation Class="PatchOperationSequence">
 		<operations>
-			<li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="Makai_SunC"]/building/soundAmbient</xpath>
-			<value>
-				<soundAmbient>ArchonexusCore_Ambience</soundAmbient>
-			</value>
-			</li>
-			<li Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName="Makai_Powernode_TierOne"]/building/soundAmbient</xpath>
-			<value>
-				<soundAmbient>ArchonexusCore_Ambience</soundAmbient>
-			</value>
-			</li>
+			<!-- <li Class="PatchOperationReplace"> -->
+			<!-- <xpath>Defs/ThingDef[defName="Makai_SunC"]/building/soundAmbient</xpath> -->
+			<!-- <value> -->
+				<!-- <soundAmbient>ArchonexusCore_Ambience</soundAmbient> -->
+			<!-- </value> -->
+			<!-- </li> -->
+			<!-- <li Class="PatchOperationReplace"> -->
+			<!-- <xpath>Defs/ThingDef[defName="Makai_Powernode_TierOne"]/building/soundAmbient</xpath> -->
+			<!-- <value> -->
+				<!-- <soundAmbient>ArchonexusCore_Ambience</soundAmbient> -->
+			<!-- </value> -->
+			<!-- </li> -->
 			<li Class="PatchOperationReplace">
 			<xpath>Defs/RecipeDef[@Name="MakaiPrimoForgeCraftBase"]/soundWorking</xpath>
 			<value>

@@ -1,0 +1,40 @@
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="MedPodBedBase"]/comps/li[@Class="MedPod.CompProperties_TreatmentRestrictions"]/neverTreatableHediffs</xpath>
+		<value>
+			<li>Destined_Death_Soul_Missing_Giver</li> <!-- isBad = false, would cause pawn to get stuck in MedPod, and no you can't regenerate a missing soul with nanite  -->
+			<li>Essence_Knowledge_Cooldown</li>
+			<li>Essence_Incubating_Complete_Insanity</li>
+			<li>Essence_Fate_Buffer</li>
+			<li>Essence_Fate_Encounter</li>
+			<li>Conceptual_Destruction</li>
+			<li>Conceptual_Null</li>
+			<li>Knowledge_Stolen</li>
+			<li>Conceptual_Corrupt</li>
+			<li>Perma_Confuse</li>
+			<li>Perma_Flee</li>
+			<li>Perma_Mad</li>
+			<li>Conceptual_Frost</li>
+			<li>Conceptual_Frost_Freezing</li>
+			<li>Conceptual_Flame</li>
+			<li>Conceptual_StarHeat</li>
+			<li>Conceptual_Death</li>
+			<li>Destined_Death</li>
+			<li>Nigthmare_Claw</li>
+			<li>Conceptual_CelestialScar</li>
+		</value>	
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="MedPodBedBase"]/comps/li[@Class="MedPod.CompProperties_TreatmentRestrictions"]/usageBlockingHediffs</xpath>
+		<value>
+			<li>Destined_Death_Soul_Missing_Giver</li> <!-- isBad = false, would cause pawn to get stuck in MedPod, and no you can't regenerate a missing soul with nanite  -->
+			<li>Essence_Incubating_Complete_Insanity</li>
+			<li>Essence_Fate_Buffer</li>		
+			<li>Conceptual_Death</li>
+			<li>Destined_Death</li>
+		</value>	
+	</Operation>
+	
+</Patch>

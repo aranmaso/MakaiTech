@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="EssenceBase">
+		<defName>Makai_Dea_Path_Soul</defName>
+		<thingClass>MakaiTech.Soul</thingClass>
+		<label>Soul</label>
+		<description>A soul extracted from other being.</description>
+		<graphicData>
+			<texPath>Things/Items/Essence/EssenceDeathSoul</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<tradeTags>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<comps>
+		<li Class="CompProperties_Usable">
+			<useJob>UseItem</useJob>
+			<useLabel>Transfer Soul to target</useLabel>
+			<useDuration>60</useDuration>
+			<warmupMote>Mote_ResurrectAbility</warmupMote>
+		</li>
+		<li Class="CompProperties_Targetable">
+			<compClass>CompTargetable_SinglePawn</compClass>
+			<!-- <moteOnTarget>Mote_PurpleGlow</moteOnTarget> -->
+		</li>
+		<li Class="MakaiTech.CompProperties_TargetEffectTransferSoul" />
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="EssenceBase">
+		<defName>Makai_Dea_Path_SoulExtracter</defName>
+		<label>soul extractor</label>
+		<description>A mythical item of Makai origin said to be able to extract souls from a deceased corpse. An extracted soul can then later be transplanted into a new body with a Missing Soul.</description>
+		<graphicData>
+			<texPath>Things/Items/SoulExtracter</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<soundInteract>Silver_Drop</soundInteract>
+		<soundDrop>Silver_Drop</soundDrop>
+		<stackLimit>30</stackLimit>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<tradeTags Inherit="False">
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags Inherit="False">
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+		</statBases>
+		<comps>
+		<li Class="CompProperties_Usable">
+			<useJob>UseItem</useJob>
+			<useLabel>extracting soul from corpse</useLabel>
+			<useDuration>60</useDuration>
+			<warmupMote>Mote_ResurrectAbility</warmupMote>
+		</li>
+		<li Class="CompProperties_Targetable">
+			<compClass>CompTargetable_SingleCorpse</compClass>
+			<fleshCorpsesOnly>false</fleshCorpsesOnly>
+			<nonDessicatedCorpsesOnly>false</nonDessicatedCorpsesOnly>
+		</li>
+		<li Class="MakaiTech.CompProperties_TargetEffectDoJob">
+			<jobDef>DeathEssenseExtract</jobDef>
+			<onlyTargetHumanlike>true</onlyTargetHumanlike>
+		</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="EssenceBase">
+		<defName>Makai_Dea-Path_FragFirst</defName>
+		<label>Fragment of Death - First Half</label>
+		<description>First half of death essence.</description>
+		<graphicData>
+			<texPath>Things/Items/Essence/EssenceDeath1st</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<tradeTags>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<statBases>
+		</statBases>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="EssenceBase">
+		<defName>Makai_Dea-Path_FragSecond</defName>
+		<label>Fragment of Death - Second Half</label>
+		<description>Second half of death essence.</description>
+		<graphicData>
+			<texPath>Things/Items/Essence/EssenceDeath2nd</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<tradeTags>
+		</tradeTags>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<statBases>
+		</statBases>
+		<comps>
+		</comps>
+	</ThingDef>
+</Defs>

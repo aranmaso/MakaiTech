@@ -1,0 +1,9 @@
+<Defs>
+	
+	<ThingCategoryDef>
+		<defName>Makai_Essence_Category</defName>
+		<label>Essence of the universe</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
+
+</Defs>

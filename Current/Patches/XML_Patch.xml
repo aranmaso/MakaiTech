@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- moved to C -->
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/StatDef[defName="MarketValue"]/parts</xpath> -->
+		<!-- <value> -->
+			<!-- <li Class="MakaiTech.StatPart_SoulWorth"/> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="PatchOperationAdd"> -->
+	<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath> -->
+	<!-- <value> -->
+	<!-- <parts> -->
+	<!-- <li Class="MakaiTech.StatPart_CelestialScar"/> -->
+	<!-- </parts>			 -->
+	<!-- </value> -->
+	<!-- </Operation> -->
+	
+	<!-- moved to C -->
+	<!-- <Operation Class="PatchOperationConditional"> -->
+		<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath> -->
+		<!-- <nomatch Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]</xpath> -->
+			<!-- <value> -->
+				<!-- <parts> -->
+					<!-- <li Class="MakaiTech.StatPart_CelestialScar"/> -->
+				<!-- </parts> -->
+			<!-- </value> -->
+		<!-- </nomatch> -->
+		<!-- <match Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/StatDef[defName="IncomingDamageFactor"]/parts</xpath> -->
+			<!-- <value> -->
+				<!-- <li Class="MakaiTech.StatPart_CelestialScar"/> -->
+			<!-- </value> -->
+		<!-- </match> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
+	<!-- <modId>Aranmaho.Makai</modId> -->
+	<!-- <key>Makai_Ingot_Oldname</key> -->
+	<!-- <defaultValue>false</defaultValue> -->
+	<!-- <caseTrue> -->
+	<!-- <Operation Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Makai_Ingot"]/label</xpath> -->
+	<!-- <value> -->
+	<!-- <label>makainium</label> -->
+	<!-- </value> -->
+	<!-- </Operation> -->
+	<!-- </caseTrue> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
+	<!-- <modId>Aranmaho.Makai</modId> -->
+	<!-- <key>Makai_Ingot_Commonality_Toggle</key> -->
+	<!-- <defaultValue>false</defaultValue> -->
+	<!-- <caseTrue> -->
+	<!-- <Operation Class="PatchOperationReplace"> -->
+	<!-- <xpath>Defs/ThingDef[defName="Makai_Ingot"]/stuffProps/commonality</xpath> -->
+	<!-- <value> -->
+	<!-- <commonality>0.01</commonality> -->
+	<!-- </value> -->
+	<!-- </Operation> -->
+	<!-- </caseTrue> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
+	<!-- <modId>Aranmaho.Makai</modId> -->
+	<!-- <key>Makai_Armor_Toggle</key> -->
+	<!-- <defaultValue>false</defaultValue> -->
+	<!-- <caseTrue> -->
+	<!-- <Operation Class="PatchOperationSequence"> -->
+	<!-- <operations> -->
+	<!-- <li Class="PatchOperationAdd"> -->
+	<!-- <xpath>Defs</xpath> -->
+	<!-- <value> -->
+	<!-- <DamageArmorCategoryDef> -->
+	<!-- <defName>Celestial</defName> -->
+	<!-- <multStat>CelestialDamageMultiplier</multStat> -->
+	<!-- <armorRatingStat>ArmorRating_Celestial</armorRatingStat> -->
+	<!-- </DamageArmorCategoryDef> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationAdd"> -->
+	<!-- <xpath>Defs</xpath> -->
+	<!-- <value> -->
+	<!-- <StatDef> -->
+	<!-- <defName>CelestialDamageMultiplier</defName> -->
+	<!-- <label>celestial damage</label> -->
+	<!-- <description>A multiplier on damage from Celestial-type attacks for weapons made of this material.</description> -->
+	<!-- <category>StuffStatFactors</category> -->
+	<!-- <defaultBaseValue>1</defaultBaseValue> -->
+	<!-- <minValue>0.05</minValue> -->
+	<!-- <toStringStyle>PercentZero</toStringStyle> -->
+	<!-- <showIfUndefined>false</showIfUndefined> -->
+	<!-- <displayPriorityInCategory>4507</displayPriorityInCategory> -->
+	<!-- </StatDef> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationAdd"> -->
+	<!-- <xpath>Defs</xpath> -->
+	<!-- <value> -->
+	<!-- <StatDef ParentName="ArmorRatingBase"> -->
+	<!-- <defName>ArmorRating_Celestial</defName> -->
+	<!-- <label>Armor - Celestial</label> -->
+	<!-- <labelForFullStatList>Armor - Celestial (armor stat)</labelForFullStatList> -->
+	<!-- <description>The protection given against celestial damage found in Makai's weapon. -->
+
+	<!-- Upon taking damage, first this armor rating is reduced by the attack's armor penetration value. -->
+
+	<!-- The remaining armor rating is then compared against a random number from 0 to 100. -->
+
+	<!-- - If the random number is under half the armor rating, the damage deflects harmlessly. -->
+	<!-- - If the random number is over half the armor rating, but not higher than the armor rating, the damage is reduced by half and changed to blunt. -->
+	<!-- - If the random number is greater than the armor rating, the armor has no effect. -->
+
+	<!-- For example, at 90% armor rating against an attack with 10% armor penetration, there is a 40% chance of deflecting the attack harmlessly, and a 40% chance of mitigating the damage. -->
+
+	<!-- Each layer of armor is applied separately, from the outside in.</description> -->
+	<!-- <displayPriorityInCategory>97</displayPriorityInCategory> -->
+	<!-- <parts> -->
+	<!-- <li Class="StatPart_Stuff"> -->
+	<!-- <priority>100</priority> -->
+	<!-- <stuffPowerStat>StuffPower_Armor_Celestial</stuffPowerStat> -->
+	<!-- <multiplierStat>StuffEffectMultiplierArmor</multiplierStat> -->
+	<!-- </li> -->
+	<!-- </parts> -->
+	<!-- </StatDef> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationAdd"> -->
+	<!-- <xpath>Defs</xpath> -->
+	<!-- <value> -->
+	<!-- <defName>StuffPower_Armor_Celestial</defName> -->
+	<!-- <label>Armor - Celestial</label> -->
+	<!-- <labelForFullStatList>Armor - Celestial (material factor)</labelForFullStatList> -->
+	<!-- <description>Armor against celestial damage found in Makai's weapon.</description> -->
+	<!-- <category>StuffStatFactors</category> -->
+	<!-- <defaultBaseValue>0</defaultBaseValue> -->
+	<!-- <minValue>0</minValue> -->
+	<!-- <toStringStyle>PercentZero</toStringStyle> -->
+	<!-- <showIfUndefined>false</showIfUndefined> -->
+	<!-- <displayPriorityInCategory>4507</displayPriorityInCategory> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationAdd"> -->
+	<!-- <xpath>Defs</xpath> -->
+	<!-- <value> -->
+	<!-- <ToolCapacityDef> -->
+	<!-- <defName>Makai_Celestial</defName> -->
+	<!-- <label>cut - celestial scar</label> -->
+	<!-- </ToolCapacityDef> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationAdd"> -->
+	<!-- <xpath>Defs</xpath> -->
+	<!-- <value> -->
+	<!-- <ManeuverDef> -->
+	<!-- <defName>Makai_Celestial</defName> -->
+	<!-- <requiredCapacity>Makai_Celestial</requiredCapacity> -->
+	<!-- <verb> -->
+	<!-- <verbClass>Verb_MeleeAttackDamage</verbClass> -->
+	<!-- <meleeDamageDef>Makai_Celestial_Cut</meleeDamageDef> -->
+	<!-- </verb> -->
+	<!-- <logEntryDef>MeleeAttack</logEntryDef> -->
+	<!-- <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit> -->
+	<!-- <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect> -->
+	<!-- <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss> -->
+	<!-- <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge> -->
+	<!-- </ManeuverDef> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- </operations> -->
+	<!-- </Operation> -->
+	<!-- </caseTrue> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
+	<!-- <modId>Aranmaho.Makai</modId> -->
+	<!-- <key>Makai_Ingot_OP</key> -->
+	<!-- <defaultValue>false</defaultValue> -->
+	<!-- <caseTrue> -->
+	<!-- <Operation Class="PatchOperationFindMod"> -->
+	<!-- <mods> -->
+	<!-- <li>Combat Extended</li> -->
+	<!-- </mods>			 -->
+	<!-- <nomatch Class="PatchOperationSequence"> -->
+	<!-- <operations> -->
+	<!-- <li Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Makai_Ingot"]/statBases</xpath> -->
+	<!-- <value> -->
+	<!-- <statBases> -->
+	<!-- <MarketValue>500</MarketValue> -->
+	<!-- <Mass>0.15</Mass> -->
+	<!-- <Flammability>0</Flammability> -->
+	<!-- <DeteriorationRate>0</DeteriorationRate> -->
+	<!-- <StuffPower_Armor_Sharp>13</StuffPower_Armor_Sharp> -->
+	<!-- <StuffPower_Armor_Blunt>13</StuffPower_Armor_Blunt> -->
+	<!-- <StuffPower_Armor_Heat>13</StuffPower_Armor_Heat> -->
+	<!-- <StuffPower_Armor_Celestial>13</StuffPower_Armor_Celestial> -->
+	<!-- <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold> -->
+	<!-- <StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat> -->
+	<!-- <SharpDamageMultiplier>6</SharpDamageMultiplier> -->
+	<!-- <BluntDamageMultiplier>6</BluntDamageMultiplier> -->
+	<!-- <CelestialDamageMultiplier>6</CelestialDamageMultiplier> -->
+	<!-- </statBases> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Makai_Ingot"]/stuffProps/statFactors</xpath> -->
+	<!-- <value> -->
+	<!-- <statFactors> -->
+	<!-- <Flammability>0</Flammability> -->
+	<!-- <MaxHitPoints>66</MaxHitPoints> -->
+	<!-- <Mass>0.5</Mass> -->
+	<!-- <WorkToMake>3.5</WorkToMake> -->
+	<!-- <DoorOpenSpeed>6</DoorOpenSpeed> -->
+	<!-- <TrapMeleeDamage>6.66</TrapMeleeDamage> -->
+	<!-- <TrapSpringChance>6.66</TrapSpringChance> -->
+	<!-- <SurgerySuccessChanceFactor>100</SurgerySuccessChanceFactor> -->
+	<!-- <MedicalTendQualityOffset>4</MedicalTendQualityOffset> -->
+	<!-- <WorkTableWorkSpeedFactor>12</WorkTableWorkSpeedFactor> -->
+	<!-- <WorkTableEfficiencyFactor>4</WorkTableEfficiencyFactor> -->
+	<!-- <ResearchSpeedFactor>6</ResearchSpeedFactor> -->
+	<!-- <MeditationFocusStrength MayRequire="ludeon.rimworld.royalty">3</MeditationFocusStrength> -->
+	<!-- <JoyGainFactor>12</JoyGainFactor> -->
+	<!-- <BedRestEffectiveness>6</BedRestEffectiveness> -->
+	<!-- <WorkToBuild>3.5</WorkToBuild> -->
+	<!-- <Beauty>20</Beauty> -->
+	<!-- <MeleeWeapon_CooldownMultiplier>0.35</MeleeWeapon_CooldownMultiplier> -->
+	<!-- <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown> -->
+	<!-- <EnergyShieldEnergyMax>6</EnergyShieldEnergyMax> -->
+	<!-- <EnergyShieldRechargeRate>6</EnergyShieldRechargeRate> -->
+	<!-- <Ability_PsyfocusCost MayRequire="ludeon.rimworld.royalty">0.5</Ability_PsyfocusCost> -->
+	<!-- <Ability_EntropyGain MayRequire="ludeon.rimworld.royalty">0</Ability_EntropyGain> -->
+	<!-- <ShootingAccuracyTurret>6</ShootingAccuracyTurret> -->
+	<!-- <ShootingAccuracyPawn>6</ShootingAccuracyPawn> -->
+	<!-- <FilthMultiplier>0</FilthMultiplier> -->
+	<!-- <BabyPlayGainFactor MayRequire="ludeon.rimworld.biotech">2</BabyPlayGainFactor> -->
+	<!-- <BirthRitualQualityOffset MayRequire="ludeon.rimworld.biotech">2</BirthRitualQualityOffset> -->
+	<!-- <RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.2</RangedCooldownFactor> -->
+	<!-- <StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.2</StaggerDurationFactor> -->
+	<!-- <StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">2</StaggerDurationFactor> -->
+	<!-- <MechBandwidth MayRequire="ludeon.rimworld.biotech">2</MechBandwidth> -->
+	<!-- <MechRepairSpeed MayRequire="ludeon.rimworld.biotech">2</MechRepairSpeed> -->
+	<!-- <RestFallRateFactor MayRequire="ludeon.rimworld.biotech">0.2</RestFallRateFactor> -->
+	<!-- </statFactors> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- </operations> -->
+	<!-- </nomatch> -->
+	<!-- <match Class="PatchOperationSequence"> -->
+	<!-- <operations> -->
+	<!-- <li Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Makai_Ingot"]/statBases</xpath> -->
+	<!-- <value> -->
+	<!-- <statBases> -->
+	<!-- <MarketValue>500</MarketValue> -->
+	<!-- <Mass>0.15</Mass> -->
+	<!-- <Flammability>0</Flammability> -->
+	<!-- <DeteriorationRate>0</DeteriorationRate> -->
+	<!-- <StuffPower_Armor_Sharp>13</StuffPower_Armor_Sharp> -->
+	<!-- <StuffPower_Armor_Blunt>13</StuffPower_Armor_Blunt> -->
+	<!-- <StuffPower_Armor_Heat>13</StuffPower_Armor_Heat> -->
+	<!-- <StuffPower_Armor_Electric>13</StuffPower_Armor_Electric> -->
+	<!-- <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold> -->
+	<!-- <StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat> -->
+	<!-- <SharpDamageMultiplier>6</SharpDamageMultiplier> -->
+	<!-- <BluntDamageMultiplier>6</BluntDamageMultiplier> -->
+	<!-- </statBases> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Makai_Ingot"]/stuffProps/statFactors</xpath> -->
+	<!-- <value> -->
+	<!-- <statFactors> -->
+	<!-- <MeleePenetrationFactor>6</MeleePenetrationFactor> -->
+	<!-- <Flammability>0</Flammability> -->
+	<!-- <MaxHitPoints>66</MaxHitPoints> -->
+	<!-- <Mass>0.5</Mass> -->
+	<!-- <WorkToMake>3.5</WorkToMake> -->
+	<!-- <DoorOpenSpeed>6</DoorOpenSpeed> -->
+	<!-- <TrapMeleeDamage>6.66</TrapMeleeDamage> -->
+	<!-- <TrapSpringChance>6.66</TrapSpringChance> -->
+	<!-- <SurgerySuccessChanceFactor>100</SurgerySuccessChanceFactor> -->
+	<!-- <MedicalTendQualityOffset>4</MedicalTendQualityOffset> -->
+	<!-- <WorkTableWorkSpeedFactor>12</WorkTableWorkSpeedFactor> -->
+	<!-- <WorkTableEfficiencyFactor>4</WorkTableEfficiencyFactor> -->
+	<!-- <ResearchSpeedFactor>6</ResearchSpeedFactor> -->
+	<!-- <MeditationFocusStrength MayRequire="ludeon.rimworld.royalty">3</MeditationFocusStrength> -->
+	<!-- <JoyGainFactor>12</JoyGainFactor> -->
+	<!-- <BedRestEffectiveness>6</BedRestEffectiveness> -->
+	<!-- <WorkToBuild>3.5</WorkToBuild> -->
+	<!-- <Beauty>6</Beauty> -->
+	<!-- <MeleeWeapon_CooldownMultiplier>0.35</MeleeWeapon_CooldownMultiplier> -->
+	<!-- <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown> -->
+	<!-- <EnergyShieldEnergyMax>6</EnergyShieldEnergyMax> -->
+	<!-- <EnergyShieldRechargeRate>6</EnergyShieldRechargeRate> -->
+	<!-- <Ability_PsyfocusCost MayRequire="ludeon.rimworld.royalty">0.5</Ability_PsyfocusCost> -->
+	<!-- <Ability_EntropyGain MayRequire="ludeon.rimworld.royalty">0</Ability_EntropyGain> -->
+	<!-- <ShootingAccuracyTurret>6</ShootingAccuracyTurret> -->
+	<!-- <FilthMultiplier>0</FilthMultiplier> -->
+	<!-- <BabyPlayGainFactor MayRequire="ludeon.rimworld.biotech">2</BabyPlayGainFactor> -->
+	<!-- <BirthRitualQualityOffset MayRequire="ludeon.rimworld.biotech">2</BirthRitualQualityOffset> -->
+	<!-- <RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.2</RangedCooldownFactor> -->
+	<!-- <StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.2</StaggerDurationFactor> -->
+	<!-- <StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">2</StaggerDurationFactor> -->
+	<!-- <MechBandwidth MayRequire="ludeon.rimworld.biotech">2</MechBandwidth> -->
+	<!-- <MechRepairSpeed MayRequire="ludeon.rimworld.biotech">2</MechRepairSpeed> -->
+	<!-- <RestFallRateFactor MayRequire="ludeon.rimworld.biotech">0.2</RestFallRateFactor> -->
+	<!-- </statFactors> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- </operations> -->
+	<!-- </match> -->
+	<!-- </Operation> -->
+	<!-- </caseTrue> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="MakaiTech.PatchOperation_IsUniversalFuel"> -->
+		<!-- <match Class="PatchOperationAdd">			 -->
+			<!-- <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath> -->
+			<!-- <value> -->
+				<!-- <li>Makai_Stardust</li> -->
+			<!-- </value> -->
+		<!-- </match>		 -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath> -->
+		<!-- <value> -->
+			<!-- <li>PrimordialFrag</li> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
+	
+	<!--Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Aranmaho.Makai</modId>
+		<key>Makai_Melee_hasRange</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+		<Operation Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Weapons Expanded - Laser</li>
+				</mods>
+				<nomatch Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/verbs</xpath>
+								<value>
+									<li>
+									<label>G_Attack</label>
+									<verbClass>Verb_Shoot</verbClass>
+									<hasStandardCommand>true</hasStandardCommand>
+									<defaultProjectile>Makai_Lightning_G_Nerf</defaultProjectile>
+									<warmupTime>2</warmupTime>
+									<range>13</range>
+									<minRange>2</minRange>
+									<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+									<burstShotCount>1</burstShotCount>
+									<soundCast>anva_gl</soundCast>
+									<soundCastTail>GunTail_Heavy</soundCastTail>
+									<muzzleFlashScale>14</muzzleFlashScale>
+									<targetParams>
+										<canTargetLocations>false</canTargetLocations>
+									</targetParams>
+									</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]/verbProps</xpath>
+					<value>
+							<li>
+							<label>G_Attack</label>
+							</li>
+					</value>
+					</li>
+					</operations>
+				</nomatch>
+				</li>
+				
+				<li Class="PatchOperationFindMod">
+				<mods>
+					<li>Vanilla Weapons Expanded - Laser</li>
+				</mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/verbs</xpath>
+								<value>
+									<li>
+									<label>G_Attack</label>
+									<verbClass>Verb_Shoot</verbClass>
+									<hasStandardCommand>true</hasStandardCommand>
+									<defaultProjectile>Makai_Lightning_G</defaultProjectile>
+									<warmupTime>2</warmupTime>
+									<range>13</range>
+									<minRange>2</minRange>
+									<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+									<burstShotCount>1</burstShotCount>
+									<soundCast>anva_gl</soundCast>
+									<soundCastTail>GunTail_Heavy</soundCastTail>
+									<muzzleFlashScale>14</muzzleFlashScale>
+									<targetParams>
+										<canTargetLocations>true</canTargetLocations>
+									</targetParams>
+									</li>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]/verbProps</xpath>
+					<value>
+							<li>
+							<label>G_Attack</label>
+							</li>
+					</value>
+					</li>
+					</operations>
+				</match>
+				</li>
+			</operations>
+		</Operation>
+		</caseTrue>
+	</Operation-->
+
+	<!--Operation Class="XmlExtensions.OptionalPatch">
+		<modId>Aranmaho.Makai</modId>
+		<key>Makai_Weapon_NoBig</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			<Operation Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/graphicData/drawSize</xpath>
+							<value>
+									<drawSize>1.5</drawSize>
+							</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Anva_Sword"]/comps/li[@Class="CompOversizedWeapon.CompProperties_OversizedWeapon"]</xpath>
+							<value>
+									<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+									<northOffset>(0.6,0,0.3)</northOffset>
+									<eastOffset>(0.6,0,0.3)</eastOffset>
+									<westOffset>(-0.6,0,0.3)</westOffset>
+									<southOffset>(0.6,0,0.3)</southOffset>
+									</li>
+							</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Ama_Berd"]/graphicData/drawSize</xpath>
+							<value>
+									<drawSize>2</drawSize>
+							</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Ama_Berd"]/comps/li[@Class="CompOversizedWeapon.CompProperties_OversizedWeapon"]</xpath>
+							<value>
+									<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+									<northOffset>(0.5,0,0.6)</northOffset>
+									<eastOffset>(0.5,0,0.6)</eastOffset>
+									<westOffset>(-0.5,0,0.6)</westOffset>
+									<southOffset>(0.5,0,0.6)</southOffset>
+									</li>
+							</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]/graphicData/drawSize</xpath>
+							<value>
+									<drawSize>2</drawSize>
+							</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Ouro_Berd"]/comps/li[@Class="CompOversizedWeapon.CompProperties_OversizedWeapon"]</xpath>
+							<value>
+									<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+									<northOffset>(0.5,0,0.6)</northOffset>
+									<eastOffset>(0.5,0,0.6)</eastOffset>
+									<westOffset>(-0.5,0,0.6)</westOffset>
+									<southOffset>(0.5,0,0.6)</southOffset>
+									</li>
+							</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Bow_Varia"]/graphicData/drawSize</xpath>
+							<value>
+									<drawSize>1.5</drawSize>
+							</value>
+					</li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="Makai_Bow_Varia"]/comps/li[@Class="CompOversizedWeapon.CompProperties_OversizedWeapon"]</xpath>
+							<value>
+									<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+									<northOffset>(0,0,0)</northOffset>
+									<eastOffset>(0,0,0)</eastOffset>
+									<westOffset>(0,0,0)</westOffset>
+									<southOffset>(0,0,0)</southOffset>
+									</li>
+							</value>
+					</li>
+				</operations>
+			</Operation>
+		</caseTrue>
+	</Operation-->
+	
+	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
+	<!-- <modId>Aranmaho.Makai</modId> -->
+	<!-- <key>Makai_Turret1_spread</key> -->
+	<!-- <defaultValue>false</defaultValue> -->
+	<!-- <caseTrue> -->
+	<!-- <Operation Class="PatchOperationSequence"> -->
+	<!-- <operations> -->
+	<!-- <li Class="PatchOperationAdd"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Makai_Turret_TopA"]/verbs/li</xpath> -->
+	<!-- <value> -->
+	<!-- <forcedMissRadius>282</forcedMissRadius> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Makai_Turret_TopA"]/verbs/li/burstShotCount</xpath> -->
+	<!-- <value> -->
+	<!-- <burstShotCount>40</burstShotCount> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- <li Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/ThingDef[defName="Bullet_Turret_Makai_A"]/projectile/speed</xpath> -->
+	<!-- <value> -->
+	<!-- <speed>20</speed> -->
+	<!-- </value> -->
+	<!-- </li> -->
+	<!-- </operations> -->
+	<!-- </Operation> -->
+	<!-- </caseTrue> -->
+	<!-- </Operation>		 -->
+	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
+	<!-- <modId>Aranmaho.Makai</modId> -->
+	<!-- <key>Makai_CelestF_noSun</key> -->
+	<!-- <defaultValue>false</defaultValue> -->
+	<!-- <caseTrue> -->
+	<!-- <Operation Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/TerrainDef[defName="Makai_Celest_Floor"]/texturePath</xpath> -->
+	<!-- <value> -->
+	<!-- <texturePath>Terrains/Floors/celest_floor_without_Sun</texturePath> -->
+	<!-- </value> -->
+	<!-- </Operation> -->
+	<!-- </caseTrue> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="XmlExtensions.OptionalPatch"> -->
+	<!-- <modId>Aranmaho.Makai</modId> -->
+	<!-- <key>Makai_CelestF_noSun_noLine</key> -->
+	<!-- <defaultValue>false</defaultValue> -->
+	<!-- <caseTrue> -->
+	<!-- <Operation Class="PatchOperationReplace"> -->
+	<!-- <xpath>/Defs/TerrainDef[defName="Makai_Celest_Floor"]/texturePath</xpath> -->
+	<!-- <value> -->
+	<!-- <texturePath>Terrains/Floors/celest_floor_without_Sun_without_line</texturePath> -->
+	<!-- </value> -->
+	<!-- </Operation> -->
+	<!-- </caseTrue> -->
+	<!-- </Operation> -->
+	
+	<!-- example patch for later study -->
+	<!--Operation Class="PatchOperationFindMod">
+			<mods>
+				<li>Medieval Overhaul</li>
+			</mods>
+	 <match Class="PatchOperationSequence">
+		  <success>Normal</success>
+		  <operations>
+		  <li Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="Anjanath"]/lifeStages/li[3]</xpath>
+
+			<value>
+			  <butcherBodyPart>
+				<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+				<thing>DankPyon_Hide_Anjanath</thing>
+				<allowFemale>true</allowFemale>
+			  </butcherBodyPart>
+			</value>
+		  </li>
+	</operations>
+	</match>
+	</Operation>
+	</Patch-->
+			
+</Patch>

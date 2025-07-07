@@ -8,7 +8,7 @@
 				<li Class="CombatExtended.ToolCE">
 					<label>grip</label>
 					<capacities>
-						<li>Blunt</li>
+						<li>Makai_Celestial</li>						
 					</capacities>
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
@@ -19,7 +19,7 @@
 				<li Class="CombatExtended.ToolCE">
 					<label>arms</label>
 					<capacities>
-						<li>Blunt</li>
+						<li>Makai_Celestial</li>
 					</capacities>
 					<power>5</power>
 					<cooldownTime>2.02</cooldownTime>
@@ -61,7 +61,7 @@
 			<NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon><!-- Some weapons have have advanced optics that reduce the penalty for shooting in the dark. -->
 			<ShotSpread>0.01</ShotSpread>
 			<SwayFactor>0.5</SwayFactor>
-			<Bulk>5</Bulk>
+			<Bulk>15</Bulk>
 			<Mass>3.8</Mass>
 			<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
 			<WorkToMake>12050</WorkToMake>
@@ -110,6 +110,7 @@
 							<amount>1</amount>
 						</li>
 					</extraMeleeDamages>
+					<armorPenetration>0.7</armorPenetration>
 					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -125,6 +126,7 @@
 							<amount>1</amount>
 						</li>
 					</extraMeleeDamages>
+					<armorPenetration>0.7</armorPenetration>
 					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 				</li>
 			</tools>
@@ -160,6 +162,7 @@
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
 					<chanceFactor>1.5</chanceFactor>
+					<armorPenetration>0.45</armorPenetration>
 					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -169,6 +172,7 @@
 					</capacities>
 					<power>5</power>
 					<cooldownTime>2.02</cooldownTime>
+					<armorPenetration>0.45</armorPenetration>
 					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -178,6 +182,7 @@
 					</capacities>
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
+					<armorPenetration>0.45</armorPenetration>
 					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
 				</li>
 			</tools>
@@ -205,7 +210,7 @@
 			<NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon><!-- Some weapons have have advanced optics that reduce the penalty for shooting in the dark. -->
 			<ShotSpread>0.0</ShotSpread>
 			<SwayFactor>0.0</SwayFactor>
-			<Bulk>5</Bulk>
+			<Bulk>12</Bulk>
 			<Mass>2</Mass>
 			<RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
 			<WorkToMake>15000</WorkToMake>
@@ -253,6 +258,7 @@
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
 					<chanceFactor>1.5</chanceFactor>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -262,6 +268,7 @@
 					</capacities>
 					<power>5</power>
 					<cooldownTime>2.02</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -271,6 +278,7 @@
 					</capacities>
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
 				</li>
 			</tools>
@@ -346,6 +354,7 @@
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
 					<chanceFactor>1.5</chanceFactor>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -355,6 +364,7 @@
 					</capacities>
 					<power>5</power>
 					<cooldownTime>2.02</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -364,6 +374,7 @@
 					</capacities>
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
 				</li>
 			</tools>
@@ -381,7 +392,7 @@
 			<NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon><!-- Some weapons have have advanced optics that reduce the penalty for shooting in the dark. -->
 			<ShotSpread>0.5</ShotSpread>
 			<SwayFactor>1.37</SwayFactor>
-			<Bulk>12.9</Bulk>
+			<Bulk>20</Bulk>
 			<Mass>2</Mass>
 			<RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
 			<WorkToMake>15000</WorkToMake>
@@ -432,6 +443,7 @@
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
 					<chanceFactor>1.5</chanceFactor>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -441,6 +453,7 @@
 					</capacities>
 					<power>5</power>
 					<cooldownTime>2.02</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -450,6 +463,7 @@
 					</capacities>
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
 				</li>
 			</tools>
@@ -459,11 +473,11 @@
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>Makai_Stardust_Cannon</defName>
 		<statBases>
-			<Bulk>12.5</Bulk>
+			<Bulk>25</Bulk>
 			<Mass>2.0</Mass>
-			<SwayFactor>0.2</SwayFactor>
-			<ShotSpread>0.15</ShotSpread>
-			<SightsEfficiency>0.7</SightsEfficiency>
+			<SwayFactor>0.05</SwayFactor>
+			<ShotSpread>0.05</ShotSpread>
+			<SightsEfficiency>1</SightsEfficiency>
 			<RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
 			<WorkToMake>15000</WorkToMake>
 			<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
@@ -513,6 +527,7 @@
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
 					<chanceFactor>1.5</chanceFactor>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -522,6 +537,7 @@
 					</capacities>
 					<power>5</power>
 					<cooldownTime>2.02</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -531,6 +547,7 @@
 					</capacities>
 					<power>8</power>
 					<cooldownTime>1.55</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
 					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
 				</li>
 			</tools>
@@ -563,13 +580,8 @@
 		</value>
 	</Operation>
 	
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Makai_T1_Assault"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>		
-		<value>
-			<li>
-				<compClass>CompEquippable</compClass>	
-			</li>
-		</value>
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Makai_T1_Assault"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
 	</Operation>
 	
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
@@ -579,7 +591,7 @@
 			<NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon><!-- Some weapons have have advanced optics that reduce the penalty for shooting in the dark. -->
 			<ShotSpread>0.20</ShotSpread>
 			<SwayFactor>0.5</SwayFactor>
-			<Bulk>7</Bulk>
+			<Bulk>12.9</Bulk>
 			<Mass>5</Mass>
 			<RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
 			<WorkToMake>15000</WorkToMake>
@@ -632,13 +644,8 @@
 		</value>
 	</Operation>
 	
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Makai_T1_Sniper"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>		
-		<value>
-			<li>
-				<compClass>CompEquippable</compClass>	
-			</li>
-		</value>
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Makai_T1_Sniper"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
 	</Operation>
 	
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
@@ -701,13 +708,8 @@
 		</value>
 	</Operation>
 	
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Makai_T1_Pistol"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>		
-		<value>
-			<li>
-				<compClass>CompEquippable</compClass>	
-			</li>
-		</value>
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Makai_T1_Pistol"]/comps/li[@Class="MVCF.Comps.CompProperties_VerbProps"]</xpath>
 	</Operation>
 	
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
