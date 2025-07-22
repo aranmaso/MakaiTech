@@ -924,6 +924,35 @@
 				<interval>250</interval>
 				<tickIncrease>1000</tickIncrease>
 				<severityToReverse>0.1</severityToReverse>
+				<excludedTags>
+					<li>CTR_Realm</li>
+					<li>CTR_Tribulation</li>
+					<li>CTR_BreakthroughCounter</li>
+				</excludedTags>
+				<excludedHediffs>
+					<li>Makai_Fate_Reverse</li>
+					<li>Destined_Death</li>
+					<li>Essence_Knowledge_Cooldown</li>
+					<li>Destruction_AutoAttack</li>
+					<li>Order_Enlightenment</li>
+					<li>Corruption_Avatar</li>
+					<li>Death_Avatar</li>
+					<li>Flame_Avatar</li>
+					<li>Frost_Avatar</li>
+					<li>Knowledge_Avatar</li>
+					<li>Existence_Resurrection</li>
+					<li>PregnantHuman</li>
+					<li>PregnancyLabor</li>
+					<li>PregnancyLaborPushing</li>
+					<li>AlcoholHigh</li>
+					<li MayRequire="aranmaho.makai.psycast">MakaiTechPsy_DD_LichSoul</li>
+					<li MayRequire="aranmaho.makai.psycast">MakaiTechPsy_DD_MissingSoul</li>
+					<li MayRequire="aranmaho.makai.psycast">MakaiPsy_SF_Counter</li>
+					<li MayRequire="aranmaho.makai.psycast">MakaiTechPsy_DD_CollectSoul</li>
+					<li MayRequire="aranmaho.makai.psycast">MakaiTechPsy_DR_DistortBulletBounce</li>
+					<li MayRequire="aranmaho.makai.psycast">MakaiPsy_SF_Reverse</li>
+					<li MayRequire="aranmaho.makai.psycast">MakaiPsy_SF_Accelerate</li>
+				</excludedHediffs>
 			</li>
 		</comps>
 		<stages>

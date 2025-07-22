@@ -162,6 +162,9 @@
 		<researchPrerequisites>
 			<li>Makai_Essence3</li>
 		</researchPrerequisites>
+		<inspectorTabs>
+			<li>PipeSystem.ITab_Processor</li>
+		</inspectorTabs>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>

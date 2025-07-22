@@ -165,7 +165,7 @@
 		<weaponTags Inherit="False">
 			<!-- <li>UltratechGun</li> -->
 			<li>LaserGun</li>
-			<li>Makai_God_Weapon</li>
+			<li>Makai_God_Weapon_Ranged</li>
 		</weaponTags>
 		<generateCommonality>0.02</generateCommonality>
 		<equippedStatOffsets>
@@ -505,7 +505,7 @@
 		<techLevel>Archotech</techLevel>
 		<weaponTags>
 			<li>UltratechGun</li>
-			<li>Makai_God_Weapon</li>
+			<li>Makai_God_Weapon_Ranged</li>
 		</weaponTags>
 		<equippedStatOffsets>
 			<ComfyTemperatureMin>-10000</ComfyTemperatureMin>
@@ -702,8 +702,8 @@
 		<comps>
 			<li Class="VEF.Weapons.CompProperties_HomingProjectile">
 				<homingDistanceFractionPassed>0.3</homingDistanceFractionPassed>
-				<homingCorrectionTickRate>20</homingCorrectionTickRate>
-				<initialDispersionFromTarget>30</initialDispersionFromTarget>
+				<homingCorrectionTickRate>15</homingCorrectionTickRate>
+				<initialDispersionFromTarget>15</initialDispersionFromTarget>
 			</li>
 		</comps>
 	</ThingDef>

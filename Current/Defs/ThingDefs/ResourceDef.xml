@@ -38,6 +38,7 @@
 		</statBases>
 		<stuffProps>
 			<stuffAdjective>starborne</stuffAdjective>
+			<isAirtight>true</isAirtight>
 			<categories>
 				<li>Metallic</li>
 				<li>Makai_Celestial</li>
@@ -141,6 +142,7 @@
 		</comps>
 		<stuffProps>
 			<stuffAdjective>starcradle</stuffAdjective>
+			<isAirtight>true</isAirtight>
 			<categories>
 				<li>Fabric</li>
 				<li>Leathery</li>

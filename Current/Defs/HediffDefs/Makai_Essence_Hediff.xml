@@ -104,6 +104,46 @@
 			</li>
 		</stages>
 	</HediffDef>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Essence_Fate_Buff_PermanentVariant</defName>
+		<label>Fate's Favor</label>
+		<defaultLabelColor>(196, 145, 191)</defaultLabelColor>
+		<description>This pawn has received the favor of fate. all their needs passively regenerate on it own until 50%, and they have receive unnatural level of regeneration.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_ChangeNeeds">
+				<maxThreshold>0.5</maxThreshold>
+				<needs>
+					<li>Joy</li>
+					<!-- <li>Mood</li> -->
+					<li>Rest</li>
+					<!-- <li>Food</li> -->
+					<li>Comfort</li>
+					<li>Beauty</li>
+					<li MayRequire="mrkociak.cyberpsychosismod">MKT_Cyberpsychosis</li>
+				</needs>
+				<percentPerDay>25</percentPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<naturalHealingFactor>1.5</naturalHealingFactor>
+				<regeneration>100</regeneration>
+				<capMods>
+				</capMods>
+				<statFactors>
+					<ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+					<InjuryHealingFactor>1.5</InjuryHealingFactor>
+				</statFactors>
+				<statOffsets>
+			
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
   
 	<HediffDef ParentName="DiseaseBase" Name="Essence_SurgeryInitialBase" Abstract="True">
 		<defaultLabelColor>(255, 255, 255)</defaultLabelColor>
@@ -536,16 +576,6 @@
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 			</li>
-			<!--li Class="MakaiTech.MakaiHediffCompProperties_ChangeImplantLevel">
-			<implant>Essence_Growth_Bond</implant>
-			<levelOffset>1</levelOffset>
-			<probabilityPerStageOfThisHediff>
-			<li>
-				<mtbDays>0.001</mtbDays>
-				<minIntervalDays>1</minIntervalDays>
-			</li>
-			</probabilityPerStageOfThisHediff>
-		</li-->
 		</comps>
 		<stages>
 			<li>
