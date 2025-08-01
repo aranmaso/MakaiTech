@@ -452,11 +452,11 @@
 			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Regeneration">
 				<healAmount>1</healAmount>
 			</li>
-			<!-- <li Class="MakaiTech.HediffCompProperties_ToggleHediff"> -->
-				<!-- <HediffDef>Makai_PhasingBuff</HediffDef> -->
-				<!-- <severity>1</severity> -->
-				<!-- <uiIcon>Things/Abilities/HediffToggle/Phase</uiIcon> -->
-			<!-- </li> -->
+			<li Class="MakaiTech.HediffCompProperties_ToggleHediff">
+				<HediffDef>Makai_PhasingBuff</HediffDef>
+				<severity>1</severity>
+				<uiIcon>Things/Abilities/HediffToggle/Phase</uiIcon>
+			</li>
 		</comps>
 		<modExtensions>
 			<li Class="MakaiTech.HediffExtension_MinCapacity">
@@ -495,24 +495,24 @@
 		</stages>		
 	</HediffDef>
 	
-	<!-- <HediffDef ParentName="DiseaseBase"> -->
-		<!-- <defName>Makai_PhasingBuff</defName> -->
-		<!-- <label>Phasing</label> -->
-		<!-- <description>is currently phasing through wall.</description> -->
-		<!-- <isBad>false</isBad> -->
-		<!-- <initialSeverity>1</initialSeverity> -->
-		<!-- <maxSeverity>1</maxSeverity> -->
-		<!-- <comps> -->
-			<!-- <li> -->
-				<!-- <compClass>VEF.Hediffs.HediffComp_Phasing</compClass> -->
-			<!-- </li> -->
-		<!-- </comps> -->
-		<!-- <stages> -->
-			<!-- <li> -->
-				<!-- <becomeVisible>false</becomeVisible> -->
-			<!-- </li> -->
-		<!-- </stages> -->
-	<!-- </HediffDef> -->
+	<HediffDef ParentName="DiseaseBase">
+		<defName>Makai_PhasingBuff</defName>
+		<label>Phasing</label>
+		<description>is currently phasing through wall.</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li>
+				<compClass>VEF.Hediffs.HediffComp_Phasing</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
 	
 	<ThingDef ParentName="BodyPartCelestialBase">
 		<defName>Makai_CelestialHeart</defName>

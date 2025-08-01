@@ -761,25 +761,6 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="Makai_BulletLaser" Class="VanillaWeaponsExpandedLaser.LaserBeamDef" MayRequire="VanillaExpanded.VWEL">
-		<defName>Makai_StarFlail</defName>
-		<label>Radiant Star</label>
-		<description>A focused, long range sun.</description>
-		<textures>
-			<li>Things/Projectile/makai_bullet_flail</li>
-		</textures>
-		<seam>1</seam>
-		<causefireChance>1</causefireChance>
-		<beamWidth>1.5</beamWidth>
-		<lifetime>220</lifetime>
-		<projectile>
-			<damageDef>Mica_Star</damageDef>
-			<damageAmountBase>10</damageAmountBase>
-			<armorPenetrationBase>1</armorPenetrationBase>
-			<stoppingPower>3</stoppingPower>
-		</projectile>
-	</ThingDef>
-	
 	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>Makai_StarFlail_Extend</defName>
 		<label>A focused, long range sun.</label>
