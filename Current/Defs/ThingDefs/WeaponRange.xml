@@ -133,6 +133,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>2</drawSize>
 		</graphicData>
+		<tickerType>Normal</tickerType>
 		<uiIconPath>Things/Weapon/varia_bow</uiIconPath>
 		<soundInteract>Interact_ChargeLance</soundInteract>
 		<statBases>
@@ -143,6 +144,8 @@
 			<AccuracyMedium>2</AccuracyMedium>
 			<AccuracyLong>2</AccuracyLong>
 			<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+			<EnergyShieldRechargeRate>0.13</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1.1</EnergyShieldEnergyMax>
 		</statBases>
 		<costList>
 			<Makai_Ingot>65</Makai_Ingot>

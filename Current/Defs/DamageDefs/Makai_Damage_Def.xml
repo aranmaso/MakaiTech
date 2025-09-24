@@ -437,6 +437,12 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
+		<additionalHediffs>
+			<li>
+				<hediff>Conceptual_CelestialScar</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
 		<hediff>Burn</hediff>
 		<hediffSolid>Crack</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
@@ -659,6 +665,12 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been shot to death</deathMessage>
+		<additionalHediffs>
+			<li>
+				<hediff>Conceptual_CelestialScar</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
 		<hediff>Burn</hediff>
 		<hediffSolid>Crack</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>

@@ -109,7 +109,7 @@
 		<defName>Essence_Fate_Buff_PermanentVariant</defName>
 		<label>Fate's Favor</label>
 		<defaultLabelColor>(196, 145, 191)</defaultLabelColor>
-		<description>This pawn has received the favor of fate. all their needs passively regenerate on it own until 50%, and they have receive unnatural level of regeneration.</description>
+		<description>This pawn has received the favor of fate. all their needs except Mood and Food passively regenerate on it own until 50%, and they have receive unnatural level of regeneration.</description>
 		<isBad>false</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1</maxSeverity>

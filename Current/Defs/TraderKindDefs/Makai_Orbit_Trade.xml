@@ -4,6 +4,7 @@
 		<defName>Makai_Trade_General</defName>
 		<label>Makai Salesman</label>
 		<orbital>true</orbital>
+		<faction MayRequire="aranmaho.makaitech.faction">Makai_Puppet</faction>
 		<commonality>0.5</commonality>
 		<hideThingsNotWillingToTrade>true</hideThingsNotWillingToTrade>
 		<stockGenerators>
