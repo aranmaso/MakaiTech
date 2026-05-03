@@ -1195,7 +1195,7 @@ You shall be exalted in strength.</description>
 				<weaponToEquip>Makai_Ouro_Berd</weaponToEquip>
 				<traitRequirement>Makai_Trait_Existence</traitRequirement>
 				<shouldEverBeDowned>false</shouldEverBeDowned>
-				<!-- <uiIcon>Things/Items/Essence/EssenceExistence</uiIcon> -->
+				<uiIcon>Things/Items/Essence/EssenceExistence</uiIcon>
 			</li>
 		</comps>
 		<stages>
@@ -1474,8 +1474,8 @@ You shall be exalted in strength.</description>
 					<ArmorRating_Sharp>2</ArmorRating_Sharp>
 					<ArmorRating_Blunt>2</ArmorRating_Blunt>
 					<ArmorRating_Heat>2</ArmorRating_Heat>
-					<MeleeHitChance>2</MeleeHitChance>
-					<MeleeDodgeChance>2</MeleeDodgeChance>
+					<MeleeHitChance>200</MeleeHitChance>
+					<MeleeDodgeChance>200</MeleeDodgeChance>
 					<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
 					<ToxicResistance>1</ToxicResistance>
 				</statOffsets>
@@ -1483,7 +1483,7 @@ You shall be exalted in strength.</description>
 					<IncomingDamageFactor>0</IncomingDamageFactor>
 					<AimingDelayFactor>0</AimingDelayFactor>
 					<Flammability>0</Flammability>
-					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">2</MeleeDamageFactor>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">200</MeleeDamageFactor>
 					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0</RangedCooldownFactor>
 					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0</StaggerDurationFactor>
 				</statFactors>
@@ -1494,15 +1494,15 @@ You shall be exalted in strength.</description>
 				<pawnCapacityMinLevels>
 					<li>
 						<capacity>Moving</capacity>
-						<minLevel>1</minLevel>
+						<minLevel>2</minLevel>
 					</li>
 					<li>
 						<capacity>Consciousness</capacity>
-						<minLevel>1</minLevel>
+						<minLevel>2</minLevel>
 					</li>
 					<li>
 						<capacity>Manipulation</capacity>
-						<minLevel>1</minLevel>
+						<minLevel>2</minLevel>
 					</li>
 				</pawnCapacityMinLevels>
 			</li>

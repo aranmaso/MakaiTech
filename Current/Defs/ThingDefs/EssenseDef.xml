@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>	
+<Defs>
 	
 	<ThingDef Name="EssenceBase" ParentName="ResourceBase" Abstract="True">
 		<graphicData>
@@ -27,7 +27,7 @@
 			<li>Makai_Essence_Category</li>
 		</thingCategories>
 		<tradeTags Inherit="False">
-			<!--li>ExoticMisc</li-->
+			<li>ExoticMisc</li>
 		</tradeTags>
 		<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>
@@ -105,18 +105,18 @@
 			<MarketValue>2500</MarketValue>
 		</statBases>
 		<comps>
-		<li Class="CompProperties_Usable">
-			<useJob>UseItem</useJob>
-			<useLabel>Use Essence of Bond</useLabel>
-			<useDuration>60</useDuration>
-		</li>
-		<li Class="MakaiTech.CompProperties_UseEffectBondEssence">
-			<goodwillImpact>25</goodwillImpact>
-			<thoughtDef>BondMood</thoughtDef>
-		</li>
-		<li Class="CompProperties_UseEffectPlaySound">
-			<soundOnUsed>MechSerumUsed</soundOnUsed>
-		</li>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use Essence of Bond</useLabel>
+				<useDuration>60</useDuration>
+			</li>
+			<li Class="MakaiTech.CompProperties_UseEffectBondEssence">
+				<goodwillImpact>25</goodwillImpact>
+				<thoughtDef>BondMood</thoughtDef>
+			</li>
+			<li Class="CompProperties_UseEffectPlaySound">
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
+			</li>
 		</comps>
 	</ThingDef>
 	
@@ -131,22 +131,23 @@
 		</graphicData>
 		<stackLimit>1</stackLimit>
 		<comps>
-		<li Class="CompProperties_Usable">
-			<useJob>UseItem</useJob>
-			<useLabel>Use Essence of Fate</useLabel>
-			<useDuration>200</useDuration>
-		</li>
-		<li Class="MakaiTech.CompProperties_UseEffectGiveHediff">
-        <hediff>Essence_Fate_Buff</hediff>
-        <bodyPart>Brain</bodyPart>
-		</li>
-		<!-- <li Class="CompProperties_UseEffect"> -->
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use Essence of Fate</useLabel>
+				<useDuration>200</useDuration>
+			</li>
+			<li Class="MakaiTech.CompProperties_UseEffectGiveHediff">
+				<hediff>Essence_Fate_Buff</hediff>
+				<bodyPart>Brain</bodyPart>
+			</li>
+			<li Class="MakaiTech.CompProperties_UseEffectHealTemporalScar"/>
+			<!-- <li Class="CompProperties_UseEffect"> -->
 			<!-- <compClass>CompUseEffect_FixWorstHealthCondition</compClass> -->
-		<!-- </li> -->
-		<li Class="CompProperties_UseEffectPlaySound">
-			<soundOnUsed>MechSerumUsed</soundOnUsed>
-		</li>
-		<!--li Class="CompProperties_UseEffect">
+			<!-- </li> -->
+			<li Class="CompProperties_UseEffectPlaySound">
+				<soundOnUsed>MechSerumUsed</soundOnUsed>
+			</li>
+			<!--li Class="CompProperties_UseEffect">
 			<compClass>CompUseEffect_DestroySelf</compClass>
 		</li-->
 		</comps>
@@ -287,19 +288,19 @@
 			<drawSize>1.50</drawSize>
 		</graphicData>
 		<comps>
-		<li Class="CompProperties_Usable">
-			<useJob>UseItem</useJob>
-			<useLabel>resurrect pawn with essence</useLabel>
-			<useDuration>0</useDuration>
-		</li>
-		<li Class="CompProperties_Targetable">
-			<compClass>CompTargetable_SingleCorpse</compClass>
-			<fleshCorpsesOnly>false</fleshCorpsesOnly>
-			<nonDessicatedCorpsesOnly>false</nonDessicatedCorpsesOnly>
-		</li>
-		<li>
-			<compClass>MakaiTech.CompTargetEffect_ResurrectEssence</compClass>
-		</li>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>resurrect pawn with essence</useLabel>
+				<useDuration>0</useDuration>
+			</li>
+			<li Class="CompProperties_Targetable">
+				<compClass>CompTargetable_SingleCorpse</compClass>
+				<fleshCorpsesOnly>false</fleshCorpsesOnly>
+				<nonDessicatedCorpsesOnly>false</nonDessicatedCorpsesOnly>
+			</li>
+			<li>
+				<compClass>MakaiTech.CompTargetEffect_ResurrectEssence</compClass>
+			</li>
 		</comps>
 	</ThingDef>
 	
@@ -319,7 +320,7 @@
 				<useLabel>Use essence of distortion to tear apart reality</useLabel>
 				<useDuration>1000</useDuration>
 			</li>
-			<li Class="MakaiTech.CompProperties_UseEffectCauseRandomShit" />
+			<li Class="MakaiTech.CompProperties_UseEffectCauseRandomShit"/>
 			<li Class="CompProperties_UseEffectPlaySound">
 				<soundOnUsed>MechSerumUsed</soundOnUsed>
 			</li>
@@ -433,7 +434,7 @@
 			<WorkToMake>120</WorkToMake>
 			<MarketValue>15</MarketValue>
 			<Mass>0.05</Mass>
-			</statBases>
+		</statBases>
 		<ingestible>
 			<drugCategory>Medical</drugCategory>
 			<foodType>Processed</foodType>
@@ -474,8 +475,8 @@
 		</costList>
 		<comps>
 			<li Class="CompProperties_Drug">
-			<addictiveness>0</addictiveness>
-			<listOrder>1000</listOrder>
+				<addictiveness>0</addictiveness>
+				<listOrder>1000</listOrder>
 				<overdoseSeverityOffset>
 					<min>0.08</min>
 					<max>0.14</max>

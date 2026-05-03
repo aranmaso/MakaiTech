@@ -16,7 +16,7 @@
 		</comps>
 		<stages>
 			<li>
-				<label>Defense Null</label>
+				<!-- <label>Defense Null</label> -->
 				<painFactor>1.2</painFactor>
 				<capMods>
 					<li>
@@ -745,10 +745,10 @@
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>13.5</maxSeverity>
 		<comps>
-			<li Class="HediffCompProperties_Disappears">
+			<!-- <li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>32500</disappearsAfterTicks>
 				<showRemainingTime>True</showRemainingTime>
-			</li>
+			</li> -->
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>0</severityPerDay>
 				<showHoursToRecover>true</showHoursToRecover>
@@ -1162,7 +1162,7 @@
 				<label>1</label>
 				<minSeverity>0.1</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.1</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.1</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.1</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1177,7 +1177,7 @@
 				<label>2</label>
 				<minSeverity>2</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.2</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.2</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.2</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1192,7 +1192,7 @@
 				<label>3</label>
 				<minSeverity>3</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.3</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.3</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.3</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1207,7 +1207,7 @@
 				<label>4</label>
 				<minSeverity>4</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.4</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.4</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.4</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1222,7 +1222,7 @@
 				<label>5</label>
 				<minSeverity>5</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.5</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.5</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.5</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1237,7 +1237,7 @@
 				<label>6</label>
 				<minSeverity>6</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.6</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.6</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.6</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1252,7 +1252,7 @@
 				<label>7</label>
 				<minSeverity>7</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.7</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.7</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.7</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1267,7 +1267,7 @@
 				<label>8</label>
 				<minSeverity>8</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.8</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.8</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.8</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1282,7 +1282,7 @@
 				<label>9</label>
 				<minSeverity>9</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.9</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.9</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.9</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1297,7 +1297,7 @@
 				<label>10</label>
 				<minSeverity>10</minSeverity>
 				<statOffsets>
-					<VEF_VerbCooldownFactor>-0.99</VEF_VerbCooldownFactor>
+					<VEF_RangedCooldownFactor>-0.99</VEF_RangedCooldownFactor>
 					<AimingDelayFactor>-0.99</AimingDelayFactor>
 				</statOffsets>
 				<hediffGivers>
@@ -1337,7 +1337,7 @@
 		<label>Celestial Scar</label>
 		<defaultLabelColor>(95, 87, 165)</defaultLabelColor>
 		<description>A temporal scar caused by a weapon made from Celestial Steel. once afflicted by celestial scar, their incoming damage modifier will never be lower than 100%</description>
-		<isBad>true</isBad>
+		<isBad>false</isBad>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>1</maxSeverity>
 		<comps>

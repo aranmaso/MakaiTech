@@ -12,8 +12,12 @@
 			<drawSize>1</drawSize>
 		</graphicData>
 		<stackLimit>1</stackLimit>
-		<tradeTags>
+		<tradeTags Inherit="False">
+			<li>ExoticMisc</li>
 		</tradeTags>
+		<thingSetMakerTags Inherit="False">
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
 		<thingCategories>
 			<li>Items</li>
 		</thingCategories>

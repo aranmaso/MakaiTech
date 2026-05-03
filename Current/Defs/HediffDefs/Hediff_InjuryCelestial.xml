@@ -1,0 +1,123 @@
+<Defs>
+
+	<HediffDef ParentName="InjuryBase">
+		<defName>Makai_TemporalCut</defName>
+		<hediffClass>MakaiTech.Hediff_TemporalInjury</hediffClass>
+		<label>celesial cut</label>
+		<labelNoun>a celesial cut</labelNoun>
+		<description>A cut made by celestial weapon, or weapon made from celestial steel. the injury is inflict on a temporal level, and cause a permanent unhealable damage.\n\nif the damage on temporal scar exceed 5, it will spread to other part once a day at half damage.</description>
+		<tendable>false</tendable>
+		<displayWound>false</displayWound>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>temporal cut scar</permanentLabel>
+				<becomePermanentChanceFactor>999</becomePermanentChanceFactor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.DefModExtension_TemporalDamage">
+				<immuneGeneDef>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_DemonianPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_AdeltiaPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_ElventiaPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_FrostlinxPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_IgneusPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_FairinPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_VulpinPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_VesperiaPhysique</li>
+				</immuneGeneDef>
+			</li>
+		</modExtensions>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0</bleedRate>
+			<canMerge>false</canMerge>
+			<destroyedLabel>temporal lost</destroyedLabel>
+			<destroyedOutLabel>temporal lost</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+
+	<HediffDef ParentName="InjuryBase">
+		<defName>Makai_TemporalBurn</defName>
+		<hediffClass>MakaiTech.Hediff_TemporalInjury</hediffClass>
+		<label>celesial burn</label>
+		<labelNoun>a celesial burn</labelNoun>
+		<description>A burn made by celestial weapon, or weapon made from celestial steel. the injury is inflict on a temporal level, and cause a permanent unhealable damage.\n\nif the damage on temporal scar exceed 5, it will spread to other part once a day at half damage.</description>
+		<tendable>false</tendable>
+		<displayWound>false</displayWound>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>temporal burn scar</permanentLabel>
+				<becomePermanentChanceFactor>999</becomePermanentChanceFactor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.DefModExtension_TemporalDamage">
+				<immuneGeneDef>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_DemonianPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_AdeltiaPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_ElventiaPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_FrostlinxPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_IgneusPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_FairinPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_VulpinPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_VesperiaPhysique</li>
+				</immuneGeneDef>
+			</li>
+		</modExtensions>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0</bleedRate>
+			<canMerge>false</canMerge>
+			<destroyedLabel>temporal lost</destroyedLabel>
+			<destroyedOutLabel>temporal lost</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+
+	<HediffDef ParentName="InjuryBase">
+		<defName>Makai_TemporalFrost</defName>
+		<hediffClass>MakaiTech.Hediff_TemporalInjury</hediffClass>
+		<label>celesial frost</label>
+		<labelNoun>a celesial frost</labelNoun>
+		<description>A frostbite made by celestial weapon, or weapon made from celestial steel. the injury is inflict on a temporal level, and cause a permanent unhealable damage.\n\nif the damage on temporal scar exceed 5, it will spread to other part once a day at half damage.</description>
+		<tendable>false</tendable>
+		<displayWound>false</displayWound>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>temporal frost scar</permanentLabel>
+				<becomePermanentChanceFactor>999</becomePermanentChanceFactor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.DefModExtension_TemporalDamage">
+				<immuneGeneDef>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_DemonianPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_AdeltiaPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_ElventiaPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_FrostlinxPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_IgneusPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_FairinPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_VulpinPhysique</li>
+					<li MayRequire="aranmaho.makaitech.xenotype">Makai_VesperiaPhysique</li>
+				</immuneGeneDef>
+			</li>
+		</modExtensions>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0</bleedRate>
+			<canMerge>false</canMerge>
+			<destroyedLabel>temporal lost</destroyedLabel>
+			<destroyedOutLabel>temporal lost</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+
+</Defs>

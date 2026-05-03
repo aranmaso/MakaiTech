@@ -470,6 +470,10 @@
 			<armorPenetrationBase>2</armorPenetrationBase>
 			<stoppingPower>5</stoppingPower>
 			<explosionRadius>3.0</explosionRadius>
+			<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
+			<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>	
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>	
 		</projectile>
 	</ThingDef>
   
@@ -922,10 +926,10 @@
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(6,6)</drawSize>
-			<drawOffsetNorth>(0,0,0.2)</drawOffsetNorth>
-			<drawOffsetSouth>(0,0,-0.5)</drawOffsetSouth>
-			<drawOffsetEast>(0.2,0,0)</drawOffsetEast>
-			<drawOffsetWest>(-0.2,0,0)</drawOffsetWest>
+			<!-- <drawOffsetNorth>(0,0,0.2)</drawOffsetNorth> -->
+			<!-- <drawOffsetSouth>(0,0,-0.5)</drawOffsetSouth> -->
+			<!-- <drawOffsetEast>(0.2,0,0)</drawOffsetEast> -->
+			<!-- <drawOffsetWest>(-0.2,0,0)</drawOffsetWest> -->
 			<damageData>
 				<rect>(0.2,0.2,0.6,0.6)</rect>
 			</damageData>
@@ -937,7 +941,7 @@
 		<hasInteractionCell>false</hasInteractionCell>
 		<interactionCellOffset>(0,0,0)</interactionCellOffset>
 		<stealable>false</stealable>
-		<rotatable>true</rotatable>
+		<rotatable>false</rotatable>
 		<thingCategories>
 			<li>BuildingsSecurity</li>
 		</thingCategories>
@@ -973,7 +977,7 @@
 			<ai_combatDangerous>true</ai_combatDangerous>
 			<turretGunDef>Makai_Turret_TopE</turretGunDef>
 			<turretTopDrawSize>5</turretTopDrawSize>
-			<turretTopOffset>(0, 1)</turretTopOffset>
+			<!-- <turretTopOffset>(0, 1)</turretTopOffset> -->
 			<turretBurstWarmupTime>4.0</turretBurstWarmupTime>
 			<turretBurstCooldownTime>15</turretBurstCooldownTime>
 			<buildingTags>
@@ -1072,6 +1076,10 @@
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
 			<soundAmbient>MortarRound_Ambient</soundAmbient>
 			<explosionEffect>BIGLASERIMPACT</explosionEffect>
+			<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
+			<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>	
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>	
 		</projectile>
 		<comps>
 			<li Class="CompProperties_ProjectileEffecter">

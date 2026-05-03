@@ -57,6 +57,20 @@
 	</FleckDef>
 	
 	<FleckDef ParentName="FleckBase">
+		<defName>Fleck_PurpleRingShrink</defName>
+		<graphicData>
+			<texPath>Things/Mote/Mote_RingPurple</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>0.4</fadeOutTime>
+		<growthRate>-8</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase">
 		<defName>Fleck_YellowRing</defName>
 		<graphicData>
 			<texPath>Things/Mote/Mote_MakaiYellowCage2</texPath>
@@ -320,6 +334,21 @@
 		<solidTime>0.24</solidTime>
 		<fadeOutTime>0.25</fadeOutTime>
 		<growthRate>-0.4</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_StardustOrb</defName>
+		<graphicData>
+			<texPath>Things/Mote/StardustOrb</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0.55</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<speedPerTime>-0.25</speedPerTime>
 	</FleckDef>
 
 </Defs>

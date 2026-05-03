@@ -4,10 +4,7 @@
 	<ThingDef Name="BaseMakaiRangedLaser" Abstract="True" ParentName="BaseWeapon">
 		<techLevel>Archotech</techLevel>
 		<smeltable>true</smeltable>
-		<tradeability>Sellable</tradeability>
-		<thingCategories>
-			<li>WeaponsRanged</li>
-		</thingCategories>
+		<tradeability>Sellable</tradeability>		
 		<inspectorTabs>
 			<li>ITab_Art</li>
 		</inspectorTabs>
@@ -154,6 +151,9 @@
 			<Makai_Stardust>15</Makai_Stardust>
 			<Makai_K-Path_E>1</Makai_K-Path_E>
 		</costList>
+		<thingCategories Inherit="False">
+			<li>Makai_GuardianWeapon_Category</li>
+		</thingCategories>
 		<recipeMaker>
 			<skillRequirements>
 				<Crafting>8</Crafting>
@@ -510,6 +510,9 @@
 			<li>UltratechGun</li>
 			<li>Makai_God_Weapon_Ranged</li>
 		</weaponTags>
+		<thingCategories Inherit="False">
+			<li>Makai_GuardianWeapon_Category</li>
+		</thingCategories>
 		<equippedStatOffsets>
 			<ComfyTemperatureMin>-10000</ComfyTemperatureMin>
 		</equippedStatOffsets>
@@ -598,54 +601,58 @@
 		</modExtensions>
 		<comps Inherit="False">
 			<li Class="CompProperties_Styleable"/>
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
+			<li>
 				<compClass>CompEquippable</compClass>
-				<verbProps>
-					<li>
-						<label>MainAttack</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Projectile/makai_bullet_coldorb</switchIcon>
-							</li>
-						</comps>
-					</li>
-					<li>
-						<label>ColdBurst</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/ColdBurst</switchIcon>
-								<startEnabled>true</startEnabled>
-							</li>
-						</comps>
-					</li>
-					<li>
-						<label>ColdSpike</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/IceSpike</switchIcon>
-							</li>
-						</comps>
-					</li>
-					<li>
-						<canBeToggled>True</canBeToggled>
-						<graphic>
-							<texPath>Things/Projectile/makai_bullet_coldorb</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-						<label>ExtraShot</label>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-								<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-								<uniqueTargets>true</uniqueTargets>
-								<invisible>true</invisible>
-							</li>
-						</comps>
-					</li>
-				</verbProps>
 			</li>
+			<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+				<!-- <compClass>CompEquippable</compClass> -->
+				<!-- <verbProps> -->
+					<!-- <li> -->
+						<!-- <label>MainAttack</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Projectile/makai_bullet_coldorb</switchIcon> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>ColdBurst</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/ColdBurst</switchIcon> -->
+								<!-- <startEnabled>true</startEnabled> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>ColdSpike</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/IceSpike</switchIcon> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <canBeToggled>True</canBeToggled> -->
+						<!-- <graphic> -->
+							<!-- <texPath>Things/Projectile/makai_bullet_coldorb</texPath> -->
+							<!-- <graphicClass>Graphic_Single</graphicClass> -->
+						<!-- </graphic> -->
+						<!-- <label>ExtraShot</label> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Turret"> -->
+								<!-- <compClass>MVCF.VerbComps.VerbComp_Turret</compClass> -->
+								<!-- <uniqueTargets>true</uniqueTargets> -->
+								<!-- <invisible>true</invisible> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+				<!-- </verbProps> -->
+			<!-- </li> -->
+			
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -819,7 +826,11 @@
 			<ai_IsIncendiary>true</ai_IsIncendiary>
 			<flyOverhead>false</flyOverhead>
 			<arcHeightFactor>0.2</arcHeightFactor>
-			<explosionRadius>2.5</explosionRadius>
+			<explosionRadius>3.5</explosionRadius>
+			<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
+			<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>	
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>			
 			<shadowSize>1</shadowSize>
 			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 		</projectile>
@@ -843,7 +854,11 @@
 			<ai_IsIncendiary>true</ai_IsIncendiary>
 			<arcHeightFactor>5</arcHeightFactor>
 			<flyOverhead>true</flyOverhead>
-			<explosionRadius>1.5</explosionRadius>
+			<explosionRadius>2.5</explosionRadius>
+			<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
+			<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>	
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>		
 			<shadowSize>1</shadowSize>
 			<stoppingPower>1</stoppingPower>
 		</projectile>
@@ -1097,6 +1112,10 @@
 			<shadowSize>1</shadowSize>
 			<stoppingPower>1</stoppingPower>
 			<explosionEffect>LASERIMPACT_PURPLE</explosionEffect>
+			<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
+			<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>	
+			<postExplosionSpawnChance>1</postExplosionSpawnChance>
+			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>		
 		</projectile>
 		<comps>
 			<li Class="CompProperties_ProjectileEffecter">
@@ -1420,39 +1439,42 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li>
-						<label>Single Shot</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/changeFireMode</switchIcon>
-							</li>
-						</comps>
-					</li>
-					<li>
-						<label>Triple Shot</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/changeFireMode</switchIcon>
-								<startEnabled>true</startEnabled>
-							</li>
-						</comps>
-					</li>
-					<li>
-						<label>Full Auto</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/changeFireMode</switchIcon>
-							</li>
-						</comps>
-					</li>
-				</verbProps>
-			</li>
+			<!-- <li> -->
+				<!-- <compClass>CompEquippable</compClass> -->
+			<!-- </li> -->
+			<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+				<!-- <compClass>MVCF.Comps.Comp_VerbProps</compClass> -->
+				<!-- <verbProps> -->
+					<!-- <li> -->
+						<!-- <label>Single Shot</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/changeFireMode</switchIcon> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>Triple Shot</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/changeFireMode</switchIcon> -->
+								<!-- <startEnabled>true</startEnabled> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>Full Auto</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/changeFireMode</switchIcon> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+				<!-- </verbProps> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	
@@ -1503,30 +1525,30 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li>
-						<label>Single Shot</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/changeFireMode</switchIcon>
-							</li>
-						</comps>
-					</li>
-					<li>
-						<label>Triple Shot</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/changeFireMode</switchIcon>
-								<startEnabled>true</startEnabled>
-							</li>
-						</comps>
-					</li>
-				</verbProps>
-			</li>
+			<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+				<!-- <compClass>MVCF.Comps.Comp_VerbProps</compClass> -->
+				<!-- <verbProps> -->
+					<!-- <li> -->
+						<!-- <label>Single Shot</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/changeFireMode</switchIcon> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>Triple Shot</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/changeFireMode</switchIcon> -->
+								<!-- <startEnabled>true</startEnabled> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+				<!-- </verbProps> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	
@@ -1577,31 +1599,31 @@
 			</li>
 		</verbs>
 		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li>
-						<label>Single Shot</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/changeFireMode</switchIcon>
-								<startEnabled>false</startEnabled>
-							</li>
-						</comps>
-					</li>
-					<li>
-						<label>Triple Shot</label>
-						<canBeToggled>false</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>Things/Gizmos/changeFireMode</switchIcon>
-								<startEnabled>true</startEnabled>
-							</li>
-						</comps>
-					</li>
-				</verbProps>
-			</li>
+			<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+				<!-- <compClass>MVCF.Comps.Comp_VerbProps</compClass> -->
+				<!-- <verbProps> -->
+					<!-- <li> -->
+						<!-- <label>Single Shot</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/changeFireMode</switchIcon> -->
+								<!-- <startEnabled>false</startEnabled> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>Triple Shot</label> -->
+						<!-- <canBeToggled>false</canBeToggled> -->
+						<!-- <comps> -->
+							<!-- <li Class="MVCF.VerbComps.VerbCompProperties_Switch"> -->
+								<!-- <switchIcon>Things/Gizmos/changeFireMode</switchIcon> -->
+								<!-- <startEnabled>true</startEnabled> -->
+							<!-- </li> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+				<!-- </verbProps> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	

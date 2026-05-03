@@ -20,4 +20,18 @@
 		<reportString>transfer soul to TargetA.</reportString>
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
 	</JobDef>
+	
+	<JobDef>
+		<defName>Makai_SaveDeathNexus</defName>
+		<driverClass>MakaiTech.JobDriver_SaveOnDeathNexus</driverClass>
+		<reportString>link soul to TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+	<JobDef>
+		<defName>Makai_UnSaveDeathNexus</defName>
+		<driverClass>MakaiTech.JobDriver_UnSaveFromDeathNexus</driverClass>
+		<reportString>unlink soul from TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
 </Defs>

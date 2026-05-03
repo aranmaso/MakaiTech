@@ -62,7 +62,7 @@
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>false</shortCircuitInRain>
-				<basePowerConsumption>2000</basePowerConsumption>
+				<basePowerConsumption>10240000</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
@@ -169,7 +169,7 @@
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>false</shortCircuitInRain>
-				<basePowerConsumption>2000</basePowerConsumption>
+				<basePowerConsumption>10240000</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">

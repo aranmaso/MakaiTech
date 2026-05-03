@@ -8,8 +8,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has it existence made null</deathMessage>
-		<hediff>Crush</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -30,8 +30,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has suffered from temporal damage</deathMessage>
-		<hediff>Cut</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -52,8 +52,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has it existence made null</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -74,8 +74,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has it existence made null</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -96,8 +96,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has face the concept of existence</deathMessage>
-		<hediff>Crush</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -119,8 +119,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has lost it mind.</deathMessage>
-		<hediff>Cut</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -142,8 +142,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has lost it mind.</deathMessage>
-		<hediff>Cut</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -165,8 +165,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has freezed to dead.</deathMessage>
-		<hediff>Frostbite</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalFrost</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -192,8 +192,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has freezed to dead.</deathMessage>
-		<hediff>Frostbite</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalFrost</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -223,8 +223,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has freezed to dead.</deathMessage>
-		<hediff>Frostbite</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalFrost</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -256,8 +256,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has burned to dead.</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -291,8 +291,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has burned to dead.</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Burn</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalBurn</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -326,8 +326,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has met a destined death.</deathMessage>
-		<hediff>Cut</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -349,8 +349,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has met a destined death.</deathMessage>
-		<hediff>Cut</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -372,8 +372,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their ability to think cease functioned</deathMessage>
-		<hediff>Stab</hediff>
-		<hediffSolid>Crush</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -394,8 +394,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their being scorched by stardust</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -418,8 +418,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their being scorched by stardust</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<buildingDamageFactor>4</buildingDamageFactor>
 		<plantDamageFactor>4</plantDamageFactor>
@@ -443,8 +443,8 @@
 				<severityPerDamageDealt>1</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<buildingDamageFactor>4</buildingDamageFactor>
 		<plantDamageFactor>4</plantDamageFactor>
@@ -479,8 +479,8 @@
 				<severityPerDamageDealt>1</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<buildingDamageFactor>4</buildingDamageFactor>
 		<plantDamageFactor>4</plantDamageFactor>
@@ -515,8 +515,8 @@
 				<severityPerDamageDealt>1</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<buildingDamageFactor>10</buildingDamageFactor>
 		<plantDamageFactor>10</plantDamageFactor>
@@ -545,8 +545,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
-		<hediff>Cut</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -579,8 +579,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their being corrupted by nightmare claw</deathMessage>
-		<hediff>Cut</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalCut</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -605,8 +605,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been shot to death</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -633,8 +633,8 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
 			<li>
@@ -671,8 +671,8 @@
 				<severityPerDamageDealt>1</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
-		<hediff>Burn</hediff>
-		<hediffSolid>Crack</hediffSolid>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<buildingDamageFactor>1</buildingDamageFactor>
 		<plantDamageFactor>1</plantDamageFactor>
@@ -689,7 +689,7 @@
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been vaporized by extreme heat.</deathMessage>
-		<hediff>Burn</hediff>
+		<hediff>Makai_TemporalBurn</hediff>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<defaultDamage>800</defaultDamage>
 		<defaultStoppingPower>1.5</defaultStoppingPower>
@@ -708,6 +708,60 @@
 		<expolosionPropagationSpeed>0.3</expolosionPropagationSpeed>
 		<hasForcefulImpact>true</hasForcefulImpact>
 		<corpseDamageFactor>0.1</corpseDamageFactor>
+	</DamageDef>
+	
+	<DamageDef>
+		<defName>Makai</defName>
+		<label>stardust cloud</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been scorched by stardust cloud</deathMessage>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs>
+			<li>
+				<hediff>Makai_ArmorMelt</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+			</li>
+			<li>
+				<hediff>Conceptual_CelestialScar</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+		<buildingDamageFactor>0</buildingDamageFactor>
+		<plantDamageFactor>0</plantDamageFactor>
+		<impactSoundType>Electric</impactSoundType>
+		<armorCategory>Celestial</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+	</DamageDef>
+	
+	<DamageDef>
+		<defName>Makai_Celestial_StardustCloud</defName>
+		<label>Stardust Cloud</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been scorched by temporal cloud</deathMessage>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs>
+			<li>
+				<hediff>Conceptual_CelestialScar</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+			</li>
+			<li>
+				<hediff>Makai_ArmorMelt</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+		<impactSoundType>Electric</impactSoundType>
+		<armorCategory>Celestial</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
 	</DamageDef>
   
 	<!--DamageDef>

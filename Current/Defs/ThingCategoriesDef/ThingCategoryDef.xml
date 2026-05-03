@@ -5,5 +5,11 @@
 		<label>Essence of the universe</label>
 		<parent>Items</parent>
 	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>Makai_GuardianWeapon_Category</defName>
+		<label>Cosmic weapons</label>
+		<parent>Weapons</parent>
+	</ThingCategoryDef>
 
 </Defs>

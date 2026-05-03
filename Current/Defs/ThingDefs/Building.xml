@@ -419,7 +419,7 @@
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
-				<basePowerConsumption>1000</basePowerConsumption>
+				<basePowerConsumption>10000</basePowerConsumption>
 			</li>
 			<li Class="CompProperties_Flickable"/>
 			<li Class="CompProperties_Facility">
@@ -711,6 +711,7 @@
 			<li>Makai_Essence5</li>
 		</researchPrerequisites>
 		<size>(1,1)</size>
+        <stealable>false</stealable>
 		<tickerType>Normal</tickerType>
 		<rotatable>false</rotatable>
 		<altitudeLayer>Building</altitudeLayer>
@@ -734,6 +735,7 @@
 		</statBases>
 		<costList>
 			<Makai_Ingot>250</Makai_Ingot>
+			<Makai_Dea-Path_E>1</Makai_Dea-Path_E>
 		</costList>
 		<building>
 			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
@@ -750,6 +752,188 @@
 				<thingToSpawnOnceDestroy>Makai_Dea-Path_E</thingToSpawnOnceDestroy>
 			</li>
 		</modExtensions>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>Makai_MatterConstructor</defName>
+		<label>Stardust Matter Constructor</label>
+		<description>a statdust matter fabricator. capable of constructing nearby building frame without needing material by using Stardust as substitute material. consume stardust fuel.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/stardust_fab</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.25,1.25)</drawSize>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<uiIconPath>Things/Building/stardust_fab</uiIconPath>
+		<researchPrerequisites>
+			<li>Makai_EnergyRelay_Tier4</li>
+		</researchPrerequisites>
+		<size>(1,1)</size>
+		<rotatable>False</rotatable>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<tickerType>Normal</tickerType>
+		<designationHotKey>Misc4</designationHotKey>
+		<designationCategory>Makai_Tech</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+			<WorkToBuild>20000</WorkToBuild>
+			<Mass>60</Mass>
+		</statBases>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>300</Makai_Stardust>
+		</costList>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+		</building>
+		<specialDisplayRadius>10</specialDisplayRadius>
+		<comps>
+			<li Class="PipeSystem.CompProperties_RefillWithPipes">
+				<pipeNet>Makai_StarDustNet</pipeNet>
+				<thing>Makai_Stardust</thing>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>stardust storage</fuelLabel>
+				<fuelGizmoLabel>Stardust storage</fuelGizmoLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Makai_Stardust</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>3000</fuelCapacity>
+				<initialFuelPercent>0.0</initialFuelPercent>
+				<autoRefuelPercent>0.25</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<!-- <minimumFueledThreshold>1</minimumFueledThreshold> -->
+				<fuelMultiplier>1</fuelMultiplier>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<outOfFuelMessage>Cannot function: Needs stardust</outOfFuelMessage>
+				<fuelIconPath>Things/Items/makai_mat_dust</fuelIconPath>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>False</shortCircuitInRain>
+				<basePowerConsumption>2500</basePowerConsumption>
+			</li>
+			<li Class="MakaiTech.CompProperties_BuildNearbyFrame">
+				<interval>60</interval>
+				<stardustUsedPerWork>0.5</stardustUsedPerWork>
+				<workAmountPerTick>10</workAmountPerTick>
+				<fleckDef>Makai_StardustOrb</fleckDef>
+				<!-- <secondFleckDef>Fleck_PurpleRingShrink</secondFleckDef> -->
+				<blackList>
+					<li>Makai_PrimordialForge</li>
+					<li>Makai_FlamePillar</li>
+					<li>Makai_FrostPillar</li>
+				</blackList>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2.9</glowRadius>
+				<glowColor>(95,87,165)</glowColor>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>Makai_MatterConstructor_SpecialStarter</defName>
+		<label>Stardust Matter Constructor(Special)</label>
+		<description>a statdust matter fabricator. capable of constructing nearby building frame without needing material by using Stardust as substitute material. consume stardust fuel.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/stardust_fab</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.25,1.25)</drawSize>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<uiIconPath>Things/Building/stardust_fab</uiIconPath>
+		<size>(1,1)</size>
+		<rotatable>False</rotatable>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<tickerType>Normal</tickerType>
+		<designationHotKey>Misc4</designationHotKey>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+			<WorkToBuild>20000</WorkToBuild>
+			<Mass>60</Mass>
+		</statBases>
+		<costList>
+			<Makai_Ingot>25</Makai_Ingot>
+			<Makai_Stardust>300</Makai_Stardust>
+		</costList>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+		</building>
+		<specialDisplayRadius>10</specialDisplayRadius>
+		<comps>
+			<li Class="PipeSystem.CompProperties_RefillWithPipes">
+				<pipeNet>Makai_StarDustNet</pipeNet>
+				<thing>Makai_Stardust</thing>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>stardust storage</fuelLabel>
+				<fuelGizmoLabel>Stardust storage</fuelGizmoLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Makai_Stardust</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>3000</fuelCapacity>
+				<initialFuelPercent>0.0</initialFuelPercent>
+				<autoRefuelPercent>0.25</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<!-- <minimumFueledThreshold>1</minimumFueledThreshold> -->
+				<fuelMultiplier>1</fuelMultiplier>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<outOfFuelMessage>Cannot function: Needs stardust</outOfFuelMessage>
+				<fuelIconPath>Things/Items/makai_mat_dust</fuelIconPath>
+			</li>
+			<!-- <li Class="CompProperties_Power"> -->
+				<!-- <compClass>CompPowerTrader</compClass> -->
+				<!-- <shortCircuitInRain>False</shortCircuitInRain> -->
+				<!-- <basePowerConsumption>2500</basePowerConsumption> -->
+			<!-- </li> -->
+			<li Class="MakaiTech.CompProperties_BuildNearbyFrame">
+				<interval>60</interval>
+				<stardustUsedPerWork>0.5</stardustUsedPerWork>
+				<workAmountPerTick>10</workAmountPerTick>
+				<fleckDef>Makai_StardustOrb</fleckDef>
+				<!-- <secondFleckDef>Fleck_PurpleRingShrink</secondFleckDef> -->
+				<blackList>
+					<li>Makai_PrimordialForge</li>
+					<li>Makai_FlamePillar</li>
+					<li>Makai_FrostPillar</li>
+				</blackList>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2.9</glowRadius>
+				<glowColor>(95,87,165)</glowColor>
+			</li>
+		</comps>
 		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
 	</ThingDef>
 

@@ -1,0 +1,139 @@
+<Defs>
+
+	<ThingDef Name="Makai_BaseGas" Abstract="True">
+		<thingClass>Gas</thingClass>
+		<label>gas</label>
+		<category>Gas</category>
+		<altitudeLayer>Gas</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<graphicClass>Graphic_Gas</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="Makai_BaseGas">
+		<defName>Makai_StardustSmoke</defName>
+		<label>stardust cloud</label>
+		<graphicData>
+			<graphicClass>Graphic_Gas</graphicClass>
+			<texPath>Things/Mote/Mote_MakaiWhiteSmoke/Mote_MakaiWhiteSmokeB</texPath>
+			<drawSize>2.5</drawSize>
+			<color>(0.37,0.34,0.64,0.75)</color>
+		</graphicData>
+		<gas>
+			<expireSeconds>
+				<min>20</min>
+				<max>30</max>
+			</expireSeconds>
+			<rotationSpeed>20</rotationSpeed>
+		</gas>
+		<thingClass>MakaiTech.Gas_Stardust</thingClass>
+		<comps>
+		</comps>
+		<modExtensions>
+			<li Class="MakaiTech.DefModExtension_StardustGas">
+				<effectDelay>240~480</effectDelay>
+				<immuneThingDefs />
+				<fleckDefs>
+					<!-- <li>BlastEMP</li> -->
+					<!-- <li>LineEMP</li> -->
+					<!-- <li>ElectricalSpark</li> -->
+					<li>Makai_Fleck_StardustSparkA</li>
+					<li>Makai_Fleck_StardustSparkB</li>
+					<li>Makai_Fleck_StardustSparkC</li>
+				</fleckDefs>
+				<soundDef>Power_OnSmall</soundDef>
+				<soundChance>0.5</soundChance>
+				<!-- <effecterDef MayRequire="ludeon.rimworld.biotech">MechBandElectricityArc</effecterDef> -->
+				<damageDef>Makai_Celestial_StardustCloud</damageDef>
+				<amount>1~3</amount>
+			</li>
+		</modExtensions>
+	</ThingDef>
+  
+	<ThingDef>
+		<defName>Makai_StardustSmokeGlow</defName>
+		<label>Stardust Glow</label>
+		<description>A power uplink connected to the Makai home dimension to receive power sent from there. This piece of technology is a vital part of the Makai expedition fleet's ability to receive power in different dimensions. \n Sadly, with our own technology, this powernode won't give any usable power. You will need to research into a power converter to convert energy sent from Makai into a usable power. \n Put this building near a research bench seem to make people smarter somehow. \nMax simultaneous 2.</description>
+		<tickerType>Normal</tickerType>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Things/Mote/mote_invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<altitudeLayer>Gas</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<selectable>false</selectable>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<overlightRadius>2</overlightRadius>
+				<glowRadius>3</glowRadius>
+				<glowColor>(120,112,190,255)</glowColor>
+			</li>
+			<li Class="CompProperties_DestroyAfterDelay">
+				<delayTicks>1200</delayTicks>
+				<displayCountdownOnLabel>true</displayCountdownOnLabel>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_Fleck_StardustSparkA</defName>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.3</solidTime>
+		<fadeOutTime>0.35</fadeOutTime>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<growthRate>0</growthRate>
+		<speedPerTime>-5</speedPerTime>
+		<rotateTowardsMoveDirectionExtraAngle>5</rotateTowardsMoveDirectionExtraAngle>
+		<graphicData>
+			<texPath>Things/Mote/Mote_MakaiSparkA</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>2</drawSize>
+			<color>(95,87,165,255)</color>
+			<!-- <color>(255,255,0)</color> -->
+			<renderQueue>3200</renderQueue>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_Fleck_StardustSparkB</defName>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.3</solidTime>
+		<fadeOutTime>0.35</fadeOutTime>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<growthRate>0</growthRate>
+		<speedPerTime>-5</speedPerTime>
+		<rotateTowardsMoveDirectionExtraAngle>5</rotateTowardsMoveDirectionExtraAngle>
+		<graphicData>
+			<texPath>Things/Mote/Mote_MakaiSparkB</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>2</drawSize>
+			<color>(95,87,165,255)</color>
+			<!-- <color>(255,255,0)</color> -->
+			<renderQueue>3200</renderQueue>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>Makai_Fleck_StardustSparkC</defName>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0.3</solidTime>
+		<fadeOutTime>0.35</fadeOutTime>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<growthRate>0</growthRate>
+		<speedPerTime>-5</speedPerTime>
+		<rotateTowardsMoveDirectionExtraAngle>5</rotateTowardsMoveDirectionExtraAngle>
+		<graphicData>
+			<texPath>Things/Mote/Mote_MakaiSparkC</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>2</drawSize>
+			<color>(95,87,165,255)</color>
+			<!-- <color>(255,255,0)</color> -->
+			<renderQueue>3200</renderQueue>
+		</graphicData>
+	</FleckDef>
+
+</Defs>

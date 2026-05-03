@@ -49,6 +49,9 @@
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality" Name="MakaiMeleeBase" Abstract="True">
 		<generateAllowChance>0.01</generateAllowChance>
 		<tradeability>Sellable</tradeability>
+		<thingCategories Inherit="False">
+			<li>Makai_GuardianWeapon_Category</li>
+		</thingCategories>
 	</ThingDef>
 	
 	<ThingDef ParentName="MakaiMeleeBase">
@@ -83,7 +86,7 @@
 		</stuffCategories>
 		<costStuffCount>550</costStuffCount>
 		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
+			<!-- <li>RewardStandardQualitySuper</li> -->
 		</thingSetMakerTags>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -257,7 +260,7 @@
 			<MeditationFocusGain MayRequire="ludeon.rimworld.royalty">1</MeditationFocusGain>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
+			<!-- <li>RewardStandardQualitySuper</li> -->
 		</thingSetMakerTags>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -377,7 +380,7 @@
 			<InjuryHealingFactor>50</InjuryHealingFactor>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
+			<!-- <li>RewardStandardQualitySuper</li> -->
 		</thingSetMakerTags>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -514,7 +517,7 @@
 			<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
+			<!-- <li>RewardStandardQualitySuper</li> -->
 		</thingSetMakerTags>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -641,7 +644,7 @@
 			<ComfyTemperatureMax>10000</ComfyTemperatureMax>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
+			<!-- <li>RewardStandardQualitySuper</li> -->
 		</thingSetMakerTags>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -826,7 +829,7 @@
 			<ComfyTemperatureMax>10000</ComfyTemperatureMax>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
+			<!-- <li>RewardStandardQualitySuper</li> -->
 		</thingSetMakerTags>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -947,19 +950,21 @@
 			</li>
 		</modExtensions>
 		<comps Inherit="False">
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
+			<li>
 				<compClass>CompEquippable</compClass>
-				<!-- <ConsiderMelee>true</ConsiderMelee> -->
-				<verbProps>
-					<li>
-						<label>Swing thrown</label>
-						<graphic>
-							<texPath>Things/Projectile/makai_bullet_fire</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-					</li>
-				</verbProps>
 			</li>
+			<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+				<!-- <compClass>CompEquippable</compClass> -->
+				<!-- <verbProps> -->
+					<!-- <li> -->
+						<!-- <label>Swing thrown</label> -->
+						<!-- <graphic> -->
+							<!-- <texPath>Things/Projectile/makai_bullet_fire</texPath> -->
+							<!-- <graphicClass>Graphic_Single</graphicClass> -->
+						<!-- </graphic> -->
+					<!-- </li> -->
+				<!-- </verbProps> -->
+			<!-- </li> -->
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -1101,7 +1106,7 @@
 			<PainShockThreshold>1</PainShockThreshold>
 		</equippedStatOffsets>
 		<thingSetMakerTags>
-			<li>RewardStandardQualitySuper</li>
+			<!-- <li>RewardStandardQualitySuper</li> -->
 		</thingSetMakerTags>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -1247,50 +1252,46 @@
 			</li>
 		</modExtensions>
 		<comps Inherit="False">
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
+			<li>
 				<compClass>CompEquippable</compClass>
-				<!-- <ConsiderMelee>true</ConsiderMelee> -->
-				<verbProps>
-		
-					<li>
-						<label>Sweep</label>
-						<graphic>
-							<texPath>Things/Gizmos/ScytheSweep</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-						<comps>
-							<!--li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-				<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-				<uniqueTargets>true</uniqueTargets>
-				<invisible>true</invisible>
-				</li-->
-						</comps>
-					</li>
-			
-					<li MayRequire="RimOfMadness.Vampires">
-						<label>DEAD IMMINENT</label>
-						<description>not even god can save you now</description>
-						<graphic>
-							<texPath>Things/Gizmos/ScytheSweep</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-					</li>
-					<li>
-						<label>Thrown</label>
-						<graphic>
-							<texPath>Things/Gizmos/ScytheThrown</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-					</li>
-					<li>
-						<label>Spin</label>
-						<graphic>
-							<texPath>Things/Gizmos/ScytheSpin</texPath>
-							<graphicClass>Graphic_Single</graphicClass>
-						</graphic>
-					</li>
-				</verbProps>
 			</li>
+			<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
+				<!-- <compClass>CompEquippable</compClass> -->
+				<!-- <verbProps> -->
+		
+					<!-- <li> -->
+						<!-- <label>Sweep</label> -->
+						<!-- <graphic> -->
+							<!-- <texPath>Things/Gizmos/ScytheSweep</texPath> -->
+							<!-- <graphicClass>Graphic_Single</graphicClass> -->
+						<!-- </graphic> -->
+						<!-- <comps> -->
+						<!-- </comps> -->
+					<!-- </li> -->
+					<!-- <li MayRequire="RimOfMadness.Vampires"> -->
+						<!-- <label>DEAD IMMINENT</label> -->
+						<!-- <description>not even god can save you now</description> -->
+						<!-- <graphic> -->
+							<!-- <texPath>Things/Gizmos/ScytheSweep</texPath> -->
+							<!-- <graphicClass>Graphic_Single</graphicClass> -->
+						<!-- </graphic> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>Thrown</label> -->
+						<!-- <graphic> -->
+							<!-- <texPath>Things/Gizmos/ScytheThrown</texPath> -->
+							<!-- <graphicClass>Graphic_Single</graphicClass> -->
+						<!-- </graphic> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <label>Spin</label> -->
+						<!-- <graphic> -->
+							<!-- <texPath>Things/Gizmos/ScytheSpin</texPath> -->
+							<!-- <graphicClass>Graphic_Single</graphicClass> -->
+						<!-- </graphic> -->
+					<!-- </li> -->
+				<!-- </verbProps> -->
+			<!-- </li> -->
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>

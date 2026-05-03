@@ -46,11 +46,11 @@
       <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
     </building>
     <comps>
-    <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>1000</basePowerConsumption>
-    </li>
+    <!-- <li Class="CompProperties_Power"> -->
+        <!-- <compClass>CompPowerTrader</compClass> -->
+        <!-- <shortCircuitInRain>true</shortCircuitInRain> -->
+        <!-- <basePowerConsumption>1000</basePowerConsumption> -->
+    <!-- </li> -->
 	<li Class="CompProperties_Glower">
 			<glowRadius>2</glowRadius>
 			<glowColor>(238,142,0)</glowColor>
@@ -112,11 +112,11 @@
       <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
     </building>
     <comps>
-    <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>1000</basePowerConsumption>
-    </li>
+    <!-- <li Class="CompProperties_Power"> -->
+        <!-- <compClass>CompPowerTrader</compClass> -->
+        <!-- <shortCircuitInRain>true</shortCircuitInRain> -->
+        <!-- <basePowerConsumption>1000</basePowerConsumption> -->
+    <!-- </li> -->
 	<li Class="CompProperties_Glower">
 			<glowRadius>2</glowRadius>
 			<glowColor>(0,179,238)</glowColor>

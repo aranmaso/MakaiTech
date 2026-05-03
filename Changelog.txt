@@ -1,0 +1,2 @@
+-Lower natural celestial armor and celestial damage mul on apparel and stuffable material.
+-Added Stardust Matter Constructor, a building version of Stardust substitute material.

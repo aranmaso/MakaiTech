@@ -1056,6 +1056,24 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>Makai_DeathNexus_SavePoint</defName>
+		<label>soul-nexus link</label>
+		<description>a link to soul nexus, whenever individual with this link died, they will be teleport back and resurrect at their linked nexus. given that the linked nexus has any accumulated souls.</description>
+		<defaultLabelColor>(95, 87, 165)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="MakaiTech.HediffCompProperties_DeathNexusSavePoint" />
+		</comps>
+		<stages>
+			<li>
+			</li>
+		</stages>
+	</HediffDef>
+	
 	<ThingDef ParentName="BodyPartBase">
 		<defName>Makai_ForgeInterfaceImplant</defName>
 		<label>primordial forge interface</label>
@@ -1121,7 +1139,7 @@
 		<comps>
 			<li Class="MakaiTech.HediffCompProperties_ForgeInterface">
 				<maxThingToRemember>30</maxThingToRemember>
-				<cooldownPerSummon>0</cooldownPerSummon>
+				<cooldownPerSummon>60000</cooldownPerSummon>
 				<uiIcon>Things/Items/ForgeInterface</uiIcon>
 				<effecterDef>Makai_ForgeInterfaceSummonItem</effecterDef>
 			</li>
@@ -1148,7 +1166,7 @@
 		<comps>
 			<li Class="MakaiTech.HediffCompProperties_ForgeInterface">
 				<maxThingToRemember>6</maxThingToRemember>
-				<cooldownPerSummon>0</cooldownPerSummon>
+				<cooldownPerSummon>2500</cooldownPerSummon>
 				<uiIcon>Things/Items/ForgeInterface</uiIcon>
 				<effecterDef>Makai_ForgeInterfaceSummonItem</effecterDef>
 			</li>

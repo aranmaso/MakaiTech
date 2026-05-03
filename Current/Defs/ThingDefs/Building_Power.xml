@@ -195,10 +195,11 @@
 			<li Class="CompProperties_Explosive">
 				<explosiveRadius>60</explosiveRadius>
 				<explosiveDamageType>Makai_Vaporize</explosiveDamageType>
-				<postExplosionSpawnThingDef>Filth_Ash</postExplosionSpawnThingDef>
+				<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>
+				<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
 				<postExplosionSpawnChance>1</postExplosionSpawnChance>
 				<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
-				<chanceNeverExplodeFromDamage>0.15</chanceNeverExplodeFromDamage>
+				<!-- <chanceNeverExplodeFromDamage>0.15</chanceNeverExplodeFromDamage> -->
 			</li>
 			<li Class="CompProperties_Glower">
 				<overlightRadius>40</overlightRadius>
