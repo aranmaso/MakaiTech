@@ -158,7 +158,7 @@
 			</li>
 		</comps>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier4</li>
+			<li>Makai_StardustCondenser</li>
 		</researchPrerequisites>
 	</ThingDef>
   
@@ -218,7 +218,7 @@
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier4</li>
+			<li>Makai_StardustCondenser</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -380,7 +380,7 @@
 			</li>
 		</comps>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier5</li>
+			<li>Makai_CelestialSteelForge</li>
 		</researchPrerequisites>
 	</ThingDef>
   
@@ -536,7 +536,7 @@
 			</li>
 		</comps>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier6</li>
+			<li>Makai_CelestialLoom</li>
 		</researchPrerequisites>
 	</ThingDef>
 	<!-- -->

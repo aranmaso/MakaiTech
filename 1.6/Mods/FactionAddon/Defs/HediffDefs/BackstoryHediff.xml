@@ -1,0 +1,27 @@
+<Defs>
+
+	<HediffDef Name="Makai_BackstoryHediffBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(95,87,165)</defaultLabelColor>
+		<initialSeverity>0.001</initialSeverity>
+		<minSeverity>0.001</minSeverity>
+		<isBad>false</isBad>
+		<comps/>
+	</HediffDef>
+	
+	<HediffDef ParentName="Makai_BackstoryHediffBase">
+		<defName>Makai_MageStudent</defName>
+		<label>Mage Student</label>
+		<description>increase psySen and Focus gain</description>
+		<comps /> 
+		<stages>
+			<li>
+				<statOffsets>
+					<PsychicSensitivity>0.5</PsychicSensitivity>
+					<MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.5</MeditationFocusGain>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

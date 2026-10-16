@@ -1,0 +1,54 @@
+<Defs>
+
+    <GameConditionDef>
+        <defName>Makai_GravityWellDebriField</defName>
+        <conditionClass>MakaiTech.GameCondition_DebrisField</conditionClass>
+        <label>Massive gravity field</label>
+        <description>a massive ship arriving in local orbit which can only be describe as a flying continent, it anomalous gravity well is throwing space debris in orbit into disarrey, and cause a debris shower over the entire region.</description>
+        <canBePermanent>true</canBePermanent>
+        <!-- <displayOnUI>false</displayOnUI> -->
+    </GameConditionDef>
+
+    <GameConditionDef>
+        <defName>Makai_BombardmentStray</defName>
+        <conditionClass>MakaiTech.GameCondition_BombardmentStray</conditionClass>
+        <label>Celestial Fall</label>
+        <description>The Makainian fleet in orbit is commencing region-wide bombardment. They won't specifically target your colony, but be careful of catching stray bombardment, roofed and home areas won't be affected.</description>
+        <canBePermanent>true</canBePermanent>
+        <!-- <displayOnUI>false</displayOnUI> -->
+    </GameConditionDef>
+
+    <GameConditionDef>
+        <defName>Makai_CelestialFall</defName>
+        <conditionClass>MakaiTech.GameCondition_CelestialFall</conditionClass>
+        <label>Celestial Fall</label>
+        <description>The Makainian fleet in orbit is commencing region-wide bombardment in current map. They won't specifically target your colony, but be careful of catching stray bombardment, roofed and home areas won't be affected.</description>
+        <canBePermanent>true</canBePermanent>
+        <!-- <displayOnUI>false</displayOnUI> -->
+    </GameConditionDef>
+
+    <GameConditionDef>
+        <defName>Makai_ArtificialSun</defName>
+        <conditionClass>MakaiTech.GameCondition_ArtificialSun</conditionClass>
+        <label>Artificial Sun</label>
+        <description>a massive capital ship with artifitial sun as it core is hovering in high-orbit, blanked the entire region with field of climate alteration.</description>
+        <canBePermanent>true</canBePermanent>
+        <!-- <displayOnUI>false</displayOnUI> -->
+    </GameConditionDef>
+
+    <GameConditionDef>
+        <defName>Makai_SunBlockade</defName>
+        <conditionClass>GameCondition_NoSunlight</conditionClass>
+        <label>eclipse</label>
+        <description>An massive Makainian ship is shadowing the surface. It will be dark, even during the daytime.</description>
+        <endMessage>The Makainian ship is leaving.</endMessage>
+        <letterText>A massive Makainian tradeship has arrive in orbit, and is blocking sunlight for the duration. An eclipse has begun.</letterText>
+        <letterDef>NegativeEvent</letterDef>
+        <canBePermanent>true</canBePermanent>
+        <allowUnderground>false</allowUnderground>
+        <canAffectAllPlanetLayers>true</canAffectAllPlanetLayers>
+        <silencedByConditions>
+        </silencedByConditions>
+    </GameConditionDef>
+
+</Defs>

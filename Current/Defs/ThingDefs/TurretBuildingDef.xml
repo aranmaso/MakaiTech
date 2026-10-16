@@ -115,7 +115,7 @@
 		</placeWorkers>
 		<designationHotKey>Misc2</designationHotKey>
 		<researchPrerequisites>
-			<li>Makai_Weapon3</li>
+			<li>Makai_StardustDefensePlacement</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -286,7 +286,7 @@
 		</placeWorkers>
 		<designationHotKey>Misc2</designationHotKey>
 		<researchPrerequisites>
-			<li>Makai_Weapon1</li>
+			<li>Makai_BasicMakainianWeapons</li>
 		</researchPrerequisites>
 	</ThingDef>
 	
@@ -445,12 +445,13 @@
 		</placeWorkers>
 		<designationHotKey>Misc2</designationHotKey>
 		<researchPrerequisites>
-			<li>Makai_Weapon3</li>
+			<li>Makai_StardustDefensePlacement</li>
 		</researchPrerequisites>
 	</ThingDef>
 	
-	<ThingDef ParentName="Makai_BulletLaser" Class="VEF.Weapons.LaserBeamDef">
+	<VEF.Weapons.LaserBeamDef ParentName="Makai_BulletLaser">
 		<defName>Bullet_Turret_Makai_B</defName>
+        <thingClass>MakaiTech.StardustLaserBeam</thingClass>
 		<label>Compressed Stardust</label>
 		<description>a beam of stardust particle</description>
 		<textures>
@@ -470,12 +471,12 @@
 			<armorPenetrationBase>2</armorPenetrationBase>
 			<stoppingPower>5</stoppingPower>
 			<explosionRadius>3.0</explosionRadius>
-			<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
+			<preExplosionSpawnSingleThingDef>Makai_StardustSmokeGlow</preExplosionSpawnSingleThingDef>
 			<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>	
 			<postExplosionSpawnChance>1</postExplosionSpawnChance>
 			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>	
 		</projectile>
-	</ThingDef>
+	</VEF.Weapons.LaserBeamDef>
   
 	<ThingDef ParentName="BaseGrenadeProjectile">
 		<defName>Bullet_Turret_Makai_B_EX</defName>
@@ -642,7 +643,7 @@
 		</placeWorkers>
 		<designationHotKey>Misc2</designationHotKey>
 		<researchPrerequisites>
-			<li>Makai_Weapon4</li>
+			<li>Makai_ConceptualWeapons</li>
 		</researchPrerequisites>
 	</ThingDef>
   
@@ -833,7 +834,7 @@
 		</placeWorkers>
 		<designationHotKey>Misc2</designationHotKey>
 		<researchPrerequisites>
-			<li>Makai_Weapon4</li>
+			<li>Makai_ConceptualWeapons</li>
 		</researchPrerequisites>
 	</ThingDef>
   
@@ -991,7 +992,7 @@
 		</placeWorkers>
 		<designationHotKey>Misc2</designationHotKey>
 		<researchPrerequisites>
-			<li>Makai_Weapon3</li>
+			<li>Makai_StardustDefensePlacement</li>
 		</researchPrerequisites>
 		<tickerType>Normal</tickerType>
 		<comps>
@@ -1062,7 +1063,7 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<speed>50</speed>
+			<speed>100</speed>
 			<damageDef>Stardust_Artiliery_Bullet_Ex</damageDef>
 			<damageAmountBase>750</damageAmountBase>
 			<armorPenetrationBase>2</armorPenetrationBase>
@@ -1076,7 +1077,7 @@
 			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
 			<soundAmbient>MortarRound_Ambient</soundAmbient>
 			<explosionEffect>BIGLASERIMPACT</explosionEffect>
-			<preExplosionSpawnThingDef>Makai_StardustSmokeGlow</preExplosionSpawnThingDef>
+			<preExplosionSpawnSingleThingDef>Makai_StardustSmokeGlow</preExplosionSpawnSingleThingDef>
 			<postExplosionSpawnThingDef>Makai_StardustSmoke</postExplosionSpawnThingDef>	
 			<postExplosionSpawnChance>1</postExplosionSpawnChance>
 			<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>	
@@ -1137,6 +1138,7 @@
 				<range>500</range>
 				<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
+                <aimingTargetMote>Makai_Mote_CelestialWeapon_Target</aimingTargetMote>
 				<requireLineOfSight>false</requireLineOfSight>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>

@@ -70,7 +70,7 @@
 			<warmupMote>Mote_ResurrectAbility</warmupMote>
 		</li>
 		<li Class="CompProperties_Targetable">
-			<compClass>CompTargetable_SingleCorpse</compClass>
+			<compClass>MakaiTech.CompTargetable_SingleCorpseFilter</compClass>
 			<fleshCorpsesOnly>false</fleshCorpsesOnly>
 			<nonDessicatedCorpsesOnly>false</nonDessicatedCorpsesOnly>
 		</li>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<DamageArmorCategoryDef>
+		<defName>Celestial</defName>
+		<multStat>CelestialDamageMultiplier</multStat>
+		<armorRatingStat>ArmorRating_Celestial</armorRatingStat>
+	</DamageArmorCategoryDef>
+  
+	<StatDef>
+		<defName>CelestialDamageMultiplier</defName>
+		<label>celestial damage</label>
+		<description>A multiplier on damage from Celestial-type attacks for weapons made of this material.</description>
+		<category>StuffStatFactors</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<minValue>0.05</minValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>4507</displayPriorityInCategory>
+	</StatDef>
+  
+	<StatDef ParentName="ArmorRatingBase">
+		<defName>ArmorRating_Celestial</defName>
+		<label>Armor - Celestial</label>
+		<labelForFullStatList>Armor - Celestial (armor stat)</labelForFullStatList>
+		<description>The protection given against celestial damage found in Makai's weapon.
+
+Upon taking damage, first this armor rating is reduced by the attack's armor penetration value.
+
+The remaining armor rating is then compared against a random number from 0 to 100.
+
+    - If the random number is under half the armor rating, the damage deflects harmlessly.
+    - If the random number is over half the armor rating, but not higher than the armor rating, the damage is reduced by half and changed to blunt.
+    - If the random number is greater than the armor rating, the armor has no effect.
+
+For example, at 90% armor rating against an attack with 10% armor penetration, there is a 40% chance of deflecting the attack harmlessly, and a 40% chance of mitigating the damage.
+
+Each layer of armor is applied separately, from the outside in.</description>
+		<displayPriorityInCategory>97</displayPriorityInCategory>
+		<parts>
+			<li Class="StatPart_Stuff">
+				<priority>100</priority>
+				<stuffPowerStat>StuffPower_Armor_Celestial</stuffPowerStat>
+				<multiplierStat>StuffEffectMultiplierArmor</multiplierStat>
+			</li>
+		</parts>
+	</StatDef>
+  
+	<StatDef>
+		<defName>StuffPower_Armor_Celestial</defName>
+		<label>Armor - Celestial</label>
+		<labelForFullStatList>Armor - Celestial (material factor)</labelForFullStatList>
+		<description>Armor against celestial damage found in Makai's weapons.</description>
+		<category>StuffStatFactors</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>4507</displayPriorityInCategory>
+	</StatDef>
+  
+	<ToolCapacityDef>
+		<defName>Makai_Celestial</defName>
+		<label>cut - celestial scar</label>
+	</ToolCapacityDef>
+  
+	<ManeuverDef>
+		<defName>Makai_Celestial</defName>
+		<requiredCapacity>Makai_Celestial</requiredCapacity>
+		<verb>
+			<verbClass>Verb_MeleeAttackDamage</verbClass>
+			<meleeDamageDef>Makai_Celestial_Cut</meleeDamageDef>
+			<impactFleck>Fleck_PurpleHitMark</impactFleck>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
+
+</Defs>

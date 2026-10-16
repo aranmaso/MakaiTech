@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <RulePackDef>
+    <defName>NamerIdeoMakai</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_ideoName->Creator's will</li>
+        <li>r_ideoAdjective->lord will</li>
+        <li>r_memberName->makainian</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <IdeoStoryPatternDef>
+    <defName>IdeologicalFederation</defName>
+    <segments>
+      <li>Prime Axiom</li>
+    </segments>
+    <rules>
+      <rulesStrings>
+        <!-- final fallbacks -->
+        <li>story(priority=-999)-></li>
+        <!-- generic setup -->
+        <li>setup->Order, Peace, Unity.
+		</li>
+        <!-- low-priority generic stories -->
+        <li>story->Without order, there is no peace.
+Without peace, there is no unity.
+Without unity, there is no order.</li>
+      </rulesStrings>
+    </rules>
+  </IdeoStoryPatternDef>
+  
+  <RulePackDef>
+    <defName>NamerDeityMakai</defName>
+	<rulePack>
+      <rulesStrings>
+        <li>r_deityName->Ouroboros</li>
+        <li>r_deityName->Thakalia</li>
+        <li>r_deityName->Anva</li>
+        <li>r_deityName->Hakariel</li>
+        <li>r_deityName->Amariel</li>
+        <li>r_deityName->Vakriel</li>
+        <li>r_deityName->Oko</li>
+        <li>r_deityName->Yukina</li>
+        <li>r_deityName->Lavina</li>
+        <li>r_deityName->Lavinia</li>
+        <li>r_deityName->Etna</li>
+        <li>r_deityName->Nephira</li>
+        <li>r_deityName->Aria</li>
+        <li>r_deityName->Alf</li>
+        <li>r_deityName->Sakriel</li>
+        <li>r_deityName->Sariel</li>
+        <li>r_deityName->Rosaria</li>
+        <li>r_deityName->Lilya</li>
+        <li>r_deityName->Varia</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>leaderTitleMaker_Makainian</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_leaderTitle(p=1)->Prime</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>DeityTypeMakerMakai</defName>
+    <include>
+      <li>GlobalUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityType->Manifestation of [god] of [makaiConcept]</li>
+        <!-- <li>r_deityType->Manifestation of [god] of [memeConcept]</li> -->
+		
+        <li>god->Concept</li>
+		
+		<li>makaiConcept->Existence</li>
+		<li>makaiConcept->Oblivion</li>
+		<li>makaiConcept->Change</li>
+		<li>makaiConcept->Chaos</li>
+		<li>makaiConcept->Order</li>
+		<li>makaiConcept->Void</li>
+		<li>makaiConcept->Reality</li>
+		<li>makaiConcept->Magic</li>
+		<li>makaiConcept->Time</li>
+		<li>makaiConcept->Eternity</li>
+		<li>makaiConcept->Fate</li>
+		<li>makaiConcept->Bond</li>
+		<li>makaiConcept->Corruption</li>
+		<li>makaiConcept->Cycle</li>
+		<li>makaiConcept->Death</li>
+		<li>makaiConcept->Decay</li>
+		<li>makaiConcept->Desire</li>
+		<li>makaiConcept->Knowledge</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>DeityTypeMakerMakainian</defName>
+    <include>
+      <li>DeityTypeMakerMakai</li>
+    </include>
+  </RulePackDef>
+  
+
+  <CultureDef>
+    <defName>MakainianCulture</defName>
+    <label>makailism</label>
+    <description>.</description>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoMakai</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityMakai</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerMakainian</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">leaderTitleMaker_Makainian</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
+     <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>Things/ExistIcon</iconPath>
+    <iconColor>(0.8, 0.2, 0.2)</iconColor>
+    <styleItemTags>
+      <li>
+        <tag>Urban</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardRural</tag>
+        <baseWeight>0.1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardUrban</tag>
+        <baseWeight>0.2</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+
+
+
+</Defs>

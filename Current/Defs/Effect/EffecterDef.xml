@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<EffecterDef>
-    <defName>LASERIMPACT</defName>
-    <children>
-	  <!--li>
+    <EffecterDef>
+        <defName>LASERIMPACT</defName>
+        <children>
+            <!--li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
         <positionRadius>0.2</positionRadius>
         <moteDef>Mote_ExtinguisherPuff</moteDef>
@@ -11,40 +11,40 @@
         <speed>1.8~2.4</speed>
         <scale>4~5</scale>
       </li-->
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <fleckDef>SparkFlash</fleckDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>2.5</min>
-          <max>4.5</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_YellowGlow</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>12</min>
-          <max>12</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_YellowRing</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>3</min>
-          <max>4</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <!--li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>SparkFlash</fleckDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2.5</min>
+                    <max>4.5</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_YellowGlow</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>12</min>
+                    <max>12</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_YellowRing</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>3</min>
+                    <max>4</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <!--li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
         <moteDef>Mote_YellowGlowExplode</moteDef>
         <positionLerpFactor>0.6</positionLerpFactor>
@@ -55,13 +55,13 @@
         </scale>
         <spawnLocType>OnSource</spawnLocType>
       </li-->
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~1</scale>
-		<spawnLocType>OnSource</spawnLocType>
-      </li>
-      <!--li>
+            <!-- <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>1~1</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li> -->
+            <!--li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
         <positionRadius>0.2</positionRadius>
         <fleckDef>AirPuff</fleckDef>
@@ -155,546 +155,921 @@
         </scale>
         <spawnLocType>OnSource</spawnLocType>
       </li-->
-    </children>
-    <offsetTowardsTarget><min>0.0</min><max>0.0</max></offsetTowardsTarget>
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>MKLivingImpact</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <positionRadius>0.2</positionRadius>
-        <fleckDef>AirPuff</fleckDef>
-        <burstCount>
-          <min>4</min>
-          <max>5</max>
-        </burstCount>
-        <speed>
-          <min>0.4</min>
-          <max>0.8</max>
-        </speed>
-        <scale>
-          <min>0.5</min>
-          <max>0.8</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-    <offsetTowardsTarget><min>0.0</min><max>0.0</max></offsetTowardsTarget>
-    <positionRadius>0.3</positionRadius>
-  </EffecterDef>
-  
-   <EffecterDef>
-    <defName>Ring_ExpandP</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~1</scale>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PurpleRing</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>2</min>
-          <max>4</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>Ring_ExpandP_Mini</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~1</scale>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PurpleRing</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>1</min>
-          <max>1</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>Ring_ExpandY</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~1</scale>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_YellowRing</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>1</min>
-          <max>2</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>Ring_ExpandY_CorruptionPulse</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~1</scale>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_YellowRing_CorruptionPulse</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>0.1</min>
-          <max>0.2</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>LASERIMPACT_PURPLE</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <fleckDef>SparkFlash</fleckDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>2.5</min>
-          <max>4.5</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PurpleGlow</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>12</min>
-          <max>12</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PurpleRing</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>3</min>
-          <max>4</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~1</scale>
-		<spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>BIGLASERIMPACT</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_YellowGlow</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>26</min>
-          <max>26</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_YellowRing</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>10</min>
-          <max>10</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~2</scale>
-		<spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>BIGLASERIMPACT_PURPLE</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PurpleGlow</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>26</min>
-          <max>26</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PurpleRing</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>10</min>
-          <max>10</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
-        <scale>1~2</scale>
-		<spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  
-  <EffecterDef>
-    <defName>Makai_WarpBullet</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Mote_YellowGlowWarp</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>2</min>
-          <max>2</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  <EffecterDef>
-    <defName>MakaiRing_ExpandP_superMini</defName>
-    <children>
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Makai_Mote_PurpleRingMini</moteDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>0.2</min>
-          <max>0.2</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-  </EffecterDef>
-  
-   <EffecterDef>
-    <defName>Makai_ForgeInterfaceSummonItem</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <fleckDef>Fleck_PrimoForgeSummonItem</fleckDef>
-        <scale>5~5</scale>
-		<rotation>0</rotation>
-		<positionOffset>(0,0,1.5)</positionOffset>
-		<spawnLocType>OnSource</spawnLocType>
-      </li>	
-	  <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <moteDef>Makai_Mote_PsychicEmanatorEffect</moteDef>
-        <scale>3~3</scale>
-		<spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  <EffecterDef>
-    <defName>Makai_WarpBulletGreen</defName>
-    <children>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <fleckDef>Makai_GreenSphere</fleckDef>
-        <positionLerpFactor>0.6</positionLerpFactor>
-        <chancePerTick>0.2</chancePerTick>
-        <scale>
-          <min>2</min>
-          <max>2</max>
-        </scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-	<!--positionRadius>0.01</positionRadius-->
-  </EffecterDef>
-  
-  <EffecterDef>
-		<defName>Makai_StardustShell_Launched</defName>
-		<offsetTowardsTarget>1</offsetTowardsTarget>
-		<children>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-				<fleckDef>Makai_FleckSmokeA</fleckDef>
-				<scale>1~3</scale>
-				<burstCount>25~50</burstCount>
-				<spawnLocType>OnSource</spawnLocType>
-				<absoluteAngle>false</absoluteAngle>
-				<positionOffset>(1,0,0)</positionOffset>
-				<positionRadius>0.1</positionRadius>
-				<positionRadiusMin>0</positionRadiusMin>
-				<angle>-70~70</angle>
-				<speed>-10~-15</speed>
-				<rotation>0~360</rotation>
-				<fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
-			</li>
-		</children>
-	</EffecterDef>
-	
-	<EffecterDef>
-		<defName>Makai_StardustShell_Stream</defName>
-		<children>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-				<chancePerTick>1</chancePerTick>
-				<fleckDef>Makai_FleckSmokeA</fleckDef>
-				<positionRadius>0</positionRadius>
-				<burstCount>6~12</burstCount>
-				<scale>0.25~1</scale>
-				<spawnLocType>OnSource</spawnLocType>
-				<speed>0.55~1.0</speed>
-				<angle>0~359</angle>
-				<rotationRate>20~30</rotationRate>
-				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
-			</li>
-		</children>
-	</EffecterDef>
-	
-	<EffecterDef>
-		<defName>Makai_StardustShell_StreamSlow</defName>
-		<children>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-				<chancePerTick>0.5</chancePerTick>
-				<fleckDef>Makai_FleckSmokeShortB</fleckDef>
-				<spawnLocType>OnSource</spawnLocType>
-				<!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
-				<positionRadius>0</positionRadius>
-				<absoluteAngle>false</absoluteAngle>
-				<burstCount>1~2</burstCount>
-				<scale>0.25~1</scale>
-				<speed>-1.0~1.0</speed>
-				<angle>-30~30</angle>
-				<rotation>0~360</rotation>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-				<chancePerTick>0.25</chancePerTick>
-				<fleckDef>Makai_Fleck_SparkA</fleckDef>
-				<spawnLocType>OnSource</spawnLocType>
-				<!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
-				<positionRadius>0</positionRadius>
-				<absoluteAngle>false</absoluteAngle>
-				<burstCount>1~1</burstCount>
-				<scale>0.25~1</scale>
-				<speed>-1.0~1.0</speed>
-				<angle>-30~30</angle>
-				<rotation>0~360</rotation>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-				<chancePerTick>0.25</chancePerTick>
-				<fleckDef>Makai_Fleck_SparkB</fleckDef>
-				<spawnLocType>OnSource</spawnLocType>
-				<!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
-				<positionRadius>0</positionRadius>
-				<absoluteAngle>false</absoluteAngle>
-				<burstCount>1~1</burstCount>
-				<scale>0.25~1</scale>
-				<speed>-1.0~1.0</speed>
-				<angle>-30~30</angle>
-				<rotation>0~360</rotation>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-				<chancePerTick>0.25</chancePerTick>
-				<fleckDef>Makai_Fleck_SparkC</fleckDef>
-				<spawnLocType>OnSource</spawnLocType>
-				<!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
-				<positionRadius>0</positionRadius>
-				<absoluteAngle>false</absoluteAngle>
-				<burstCount>1~1</burstCount>
-				<scale>0.25~1</scale>
-				<speed>-1.0~1.0</speed>
-				<angle>-30~30</angle>
-				<rotation>0~360</rotation>
-			</li>
-		</children>
-	</EffecterDef>
-	
-	<EffecterDef>
-		<defName>Makai_StardustHandheldShell_Stream</defName>
-		<children>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
-				<chancePerTick>1</chancePerTick>
-				<fleckDef>Makai_FleckSmokeShortA</fleckDef>
-				<spawnLocType>OnSource</spawnLocType>
-				<positionOffset>(-0.5,0,0)</positionOffset>
-				<positionRadius>0</positionRadius>
-				<absoluteAngle>false</absoluteAngle>
-				<burstCount>3~6</burstCount>
-				<scale>0.25~1</scale>
-				<speed>-1.0~1.0</speed>
-				<angle>-30~30</angle>
-				<rotation>0~360</rotation>
-			</li>
-			<!-- <li> -->
-				<!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
-				<!-- <chancePerTick>1</chancePerTick> -->
-				<!-- <fleckDef>Makai_Fleck_Glitch</fleckDef> -->
-				<!-- <spawnLocType>OnSource</spawnLocType> -->
-				<!-- <positionOffset>(0,0,0)</positionOffset> -->
-				<!-- <positionRadius>0</positionRadius> -->
-				<!-- <absoluteAngle>false</absoluteAngle> -->
-				<!-- <burstCount>1~1</burstCount> -->
-				<!-- <scale>0.75~0.75</scale> -->
-				<!-- <angle>-30~30</angle> -->
-				<!-- <rotation>0~360</rotation> -->
-			<!-- </li> -->
-			<!-- <li> -->
-				<!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
-				<!-- <chancePerTick>1</chancePerTick> -->
-				<!-- <fleckDef>Makai_FleckSmokeShortA</fleckDef> -->
-				<!-- <spawnLocType>OnSource</spawnLocType> -->
-				<!-- <positionRadius>0</positionRadius> -->
-				<!-- <absoluteAngle>false</absoluteAngle> -->
-				<!-- <burstCount>3~6</burstCount> -->
-				<!-- <scale>0.25~1</scale> -->
-				<!-- <speed>6.0~6.0</speed> -->
-				<!-- <angle>-30~30</angle> -->
-				<!-- <rotation>0~360</rotation> -->
-			<!-- </li> -->
-			<!-- <li> -->
-				<!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
-				<!-- <chancePerTick>1</chancePerTick> -->
-				<!-- <fleckDef>Makai_FleckSmokeShortA</fleckDef> -->
-				<!-- <spawnLocType>OnSource</spawnLocType> -->
-				<!-- <positionRadius>0</positionRadius> -->
-				<!-- <absoluteAngle>false</absoluteAngle> -->
-				<!-- <burstCount>3~6</burstCount> -->
-				<!-- <scale>0.25~1</scale> -->
-				<!-- <speed>-6.0~-6.0</speed> -->
-				<!-- <angle>-30~30</angle> -->
-				<!-- <rotation>0~360</rotation> -->
-			<!-- </li> -->
-			
-		</children>
-	</EffecterDef>
-  
-  <EffecterDef>
-    <defName>Makai_GlitchWarp</defName>
-    <children>
-      <!-- <li> -->
-        <!-- <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass> -->
-        <!-- <moteDef>Mote_Glitch</moteDef> -->
-        <!-- <burstCount>1~1</burstCount> -->
-        <!-- <scale>1~1</scale> -->
-        <!-- <rotation>0~0</rotation> -->
-        <!-- <spawnLocType>RandomCellOnTarget</spawnLocType> -->
-      <!-- </li> -->
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-        <fleckDef>Makai_Fleck_Glitch</fleckDef>
-        <burstCount>1~1</burstCount>
-        <scale>1~1</scale>
-        <rotation>0~0</rotation>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-	  <li>
-        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
-        <soundDef>makai_teleportSound</soundDef>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
-        <fleckDef>PsycastSkipFlashExit</fleckDef>
-        <initialDelayTicks>12</initialDelayTicks>
-        <burstCount>1~1</burstCount>
-        <scale>1~1</scale>
-        <rotation>0~0</rotation>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
-        <fleckDef>PlainFlash</fleckDef>
-        <initialDelayTicks>14</initialDelayTicks>
-        <burstCount>1~1</burstCount>
-        <scale>7.0~7.0</scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
-        <positionRadius>1.3</positionRadius>
-        <initialDelayTicks>16</initialDelayTicks>
-        <fleckDef>ElectricalSpark</fleckDef>
-        <burstCount>7~9</burstCount>
-        <scale>2.5</scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
-        <positionRadius>1.3</positionRadius>
-        <initialDelayTicks>24</initialDelayTicks>
-        <fleckDef>ElectricalSpark</fleckDef>
-        <burstCount>5~7</burstCount>
-        <scale>2.5</scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-      <li>
-        <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
-        <positionRadius>1.3</positionRadius>
-        <initialDelayTicks>32</initialDelayTicks>
-        <fleckDef>ElectricalSpark</fleckDef>
-        <burstCount>3~7</burstCount>
-        <scale>1.5</scale>
-        <spawnLocType>OnSource</spawnLocType>
-      </li>
-    </children>
-  </EffecterDef>
-  
-  </Defs>
+        </children>
+        <offsetTowardsTarget>
+            <min>0.0</min>
+            <max>0.0</max>
+        </offsetTowardsTarget>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>MKLivingImpact</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <positionRadius>0.2</positionRadius>
+                <fleckDef>AirPuff</fleckDef>
+                <burstCount>
+                    <min>4</min>
+                    <max>5</max>
+                </burstCount>
+                <speed>
+                    <min>0.4</min>
+                    <max>0.8</max>
+                </speed>
+                <scale>
+                    <min>0.5</min>
+                    <max>0.8</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+        <offsetTowardsTarget>
+            <min>0.0</min>
+            <max>0.0</max>
+        </offsetTowardsTarget>
+        <positionRadius>0.3</positionRadius>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Ring_ExpandP</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>1~1</scale>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PurpleRing</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2</min>
+                    <max>4</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Ring_ExpandP_Mini</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>1~1</scale>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PurpleRing</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>1</min>
+                    <max>1</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Ring_ExpandY</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>1~1</scale>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_YellowRing</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>1</min>
+                    <max>2</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+        <!--positionRadius>0.01</positionRadius-->
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Ring_ExpandY_CorruptionPulse</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>1~1</scale>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_YellowRing_CorruptionPulse</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>0.1</min>
+                    <max>0.2</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+        <!--positionRadius>0.01</positionRadius-->
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>LASERIMPACT_PURPLE</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>SparkFlash</fleckDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2.5</min>
+                    <max>4.5</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PurpleGlow</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>12</min>
+                    <max>12</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PurpleRing</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>3</min>
+                    <max>4</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>1~1</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+        <!--positionRadius>0.01</positionRadius-->
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>BIGLASERIMPACT</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>SparkFlash</fleckDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2.5</min>
+                    <max>4.5</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_YellowGlow</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>26</min>
+                    <max>26</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_YellowRing</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>10</min>
+                    <max>10</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+        <!--positionRadius>0.01</positionRadius-->
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>BIGLASERIMPACT_PURPLE</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>SparkFlash</fleckDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2.5</min>
+                    <max>4.5</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PurpleGlow</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>26</min>
+                    <max>26</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PurpleRing</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>10</min>
+                    <max>10</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <!-- <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>1~2</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li> -->
+        </children>
+        <!--positionRadius>0.01</positionRadius-->
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_WarpBullet</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_YellowGlowWarp</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2</min>
+                    <max>2</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_WarpBulletWithSound</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Makai_SingularityProjSplit</fleckDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2</min>
+                    <max>2</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+                <soundDef>pewpewthree</soundDef>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>MakaiRing_ExpandP_superMini</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Makai_Mote_PurpleRingMini</moteDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>0.2</min>
+                    <max>0.2</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_ForgeInterfaceSummonItem</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Fleck_PrimoForgeSummonItem</fleckDef>
+                <scale>5~5</scale>
+                <rotation>0</rotation>
+                <positionOffset>(0,0,1.5)</positionOffset>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Makai_Mote_PsychicEmanatorEffect</moteDef>
+                <scale>3~3</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+        <!--positionRadius>0.01</positionRadius-->
+    </EffecterDef>
+    <EffecterDef>
+        <defName>Makai_WarpBulletGreen</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Makai_GreenSphere</fleckDef>
+                <positionLerpFactor>0.6</positionLerpFactor>
+                <chancePerTick>0.2</chancePerTick>
+                <scale>
+                    <min>2</min>
+                    <max>2</max>
+                </scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+        <!--positionRadius>0.01</positionRadius-->
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_StardustShell_Launched</defName>
+        <offsetTowardsTarget>1</offsetTowardsTarget>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Makai_FleckSmokeA</fleckDef>
+                <scale>1~3</scale>
+                <burstCount>25~50</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <absoluteAngle>false</absoluteAngle>
+                <positionOffset>(1,0,0)</positionOffset>
+                <positionRadius>0.1</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <angle>-70~70</angle>
+                <speed>-10~-15</speed>
+                <rotation>0~360</rotation>
+                <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_StardustShell_Stream</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <chancePerTick>1</chancePerTick>
+                <fleckDef>Makai_FleckSmokeA</fleckDef>
+                <positionRadius>0</positionRadius>
+                <burstCount>6~12</burstCount>
+                <scale>0.25~1</scale>
+                <spawnLocType>OnSource</spawnLocType>
+                <speed>0.55~1.0</speed>
+                <angle>0~359</angle>
+                <rotationRate>20~30</rotationRate>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_StardustShell_StreamSlow</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <chancePerTick>0.5</chancePerTick>
+                <fleckDef>Makai_FleckSmokeShortB</fleckDef>
+                <spawnLocType>OnSource</spawnLocType>
+                <!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
+                <positionRadius>0</positionRadius>
+                <absoluteAngle>false</absoluteAngle>
+                <burstCount>1~2</burstCount>
+                <scale>0.25~1</scale>
+                <speed>-1.0~1.0</speed>
+                <angle>-30~30</angle>
+                <rotation>0~360</rotation>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <chancePerTick>0.25</chancePerTick>
+                <fleckDef>Makai_Fleck_SparkA</fleckDef>
+                <spawnLocType>OnSource</spawnLocType>
+                <!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
+                <positionRadius>0</positionRadius>
+                <absoluteAngle>false</absoluteAngle>
+                <burstCount>1~1</burstCount>
+                <scale>0.25~1</scale>
+                <speed>-1.0~1.0</speed>
+                <angle>-30~30</angle>
+                <rotation>0~360</rotation>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <chancePerTick>0.25</chancePerTick>
+                <fleckDef>Makai_Fleck_SparkB</fleckDef>
+                <spawnLocType>OnSource</spawnLocType>
+                <!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
+                <positionRadius>0</positionRadius>
+                <absoluteAngle>false</absoluteAngle>
+                <burstCount>1~1</burstCount>
+                <scale>0.25~1</scale>
+                <speed>-1.0~1.0</speed>
+                <angle>-30~30</angle>
+                <rotation>0~360</rotation>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <chancePerTick>0.25</chancePerTick>
+                <fleckDef>Makai_Fleck_SparkC</fleckDef>
+                <spawnLocType>OnSource</spawnLocType>
+                <!-- <positionOffset>(-0.5,0,0)</positionOffset> -->
+                <positionRadius>0</positionRadius>
+                <absoluteAngle>false</absoluteAngle>
+                <burstCount>1~1</burstCount>
+                <scale>0.25~1</scale>
+                <speed>-1.0~1.0</speed>
+                <angle>-30~30</angle>
+                <rotation>0~360</rotation>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_StardustHandheldShell_Stream</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <chancePerTick>1</chancePerTick>
+                <fleckDef>Makai_FleckSmokeShortA</fleckDef>
+                <spawnLocType>OnSource</spawnLocType>
+                <positionOffset>(-0.5,0,0)</positionOffset>
+                <positionRadius>0</positionRadius>
+                <absoluteAngle>false</absoluteAngle>
+                <burstCount>3~6</burstCount>
+                <scale>0.25~1</scale>
+                <speed>-1.0~1.0</speed>
+                <angle>-30~30</angle>
+                <rotation>0~360</rotation>
+            </li>
+            <!-- <li> -->
+            <!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
+            <!-- <chancePerTick>1</chancePerTick> -->
+            <!-- <fleckDef>Makai_Fleck_Glitch</fleckDef> -->
+            <!-- <spawnLocType>OnSource</spawnLocType> -->
+            <!-- <positionOffset>(0,0,0)</positionOffset> -->
+            <!-- <positionRadius>0</positionRadius> -->
+            <!-- <absoluteAngle>false</absoluteAngle> -->
+            <!-- <burstCount>1~1</burstCount> -->
+            <!-- <scale>0.75~0.75</scale> -->
+            <!-- <angle>-30~30</angle> -->
+            <!-- <rotation>0~360</rotation> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
+            <!-- <chancePerTick>1</chancePerTick> -->
+            <!-- <fleckDef>Makai_FleckSmokeShortA</fleckDef> -->
+            <!-- <spawnLocType>OnSource</spawnLocType> -->
+            <!-- <positionRadius>0</positionRadius> -->
+            <!-- <absoluteAngle>false</absoluteAngle> -->
+            <!-- <burstCount>3~6</burstCount> -->
+            <!-- <scale>0.25~1</scale> -->
+            <!-- <speed>6.0~6.0</speed> -->
+            <!-- <angle>-30~30</angle> -->
+            <!-- <rotation>0~360</rotation> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!-- <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass> -->
+            <!-- <chancePerTick>1</chancePerTick> -->
+            <!-- <fleckDef>Makai_FleckSmokeShortA</fleckDef> -->
+            <!-- <spawnLocType>OnSource</spawnLocType> -->
+            <!-- <positionRadius>0</positionRadius> -->
+            <!-- <absoluteAngle>false</absoluteAngle> -->
+            <!-- <burstCount>3~6</burstCount> -->
+            <!-- <scale>0.25~1</scale> -->
+            <!-- <speed>-6.0~-6.0</speed> -->
+            <!-- <angle>-30~30</angle> -->
+            <!-- <rotation>0~360</rotation> -->
+            <!-- </li> -->
+
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_GlitchWarp</defName>
+        <children>
+            <!-- <li> -->
+            <!-- <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass> -->
+            <!-- <moteDef>Mote_Glitch</moteDef> -->
+            <!-- <burstCount>1~1</burstCount> -->
+            <!-- <scale>1~1</scale> -->
+            <!-- <rotation>0~0</rotation> -->
+            <!-- <spawnLocType>RandomCellOnTarget</spawnLocType> -->
+            <!-- </li> -->
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Makai_Fleck_Glitch</fleckDef>
+                <burstCount>1~1</burstCount>
+                <scale>1~1</scale>
+                <rotation>0~0</rotation>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+                <soundDef>makai_teleportSound</soundDef>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+                <fleckDef>PsycastSkipFlashExit</fleckDef>
+                <initialDelayTicks>12</initialDelayTicks>
+                <burstCount>1~1</burstCount>
+                <scale>1~1</scale>
+                <rotation>0~0</rotation>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+                <fleckDef>PlainFlash</fleckDef>
+                <initialDelayTicks>14</initialDelayTicks>
+                <burstCount>1~1</burstCount>
+                <scale>7.0~7.0</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+                <positionRadius>1.3</positionRadius>
+                <initialDelayTicks>16</initialDelayTicks>
+                <fleckDef>ElectricalSpark</fleckDef>
+                <burstCount>7~9</burstCount>
+                <scale>2.5</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+                <positionRadius>1.3</positionRadius>
+                <initialDelayTicks>24</initialDelayTicks>
+                <fleckDef>ElectricalSpark</fleckDef>
+                <burstCount>5~7</burstCount>
+                <scale>2.5</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+                <positionRadius>1.3</positionRadius>
+                <initialDelayTicks>32</initialDelayTicks>
+                <fleckDef>ElectricalSpark</fleckDef>
+                <burstCount>3~7</burstCount>
+                <scale>1.5</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_CelestialFallTargeter</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Makai_CelestialFallTargeter</fleckDef>
+                <burstCount>1~1</burstCount>
+                <scale>5~5</scale>
+                <rotation>0~0</rotation>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_CelestialFallTargeter_Purple</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Makai_CelestialFallTargeterPurple</fleckDef>
+                <burstCount>1~1</burstCount>
+                <scale>5~5</scale>
+                <rotation>0~0</rotation>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_StardustCloudParticleOrbit</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <burstCount>1~20</burstCount>
+                <positionOffset>(0, 0, 0)</positionOffset>
+                <ticksBetweenMotes>30</ticksBetweenMotes>
+                <fleckDef>Makai_StardustCloudParticle</fleckDef>
+                <scale>.8~1.2</scale>
+                <positionRadius>5</positionRadius>
+                <positionRadiusMin>3</positionRadiusMin>
+                <speed>-10~10</speed>
+                <rotation>0</rotation>
+                <rotationRate>-200~200</rotationRate>
+                <angle>0~0</angle>
+                <orbitOrigin>true</orbitOrigin>
+                <orbitSpeed>1~2</orbitSpeed>
+                <orbitSnapStrength>.8</orbitSnapStrength>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <spawnLocType>OnTarget</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingA</fleckDef>
+                <burstCount>1</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <scale>5.00</scale>
+                <positionOffset>(0, 0, 0)</positionOffset>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingB</fleckDef>
+                <burstCount>0~1</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <scale>5.00</scale>
+                <positionOffset>(0, 0, 0)</positionOffset>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+                <scale>4.65</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <!-- <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>Makai_Distortion</fleckDef>
+                <burstCount>1</burstCount>
+                <spawnLocType>OnTarget</spawnLocType>
+                <scale>4.65</scale>
+                <rotationRate>-180~180</rotationRate>
+            </li> -->
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <positionRadius>0.2</positionRadius>
+                <moteDef>Makai_Mote_Puff</moteDef>
+                <burstCount>40~45</burstCount>
+                <angle>0~359</angle>
+                <speed>6.8~11.4</speed>
+                <scale>2~3</scale>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <avoidLastPositionRadius>1</avoidLastPositionRadius>
+                <fleckDef>Makai_StardustCloudParticle</fleckDef>
+                <initialDelayTicks>0</initialDelayTicks>
+                <burstCount>25~20</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <rotationRate>100~200</rotationRate>
+                <positionRadius>4</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <scale>.8~1.2</scale>
+                <rotation>0~360</rotation>
+                <absoluteAngle>True</absoluteAngle>
+                <!-- <positionOffset>(-.5, 0, -.5)</positionOffset> -->
+                <angle>0~360</angle>
+                <!-- <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity> -->
+                <speed>3.8~6.4</speed>
+                <makeMoteOnSubtrigger>true</makeMoteOnSubtrigger>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <positionRadius>2</positionRadius>
+                <fleckDef>Makai_StardustCloudParticle_ShrinkFast</fleckDef>
+                <absoluteAngle>False</absoluteAngle>
+                <spawnLocType>OnSource</spawnLocType>
+                <burstCount>40~45</burstCount>
+                <angle>0~360</angle>
+                <speed>1.8~3.4</speed>
+                <scale>2~3</scale>
+                <fleckUsesAngleForVelocity>False</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <avoidLastPositionRadius>1</avoidLastPositionRadius>
+                <fleckDef>Makai_ThrownDebrisA</fleckDef>
+                <initialDelayTicks>0</initialDelayTicks>
+                <burstCount>25~20</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <rotationRate>100~200</rotationRate>
+                <positionRadius>4</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <scale>2.5~1</scale>
+                <rotation>0~360</rotation>
+                <absoluteAngle>True</absoluteAngle>
+                <!-- <positionOffset>(-.5, 0, -.5)</positionOffset> -->
+                <angle>0~360</angle>
+                <!-- <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity> -->
+                <speed>3.8~6.4</speed>
+                <makeMoteOnSubtrigger>true</makeMoteOnSubtrigger>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+                <fleckDef>GrowingFlash</fleckDef>
+                <burstCount>1~1</burstCount>
+                <scale>3~3</scale>
+                <spawnLocType>OnSource</spawnLocType>
+            </li>
+            <!-- <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingA</fleckDef>
+                <burstCount>1</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <scale>2.00</scale>
+                <positionOffset>(0, 0, 0)</positionOffset>
+            </li> -->
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_ParticleBulletOrbit</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <burstCount>1~5</burstCount>
+                <positionOffset>(0, 0, 0)</positionOffset>
+                <initialDelayTicks>15</initialDelayTicks>
+                <ticksBetweenMotes>15</ticksBetweenMotes>
+                <fleckDef>Makai_StardustCloudParticle_Yellow</fleckDef>
+                <scale>.2~0.8</scale>
+                <positionRadius>1</positionRadius>
+                <positionRadiusMin>0.5</positionRadiusMin>
+                <!-- <speed>-10~10</speed> -->
+                <rotation>0</rotation>
+                <rotationRate>-200~200</rotationRate>
+                <angle>0~0</angle>
+                <orbitOrigin>true</orbitOrigin>
+                <orbitSpeed>1~5</orbitSpeed>
+                <orbitSnapStrength>1</orbitSnapStrength>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <spawnLocType>OnTarget</spawnLocType>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_CelestialWorkEffect</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <burstCount>1~20</burstCount>
+                <positionOffset>(0, 0, 2)</positionOffset>
+                <ticksBetweenMotes>30</ticksBetweenMotes>
+                <fleckDef>Makai_StardustCloudParticle</fleckDef>
+                <scale>.8~1.2</scale>
+                <positionRadius>0.5</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <speed>-10~10</speed>
+                <rotation>0</rotation>
+                <rotationRate>-200~200</rotationRate>
+                <angle>0~0</angle>
+                <orbitOrigin>true</orbitOrigin>
+                <orbitSpeed>1~2</orbitSpeed>
+                <orbitSnapStrength>.8</orbitSnapStrength>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <spawnLocType>OnTarget</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_StardustCloudParticle</fleckDef>
+                <scale>0.5~1</scale>
+                <burstCount>40~45</burstCount>
+                <spawnLocType>OnTarget</spawnLocType>
+                <absoluteAngle>True</absoluteAngle>
+                <positionOffset>(0,0,0)</positionOffset>
+                <positionRadius>0.5</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <angle>0~360</angle>
+                <speed>1~4</speed>
+                <rotation>0~360</rotation>
+                <fleckUsesAngleForVelocity>False</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingA</fleckDef>
+                <burstCount>1</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <scale>2.00</scale>
+                <positionOffset>(0, 0, 2)</positionOffset>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingB</fleckDef>
+                <burstCount>0~1</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <scale>2.00</scale>
+                <positionOffset>(0, 0, 2)</positionOffset>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_CelestialWorkEffect_PrimordialForge</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <burstCount>1~20</burstCount>
+                <positionOffset>(0, 0, 2)</positionOffset>
+                <ticksBetweenMotes>30</ticksBetweenMotes>
+                <fleckDef>Makai_StardustCloudParticle_Red</fleckDef>
+                <scale>.8~1.2</scale>
+                <positionRadius>0.5</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <speed>-10~10</speed>
+                <rotation>0</rotation>
+                <rotationRate>-200~200</rotationRate>
+                <angle>0~0</angle>
+                <orbitOrigin>true</orbitOrigin>
+                <orbitSpeed>1~2</orbitSpeed>
+                <orbitSnapStrength>.8</orbitSnapStrength>
+                <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+                <spawnLocType>OnTarget</spawnLocType>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_StardustCloudParticle_Red</fleckDef>
+                <scale>0.5~1</scale>
+                <burstCount>40~45</burstCount>
+                <spawnLocType>OnTarget</spawnLocType>
+                <absoluteAngle>True</absoluteAngle>
+                <positionOffset>(0,0,0)</positionOffset>
+                <positionRadius>0.5</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <angle>0~360</angle>
+                <speed>1~4</speed>
+                <rotation>0~360</rotation>
+                <fleckUsesAngleForVelocity>False</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingA_Red</fleckDef>
+                <burstCount>1</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <scale>2.00</scale>
+                <positionOffset>(0, 0, 2)</positionOffset>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingB_Red</fleckDef>
+                <burstCount>0~1</burstCount>
+                <spawnLocType>OnSource</spawnLocType>
+                <scale>2.00</scale>
+                <positionOffset>(0, 0, 2)</positionOffset>
+            </li>
+        </children>
+    </EffecterDef>
+
+    <EffecterDef>
+        <defName>Makai_CelestialWorkEffect_NoOrbit</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_StardustCloudParticle</fleckDef>
+                <scale>0.5~1</scale>
+                <burstCount>40~45</burstCount>
+                <spawnLocType>OnTarget</spawnLocType>
+                <absoluteAngle>True</absoluteAngle>
+                <positionOffset>(0,0,0)</positionOffset>
+                <positionRadius>0.5</positionRadius>
+                <positionRadiusMin>0</positionRadiusMin>
+                <angle>0~360</angle>
+                <speed>1~4</speed>
+                <rotation>0~360</rotation>
+                <fleckUsesAngleForVelocity>False</fleckUsesAngleForVelocity>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingA</fleckDef>
+                <burstCount>1</burstCount>
+                <spawnLocType>OnTarget</spawnLocType>
+                <scale>2.00</scale>
+                <positionOffset>(0, 0, 0)</positionOffset>
+            </li>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <fleckDef>Makai_CircularRingB</fleckDef>
+                <burstCount>0~1</burstCount>
+                <spawnLocType>OnTarget</spawnLocType>
+                <scale>2.00</scale>
+                <positionOffset>(0, 0, 0)</positionOffset>
+            </li>
+        </children>
+    </EffecterDef>
+</Defs>

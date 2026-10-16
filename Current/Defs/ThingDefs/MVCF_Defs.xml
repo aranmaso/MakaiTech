@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<MVCF.ModDef>
+	<!-- <MVCF.ModDef>
 		<defName>MKT_MVCF</defName>
 		<label>Makai Tech MVCF</label>
 		<description>Adding ranged attacks for Makai Tech</description>
@@ -8,5 +8,5 @@
 			<li>IntegratedToggle</li>
 			<li>ExtraEquipmentVerbs</li>
 		</ActivateFeatures>
-	</MVCF.ModDef>
+	</MVCF.ModDef> -->
 </Defs>

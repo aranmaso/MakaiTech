@@ -6,8 +6,8 @@
 		<label>Exchange Celestial Steel x10</label>
 		<description>sent dozen of material to nearby makai's ship in exchange for small amount of celestial steel \n\n This is a very inefficient way of getting celestial steel, once you go deeper into the Makai research tree, there will be a building to create Makai's material for a much cheaper cost.</description>
 		<jobString>Bargain Ingot.</jobString>
-		<effectWorking>Smith</effectWorking>
-		<soundWorking>Recipe_Smith</soundWorking>
+		<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+		<soundWorking>PsycastCastLoop</soundWorking>
 		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 		<workAmount>6666</workAmount>
 		<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
@@ -62,8 +62,8 @@
 		<label>Exchange Celestial Steel x100</label>
 		<description>sent dozen of material to nearby makai's ship in exchange for small amount of celestial steel \n\n This is a very inefficient way of getting celestial steel, once you go deeper into the Makai research tree, there will be a building to create Makai's material for a much cheaper cost.</description>
 		<jobString>Bargain Ingot.</jobString>
-		<effectWorking>Smith</effectWorking>
-		<soundWorking>Recipe_Smith</soundWorking>
+		<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+		<soundWorking>PsycastCastLoop</soundWorking>
 		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 		<workAmount>66666</workAmount>
 		<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
@@ -110,7 +110,7 @@
 		<skillRequirements>
 			<Social>16</Social>
    		 </skillRequirements>
-    		<researchPrerequisite>Makai_EnergyRelay_Tier5</researchPrerequisite>
+    		<researchPrerequisite>Makai_CelestialSteelForge</researchPrerequisite>
 	</RecipeDef>
 	
 	<RecipeDef>
@@ -118,8 +118,8 @@
 		<label>Forge Miniature Sun</label>
 		<description>Combine various materials to create a miniature sun.</description>
 		<jobString>Creating Star</jobString>
-		<effectWorking>Smith</effectWorking>
-		<soundWorking>Recipe_Smith</soundWorking>
+		<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+		<soundWorking>PsycastCastLoop</soundWorking>
 		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 		<workAmount>60000</workAmount>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -166,7 +166,7 @@
 		<skillRequirements>
 			<Crafting>16</Crafting>
    		 </skillRequirements>
-    		<researchPrerequisite>Makai_EnergyRelay_Tier7</researchPrerequisite>
+    		<researchPrerequisite>Makai_SunCradle</researchPrerequisite>
 	</RecipeDef>
 	
 	<!-- <RecipeDef MayRequire="ducks.insaneskills"> -->
@@ -174,8 +174,8 @@
 		<!-- <label>Manifest Essense of Infinity</label> -->
 		<!-- <description>Materialize the Essense of Infinity.</description> -->
 		<!-- <jobString>Manifest Infinity</jobString> -->
-		<!-- <effectWorking>Smith</effectWorking> -->
-		<!-- <soundWorking>Recipe_Smith</soundWorking> -->
+		<!-- <effectWorking>Makai_CelestialWorkEffect</effectWorking> -->
+		<!-- <soundWorking>PsycastCastLoop</soundWorking> -->
 		<!-- <workAmount>6000</workAmount> -->
 		<!-- <workSkill>Crafting</workSkill> -->
 		<!-- <workSpeedStat>GeneralLaborSpeed</workSpeedStat> -->

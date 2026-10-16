@@ -1,0 +1,19 @@
+<Defs>
+
+    <HediffDef ParentName="DiseaseBase">
+        <defName>Makai_MakainianMagicAptitude</defName>
+        <label>Magical Aptitude</label>
+        <defaultLabelColor>(95, 87, 165)</defaultLabelColor>
+        <description>natural magical aptitude of makainian, psychic sensitivity are capped at 100% minimum.</description>
+        <isBad>false</isBad>
+        <initialSeverity>1</initialSeverity>
+        <maxSeverity>1</maxSeverity>
+        <comps>
+        </comps>
+        <stages>
+            <li>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

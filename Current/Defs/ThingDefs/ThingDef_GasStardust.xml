@@ -35,7 +35,12 @@
 		<modExtensions>
 			<li Class="MakaiTech.DefModExtension_StardustGas">
 				<effectDelay>240~480</effectDelay>
-				<immuneThingDefs />
+				<immuneThingDefs>
+                    <li MayRequire="aranmaho.makaitech.xenotype,erdelf.humanoidalienraces">Makai_Makainian</li>
+                </immuneThingDefs>
+                <hediffToImmunePawn>
+                    <li>Conceptual_CelestialEmpowerment</li>
+                </hediffToImmunePawn>
 				<fleckDefs>
 					<!-- <li>BlastEMP</li> -->
 					<!-- <li>LineEMP</li> -->
@@ -56,7 +61,7 @@
 	<ThingDef>
 		<defName>Makai_StardustSmokeGlow</defName>
 		<label>Stardust Glow</label>
-		<description>A power uplink connected to the Makai home dimension to receive power sent from there. This piece of technology is a vital part of the Makai expedition fleet's ability to receive power in different dimensions. \n Sadly, with our own technology, this powernode won't give any usable power. You will need to research into a power converter to convert energy sent from Makai into a usable power. \n Put this building near a research bench seem to make people smarter somehow. \nMax simultaneous 2.</description>
+		<description>.</description>
 		<tickerType>Normal</tickerType>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -66,6 +71,7 @@
 		<altitudeLayer>Gas</altitudeLayer>
 		<useHitPoints>false</useHitPoints>
 		<selectable>false</selectable>
+        <tickerType>Normal</tickerType>
 		<comps>
 			<li Class="CompProperties_Glower">
 				<overlightRadius>2</overlightRadius>
@@ -76,6 +82,9 @@
 				<delayTicks>1200</delayTicks>
 				<displayCountdownOnLabel>true</displayCountdownOnLabel>
 			</li>
+            <li Class="CompProperties_Effecter">
+                <effecterDef>Makai_StardustCloudParticleOrbit</effecterDef>
+            </li>
 		</comps>
 	</ThingDef>
 	

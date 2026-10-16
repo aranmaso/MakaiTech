@@ -149,16 +149,16 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<unfinishedThingDef>Makai_UnfinishedMakaiThing</unfinishedThingDef>
+			<researchPrerequisite>Makai_ConceptualWeapons</researchPrerequisite>
 			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
+			<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+			<soundWorking>PsycastCastLoop</soundWorking>
 			<skillRequirements>
 				<Crafting>12</Crafting>
 			</skillRequirements>
@@ -227,7 +227,9 @@
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Ama_Berd</defName>
 		<label>Order</label>
-		<description>A massive halberd forged from the essence of order. Its blade is fashioned with celestial steel, making whoever struck by it suffer from temporal scars, a condition which nullifies all forms of damage reduction. The essence of order embedded within, granting the wielder extraordinary mind stability, preventing all forms of mental interference. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A massive halberd forged from the essence of order. Its blade is fashioned with celestial steel, making whoever struck by it suffer from temporal scars, a condition which nullifies all forms of damage reduction. The essence of order embedded within, granting the wielder extraordinary mind stability, preventing all forms of mental interference.
+
+deal critical damage(x2~x5) to pawn with mental state, and have 25% to immediately end the target mental state.\n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/ama_halberd_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -300,16 +302,16 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<unfinishedThingDef>Makai_UnfinishedMakaiThing</unfinishedThingDef>
+			<researchPrerequisite>Makai_ConceptualWeapons</researchPrerequisite>
 			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
+			<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+			<soundWorking>PsycastCastLoop</soundWorking>
 			<skillRequirements>
 				<Crafting>12</Crafting>
 			</skillRequirements>
@@ -356,7 +358,7 @@
 		<techLevel>Archotech</techLevel>
 		<weaponTags>
 			<li>SpacerMeleeAdvanced</li>
-			<li>Makai_God_Weapon</li>
+			<!-- <li>Makai_God_Weapon</li> -->
 			<li>Makai_God_Weapon_Supreme</li>
 		</weaponTags>
 		<generateCommonality>0.01</generateCommonality>
@@ -438,16 +440,16 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<unfinishedThingDef>Makai_UnfinishedMakaiThing</unfinishedThingDef>
+			<researchPrerequisite>Makai_ConceptualWeapons</researchPrerequisite>
 			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
+			<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+			<soundWorking>PsycastCastLoop</soundWorking>
 			<skillRequirements>
 				<Crafting>19</Crafting>
 			</skillRequirements>
@@ -484,7 +486,9 @@
 	<ThingDef ParentName="MakaiMeleeBase">
 		<defName>Makai_Alf_Claw</defName>
 		<label>Claw of insanity</label>
-		<description>A claw-like weapon forged from the essence of corruption. Its blade is fashioned with celestial steel, making whoever struck by it suffer from temporal scars. The essence of corruption embedded within this weapon granting its wielder a frenzy-like melee ability, making them ignore pain and attack with unbelievable speed. Each strike of this weapon inflicts target with insanity, slowly corroding their mind until eventually they break down. \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
+		<description>A claw-like weapon forged from the essence of corruption. Its blade is fashioned with celestial steel, making whoever struck by it suffer from temporal scars. The essence of corruption embedded within this weapon granting its wielder a frenzy-like melee ability, making them ignore pain and attack with unbelievable speed. Each strike of this weapon inflicts target with insanity, slowly corroding their mind until eventually they break down.
+
+hitting target that are in mental state have 25% chance to deal critical damage(x2~x5). \n\n Deals &lt;color=#5F57A5&gt;Celestial&lt;/color&gt; damage.</description>
 		<graphicData>
 			<texPath>Things/Weapon/alf_claw_new</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -560,16 +564,16 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<unfinishedThingDef>Makai_UnfinishedMakaiThing</unfinishedThingDef>
+			<researchPrerequisite>Makai_ConceptualWeapons</researchPrerequisite>
 			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
+			<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+			<soundWorking>PsycastCastLoop</soundWorking>
 			<skillRequirements>
 				<Crafting>12</Crafting>
 			</skillRequirements>
@@ -708,16 +712,16 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<unfinishedThingDef>Makai_UnfinishedMakaiThing</unfinishedThingDef>
+			<researchPrerequisite>Makai_ConceptualWeapons</researchPrerequisite>
 			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
+			<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+			<soundWorking>PsycastCastLoop</soundWorking>
 			<skillRequirements>
 				<Crafting>12</Crafting>
 			</skillRequirements>
@@ -917,16 +921,16 @@
 			</li>
 		</tools>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<unfinishedThingDef>Makai_UnfinishedMakaiThing</unfinishedThingDef>
+			<researchPrerequisite>Makai_ConceptualWeapons</researchPrerequisite>
 			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
+			<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+			<soundWorking>PsycastCastLoop</soundWorking>
 			<skillRequirements>
 				<Crafting>12</Crafting>
 			</skillRequirements>
@@ -998,7 +1002,7 @@
 		<projectile>
 			<damageDef>Sari_13th</damageDef>
 			<speed>10000</speed>
-			<damageAmountBase>1</damageAmountBase>
+			<damageAmountBase>25</damageAmountBase>
 			<armorPenetrationBase>66.6</armorPenetrationBase>
 		</projectile>
 		<drawOffscreen>true</drawOffscreen>
@@ -1026,7 +1030,7 @@
 		<projectile>
 			<damageDef>Sari_13th</damageDef>
 			<speed>33</speed>
-			<damageAmountBase>1</damageAmountBase>
+			<damageAmountBase>5</damageAmountBase>
 			<armorPenetrationBase>66.6</armorPenetrationBase>
 		</projectile>
 		<drawOffscreen>true</drawOffscreen>
@@ -1054,7 +1058,7 @@
 		<projectile>
 			<damageDef>Sari_13th</damageDef>
 			<speed>10000</speed>
-			<damageAmountBase>1</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 			<armorPenetrationBase>66.6</armorPenetrationBase>
 		</projectile>
 		<drawOffscreen>true</drawOffscreen>
@@ -1134,23 +1138,6 @@
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 			</li>
-			<li MayRequire="RimOfMadness.Vampires">
-				<label>DEAD IMMINENT</label>
-				<verbClass>Verb_Shoot</verbClass>
-				<requireLineOfSight>false</requireLineOfSight>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Makai_Sari_Swipe_DEAD</defaultProjectile>
-				<warmupTime>10</warmupTime>
-				<range>7</range>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<burstShotCount>1</burstShotCount>
-				<soundCast>sari_sweep</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>14</muzzleFlashScale>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
 			<li>
 				<label>Thrown</label>
 				<verbClass>Verb_Shoot</verbClass>
@@ -1198,7 +1185,7 @@
 				<extraMeleeDamages>
 					<li>
 						<def>Sari_13th</def>
-						<amount>1</amount>
+						<amount>10</amount>
 					</li>
 				</extraMeleeDamages>
 			</li>
@@ -1213,22 +1200,22 @@
 				<extraMeleeDamages>
 					<li>
 						<def>Sari_13th</def>
-						<amount>1</amount>
+						<amount>15</amount>
 					</li>
 				</extraMeleeDamages>
 			</li>
 		</tools>
 		<recipeMaker>
-			<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
-			<researchPrerequisite>Makai_Weapon4</researchPrerequisite>
+			<unfinishedThingDef>Makai_UnfinishedMakaiThing</unfinishedThingDef>
+			<researchPrerequisite>Makai_ConceptualWeapons</researchPrerequisite>
 			<recipeUsers Inherit="False">
 				<li>Makai_Bench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
 			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
+			<effectWorking>Makai_CelestialWorkEffect</effectWorking>
+			<soundWorking>PsycastCastLoop</soundWorking>
 			<skillRequirements>
 				<Crafting>12</Crafting>
 			</skillRequirements>
@@ -1255,6 +1242,30 @@
 			<li>
 				<compClass>CompEquippable</compClass>
 			</li>
+            <li Class="VEF.Weapons.CompProperties_MultiVerbWeapon">
+                <defaultVerbLabel>Sweep</defaultVerbLabel>
+                <gizmoLabel>Change attack</gizmoLabel>
+                <gizmoDescription>Change attack mode</gizmoDescription>
+                <gizmoIconPath>Things/Weapon/sari_scythe</gizmoIconPath>
+                <switchMode>MultiSwitchGizmo</switchMode>
+                <verbs>
+                    <li>
+                        <verbLabel>Sweep</verbLabel>
+                        <gizmoLabelOverride>sweep attack</gizmoLabelOverride>
+                        <gizmoDescriptionOverride>sweep attack in front.</gizmoDescriptionOverride>
+                    </li>
+                    <li>
+                        <verbLabel>Thrown</verbLabel>
+                        <gizmoLabelOverride>throw attack</gizmoLabelOverride>
+                        <gizmoDescriptionOverride>throw a scythe at target.</gizmoDescriptionOverride>
+                    </li>
+                    <li>
+                        <verbLabel>Spin</verbLabel>
+                        <gizmoLabelOverride>spin</gizmoLabelOverride>
+                        <gizmoDescriptionOverride>launch a scythe and make it spin in place.</gizmoDescriptionOverride>
+                    </li>
+                </verbs>
+            </li>
 			<!-- <li Class="MVCF.Comps.CompProperties_VerbProps"> -->
 				<!-- <compClass>CompEquippable</compClass> -->
 				<!-- <verbProps> -->

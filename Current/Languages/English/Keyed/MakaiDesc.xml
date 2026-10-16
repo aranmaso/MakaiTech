@@ -14,4 +14,14 @@
 	<SoulNexus_SavePawn>connect {0}'s soul to death nexus.</SoulNexus_SavePawn>
 	<SoulNexus_UnSavePawn>disconnect {0}'s soul from death nexus.</SoulNexus_UnSavePawn>
 
+    <MessageDebrisFieldEnd>Local gravity abnormality has subsided</MessageDebrisFieldEnd>
+    <MessageCelestialFallEnd>Celestial Fall bombardment has subsided</MessageCelestialFallEnd>
+
+    <Makai_RequestCelestialFall>Request Celestial Fall. (cost: 25 goodwill)</Makai_RequestCelestialFall>
+    <Makai_CelestialFallDisabledReason>Goodwills too low or in progress.</Makai_CelestialFallDisabledReason>
+
+    <ITab_ForgeInterface>Forge</ITab_ForgeInterface>
+
+    <Makai_MakainianMagicAptitude>Makainian Magic Aptitude: 100% minimum</Makai_MakainianMagicAptitude>
+
 </LanguageData>

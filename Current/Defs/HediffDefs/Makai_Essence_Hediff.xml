@@ -299,7 +299,6 @@
 	</HediffDef>
 	
 	<!-- Order -->
-	
 	<HediffDef ParentName="Essence_SurgeryInitialBase">
 		<defName>Essence_Incubating_Order</defName>
 		<label>Gathering Order</label>
@@ -697,6 +696,42 @@
 				<needDef>Food</needDef>
 				<percentPerDay>10</percentPerDay>
 			</li>
+            <li Class="MakaiTech.HediffCompProperties_FatedTransformation">
+                <fatedPartInfos>
+                    <li>
+                        <hediffDef>Makai_Fated_Arm</hediffDef>
+                        <bodyPartDef>Arm</bodyPartDef>
+                        <count>2</count>
+                    </li>
+                    <li>
+                        <hediffDef>Makai_Fated_Leg</hediffDef>
+                        <bodyPartDef>Leg</bodyPartDef>
+                        <count>2</count>
+                    </li>
+                    <li>
+                        <hediffDef>Makai_Fated_Lung</hediffDef>
+                        <bodyPartDef>Lung</bodyPartDef>
+                        <count>2</count>
+                    </li>
+                    <li>
+                        <hediffDef>Makai_Fated_Eye</hediffDef>
+                        <bodyPartDef>Eye</bodyPartDef>
+                        <count>2</count>
+                    </li>
+                    <li>
+                        <hediffDef>Makai_Fated_Heart</hediffDef>
+                        <bodyPartDef>Heart</bodyPartDef>
+                        <count>1</count>
+                        <minSeverity>5</minSeverity>
+                    </li>
+                    <li>
+                        <hediffDef>Essence_Fate_Encounter</hediffDef>
+                        <bodyPartDef>Spine</bodyPartDef>
+                        <count>1</count>
+                        <minSeverity>5</minSeverity>
+                    </li>
+                </fatedPartInfos>
+            </li>
 		</comps>
 		<stages>
 			<li>
@@ -709,7 +744,7 @@
 					</li>
 				</capMods>
 				<hediffGivers>
-					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+					<!-- <li Class="MakaiTech.HediffGiver_RandomNoAlert">
 						<hediff>Makai_Fated_Arm</hediff>
 						<mtbDays>0.1</mtbDays>
 						<partsToAffect>
@@ -748,7 +783,7 @@
 							<li>Demonian_Wing</li>
 						</partsToAffect>
 						<countToAffect>1</countToAffect>
-					</li>
+					</li> -->
 				</hediffGivers>
 				<statFactors>
 				</statFactors>
@@ -760,7 +795,7 @@
 				<capMods>
 				</capMods>
 				<hediffGivers>
-					<li Class="MakaiTech.HediffGiver_RandomNoAlert">
+					<!-- <li Class="MakaiTech.HediffGiver_RandomNoAlert">
 						<hediff>Makai_Fated_Heart</hediff>
 						<mtbDays>0.001</mtbDays>
 						<partsToAffect>
@@ -776,7 +811,7 @@
 						</partsToAffect>
 						<countToAffect>1</countToAffect>
 						<canAffectAnyLivePart>true</canAffectAnyLivePart>
-					</li>
+					</li> -->
 				</hediffGivers>
 				<statFactors>
 				</statFactors>

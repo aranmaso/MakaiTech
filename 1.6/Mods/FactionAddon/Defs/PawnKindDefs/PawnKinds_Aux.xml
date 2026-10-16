@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>Makai_Colonist</defName>
+		<label>makainian</label>
+		<defaultFactionType>Makai_Puppet_Player</defaultFactionType>
+		<nameMaker>Makai_PawnNamer</nameMaker>		
+		<chemicalAddictionChance>0.01</chemicalAddictionChance>
+		<apparelTags>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+			<li>SpacerMilitary</li>
+			<li>BeltDefensePop</li>
+			<li>PrestigeCombatGear</li>
+			<li>Makai_God_Replica</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>999999</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<chronologicalAgeRange>20~10000</chronologicalAgeRange>		
+		<minGenerationAge>18</minGenerationAge>
+		<techHediffsChance>0.1</techHediffsChance>
+		<techHediffsMoney>999999</techHediffsMoney>
+        <abilities>
+            <li>Makai_PlanarTraversal</li>
+            <li>Makai_PlanarShift</li>
+            <li>Makai_CelestialEmpowerment</li>
+        </abilities>
+		<techHediffsTags>
+			<li>Makai_Implant</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Adeltia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Adeltia>
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Demonian>
+				<Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Elventia>
+				<Makai_Frostlinx MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Frostlinx>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Igneus>
+				<Makai_Fairin MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Fairin>
+				<Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Vulpin>
+				<Makai_Vesperia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Vesperia>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+            <li Class="MakaiTech.PawnKindExtension_MakainianRace" />
+			<li Class="MakaiTech.PawnKindExtension_InitialHediffChance">
+				<initialHediffs>
+					<li>
+						<hediffDef>Essence_Fate_Buff</hediffDef>
+						<chance>0.1</chance>
+						<!-- <bodyPartDef></bodyPartDef> -->
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+					</li>
+					<li>
+						<hediffDef>Essence_Fate_Buff_PermanentVariant</hediffDef>
+						<chance>0.05</chance>
+						<severityRange>1</severityRange>
+					</li>
+					<li>
+						<hediffDef>Essence_Incubating_Complete_Order</hediffDef>
+						<chance>0.01</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<!-- <bodyPartDef></bodyPartDef> -->
+					</li>		
+					<li>
+						<hediffDef>Makai_Distorted_Skin_Base</hediffDef>
+						<chance>0.05</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<bodyPartDef>Torso</bodyPartDef>
+					</li>
+					<li>
+						<hediffDef>Makai_Distorted_EyeImplant</hediffDef>
+						<chance>0.05</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<bodyPartDef>Eye</bodyPartDef>
+					</li>
+					<li>
+						<hediffDef>Makai_Death_Deathward</hediffDef>
+						<chance>0.01</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<!-- <bodyPartDef>Eye</bodyPartDef> -->
+					</li>
+					<li>
+						<hediffDef>Makai_ForgeInterfaceImplantSpecial</hediffDef>
+						<chance>0.001</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<bodyPartDef>Heart</bodyPartDef>
+					</li>
+				</initialHediffs>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<PawnKindDef Name="MakaiMercenaryBase" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>Makai_Puppet</defaultFactionType>
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<invNutrition>2.55</invNutrition>
+		<itemQuality>Legendary</itemQuality>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<chronologicalAgeRange>20~1000</chronologicalAgeRange>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>30</maxGenerationAge>
+		<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+		<biocodeWeaponChance>0.1</biocodeWeaponChance>
+		<initialWillRange>100~300</initialWillRange>
+		<initialResistanceRange>130~530</initialResistanceRange>
+		<nameMaker>Makai_PawnNamer</nameMaker>
+		<nameMakerFemale>Makai_PawnNamer</nameMakerFemale>
+		<weaponStuffOverride>Makai_Ingot</weaponStuffOverride>
+        <abilities>
+            <li>Makai_PlanarTraversal</li>
+            <li>Makai_PlanarShift</li>
+            <li>Makai_CelestialEmpowerment</li>
+        </abilities>
+		<modExtensions>
+            <li Class="MakaiTech.PawnKindExtension_MakainianRace" />
+			<li Class="MakaiTech.PawnKindExtension_InitialHediffChance">
+				<initialHediffs>
+					<li>
+						<hediffDef>Essence_Fate_Buff</hediffDef>
+						<chance>0.1</chance>
+						<!-- <bodyPartDef></bodyPartDef> -->
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+					</li>
+					<li>
+						<hediffDef>Essence_Fate_Buff_PermanentVariant</hediffDef>
+						<chance>0.05</chance>
+						<severityRange>1</severityRange>
+					</li>
+					<li>
+						<hediffDef>Essence_Incubating_Complete_Order</hediffDef>
+						<chance>0.01</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<!-- <bodyPartDef></bodyPartDef> -->
+					</li>
+					<li>
+						<hediffDef>Makai_Distorted_Skin_Base</hediffDef>
+						<chance>0.05</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<bodyPartDef>Torso</bodyPartDef>
+					</li>
+					<li>
+						<hediffDef>Makai_Distorted_EyeImplant</hediffDef>
+						<chance>0.05</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<bodyPartDef>Eye</bodyPartDef>
+					</li>
+					<li>
+						<hediffDef>Makai_Death_Deathward</hediffDef>
+						<chance>0.01</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<!-- <bodyPartDef>Eye</bodyPartDef> -->
+					</li>
+					<li>
+						<hediffDef>Makai_ForgeInterfaceImplantSpecial</hediffDef>
+						<chance>0.001</chance>
+						<severityRange>1</severityRange>
+						<!-- <durationRange></durationRange> -->
+						<!-- <bodyPartDef>Eye</bodyPartDef> -->
+					</li>
+				</initialHediffs>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef Abstract="True" Name="MakaiMercenaryEliteTierBase" ParentName="MakaiMercenaryBase">
+		<combatPower>500</combatPower>
+		<maxGenerationAge>45</maxGenerationAge>
+		<gearHealthRange>1~3</gearHealthRange>
+		<apparelTags>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitaryAdvanced</li>
+			<li>SpacerMilitary</li>
+			<li>BeltDefensePop</li>
+			<li>PrestigeCombatGear</li>
+			<li>Makai_God_Replica</li>
+		</apparelTags>
+		<techHediffsMoney>999999</techHediffsMoney>
+		<weaponMoney>999999</weaponMoney>
+		<apparelMoney>999999</apparelMoney>
+		<apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+		<weaponTags>
+			<li>IndustrialGunAdvanced</li>
+		</weaponTags>
+		<disallowedTraits>
+			<li>Wimp</li>
+			<li>Nudist</li>
+			<li>BodyPurist</li>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<techHediffsRequired>
+			<li>Makai_CelestialEye</li>
+			<li>Makai_CelestialEye</li>
+			<li>Makai_CelestialArm</li>
+			<li>Makai_CelestialArm</li>
+			<li>Makai_CelestialLeg</li>
+			<li>Makai_CelestialLeg</li>
+			<li>Makai_CelestialLung</li>
+			<li>Makai_CelestialLung</li>
+			<!-- <li>Makai_CelestialHeart</li> -->
+		</techHediffsRequired>
+		<techHediffsChance>2</techHediffsChance>
+		<combatEnhancingDrugsChance>0.80</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+		<biocodeWeaponChance>0.3</biocodeWeaponChance>
+	</PawnKindDef>
+		
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase">
+		<defName>MakaiAuxiliary</defName>
+		<label>deathmarch</label>
+		<labelPlural>elite deathmarch</labelPlural>
+		<combatPower>1000</combatPower>
+		<weaponTags Inherit="False">
+			<!-- <li>SpacerGun</li> -->
+			<!-- <li>Makai_W_Spacer</li> -->
+			<!-- <li>Makai_W_Ultra</li> -->
+			<!-- <li>Makai_W_Ultra_G</li> -->
+			<!-- <li>Makai_God_Weapon_Ranged</li> -->
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Demonian>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>
+					<!-- <li>SpacerGun</li> -->
+					<li>Makai_W_Spacer</li>
+					<li>Makai_W_Ultra</li>
+					<li>Makai_W_Ultra_G</li>
+					<li>Makai_God_Weapon_Ranged</li>
+				</weaponTags>
+			</li>
+		</modExtensions>		
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase">
+		<defName>MakaiAvatar</defName>
+		<label>Guardian Avatar</label>
+		<labelPlural>guardian avatar</labelPlural>
+		<combatPower>1000</combatPower>
+		<weaponTags Inherit="False">
+			<!-- <li>Makai_God_Weapon</li> -->
+			<!-- <li>Makai_God_Weapon_Ranged</li> -->
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Demonian>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>
+					<li>Makai_God_Weapon</li>
+					<li>Makai_God_Weapon_Ranged</li>
+				</weaponTags>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase">
+		<defName>MakaiAvatar_Leader</defName>
+		<label>Guardian Avatar Leader</label>
+		<labelPlural>guardian avatar captain</labelPlural>
+		<combatPower>2500</combatPower>
+        <maxPerGroup>1</maxPerGroup>
+		<weaponTags Inherit="False">
+			<!-- <li>Makai_God_Weapon_Supreme</li> -->
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Demonian>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>
+					<li>Makai_God_Weapon_Supreme</li>
+				</weaponTags>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase">
+		<defName>MakaiAuxiliaryTwo</defName>
+		<label>infantry</label>
+		<labelPlural>elite infantry</labelPlural>
+		<weaponTags Inherit="False">
+			<!-- <li>Makai_W_Spacer</li> -->
+			<!-- <li>Makai_W_Ultra</li> -->
+			<!-- <li>Makai_W_Ultra_G</li> -->
+			<!-- <li>UltratechGun</li> -->
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Demonian>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+				<Makai_Adeltia MayRequire="aranmaho.makaitech.xenotype">0.1</Makai_Adeltia>
+				<Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Elventia>
+				<Makai_Frostlinx MayRequire="aranmaho.makaitech.xenotype">0.4</Makai_Frostlinx>
+				<Makai_Fairin MayRequire="aranmaho.makaitech.xenotype">0.1</Makai_Fairin>
+				<Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.2</Makai_Vulpin>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>					
+					<li>Makai_W_Spacer</li>
+					<li>Makai_W_Ultra</li>
+					<li>Makai_W_Ultra_G</li>
+					<li>UltratechGun</li>
+				</weaponTags>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase">
+		<defName>MakaiAuxiliaryThree</defName>
+		<label>trader guard</label>
+		<labelPlural>elite infantry</labelPlural>
+		<combatPower>250</combatPower>
+		<weaponTags Inherit="False">
+			<!-- <li>Makai_W_Spacer</li> -->
+			<!-- <li>Makai_W_Ultra</li> -->
+			<!-- <li>Makai_W_Ultra_G</li> -->
+			<!-- <li>Makai_God_Weapon_Ranged</li> -->
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Demonian>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+				<!-- <Makai_Adeltia>0.1</Makai_Adeltia> -->
+				<Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Elventia>
+				<Makai_Frostlinx MayRequire="aranmaho.makaitech.xenotype">0.4</Makai_Frostlinx>
+				<!-- <Makai_Fairin>0.01</Makai_Fairin> -->
+				<Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.2</Makai_Vulpin>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>					
+					<li>Makai_W_Spacer</li>
+					<li>Makai_W_Ultra</li>
+					<li>Makai_W_Ultra_G</li>
+					<li>Makai_God_Weapon_Ranged</li>
+				</weaponTags>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase" MayRequire="aoba.deadmanswitch.mobiledragoon">
+		<defName>MakaiAuxiliary_GuardExosuit</defName>
+		<label>elite guard</label>
+		<labelPlural>elite guard</labelPlural>
+		<combatPower>750</combatPower>
+		<weaponTags Inherit="False">
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Demonian>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+				<Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Elventia>
+				<Makai_Frostlinx MayRequire="aranmaho.makaitech.xenotype">0.4</Makai_Frostlinx>
+				<Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.2</Makai_Vulpin>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>					
+					<li>Makai_W_Spacer</li>
+					<li>Makai_W_Ultra</li>
+					<li>Makai_W_Ultra_G</li>
+				</weaponTags>
+			</li>
+			<li Class="WalkerGear.ModExtForceApparelGen" MayRequire="aoba.deadmanswitch.mobiledragoon">
+				<StructurePointRange>1.0</StructurePointRange>
+				<apparels>
+					<li>DMS_Apparel_PV8_Core</li>
+					<li>DMS_Apparel_Groyne_Helmet</li>
+					<li>DMS_Apparel_PackCargo</li>
+				</apparels>
+				<chanceApparels>
+					<li MayRequire="aoba.deadmanswitch.mobiledragoon">
+						<chance>0.25</chance>
+						<apparel>DMS_Apparel_CargoBox</apparel>
+					</li>
+					<li MayRequire="aoba.deadmanswitch.mobiledragoon">
+						<chance>0.15</chance>
+						<apparel>DMS_Apparel_Shield</apparel>
+					</li>
+					<li MayRequire="aoba.deadmanswitch.mobiledragoon">
+						<chance>0.15</chance>
+						<apparel>DMS_Apparel_InfraredSensor</apparel>
+					</li>
+				</chanceApparels>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<only>(90, 100, 90)</only>
+						</li>
+						<li>
+							<only>(85, 100, 95)</only>
+						</li>
+						<li>
+							<only>(95, 100, 85)</only>
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase" MayRequire="pesky.ae">
+		<defName>MakaiAuxiliary_SuperGuardExosuit</defName>
+		<label>super elite guard</label>
+		<labelPlural>super elite guard</labelPlural>
+		<combatPower>750</combatPower>
+		<weaponTags Inherit="False">
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Demonian>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+				<Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Elventia>
+				<Makai_Frostlinx MayRequire="aranmaho.makaitech.xenotype">0.4</Makai_Frostlinx>
+				<Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.2</Makai_Vulpin>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="WalkerGear.ModExtForceApparelGen" MayRequire="pesky.ae">
+				<StructurePointRange>1.0</StructurePointRange>
+				<apparels>
+					<li>AE_Core</li>
+					<li>AE_Apparel_Bulwark</li>
+					<li>AE_Apparel_Propulsor</li>
+				</apparels>
+				<chanceApparels>
+					<li MayRequire="aoba.deadmanswitch.mobiledragoon">
+						<chance>0.15</chance>
+						<apparel>DMS_Apparel_Shield</apparel>
+					</li>
+					<li MayRequire="aoba.deadmanswitch.mobiledragoon">
+						<chance>0.15</chance>
+						<apparel>DMS_Apparel_InfraredSensor</apparel>
+					</li>
+				</chanceApparels>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<only>(255, 255, 255)</only>
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>					
+					<li>Makai_W_Spacer</li>
+					<li>Makai_W_Ultra</li>
+					<li>Makai_W_Ultra_G</li>
+					<li>Makai_God_Weapon</li>
+					<li>Makai_God_Weapon_Ranged</li>
+				</weaponTags>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase">
+		<defName>MakaiCommanderTrader</defName>
+		<label>trader commander</label>
+		<labelPlural>trader commander</labelPlural>
+		<trader>true</trader>
+		<combatPower>250</combatPower>
+		<factionLeader>true</factionLeader>
+		<weaponTags Inherit="False">
+			<!-- <li>Makai_God_Weapon</li> -->
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.4</Makai_Demonian>
+				<Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Elventia>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+				<Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.2</Makai_Vulpin>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>					
+					<li>Makai_God_Weapon</li>
+				</weaponTags>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MakaiMercenaryEliteTierBase">
+		<defName>MakaiCommander</defName>
+		<label>commander</label>
+		<labelPlural>elite commander</labelPlural>
+		<combatPower>1000</combatPower>
+		<factionLeader>true</factionLeader>
+		<weaponTags Inherit="False">
+			<!-- <li>Makai_God_Weapon</li> -->
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineUltratech</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~20</range>
+			</li>
+		</skills>
+		<xenotypeSet Inherit="False" MayRequire="aranmaho.makaitech.xenotype">
+			<xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+				<Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.4</Makai_Demonian>
+				<Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Elventia>
+				<Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.5</Makai_Igneus>
+				<Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.2</Makai_Vulpin>
+			</xenotypeChances>
+		</xenotypeSet>
+		<modExtensions>
+			<li Class="MakaiTech.PawnKindExtension_MakainianGears">
+				<weaponTags>					
+					<li>Makai_God_Weapon</li>
+				</weaponTags>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- <PawnKindDef Name="MakaiPawnKindBase" Abstract="True"> -->
+	<!-- <race>Human</race> -->
+	<!-- <defaultFactionType>Makai_Puppet</defaultFactionType> -->
+	<!-- <invNutrition>2.2</invNutrition> -->
+	<!-- <itemQuality>Legendary</itemQuality> -->
+	<!-- <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality> -->
+	<!-- <minGenerationAge>18</minGenerationAge> -->
+	<!-- <maxGenerationAge>45</maxGenerationAge> -->
+	<!-- <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance> -->
+	<!-- <apparelIgnoreSeasons>true</apparelIgnoreSeasons> -->
+	<!-- <combatEnhancingDrugsCount> -->
+	<!-- <min>1</min> -->
+	<!-- <max>1</max> -->
+	<!-- </combatEnhancingDrugsCount> -->
+	<!-- <initialWillRange>100~300</initialWillRange> -->
+	<!-- <initialResistanceRange>500~130</initialResistanceRange> -->
+	<!-- <apparelTags> -->
+	<!-- <li>stopspawningwithshocklances</li> -->
+	<!-- <li>PrestigeCombatGear</li> -->
+	<!-- <li>Makai_God_Replica</li> -->
+	<!-- </apparelTags> -->
+	<!-- <weaponStuffOverride>Makai_Ingot</weaponStuffOverride> -->
+	<!-- <techHediffsChance>1</techHediffsChance> -->
+	<!-- <techHediffsMoney>180000</techHediffsMoney> -->
+	<!-- <weaponMoney>999999</weaponMoney> -->
+	<!-- <apparelMoney>999999</apparelMoney> -->
+	<!-- <techHediffsTags> -->
+	<!-- <li>Advanced</li> -->
+	<!-- <li>ImplantEmpireCommon</li> -->
+	<!-- </techHediffsTags> -->
+	<!-- <techHediffsRequired> -->
+	<!-- <li>ArchotechEye</li> -->
+	<!-- <li>ArchotechEye</li> -->
+	<!-- <li>ArchotechArm</li> -->
+	<!-- <li>ArchotechArm</li> -->
+	<!-- <li>ArchotechLeg</li> -->
+	<!-- <li>ArchotechLeg</li> -->
+	<!-- </techHediffsRequired> -->
+	<!-- <biocodeWeaponChance>0.6</biocodeWeaponChance> -->
+	<!-- </PawnKindDef>	 -->
+
+	<!-- <PawnKindDef ParentName="MakaiPawnKindBase"> -->
+	<!-- <defName>MakaiAuxiliary</defName> -->
+	<!-- <label>deathmarch</label> -->
+	<!-- <weaponTags> -->
+	<!-- <li>SpacerGun</li> -->
+	<!-- <li>Makai_W_Spacer</li> -->
+	<!-- <li>Makai_God_Weapon</li> -->
+	<!-- </weaponTags> -->
+	<!-- <weaponMoney>9999999</weaponMoney> -->
+	<!-- <skills> -->
+	<!-- <li> -->
+	<!-- <skill>Melee</skill> -->
+	<!-- <range>20~20</range> -->
+	<!-- </li> -->
+	<!-- </skills> -->
+	<!-- <combatPower>1000</combatPower> -->
+	<!-- <xenotypeSet Inherit="False"> -->
+	<!-- <xenotypeChances> -->
+	<!-- <Makai_Demonian>0.5</Makai_Demonian> -->
+	<!-- <Makai_Igneus>0.5</Makai_Igneus> -->
+	<!-- </xenotypeChances> -->
+	<!-- </xenotypeSet> -->
+	<!-- </PawnKindDef> -->
+  
+	<!-- <PawnKindDef ParentName="MakaiPawnKindBase"> -->
+	<!-- <defName>MakaiAuxiliaryTwo</defName> -->
+	<!-- <label>infantry</label> -->
+	<!-- <weaponTags> -->
+	<!-- <li>Makai_W_Spacer</li> -->
+	<!-- <li>Makai_W_Ultra</li> -->
+	<!-- <li>UltratechGun</li> -->
+	<!-- </weaponTags> -->
+	<!-- <weaponMoney>9999999</weaponMoney> -->
+	<!-- <skills> -->
+	<!-- <li> -->
+	<!-- <skill>Shooting</skill> -->
+	<!-- <range>20~20</range> -->
+	<!-- </li> -->
+	<!-- </skills> -->
+	<!-- <combatPower>500</combatPower> -->
+	<!-- <xenotypeSet Inherit="False"> -->
+	<!-- <xenotypeChances> -->
+	<!-- <Makai_Adeltia>0.1</Makai_Adeltia> -->
+	<!-- <Makai_Elventia>0.5</Makai_Elventia> -->
+	<!-- <Makai_Frostlinx>0.4</Makai_Frostlinx> -->
+	<!-- <Makai_Fairin>0.1</Makai_Fairin> -->
+	<!-- <Makai_Vulpin>0.2</Makai_Vulpin> -->
+	<!-- </xenotypeChances> -->
+	<!-- </xenotypeSet> -->
+	<!-- </PawnKindDef> -->
+
+	<!-- <PawnKindDef ParentName="MakaiPawnKindBase"> -->
+	<!-- <defName>MakaiCommander</defName> -->
+	<!-- <label>commander</label> -->
+	<!-- <factionLeader>true</factionLeader> -->
+	<!-- <combatPower>2000</combatPower> -->
+	<!-- <weaponTags> -->
+	<!-- <li>SpacerGun</li> -->
+	<!-- <li>UltratechMelee</li> -->
+	<!-- <li>Makai_God_Weapon</li> -->
+	<!-- </weaponTags> -->
+	<!-- <weaponMoney>9999999</weaponMoney> -->
+	<!-- <techHediffsDisallowTags> -->
+	<!-- <li>PainCauser</li> -->
+	<!-- </techHediffsDisallowTags> -->
+	<!-- <disallowedTraits> -->
+	<!-- <li>Wimp</li> -->
+	<!-- <li>Nudist</li> -->
+	<!-- <li>BodyPurist</li> -->
+	<!-- <li>Brawler</li> -->
+	<!-- </disallowedTraits> -->
+	<!-- <skills> -->
+	<!-- <li> -->
+	<!-- <skill>Shooting</skill> -->
+	<!-- <range>20~20</range> -->
+	<!-- </li> -->
+	  
+	<!-- <li> -->
+	<!-- <skill>Melee</skill> -->
+	<!-- <range>20~20</range> -->
+	<!-- </li> -->
+	<!-- </skills> -->
+	<!-- <initialWillRange>400~600</initialWillRange> -->
+	<!-- <initialResistanceRange>450~540</initialResistanceRange> -->
+	<!-- <xenotypeSet Inherit="False"> -->
+	<!-- <xenotypeChances> -->
+	<!-- <Makai_Demonian>0.4</Makai_Demonian> -->
+	<!-- <Makai_Elventia>0.5</Makai_Elventia> -->
+	<!-- <Makai_Igneus>0.5</Makai_Igneus> -->
+	<!-- <Makai_Vulpin>0.2</Makai_Vulpin> -->
+	<!-- </xenotypeChances> -->
+	<!-- </xenotypeSet> -->
+	<!-- </PawnKindDef> -->
+
+</Defs>

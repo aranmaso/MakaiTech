@@ -1,0 +1,20 @@
+<Defs>
+
+	<TraitDef>
+		<defName>Makai_StarbeastFriend</defName>
+		<commonality>0</commonality>
+		<disableHostilityFromAnimalType>None</disableHostilityFromAnimalType>
+		<degreeDatas>
+			<li>
+				<label>Starbeast Friend</label>
+				<description>{PAWN_nameDef} has been around Makainian animals since young, and have much higher affinity with any animals {PAWN_pronoun} encounter, this make {PAWN_nameDef} give out aura that cause most animals to be friendly toward {PAWN_objective}.</description>
+				<statFactors>
+					<AnimalGatherSpeed>1.25</AnimalGatherSpeed>
+					<AnimalGatherYield>1.25</AnimalGatherYield>
+					<TameAnimalChance>1.25</TameAnimalChance>
+				</statFactors>				
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+</Defs>

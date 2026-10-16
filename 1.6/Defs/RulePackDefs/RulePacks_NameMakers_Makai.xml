@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RulePackDef>
+		<defName>NamerMakaiBase</defName>
+		<!-- <include> -->
+			<!-- <li>NamerMakaiFaction</li> -->
+			<!-- <li>Makai_PawnNamer</li> -->
+		<!-- </include> -->
+		<rulePack>
+			<rulesStrings>
+				<!-- <li>name->[Makaibase] [Makaicolor] [Makainoun]</li> -->
+				<!-- <li>name->[Makaibase] [Snsnoun]</li> -->
+				<!-- <li>name->[Makaibase] [MakaiNameOne]</li> -->				
+				<li>name->[MakaiFactionNameSuffix] of [MakainianRaceName] people</li>
+				<li>name->[MakaiFactionNameSuffix] of [MakainianRaceName]</li>
+				<li>name->[Makai_Settlement_Name_A][nameEnd]</li>
+				<li>name->[Makai_Settlement_Name_A]</li>
+				
+				<li>nameEnd->el</li>
+				<li>nameEnd->ria</li>
+				<li>nameEnd->tia</li>
+				<li>nameEnd->mi</li>
+				<li>nameEnd->ta</li>
+				<li>nameEnd->ka</li>
+				<li>nameEnd->ia</li>
+				<li>nameEnd->iel</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>Makai_Settlement_Name_A</keyword>
+					<path>NameBanks/MakaiNameOne</path>
+				</li>			
+				<li Class="Rule_File">
+					<keyword>MakainianRaceName</keyword>
+					<path>NameBanks/MakainianRaceName</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>MakaiFactionNameSuffix</keyword>
+					<path>NameBanks/MakaiFactionNameSuffix</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerMakaiFaction</defName>
+		<!-- <include> -->
+			<!-- <li>NamerMakaiBase</li> -->
+		<!-- </include> -->
+		<rulePack>
+			<rulesStrings>
+				<li>name->[Makai_Settlement_Name_Prefix] [Makai_Settlement_Name_A]</li>
+				<li>name->[Makai_Settlement_Name_Prefix] [Makai_Settlement_Name_A] of [Makai_Settlement_Name_Guardian]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>Makai_Settlement_Name_A</keyword>
+					<path>NameBanks/MakaiNameOne</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>Makai_Settlement_Name_Prefix</keyword>
+					<path>NameBanks/MakaiNamePrefix</path>
+				</li>
+				<li Class="Rule_File">
+					<keyword>Makai_Settlement_Name_Guardian</keyword>
+					<path>NameBanks/MakaiNameGuardian</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+  
+	<RulePackDef>
+		<defName>Makai_NameUtility</defName>
+		<rulePack>
+			<rulesFiles>
+				<li>MakaiNameFirst->Names/FirstNameMakai</li>
+				<li>MakaiNameLast->Names/LastNameMakai</li>
+				<li>MakaiTownNameFirst->NameBanks/MakaiNameOne</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>Makai_PawnNamer</defName>
+		<include>
+			<li>Makai_NameUtility</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[firstName] '[nickname]' [lastName]</li>
+				<li>r_name->[firstName] [lastName]</li>
+				
+				
+				<li>firstName(p=1)->[MakaiNameFirst][nameEnd]</li>
+				<li>firstName(p=1)->[MakaiNameFirst]</li>
+				<li>firstName(p=1)->[MakaiTownNameFirst]</li>
+				<li>nickname(p=1)->[MakaiNameFirst]</li>
+				<li>nickname(p=1)->[MakaiNameFirst][nameEnd]</li>
+				<li>nickname(p=1)->[nameEnd][nameEnd]</li>
+				<li>lastName(p=1)->[MakaiNameLast][nameEnd]</li>
+				<li>lastName(p=1)->[MakaiNameLast]</li>
+				
+				<!-- <li>nameEnd->rat</li> -->
+				<!-- <li>nameEnd->dos</li> -->
+				<li>nameEnd->el</li>
+				<li>nameEnd->ria</li>
+				<li>nameEnd->tia</li>
+				<li>nameEnd->mi</li>
+				<li>nameEnd->ta</li>
+				<li>nameEnd->ka</li>
+				<li>nameEnd->ia</li>
+				<li>nameEnd->iel</li>
+				<li>nameEnd->la</li>
+				<li>nameEnd->ma</li>
+				
+				<!-- vowel sound -->
+				<li>nameEnd->a</li>
+				<li>nameEnd->e</li>
+				<li>nameEnd->i</li>
+				<li>nameEnd->o</li>
+				<li>nameEnd->u</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>

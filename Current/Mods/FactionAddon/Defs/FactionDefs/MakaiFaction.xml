@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <FactionDef ParentName="PlayerFactionBase" Name="MakainianPlayerFactionBase">
+        <defName>Makai_Puppet_Player</defName>
+        <label>Makainian Player</label>
+        <description>A team of makai's settler.</description>
+        <isPlayer>true</isPlayer>
+        <basicMemberKind>Makai_Colonist</basicMemberKind>
+        <pawnSingular>makainian</pawnSingular>
+        <pawnsPlural>makainians</pawnsPlural>
+        <techLevel>Archotech</techLevel>
+        <factionNameMaker>NamerMakaiFaction</factionNameMaker>
+        <settlementNameMaker>NamerMakaiBase</settlementNameMaker>
+        <allowedCultures>
+            <li>MakainianCulture</li>
+        </allowedCultures>
+        <fixedIdeo>true</fixedIdeo>
+        <ideoName>Guidance of the Creator</ideoName>
+        <ideoDescription>Ever since Makainian has reached the Primordial Forge, they feel the urge to explore even further beyond their own domain.
+
+Makainian are split into several factions, each governed by a immortal guardian. These guardians are a manifestation of a concept that has existed ever since the dawn of Makai creation, directly guiding Makainian through the path of evolution.
+
+From the era of the first dawn to the pinnacle of the primordial forge era. with the arrival of Primordial Forge, Makainian goal is to spread the greatness to outside the domain, wielding the power of the first flame, to other un-ascended domain the power of primordial forge is an irresistible temptation, this has allow Makainian "tourist" to have free and unhindered access to other domain through permission of other domain creator. </ideoDescription>
+        <deityPresets>
+            <li>
+                <nameType>
+                    <name>The Creator</name>
+                    <type>Makai Creator</type>
+                </nameType>
+                <gender>Male</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Ouro</name>
+                    <type>Concept of Existence</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Thakalia</name>
+                    <type>Concept of Oblivion</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Anva</name>
+                    <type>Concept of Change</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Hakariel</name>
+                    <type>Concept of Chaos</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Amariel</name>
+                    <type>Concept of Order</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Vakriel</name>
+                    <type>Concept of Void</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Oko</name>
+                    <type>Concept of Creation/Reality</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Yukina</name>
+                    <type>Concept of Magic</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Lavina=Lavinia</name>
+                    <type>Concept of Time</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Etna</name>
+                    <type>Concept of Eternity</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Nephira</name>
+                    <type>Concept of Fate</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Aria</name>
+                    <type>Concept of Bond</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Alf</name>
+                    <type>Concept of Corruption</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Aethernia</name>
+                    <type>Concept of Life</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Sakriel</name>
+                    <type>Concept of Cycle</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Nihil</name>
+                    <type>Concept of Death</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Sariel</name>
+                    <type>Concept of Death</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Rosaria</name>
+                    <type>Concept of Decay</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Lilya</name>
+                    <type>Concept of Desire</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Azure</name>
+                    <type>Concept of Civilization</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Varia</name>
+                    <type>Concept of Knowledge</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+        </deityPresets>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+        </requiredMemes>
+        <allowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+        </allowedMemes>
+        <disallowedPrecepts>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxOne</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxTwo</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxThree</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxFour</li>
+
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_MaxTwo</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_MaxThree</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_MaxFour</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_Unlimited</li>
+        </disallowedPrecepts>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Makainian_Apostle</li>
+                </categories>
+                <commonality>0.01</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Makainian</li>
+                </categories>
+                <commonality>0.5</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>0.5</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+                <commonality>0.5</commonality>
+            </li>
+        </backstoryFilters>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <startingResearchTags>
+            <li>ClassicStart</li>
+            <li>Makai_ClassicStart</li>
+        </startingResearchTags>
+        <startingTechprintsResearchTags>
+            <li>ClassicStart</li>
+            <li>ClassicStartTechprints</li>
+        </startingTechprintsResearchTags>
+        <apparelStuffFilter>
+            <thingDefs>
+                <!-- <li>Cloth</li> -->
+                <li>Makai_Ingot</li>
+            </thingDefs>
+        </apparelStuffFilter>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances MayRequire="aranmaho.makaitech.xenotype">
+                <Makai_Adeltia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Adeltia>
+                <Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Demonian>
+                <Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Elventia>
+                <Makai_Frostlinx MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Frostlinx>
+                <Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Igneus>
+                <Makai_Fairin MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Fairin>
+                <Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Vulpin>
+                <Makai_Vesperia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Vesperia>
+            </xenotypeChances>
+        </xenotypeSet>
+        <modExtensions>
+            <li Class="VEF.Factions.FactionDefExtension">
+                <startingGoodwillByFactionDefs>
+                    <Makai_Puppet>100~100</Makai_Puppet>
+                </startingGoodwillByFactionDefs>
+                <strangerInBlackReplacement>MakaiAuxiliary</strangerInBlackReplacement>
+            </li>
+        </modExtensions>
+    </FactionDef>
+
+    <FactionDef ParentName="MakainianPlayerFactionBase">
+        <defName>Makainian_PlayerHostile</defName>
+        <label>Lone Makainian</label>
+        <description>A team of makai's settler. but you dislike everyone</description>
+    </FactionDef>
+
+    <FactionDef ParentName="MakaiFactionBase">
+        <defName>Makai_Puppet</defName>
+        <label>Makainian Pioneer</label>
+        <description>Makainian Pioneering Force, or MPF for short, is a colonization team originating from another domain called Makai, inhabited by a super advanced civilization that has reached the true pinnacle of technology and magic. They decided to send out a dozen of pioneers into many other dimensions. This faction is one of them, fully equipped with the most advanced piece of technology that could defies the law of causality. they are a moderate faction that prefer diplomatic solution rather than using force. seeking to engage in trading, and exchanging culture with the local.</description>
+        <pawnSingular>makainian</pawnSingular>
+        <pawnsPlural>makainians</pawnsPlural>
+        <leaderTitle>leader</leaderTitle>
+        <factionIconPath>Things/ExistIcon</factionIconPath>
+        <colorSpectrum>
+            <li>(95, 87, 165)</li>
+        </colorSpectrum>
+        <factionNameMaker>NamerMakaiFaction</factionNameMaker>
+        <settlementNameMaker>NamerMakaiBase</settlementNameMaker>
+        <fixedLeaderKinds>
+            <li>MakaiAvatar_Leader</li>
+        </fixedLeaderKinds>
+        <allowedCultures>
+            <li>MakainianCulture</li>
+        </allowedCultures>
+        <techLevel>Archotech</techLevel>
+        <!-- <permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+        <permanentEnemyToEveryoneExcept>
+            <li>Makai_Puppet_Player</li>
+            <li>Makai_Puppet_Hostile</li>
+            <li>PlayerColony</li>
+        </permanentEnemyToEveryoneExcept> -->
+        <fixedIdeo>true</fixedIdeo>
+        <ideoName>Guidance of the Creator</ideoName>
+        <ideoDescription>Ever since Makainian has reached the Primordial Forge, they feel the urge to explore even further beyond their own domain.
+
+Makai are split into several factions, each governed by a guardian. These guardians are a manifestation of a concept that has existed ever since the dawn of Makai creation, directly guiding Makainian through the path of evolution.
+
+From the era of the first dawn to the pinnacle of the primordial forge era. with the arrival of Primordial Forge, Makainian goal is to spread the greatness to outside the domain, wielding the power of the first flame, to other un-ascended domain the power of primordial forge is an irresistible temptation, this has allow Makainian "tourist" to have free and unhindered access to other domain through permission of other domain creator. </ideoDescription>
+        <deityPresets>
+            <li>
+                <nameType>
+                    <name>The Creator</name>
+                    <type>Makai Creator</type>
+                </nameType>
+                <gender>Male</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Ouro</name>
+                    <type>Concept of Existence</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Thakalia</name>
+                    <type>Concept of Oblivion</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Anva</name>
+                    <type>Concept of Change</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Hakariel</name>
+                    <type>Concept of Chaos</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Amariel</name>
+                    <type>Concept of Order</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Vakriel</name>
+                    <type>Concept of Void</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Oko</name>
+                    <type>Concept of Creation/Reality</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Yukina</name>
+                    <type>Concept of Magic</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Lavina=Lavinia</name>
+                    <type>Concept of Time</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Etna</name>
+                    <type>Concept of Eternity</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Nephira</name>
+                    <type>Concept of Fate</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Aria</name>
+                    <type>Concept of Bond</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Alf</name>
+                    <type>Concept of Corruption</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Aethernia</name>
+                    <type>Concept of Life</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Sakriel</name>
+                    <type>Concept of Cycle</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Nihil</name>
+                    <type>Concept of Death</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Sariel</name>
+                    <type>Concept of Death</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Rosaria</name>
+                    <type>Concept of Decay</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Lilya</name>
+                    <type>Concept of Desire</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Azure</name>
+                    <type>Concept of Civilization</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+            <li>
+                <nameType>
+                    <name>Varia</name>
+                    <type>Concept of Knowledge</type>
+                </nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+        </deityPresets>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+        </requiredMemes>
+        <allowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+        </allowedMemes>
+        <disallowedPrecepts>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxOne</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxTwo</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxThree</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Male_MaxFour</li>
+
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_MaxTwo</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_MaxThree</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_MaxFour</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SpouseCount_Female_Unlimited</li>
+        </disallowedPrecepts>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Makainian</li>
+                </categories>
+                <commonality>0.3</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>0.3</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+                <commonality>0.3</commonality>
+            </li>
+        </backstoryFilters>
+        <caravanTraderKinds>
+            <li>Makai_Trade_General_Caravan</li>
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_CombatSupplier</li>
+            <li>Caravan_Outlander_Exotic</li>
+        </caravanTraderKinds>
+        <baseTraderKinds>
+            <li>Makai_Trade_General_Caravan</li>
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_CombatSupplier</li>
+            <li>Caravan_Outlander_Exotic</li>
+        </baseTraderKinds>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(10000, 100000)</li>
+                <li>(20000, 200000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>25</commonality>
+                <options>
+                    <MakaiAuxiliary>20</MakaiAuxiliary>
+                    <MakaiAuxiliaryTwo>20</MakaiAuxiliaryTwo>
+                    <MakaiAuxiliary_GuardExosuit MayRequire="aoba.deadmanswitch.mobiledragoon">10</MakaiAuxiliary_GuardExosuit>
+                </options>
+            </li>
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>25</commonality>
+                <options>
+                    <MakaiAuxiliary>5</MakaiAuxiliary>
+                    <MakaiAvatar>2</MakaiAvatar>
+                    <MakaiCommander>2</MakaiCommander>
+                    <MakaiAuxiliary_GuardExosuit MayRequire="aoba.deadmanswitch.mobiledragoon">0.25</MakaiAuxiliary_GuardExosuit>
+                    <!-- <MakaiAuxiliary_SuperGuardExosuit MayRequire="pesky.ae">0.1</MakaiAuxiliary_SuperGuardExosuit> -->
+                </options>
+            </li>
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>20</commonality>
+                <options>
+                    <MakaiAvatar_Leader>1</MakaiAvatar_Leader>
+                    <!-- <MakaiAuxiliary_SuperGuardExosuit MayRequire="pesky.ae">0.25</MakaiAuxiliary_SuperGuardExosuit> -->
+                </options>
+            </li>
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>25</commonality>
+                <options>
+                    <MakaiAvatar_Leader>1</MakaiAvatar_Leader>
+                    <MakaiAuxiliary_GuardExosuit MayRequire="aoba.deadmanswitch.mobiledragoon">0.25</MakaiAuxiliary_GuardExosuit>
+                    <!-- <MakaiAuxiliary_SuperGuardExosuit MayRequire="pesky.ae">0.1</MakaiAuxiliary_SuperGuardExosuit> -->
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <MakaiCommanderTrader>1</MakaiCommanderTrader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <MakaiAuxiliaryThree>6</MakaiAuxiliaryThree>
+                    <MakaiAuxiliary>6</MakaiAuxiliary>
+                    <MakaiAuxiliaryTwo>6</MakaiAuxiliaryTwo>
+                    <MakaiAvatar>5</MakaiAvatar>
+                    <MakaiAuxiliary_GuardExosuit MayRequire="aoba.deadmanswitch.mobiledragoon">0.25</MakaiAuxiliary_GuardExosuit>
+                    <!-- <MakaiAuxiliary_SuperGuardExosuit MayRequire="pesky.ae">1</MakaiAuxiliary_SuperGuardExosuit> -->
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <MakaiAvatar_Leader>0.5</MakaiAvatar_Leader>
+                    <MakaiAvatar>1.0</MakaiAvatar>
+                    <MakaiAuxiliary>0.3</MakaiAuxiliary>
+                    <MakaiCommander>0.8</MakaiCommander>
+                    <!-- <MakaiAuxiliary_SuperGuardExosuit MayRequire="pesky.ae">0.25</MakaiAuxiliary_SuperGuardExosuit> -->
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Miner>3</Miner>
+                    <MakaiAuxiliaryTwo>1.5</MakaiAuxiliaryTwo>
+                    <MakaiAuxiliary>2</MakaiAuxiliary>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Hunters</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <MakaiAuxiliaryTwo>1.5</MakaiAuxiliaryTwo>
+                    <MakaiAuxiliary>2</MakaiAuxiliary>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Loggers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Logger>3</Logger>
+                    <MakaiAuxiliaryTwo>1.5</MakaiAuxiliaryTwo>
+                    <MakaiAuxiliary>2</MakaiAuxiliary>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Farmers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Farmer>3</Farmer>
+                    <MakaiAuxiliaryTwo>1.5</MakaiAuxiliaryTwo>
+                    <MakaiAuxiliary>2</MakaiAuxiliary>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <Makai_Adeltia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Adeltia>
+                <Makai_Demonian MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Demonian>
+                <Makai_Elventia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Elventia>
+                <Makai_Frostlinx MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Frostlinx>
+                <Makai_Igneus MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Igneus>
+                <Makai_Fairin MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Fairin>
+                <Makai_Vulpin MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Vulpin>
+                <Makai_Vesperia MayRequire="aranmaho.makaitech.xenotype">0.15</Makai_Vesperia>
+            </xenotypeChances>
+        </xenotypeSet>
+        <modExtensions>
+            <li Class="VEF.Factions.FactionDefExtension">
+                <startingGoodwillByFactionDefs>
+                    <Makai_Puppet_Player>100~100</Makai_Puppet_Player>
+                    <Makainian_PlayerHostile>100~100</Makainian_PlayerHostile>
+                    <Makai_Puppet_Hostile>100~100</Makai_Puppet_Hostile>
+                </startingGoodwillByFactionDefs>
+                <!-- <disallowedBiomes> -->
+                <!-- <li>BorealForest</li> -->
+                <!-- <li>ColdBog</li> -->
+                <!-- <li>Tundra</li> -->
+                <!-- <li>IceSheet</li> -->
+                <!-- <li>SeaIce</li> -->
+                <!-- </disallowedBiomes> -->
+            </li>
+        </modExtensions>
+    </FactionDef>
+</Defs>

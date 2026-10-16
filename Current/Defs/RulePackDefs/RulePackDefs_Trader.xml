@@ -1,0 +1,39 @@
+<Defs>
+
+    <RulePackDef>
+        <defName>Makai_TradeShipNamer</defName>
+        <include>
+            <li>Makai_NameUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>traderShipPawnName->[firstName]</li>
+
+                <li>firstName(p=1)->[MakaiNameFirst][nameEnd]</li>
+                <li>firstName(p=1)->[MakaiNameFirst]</li>
+                <li>firstName(p=1)->[MakaiTownNameFirst]</li>
+                <li>firstName(p=1)->[MakaiNameLast][nameEnd]</li>
+				<li>firstName(p=1)->[MakaiNameLast]</li>
+
+                <li>nameEnd->el</li>
+                <li>nameEnd->ria</li>
+                <li>nameEnd->tia</li>
+                <li>nameEnd->mi</li>
+                <li>nameEnd->ta</li>
+                <li>nameEnd->ka</li>
+                <li>nameEnd->ia</li>
+                <li>nameEnd->iel</li>
+                <li>nameEnd->la</li>
+                <li>nameEnd->ma</li>
+
+                <!-- vowel sound -->
+                <li>nameEnd->a</li>
+                <li>nameEnd->e</li>
+                <li>nameEnd->i</li>
+                <li>nameEnd->o</li>
+                <li>nameEnd->u</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

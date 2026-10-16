@@ -3,7 +3,7 @@
 	<MakaiTech.ResearchExemptionDef>
 		<defName>EssenceOfKnowledge_Exemption</defName>
 		<researchProjectDefs>
-			<li>Makai_Essence1</li>
+			<li>Makai_EssenceOfKnowledge</li>
 			<li>Makai_Primordial_Forge</li>
 			<li MayRequire="explodoboy.snsambitioncosmic">SNS_Research_infinite</li>
 		</researchProjectDefs>
@@ -12,7 +12,7 @@
 	<MakaiTech.ResearchExemptionDef>
 		<defName>PrimordialForge_Exemption</defName>
 		<researchProjectDefs>
-			<li>Makai_Essence1</li>
+			<li>Makai_EssenceOfKnowledge</li>
 			<li>Makai_Primordial_Forge</li>
 			<li MayRequire="explodoboy.snsambitioncosmic">SNS_Research_infinite</li>
 		</researchProjectDefs>

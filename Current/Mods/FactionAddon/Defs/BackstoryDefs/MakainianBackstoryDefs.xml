@@ -1,0 +1,401 @@
+<Defs>
+
+	<BackstoryDef Name="Makai_BackstoryBase" Abstract="True">	
+		<title>placeholder</title>
+		<titleShort>placeholder</titleShort>
+		<description>. . .</description>
+		<spawnCategories>
+			<li>Makainian</li>
+		</spawnCategories>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<skillGains />
+		<workDisables />
+		<disallowedTraits />
+		<forcedTraits />
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_BackstoryBase" Name="Makai_ChildhoodBase" Abstract="True">
+		<slot>Childhood</slot>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_BackstoryBase" Name="Makai_AdulthoodBase" Abstract="True">
+		<slot>Adulthood</slot>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_ChildhoodBase" Abstract="True">
+		<title>adultPlaceholder</title>
+		<titleShort>adultPlaceholder</titleShort>
+		<defName>Makai_adultPlaceholder</defName>
+		<description>. . .</description>
+		<skillGains />
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_AdulthoodBase" Abstract="True">
+		<title>adultPlaceholder</title>
+		<titleShort>adultPlaceholder</titleShort>
+		<defName>Makai_adultPlaceholder</defName>
+		<description>. . .</description>
+		<skillGains />
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_ChildhoodBase">
+		<title>Pioneer Child</title>
+		<titleShort>Pioneer Child</titleShort>
+		<defName>Makai_PioneerChild</defName>
+		<description>[PAWN_nameDef] was born on a Makainian pioneer fleet, [PAWN_pronoun] is well educated by scientist aboard the colonial ship, thus giving [PAWN_objective] better understanding of makainian tech.</description>
+		<skillGains>
+			<Intellectual>4</Intellectual>
+			<Social>4</Social>
+		</skillGains>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_ChildhoodBase">
+		<title>Celestial Tailor Student</title>
+		<titleShort>Tailor Student</titleShort>
+		<defName>Makai_CelestialTailorStudent</defName>
+		<description>[PAWN_nameDef] has interest in tailoring celestial fabric since young, and has been experiment with various method of celestial fabric weaving.</description>
+		<skillGains>
+			<Crafting>4</Crafting>
+		</skillGains>
+		<possessions>
+			<Makai_Fabric_C>10~40</Makai_Fabric_C>
+		</possessions>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_ChildhoodBase">
+		<title>Starbeast friend</title>
+		<titleShort>Starbeast friend</titleShort>
+		<defName>Makai_StarbeastFriend</defName>
+		<description>[PAWN_nameDef] has been around Makainian animals since young, and have much higher affinity with any animals [PAWN_pronoun] encounter, this make [PAWN_nameDef] give out aura that cause most animals to be friendly toward [PAWN_objective].</description>
+		<skillGains>
+			<Animals>10</Animals>
+		</skillGains>
+		<forcedTraits>
+			<Makai_StarbeastFriend />
+		</forcedTraits>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_ChildhoodBase">
+		<title>Mage Student</title>
+		<titleShort>Mage Student</titleShort>
+		<defName>Makai_MageStudent</defName>
+		<description>[PAWN_nameDef] attend Makainian mage school, having study in the concept of magic, [PAWN_pronoun] is better at adapting to psycasting and magical energy.</description>
+		<modExtensions>
+			<li Class="MakaiTech.BackstoryExtension_Makainian">
+				<initialHediff>
+					<li>
+						<hediffDef>Makai_MageStudent</hediffDef>
+					</li>
+				</initialHediff>
+			</li>
+		</modExtensions>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Elite Pioneer</title>
+		<titleShort>Elite Pioneer</titleShort>
+		<defName>Makai_Pioneer</defName>
+		<description>[PAWN_nameDef] participate in Extra-dimensional pioneering program. braving the unknown dimension as Makai's coloniztion pioneer. [PAWN_pronoun] received a high level training to prepare for harsh surviving condition, giving [PAWN_objective] a better odd at thriving.</description>
+		<skillGains>
+			<Melee>6</Melee>
+			<Shooting>6</Shooting>
+			<Plants>6</Plants>
+			<Animals>6</Animals>
+		</skillGains>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Celestial Tailor</title>
+		<titleShort>Celestial Tailor</titleShort>
+		<defName>Makai_CelestialTailor</defName>
+		<description>[PAWN_nameDef] work as celestial fabric tailor back in [PAWN_objective] home town, [PAWN_pronoun] know [PAWN_objective] around how to weave fabric efficiently.</description>
+		<skillGains>
+			<Crafting>8</Crafting>
+			<Social>4</Social>
+		</skillGains>
+		<possessions>
+			<Makai_Fabric_C>10~40</Makai_Fabric_C>
+		</possessions>
+	</BackstoryDef>
+	
+	<BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Stardust Mercenary</title>
+		<titleShort>Star merc</titleShort>
+		<defName>Makai_StarMerc</defName>
+		<description>having feel bored by peaceful life back in Makai, [PAWN_nameDef] seek thrill and excitement in real deadly combat. the feeling of blade gracing [PAWN_objective] skin, the sound of bullet fly pass give [PAWN_nameDef] the excitement [PAWN_pronoun] long for. so [PAWN_nameDef] apply as a freelance mercenary and take on various dangerous jobs.</description>
+		<skillGains>
+			<Melee>6</Melee>
+			<Shooting>6</Shooting>
+		</skillGains>
+	</BackstoryDef>	
+	
+	<BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Hired Security</title>
+		<titleShort>Security</titleShort>
+		<defName>Makai_MallSecurity</defName>
+		<description>[PAWN_nameDef] has worked in a local mall as security guard, this has give [PAWN_nameDef] a basic understanding of melee combat and persuasion skill.</description>
+		<skillGains>
+			<Melee>2</Melee>
+			<Social>3</Social>
+		</skillGains>
+	</BackstoryDef>	
+	
+	<BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Flora Specialist</title>
+		<titleShort>Florist</titleShort>
+		<defName>Makai_FloraSpe</defName>
+		<description>[PAWN_nameDef] travel many world, collecting local flora life. [PAWN_nameDef] love researching plant life, thus giving [PAWN_pronoun] a better understanding of plant life.</description>
+		<skillGains>
+			<Plants>4</Plants>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+	</BackstoryDef>	
+	
+	<BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Dimensional Tourist</title>
+		<titleShort>Dimension Tourist</titleShort>
+		<defName>Makai_DimensionTourist</defName>
+		<description>[PAWN_nameDef] travel many different layer of dimension, witnessing all form of wonder of the universe. [PAWN_nameDef] love peeking into another plain of existence where no eye of lesser being are meant to see, [PAWN_pronoun] has a better understanding of fabric of reality as a whole.</description>
+		<skillGains>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<possessions>
+			<PrimordialFrag>100~400</PrimordialFrag>
+		</possessions>
+	</BackstoryDef>	
+
+    <BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Planar-bridge operator</title>
+		<titleShort>planar-operator</titleShort>
+		<defName>Makai_PlanarOps</defName>
+		<description>[PAWN_nameDef] work as a plane-shift bridge operator connecting to various dimensions and plane of existence, allowing Makainian to travel to many place.</description>
+		<skillGains>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+	</BackstoryDef>	
+
+    <BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Space-Time Shuttle Pilot</title>
+		<titleShort>Time-Shuttle Pilot</titleShort>
+		<defName>Makai_TimeShuttlePilot</defName>
+		<description>[PAWN_nameDef] work as a space-time shuttle pilot, traveling from one corner of the universe to another in the daily basis, witnessing the fold of space-time passing by.</description>
+		<skillGains>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+	</BackstoryDef>	
+
+    <BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Astral Walker</title>
+		<titleShort>Astral Walker</titleShort>
+		<defName>Makai_AstralWalker</defName>
+		<description>[PAWN_nameDef] spent time traveling the universe through the 7th dimensions from one corner of the universe to another in the daily basis, witnessing the fold of space-time and shape that no mortal mind could comprehend.</description>
+		<skillGains>
+			<Intellectual>6</Intellectual>
+		</skillGains>
+	</BackstoryDef>	
+
+    <BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Civilization Ambassador</title>
+		<titleShort>Civil Ambassador</titleShort>
+		<defName>Makai_CivilizationAmbassador</defName>
+		<description>[PAWN_nameDef] traveling from one civilization to another, spreading the influence of Makainian. at time [PAWN_pronoun] may even went as far as creating a puppet goverment to control the entire civilization</description>
+		<skillGains>
+			<Intellectual>4</Intellectual>
+			<Social>13</Social>
+		</skillGains>
+	</BackstoryDef>	
+
+    <BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Mischievous Visitor</title>
+		<titleShort>Mischievous Visitor</titleShort>
+		<defName>Makai_MischievousVisitor</defName>
+		<description>[PAWN_nameDef] often create random gadget from spare part [PAWN_pronoun] gather from higher dimension. [PAWN_pronoun] enjoy visiting lower-tier dimension civilization, posing as divine messenger and granting divine artifact of untold power to lower lifeform and then watch as the chaos unfold as they fight among themselves for these "Artifact"
+
+            at time [PAWN_pronoun] can either be a savior, or the herald of the end that brought an entire civilization to ruin.</description>
+		<skillGains>
+			<Social>12</Social>
+			<Intellectual>12</Intellectual>
+		</skillGains>
+        <possessions>
+			<PrimordialFrag>0~5</PrimordialFrag>
+			<Makai_Dea_Path_SoulExtracter>0~1</Makai_Dea_Path_SoulExtracter>
+			<Makai_Ingot>0~25</Makai_Ingot>
+			<Makai_Fabric_C>0~25</Makai_Fabric_C>
+			<Makai_Stardust>0~25</Makai_Stardust>
+			<Makai_Dis-Path_E>0~1</Makai_Dis-Path_E>
+		</possessions>
+	</BackstoryDef>	
+
+    <BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Planet Driver</title>
+		<titleShort>Planet Driver</titleShort>
+		<defName>Makai_PlanetDriver</defName>
+		<description>[PAWN_nameDef] has made it [PAWN_objective] hobby to modify an entire planet and turn it into interstellar and interplanar vessel, occasionally driving it into a blackhole sending it straight into the 6th dimension, despite the complain [PAWN_pronoun] get from [PAWN_objective] colleague about not feeding a stray blackhole, [PAWN_pronoun] still keep doing it insisting that it is [PAWN_objective] pet blackhole.</description>
+		<skillGains>
+			<Intellectual>6</Intellectual>
+			<Crafting>20</Crafting>
+			<Construction>20</Construction>
+		</skillGains>
+        <possessions>
+		</possessions>
+	</BackstoryDef>	
+
+    <BackstoryDef ParentName="Makai_AdulthoodBase">
+		<title>Star Herder</title>
+		<titleShort>Star Herder</titleShort>
+		<defName>Makai_StarHerder</defName>
+		<description>[PAWN_nameDef] find group of star constellation fascinating to look at, so [PAWN_pronoun] often flying around dragging newborn star together forming a new constellation of [PAWN_objective] design. this may or may not result in unintended stella collision cause by [PAWN_objective] negligence and flying straight through another star cluster.</description>
+		<skillGains>
+			<Intellectual>3</Intellectual>
+		</skillGains>
+        <possessions>
+		</possessions>
+	</BackstoryDef>
+
+    <!-- Guardian Apostle -->
+    <BackstoryDef ParentName="Makai_AdulthoodBase" Name="Makai_ApostleBase" Abstract="True">
+		<title>Apostle of</title>
+		<titleShort>Apostle of</titleShort>
+		<description>[PAWN_nameDef] .</description>
+        <spawnCategories Inherit="False">
+			<li>Makainian_Apostle</li>
+		</spawnCategories>
+		<skillGains>
+		</skillGains>
+        <possessions>
+		</possessions>
+	</BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Corruption</title>
+		<titleShort>Corruption Apostle</titleShort>
+		<defName>Makai_ApostleOfCorruption</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Corruption, spread the word of corruption far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_C-Path_E>0~1</Makai_C-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Bond</title>
+		<titleShort>Bond Apostle</titleShort>
+		<defName>Makai_ApostleOfBond</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Bond, spread the word of bond far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_B-Path_E>0~1</Makai_B-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Fate</title>
+		<titleShort>Fate Apostle</titleShort>
+		<defName>Makai_ApostleOfFate</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Fate, spread the word of fate far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_F-Path_E>0~1</Makai_F-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Knowledge</title>
+		<titleShort>Knowledge Apostle</titleShort>
+		<defName>Makai_ApostleOfKnowledge</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Knowledge, spread the word of knowledge far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_K-Path_E>0~1</Makai_K-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Frost</title>
+		<titleShort>Frost Apostle</titleShort>
+		<defName>Makai_ApostleOfFrost</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Frost, spread the word of frost far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_Fr-Path_E>0~1</Makai_Fr-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Flame</title>
+		<titleShort>Flame Apostle</titleShort>
+		<defName>Makai_ApostleOfFlame</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Flame, spread the word of flame far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_Fla-Path_E>0~1</Makai_Fla-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Destruction</title>
+		<titleShort>Destruction Apostle</titleShort>
+		<defName>Makai_ApostleOfDestruction</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Destruction, spread the word of destruction far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_D-Path_E>0~1</Makai_D-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Order</title>
+		<titleShort>Order Apostle</titleShort>
+		<defName>Makai_ApostleOfOrder</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Order, spread the word of order far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_Or-Path_E>0~1</Makai_Or-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Death</title>
+		<titleShort>Death Apostle</titleShort>
+		<defName>Makai_ApostleOfDeath</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Death, spread the word of death far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_Dea-Path_E>0~1</Makai_Dea-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Distortion</title>
+		<titleShort>Distortion Apostle</titleShort>
+		<defName>Makai_ApostleOfDistortion</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Distortion, spread the word of distortion far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+			<Makai_Dis-Path_E>0~1</Makai_Dis-Path_E>
+		</possessions>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="Makai_ApostleBase">
+        <title>Apostle of Existence</title>
+		<titleShort>Existence Apostle</titleShort>
+		<defName>Makai_ApostleOfExistence</defName>
+		<description>[PAWN_nameDef] spent [PAWN_objective] adulthood as apostle of Guardian of Existence, spread the word of existence far and wide to whatever world [Pawn_nameDef] visited.</description>
+        <skillGains>
+		</skillGains>
+        <possessions>
+		</possessions>
+    </BackstoryDef>
+
+</Defs>

@@ -53,7 +53,7 @@
 		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<researchPrerequisites>
-			<li>Makai_Essence3</li>
+			<li>Makai_EssenceOfFrostAndFlame</li>
 		</researchPrerequisites>
 		<inspectorTabs>
 			<li>PipeSystem.ITab_Processor</li>
@@ -160,7 +160,7 @@
 		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<researchPrerequisites>
-			<li>Makai_Essence3</li>
+			<li>Makai_EssenceOfFrostAndFlame</li>
 		</researchPrerequisites>
 		<inspectorTabs>
 			<li>PipeSystem.ITab_Processor</li>

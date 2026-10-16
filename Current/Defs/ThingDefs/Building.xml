@@ -2,8 +2,8 @@
 <Defs>
 	<DesignationCategoryDef>
 		<defName>Makai_Tech</defName>
-		<label>Makai</label>
-		<description>All Makai buildings show up here once researched.</description>
+		<label>MakaiTech</label>
+		<description>All Makaitech buildings show up here once researched.</description>
 		<order>451</order>
 		<specialDesignatorClasses>
 			<li>Designator_Cancel</li>
@@ -13,8 +13,8 @@
 
 	<ThingDef ParentName="BenchBase">
 		<defName>Makai_Bench</defName>
-		<label>Makai Fabrication Altar</label>
-		<description>An altar used to make various Makai related items. Doesn't require power to use.</description>
+		<label>Makainian Altar</label>
+		<description>An dimensional gate connecting to Makainian exchange center in the 5th dimensions of the local timespace region. allowing for exchange of goods and technology.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<drawerType>RealtimeOnly</drawerType>
 		<graphicData>
@@ -145,15 +145,16 @@
 		<surfaceType>Item</surfaceType>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
+            <li>MakaiTech.ITab_ForgeInterface</li>
 		</inspectorTabs>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 		<comps>
-			<li Class="CompProperties_MoteEmitter" MayRequire="ludeon.rimworld.ideology">
-				<mote>Mote_PsychicConditionCauserEffect</mote>
+			<li Class="CompProperties_MoteEmitter">
+				<mote>Makai_Mote_ExpandingDistortEffect</mote>
 				<emissionInterval>2000</emissionInterval>
-				<soundOnEmission>Archonexus_Throb</soundOnEmission>
+				<soundOnEmission MayRequire="ludeon.rimworld.ideology">Archonexus_Throb</soundOnEmission>
 			</li>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
@@ -235,7 +236,7 @@
 		</replaceTags>
 		<designationCategory>Makai_Tech</designationCategory>
 		<researchPrerequisites>
-			<li>Makai_Structure_Tier1</li>
+			<li>Makai_CelestialStructure</li>
 		</researchPrerequisites>
 		<uiIconPath>Things/Building/makai_wall_icon</uiIconPath>
 		<statBases>
@@ -314,7 +315,7 @@
 		</replaceTags>
 		<designationCategory>Makai_Tech</designationCategory>
 		<researchPrerequisites>
-			<li>Makai_Structure_Tier1</li>
+			<li>Makai_CelestialStructure</li>
 		</researchPrerequisites>
 		<uiIconPath>Things/Building/makai_wall_icon</uiIconPath>
 		<statBases>
@@ -382,7 +383,7 @@
 		<uiIconScale>0.85</uiIconScale>
 		<uiIconPath>Things/Building/powernode_researchlink</uiIconPath>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier1</li>
+			<li>Makai_DimensionalRelay</li>
 		</researchPrerequisites>
 		<size>(1,1)</size>
 		<rotatable>False</rotatable>
@@ -466,8 +467,8 @@
 		<uiIconPath>Things/Building/PDLaser</uiIconPath>
 		<uiIconScale>0.85</uiIconScale>
 		<researchPrerequisites>
-			<li>Makai_Weapon3</li>
-			<li>Makai_EnergyRelay_Tier4</li>
+			<li>Makai_StardustDefensePlacement</li>
+			<li>Makai_StardustCondenser</li>
 		</researchPrerequisites>
 		<size>(1,1)</size>
 		<tickerType>Normal</tickerType>
@@ -574,7 +575,7 @@
 		<uiIconPath>Things/Building/destruction_singularity</uiIconPath>
 		<uiIconScale>0.85</uiIconScale>
 		<researchPrerequisites>
-			<li>Makai_Essence5</li>
+			<li>Makai_EssenceOfDestructionAndDeath</li>
 		</researchPrerequisites>
 		<size>(1,1)</size>
 		<tickerType>Normal</tickerType>
@@ -708,7 +709,7 @@
 		<uiIconPath>Things/Building/death_nexus</uiIconPath>
 		<uiIconScale>0.85</uiIconScale>
 		<researchPrerequisites>
-			<li>Makai_Essence5</li>
+			<li>Makai_EssenceOfDestructionAndDeath</li>
 		</researchPrerequisites>
 		<size>(1,1)</size>
         <stealable>false</stealable>
@@ -768,7 +769,7 @@
 		<uiIconScale>0.85</uiIconScale>
 		<uiIconPath>Things/Building/stardust_fab</uiIconPath>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier4</li>
+			<li>Makai_StardustCondenser</li>
 		</researchPrerequisites>
 		<size>(1,1)</size>
 		<rotatable>False</rotatable>
@@ -936,5 +937,7 @@
 		</comps>
 		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
 	</ThingDef>
+
+    
 
 </Defs>

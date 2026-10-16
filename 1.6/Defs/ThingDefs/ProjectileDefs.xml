@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="PawnFlyerBase">
+        <defName>Makai_Pull</defName>
+        <thingClass>MakaiTech.PawnFlyer_CorruptionPulled</thingClass>
+        <pawnFlyer>
+            <flightDurationMin>0.2</flightDurationMin>
+            <flightSpeed>13</flightSpeed>
+        </pawnFlyer>
+    </ThingDef>
+	
+	<AbilityGroupDef>
+		<defName>Makai_Weapon_Ability</defName>
+		<cooldownTicks>600</cooldownTicks>
+	</AbilityGroupDef>
+	
+	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>MakaiPsy_CP_ClawGrab</defName>
+		<label>claw grab</label>
+		<thingClass>Makai.Makai_ExpandableProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Claw_Go</texPath>
+			<texPathFadeOut>Things/Projectile/Claw_Back</texPathFadeOut>
+			<shaderType>Cutout</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Alf_Corruption</damageDef>
+			<speed>120</speed>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
+		<lifeTimeDuration>18</lifeTimeDuration>
+		<widthScaleFactor>0.4</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, 0)</startingPositionOffset>
+		<totalSizeScale>1</totalSizeScale>
+		<tickFrameRate>1</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>false</dealsDamageOnce>
+		<minDistanceToAffect>1</minDistanceToAffect>
+		<stopWhenHit>false</stopWhenHit>
+	</VEF.Weapons.ExpandableProjectileDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Makai_SingularityProj</defName>
+		<label>energy shot</label>
+		<graphicData>
+			<texPath>Things/Mote/mote_invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>1000</speed>
+			<damageDef>Cut</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<armorPenetrationBase>0</armorPenetrationBase>
+			<stoppingPower>0</stoppingPower>
+		</projectile>
+		<comps>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Makai_SingularityProjGreenOrb</defName>
+        <thingClass>MakaiTech.Projectile_BurstAfterDelay</thingClass>
+		<label>balls</label>
+		<graphicData>
+			<texPath>Things/Mote/Mote_MakaiGreenEnergy</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<projectile>
+			<speed>25</speed>
+			<damageDef>Makai_Celestial_Cut</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>1.75</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+		</projectile>
+        <modExtensions>
+            <li Class="MakaiTech.ModExtension_DelayBurstProjectile">
+                <projectileDef>Makai_GreenLaser</projectileDef>
+                <count>1~3</count>
+                <fractionDistantCovered>0.75</fractionDistantCovered>
+            </li>
+        </modExtensions>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>Makai_StardustShell_StreamSlow</effecterDef>
+			</li>
+			<!-- <li Class="VFECore.CompProperties_HomingProjectile"> -->
+				<!-- <homingDistanceFractionPassed>0.2</homingDistanceFractionPassed> -->
+				<!-- <homingCorrectionTickRate>5</homingCorrectionTickRate> -->
+				<!-- <initialDispersionFromTarget>180</initialDispersionFromTarget> -->
+			<!-- </li> -->
+			<!-- <li Class="CompProperties_ProjectileInterceptor"> -->
+				<!-- <radius>1.5</radius> -->
+				<!-- <interceptGroundProjectiles>true</interceptGroundProjectiles> -->
+				<!-- <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles> -->
+				<!-- <interceptNonHostileProjectiles>false</interceptNonHostileProjectiles> -->
+				<!-- <color>(0, 255, 0)</color> -->
+				<!-- <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect> -->
+				<!-- <activeSound>BulletShield_Ambience</activeSound> -->
+				<!-- <hitPoints>200</hitPoints> -->
+				<!-- <drawWithNoSelection>True</drawWithNoSelection> -->
+		  <!-- </li> -->
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="Makai_BulletLaser" Class="VEF.Weapons.LaserBeamDef">
+		<defName>Makai_GreenLaser</defName>
+		<label>singularity shot</label>
+		<description>focused beam of singularity.</description>
+		<textures>
+			<li>Things/Projectile/Shot_Bow_green</li>
+		</textures>
+		<!-- <seam>1</seam> -->
+        <shieldDamageMultiplier>1</shieldDamageMultiplier>
+		<causefireChance>0</causefireChance>
+		<beamWidth>1.5</beamWidth>
+		<lifetime>60</lifetime>
+		<!-- <explosionEffect>Ring_ExpandY</explosionEffect> -->
+		<projectile>
+			<damageDef>Makai_Celestial_Cut</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>1.75</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+		</projectile>
+	</ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+		<defName>Makai_GreenLaserChained</defName>
+		<label>chain beam</label>
+		<thingClass>VEF.Weapons.TeslaProjectile</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<texPath>Things/Projectile/LightningChain</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Existence_Null_Lightning</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>140</speed>
+		</projectile>
+		<modExtensions>
+			<li Class="VEF.Weapons.TeslaChainingProps">
+				<maxBounceCount>3</maxBounceCount>
+				<damageDef>Existence_Null_Lightning</damageDef>
+				<explosionDamageDef>EMP</explosionDamageDef>
+				<impactRadius>2</impactRadius>
+				<targetFriendly>false</targetFriendly>
+				<addFire>false</addFire>
+				<bounceRange>8</bounceRange>
+				<maxLifetime>25</maxLifetime>
+				<impactSound>Explosion_EMP</impactSound>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+</Defs>

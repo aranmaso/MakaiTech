@@ -22,24 +22,29 @@
   <v1.5>
 	<li>Common</li>
 	<li>1.5</li>
-	<li IfModActive="ceteam.combatextended">ContentCE</li>
-	<li IfModActive="ducks.insaneskills">DuckInfinity</li>
-    <li IfModActive="squirtingelephant.planetarydrill,mlie.omnicoredrill,ogliss.thewhitecrayon.quarry">Warrant</li>
-	<li IfModActive="V1024.EBFramework">EliteBionicFramework</li>
-	<li IfModActive="ludeon.rimworld.ideology">Ideology</li>
-	<li IfModActive="annoprofi.adaptablemechanoids">1.5/Mods/AdaptiveMechanoid</li>
 	<!-- IfModNotActive -->
   </v1.5>
   <v1.6>
 	<li>Common</li>
-	<li>Current</li>
-	<li IfModActive="ceteam.combatextended">ContentCE</li>
-	<li IfModActive="ducks.insaneskills">DuckInfinity</li>
-    <li IfModActive="squirtingelephant.planetarydrill,mlie.omnicoredrill,ogliss.thewhitecrayon.quarry">Warrant</li>
-	<li IfModActive="V1024.EBFramework">EliteBionicFramework</li>
-	<li IfModActive="ludeon.rimworld.ideology">Ideology</li>
-	<li IfModActive="annoprofi.adaptablemechanoids">Current/Mods/AdaptiveMechanoid</li>
-	<li IfModActive="sumghai.medpod">Current/Mods/MedPod</li>
+	<li>1.6</li>
+	<li>1.6/Mods/FactionAddon</li>
+	<li IfModActive="ceteam.combatextended">1.6/ContentCE</li>
+	<li IfModActive="ducks.insaneskills">1.6/DuckInfinity</li>
+	<li IfModActive="annoprofi.adaptablemechanoids">1.6/Mods/AdaptiveMechanoid</li>
+	<li IfModActive="sumghai.medpod">1.6/Mods/MedPod</li>
+	<!-- <li IfModActive="farmerjoe.stragemfw">Current/Mods/StragemFramework</li> -->
 	<!-- IfModNotActive -->
   </v1.6>
+  <v1.7>
+	<li>Common</li>
+	<li>Current</li>
+	<li>Current/Mods/FactionAddon</li>
+    <li IfModActive="squirtingelephant.planetarydrill,mlie.omnicoredrill,ogliss.thewhitecrayon.quarry">Current/Mods/Warrant</li>
+	<li IfModActive="V1024.EBFramework">Current/Mods/EliteBionicFramework</li>
+	<li IfModActive="ludeon.rimworld.ideology">Current/Mods/Ideology</li>
+	<li IfModActive="annoprofi.adaptablemechanoids">Current/Mods/AdaptiveMechanoid</li>
+	<li IfModActive="sumghai.medpod">Current/Mods/MedPod</li>
+	<!-- <li IfModActive="farmerjoe.stragemfw">Current/Mods/StragemFramework</li> -->
+	<!-- IfModNotActive -->
+  </v1.7>
 </loadFolders>

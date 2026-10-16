@@ -61,7 +61,7 @@ Each layer of armor is applied separately, from the outside in.</description>
   
 	<ToolCapacityDef>
 		<defName>Makai_Celestial</defName>
-		<label>cut - celestial scar</label>
+		<label>celestial scar</label>
 	</ToolCapacityDef>
   
 	<ManeuverDef>

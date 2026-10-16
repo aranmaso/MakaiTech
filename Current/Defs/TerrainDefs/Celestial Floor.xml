@@ -38,7 +38,7 @@
 		<filthAcceptanceMask></filthAcceptanceMask>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<researchPrerequisites>
-			<li>Makai_Structure_Tier1</li>
+			<li>Makai_CelestialStructure</li>
 		</researchPrerequisites>
 	</TerrainDef>
 	<TerrainDef ParentName="MK_C_Floor">
@@ -74,7 +74,7 @@
 		<filthAcceptanceMask></filthAcceptanceMask>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<researchPrerequisites>
-			<li>Makai_Structure_Tier1</li>
+			<li>Makai_CelestialStructure</li>
 		</researchPrerequisites>
 	</TerrainDef>
 	<TerrainDef ParentName="MK_C_Floor">
@@ -111,7 +111,7 @@
 		<filthAcceptanceMask></filthAcceptanceMask>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<researchPrerequisites>
-			<li>Makai_Structure_Tier1</li>
+			<li>Makai_CelestialStructure</li>
 		</researchPrerequisites>
 	</TerrainDef>
 	<TerrainDef>
@@ -147,7 +147,7 @@
 		<filthAcceptanceMask></filthAcceptanceMask>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<researchPrerequisites>
-			<li>Makai_Structure_Tier1</li>
+			<li>Makai_CelestialStructure</li>
 		</researchPrerequisites>
 	</TerrainDef>
 	

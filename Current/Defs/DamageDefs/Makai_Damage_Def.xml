@@ -5,7 +5,7 @@
 	<DamageDef>
 		<defName>Existence_Null_ArmorDebuff</defName>
 		<label>Concept of Destruction</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has it existence made null</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -27,17 +27,17 @@
 	<DamageDef>
 		<defName>Makai_Celestial_Cut</defName>
 		<label>Celestial Scar</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has suffered from temporal damage</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
 		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
-			<li>
+			<!-- <li>
 				<hediff>Conceptual_CelestialScar</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
-			</li>
+				<severityPerDamageDealt>0.1</severityPerDamageDealt>
+			</li> -->
 		</additionalHediffs>
 		<impactSoundType>Slice</impactSoundType>
 		<armorCategory>Celestial</armorCategory>
@@ -49,7 +49,7 @@
 	<DamageDef>
 		<defName>Existence_Null_Lightning</defName>
 		<label>Lightning Burn</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has it existence made null</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -62,7 +62,7 @@
 			</li>
 		</additionalHediffs>
 		<impactSoundType>Slice</impactSoundType>
-		<armorCategory>Heat</armorCategory>
+		<armorCategory>Celestial</armorCategory>
 		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
 		<isRanged>false</isRanged>
 		<makesAnimalsFlee>true</makesAnimalsFlee>
@@ -71,7 +71,7 @@
 	<DamageDef>
 		<defName>Lightning_Ring_Ball</defName>
 		<label>Lightning Burn</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has it existence made null</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -84,16 +84,40 @@
 			</li>
 		</additionalHediffs>
 		<impactSoundType>Slice</impactSoundType>
-		<armorCategory>Heat</armorCategory>
+		<armorCategory>Celestial</armorCategory>
 		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
 		<isRanged>false</isRanged>
 		<makesAnimalsFlee>true</makesAnimalsFlee>
 	</DamageDef>
   
 	<DamageDef>
+		<defName>LightningStriker_Explosive</defName>
+		<label>Lightning Burn</label>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been disintegrated</deathMessage>
+		<hediff>Makai_TemporalBurn</hediff>
+		<hediffSolid>Makai_TemporalCut</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs>
+			<li>
+				<hediff>Conceptual_Destruction</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Celestial</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+        <isExplosive>true</isExplosive>
+		<soundExplosion>anva_gl</soundExplosion>
+	</DamageDef>
+  
+	<DamageDef>
 		<defName>Curse_of_Always_Exist</defName>
 		<label>Existence Dread</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has face the concept of existence</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -116,7 +140,7 @@
 		<defName>Alf_Corruption</defName>
 		<label>Mind Corruption</label>
 		<defaultDamage>0</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has lost it mind.</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -139,7 +163,7 @@
 		<defName>Alf_Corruption_Beam</defName>
 		<label>Mind Corruption</label>
 		<defaultDamage>0</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has lost it mind.</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -162,7 +186,7 @@
 		<defName>Makai_ColdEnergy</defName>
 		<label>Frigid Cold</label>
 		<defaultDamage>1</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has freezed to dead.</deathMessage>
 		<hediff>Makai_TemporalFrost</hediff>
@@ -189,7 +213,7 @@
 		<defName>Yuki_Cold</defName>
 		<label>Frigid Cold</label>
 		<defaultDamage>1</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has freezed to dead.</deathMessage>
 		<hediff>Makai_TemporalFrost</hediff>
@@ -220,7 +244,7 @@
 		<defName>Yuki_Cold_Extra</defName>
 		<label>Frigid Cold</label>
 		<defaultDamage>1</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has freezed to dead.</deathMessage>
 		<hediff>Makai_TemporalFrost</hediff>
@@ -253,7 +277,7 @@
 		<defName>Mica_Fire</defName>
 		<label>SunBlade</label>
 		<defaultDamage>1</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has burned to dead.</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -288,7 +312,7 @@
 		<defName>Mica_Star</defName>
 		<label>Radiant Star</label>
 		<defaultDamage>1</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has burned to dead.</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -323,7 +347,7 @@
 		<defName>Sari_13th</defName>
 		<label>Destined Death</label>
 		<defaultDamage>1</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has met a destined death.</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -346,7 +370,7 @@
 		<defName>Sari_Turret</defName>
 		<label>Destined Death</label>
 		<defaultDamage>1</defaultDamage>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has met a destined death.</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -369,7 +393,7 @@
 	<DamageDef>
 		<defName>Knowledge_Seeker</defName>
 		<label>Knowledge Seeker</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their ability to think cease functioned</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -391,7 +415,7 @@
 	<DamageDef>
 		<defName>Stardust_Accel_Bullet</defName>
 		<label>stardust particle</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their being scorched by stardust</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -415,7 +439,7 @@
 	<DamageDef>
 		<defName>Stardust_Compress_Bullet</defName>
 		<label>stardust beam</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their being scorched by stardust</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -434,14 +458,14 @@
 	<DamageDef>
 		<defName>Stardust_Compress_Bullet_Ex</defName>
 		<label>energy blast</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
 		<additionalHediffs>
-			<li>
+			<!-- <li>
 				<hediff>Conceptual_CelestialScar</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
-			</li>
+				<severityPerDamageDealt>0.1</severityPerDamageDealt>
+			</li> -->
 		</additionalHediffs>
 		<hediff>Makai_TemporalBurn</hediff>
 		<hediffSolid>Makai_TemporalCut</hediffSolid>
@@ -470,14 +494,14 @@
 	<DamageDef>
 		<defName>Stardust_Compress_Bullet_Ex_HELD</defName>
 		<label>energy blast</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
 		<additionalHediffs>
-			<li>
+			<!-- <li>
 				<hediff>Conceptual_CelestialScar</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
-			</li>
+				<severityPerDamageDealt>0.1</severityPerDamageDealt>
+			</li> -->
 		</additionalHediffs>
 		<hediff>Makai_TemporalBurn</hediff>
 		<hediffSolid>Makai_TemporalCut</hediffSolid>
@@ -506,14 +530,14 @@
 	<DamageDef>
 		<defName>Stardust_Artiliery_Bullet_Ex</defName>
 		<label>energy blast</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
 		<additionalHediffs>
-			<li>
+			<!-- <li>
 				<hediff>Conceptual_CelestialScar</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
-			</li>
+				<severityPerDamageDealt>0.1</severityPerDamageDealt>
+			</li> -->
 		</additionalHediffs>
 		<hediff>Makai_TemporalBurn</hediff>
 		<hediffSolid>Makai_TemporalCut</hediffSolid>
@@ -542,7 +566,7 @@
 	<DamageDef>
 		<defName>Nightmare_Claw_Bullet_Damage</defName>
 		<label>corrupted blast</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -576,7 +600,7 @@
 	<DamageDef>
 		<defName>Nightmare_Claw_Bullet_DamageTwo</defName>
 		<label>corrupted claw</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has their being corrupted by nightmare claw</deathMessage>
 		<hediff>Makai_TemporalCut</hediff>
@@ -602,7 +626,7 @@
 	<DamageDef Name="BaseAutoBullet">
 		<defName>ME_Bullet_A</defName>
 		<label>energy bullet</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been shot to death</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -630,7 +654,7 @@
 	<DamageDef>
 		<defName>ME_Bullet_G</defName>
 		<label>energy blast</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has died in an explosion.</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -662,14 +686,14 @@
 	<DamageDef>
 		<defName>ME_Bullet_T1</defName>
 		<label>energy bullet</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been shot to death</deathMessage>
 		<additionalHediffs>
-			<li>
+			<!-- <li>
 				<hediff>Conceptual_CelestialScar</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
-			</li>
+				<severityPerDamageDealt>0.1</severityPerDamageDealt>
+			</li> -->
 		</additionalHediffs>
 		<hediff>Makai_TemporalBurn</hediff>
 		<hediffSolid>Makai_TemporalCut</hediffSolid>
@@ -686,7 +710,7 @@
 	<DamageDef>
 		<defName>Makai_Vaporize</defName>
 		<label>vaporize</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been vaporized by extreme heat.</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -711,9 +735,9 @@
 	</DamageDef>
 	
 	<DamageDef>
-		<defName>Makai</defName>
+		<defName>Makai_StardustCloudExplosion</defName>
 		<label>stardust cloud</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been scorched by stardust cloud</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
@@ -724,10 +748,10 @@
 				<hediff>Makai_ArmorMelt</hediff>
 				<severityPerDamageDealt>0.01</severityPerDamageDealt>
 			</li>
-			<li>
+			<!-- <li>
 				<hediff>Conceptual_CelestialScar</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
-			</li>
+				<severityPerDamageDealt>0.1</severityPerDamageDealt>
+			</li> -->
 		</additionalHediffs>
 		<buildingDamageFactor>0</buildingDamageFactor>
 		<plantDamageFactor>0</plantDamageFactor>
@@ -736,22 +760,35 @@
 		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
 		<isRanged>true</isRanged>
 		<makesAnimalsFlee>true</makesAnimalsFlee>
+
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultStoppingPower>0.5</defaultStoppingPower>
+		<defaultArmorPenetration>5.00</defaultArmorPenetration>
+		<isExplosive>true</isExplosive>
+		<explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+		<explosionHeatEnergyPerCell>50</explosionHeatEnergyPerCell>
+		<explosionCellFleck>Mote_Invis</explosionCellFleck>
+		<explosionInteriorFleck>Mote_Invis</explosionInteriorFleck>
+		<explosionColorCenter>(0,255,0)</explosionColorCenter>
+		<explosionColorEdge>(0,255,0)</explosionColorEdge>
+		<soundExplosion>Explosion_EMP</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
 	</DamageDef>
 	
 	<DamageDef>
 		<defName>Makai_Celestial_StardustCloud</defName>
 		<label>Stardust Cloud</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
+		<workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been scorched by temporal cloud</deathMessage>
 		<hediff>Makai_TemporalBurn</hediff>
 		<hediffSolid>Makai_TemporalCut</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<additionalHediffs>
-			<li>
+			<!-- <li>
 				<hediff>Conceptual_CelestialScar</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
-			</li>
+				<severityPerDamageDealt>0.1</severityPerDamageDealt>
+			</li> -->
 			<li>
 				<hediff>Makai_ArmorMelt</hediff>
 				<severityPerDamageDealt>0.01</severityPerDamageDealt>
@@ -771,7 +808,7 @@
     <minDamageToFragment>200</minDamageToFragment>
     <deathMessage>{0} has died from an artillery explosion.</deathMessage>
     <defaultStoppingPower>0.8</defaultStoppingPower>
-    <workerClass>DamageWorker_AddInjury</workerClass>
+    <workerClass>MakaiTech.DamageWorker_Celestial</workerClass>
     <externalViolence>true</externalViolence>
     <makesAnimalsFlee>true</makesAnimalsFlee>
     <isExplosive>true</isExplosive>

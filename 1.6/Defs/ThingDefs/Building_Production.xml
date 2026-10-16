@@ -1,0 +1,104 @@
+<Defs>
+
+    <ThingDef ParentName="BuildingBase" Name="Makai_TilableHydroponicsBase" Abstract="True">
+        <thingClass>MakaiTech.Building_StardustEcosystem</thingClass>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <linkType>Basic</linkType>
+            <linkFlags>
+                <li>Custom3</li>
+            </linkFlags>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <altitudeLayer>LowPlant</altitudeLayer>
+        <passability>Standable</passability>
+        <pathCost>60</pathCost>
+        <constructEffect>ConstructMetal</constructEffect>
+        <fillPercent>0.30</fillPercent>
+        <canOverlapZones>false</canOverlapZones>
+        <size>(1,1)</size>
+        <building>
+            <defaultPlantToGrow>Plant_Rice</defaultPlantToGrow>
+            <sowTag>Hydroponic</sowTag>
+            <blueprintGraphicData>
+                <texPath>Things/Building/Linked/StardustHydro_Atlas</texPath>
+            </blueprintGraphicData>
+            <paintable>false</paintable>
+            <!-- <isEdifice>false</isEdifice> -->
+        </building>
+        <!-- <clearBuildingArea>false</clearBuildingArea> -->
+        <tickerType>Rare</tickerType>
+        <comps>
+            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties_Flickable" />
+        </comps>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <designationCategory>Makai_Tech</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="Makai_TilableHydroponicsBase">
+        <defName>Makai_TilableStardustGrower</defName>
+        <thingClass>MakaiTech.Building_StardustEcosystem</thingClass>
+        <label>celestial artificial ecosystem</label>
+        <description>a hydroponic bed powered by stardust, miniscule amount of stardust is inject into plants daily nutrients, significantly speed up the growth of plant life.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/StardustHydro_Atlas</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+        </graphicData>
+        <drawStyleCategory>Walls</drawStyleCategory>
+        <rotatable>false</rotatable>
+        <uiIconPath>Things/Building/Linked/StardustHydro_MenuIcon</uiIconPath>
+        <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+        <statBases>
+            <WorkToBuild>2500</WorkToBuild>
+            <MaxHitPoints>250</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <Cleanliness>1</Cleanliness>
+        </statBases>
+        <costList>
+            <Makai_Ingot>5</Makai_Ingot>
+            <Makai_Fabric_C>10</Makai_Fabric_C>
+            <Makai_Stardust>25</Makai_Stardust>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <fertility>15</fertility>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>50</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Glower">
+                <overlightRadius>1.5</overlightRadius>
+                <glowRadius>1.5</glowRadius>
+                <glowColor>(95,87,165,0)</glowColor>
+            </li>
+            <li Class="CompProperties_Refuelable">
+				<fuelLabel>stardust storage</fuelLabel>
+				<fuelGizmoLabel>Stardust storage</fuelGizmoLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Makai_Stardust</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>1000</fuelCapacity>
+				<initialFuelPercent>0.0</initialFuelPercent>
+				<autoRefuelPercent>0.25</autoRefuelPercent>
+                <fuelConsumptionRate>1</fuelConsumptionRate>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<showFuelGizmo>true</showFuelGizmo>
+				<fuelMultiplier>0.1</fuelMultiplier>
+				<outOfFuelMessage>Cannot function: Needs stardust</outOfFuelMessage>
+				<fuelIconPath>Things/Items/makai_mat_dust</fuelIconPath>
+			</li>
+        </comps>
+        <researchPrerequisites>
+            <li>Hydroponics</li>
+            <li>Makai_StardustEcosystem</li>
+        </researchPrerequisites>
+        <building>
+            <sowTag>Ground</sowTag>
+        </building>
+    </ThingDef>
+
+</Defs>

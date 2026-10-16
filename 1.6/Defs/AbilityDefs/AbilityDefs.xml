@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <AbilityDef>
+        <defName>Makai_Corruption_ClawGrab</defName>
+        <label>Claw Grab</label>
+        <description>Launch a claw of nightmare at a target pawn and pull target pawn to caster location.</description>
+        <iconPath>Things/Abilities/Corruption/ClawGrab</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <groupDef>Makai_Weapon_Ability</groupDef>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>20.9</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>sari_sweep</soundCast>
+            <targetParams>
+                <canTargetLocations>false</canTargetLocations>
+                <canTargetBuildings>false</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="MakaiTech.CompProperties_PullingClaw">
+                <thingDef>Makai_Pull</thingDef>
+                <projectileDef>MakaiPsy_CP_ClawGrab</projectileDef>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="MakaiTech.AbilityExtension_MakaiDataHolder">
+                <thingDef>Makai_Pull</thingDef>
+                <projectileDef>MakaiPsy_CP_ClawGrab</projectileDef>
+            </li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>Makai_Corruption_Pulse</defName>
+        <label>Pulse Now</label>
+        <description>Pulse a wave of nightmare around caster, causing hostile to go on a mental break</description>
+        <iconPath>Things/Abilities/Corruption/ClawGrab</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <groupDef>Makai_Weapon_Ability</groupDef>
+        <targetRequired>False</targetRequired>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>5.9</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>sari_sweep</soundCast>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="MakaiTech.CompProperties_PulsingCorruption" />
+        </comps>
+        <modExtensions>
+            <li Class="MakaiTech.AbilityExtension_MakaiDataHolder">
+                <thingDef>Makai_Pull</thingDef>
+                <projectileDef>MakaiPsy_CP_ClawGrab</projectileDef>
+            </li>
+        </modExtensions>
+    </AbilityDef>
+
+
+    <AbilityDef>
+        <defName>Makai_PlanarTraversal</defName>
+        <label>Planar Traversal</label>
+        <description>innate ability of makainian to freely traverse the existential-plane between the 4th dimension up to the 12th dimensions, instantly cross time-space to arrive at destination.</description>
+        <iconPath>Things/Abilities/HediffToggle/Phase</iconPath>
+        <hotKey>Misc9</hotKey>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <aiCanUse>true</aiCanUse>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <statBases>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0</warmupTime>
+            <range>60.9</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetHumans>true</canTargetHumans>
+                <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="MakaiTech.CompProperties_AbilityPlanarTraversal" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>Makai_CelestialEmpowerment</defName>
+        <label>Celestial Empowerment</label>
+        <description>draw upon the Makainian's energy grid in the 7th dimension, and spread cloud of stardust around caster, damaging all non-Makainian while also empower Makainian within the cloud with Celestial Empowerment.</description>
+        <iconPath>Things/Abilities/HediffToggle/StardustPower</iconPath>
+        <hotKey>Misc9</hotKey>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <aiCanUse>true</aiCanUse>
+        <targetRequired>false</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <statBases>
+            <!-- <Ability_EffectRadius>4.0</Ability_EffectRadius> -->
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0</warmupTime>
+            <range>4.0</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetHumans>true</canTargetHumans>
+                <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="MakaiTech.CompProperties_AbilityCelestialEmpowerment" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>Makai_PlanarShift</defName>
+        <label>Planar Shift</label>
+        <description>makainian shift themselve into the 6th dimensions, allowing them to traverse the plane freely ignoring all obstacle and becoming intangible.</description>
+        <iconPath>Things/Abilities/HediffToggle/PlaneShift</iconPath>
+        <hotKey>Misc9</hotKey>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <targetRequired>false</targetRequired>
+        <statBases>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.25</warmupTime>
+            <range>27.9</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="MakaiTech.CompProperties_AbilityToggleHediff">
+                <hediffDef>Makai_PlaneShift</hediffDef>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

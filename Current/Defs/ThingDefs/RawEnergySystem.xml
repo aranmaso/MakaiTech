@@ -184,7 +184,7 @@
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier2</li>
+			<li>Makai_AdvDimensionalRelay</li>
 		</researchPrerequisites>
 	</ThingDef>
 
@@ -247,7 +247,7 @@
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier2</li>
+			<li>Makai_AdvDimensionalRelay</li>
 		</researchPrerequisites>
 	</ThingDef>
 	  
@@ -327,7 +327,7 @@
 		<constructEffect>ConstructMetal</constructEffect>
 		<canOverlapZones>false</canOverlapZones>
 		<researchPrerequisites>
-			<li>Makai_EnergyRelay_Tier3</li>
+			<li>Makai_PureEnergyConverter</li>
 		</researchPrerequisites>
 	</ThingDef>
 

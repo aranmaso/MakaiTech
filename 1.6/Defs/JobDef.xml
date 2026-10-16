@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <JobDef>
+        <defName>DeathEssenseResurrect</defName>
+        <driverClass>MakaiTech.JobDriver_ResurrectEssence</driverClass>
+        <reportString>resurrecting TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+	
+	<JobDef>
+        <defName>DeathEssenseExtract</defName>
+        <driverClass>MakaiTech.JobDriver_ExtractSoul</driverClass>
+        <reportString>extracting TargetA soul</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+	
+	<JobDef>
+    <defName>SoulTransfer</defName>
+		<driverClass>MakaiTech.JobDriver_TransferSoul</driverClass>
+		<reportString>transfer soul to TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+	<JobDef>
+		<defName>Makai_SaveDeathNexus</defName>
+		<driverClass>MakaiTech.JobDriver_SaveOnDeathNexus</driverClass>
+		<reportString>link soul to TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+	<JobDef>
+		<defName>Makai_UnSaveDeathNexus</defName>
+		<driverClass>MakaiTech.JobDriver_UnSaveFromDeathNexus</driverClass>
+		<reportString>unlink soul from TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+</Defs>
