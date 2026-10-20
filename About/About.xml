@@ -2,7 +2,7 @@
 <ModMetaData>
 	<name>MakaiTech</name>
 	<author>Aranmaho</author>
-	<packageId>Aranmaho.Makai.Dev</packageId>
+	<packageId>Aranmaho.Makai</packageId>
 	<supportedVersions>
 		<!-- <li>1.4</li> -->
 		<li>1.5</li>
